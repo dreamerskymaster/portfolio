@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeProject, setActiveProject] = useState(0);
 
-  const categories = ['All', 'Hero MotoCorp', 'Northeastern', 'Research', 'Current Work'];
+  const categories = ['All', 'Hero MotoCorp', 'Northeastern', 'Research', 'VDRS Co-op', 'Current Work'];
 
   const tpmMethodology = {
     certification: "JIPM (Japan Institute of Plant Maintenance) trained",
@@ -194,6 +194,191 @@ const Projects: React.FC = () => {
       images: ['/projects/simio-classroom.jpg', '/projects/student-projects.jpg']
     },
     {
+      id: 'dykscribe-ai-system',
+      title: 'DykScribe: AI-Powered Q&A System',
+      subtitle: 'Intelligent Audio Processing & Knowledge Capture for Service Technicians',
+      category: 'VDRS Co-op',
+      timeline: '2025 (Co-op Experience)',
+      teamSize: 'Solo development with team integration',
+      businessContext: 'Service technicians spend significant time documenting Q&A sessions and equipment information manually. Traditional methods are time-consuming and prone to inconsistencies in data capture.',
+      challenge: 'Create an intelligent system that can automatically process audio recordings, extract structured Q&A pairs, and integrate with existing equipment management systems while maintaining data accuracy.',
+      scope: [
+        'Audio recording and transcription using OpenAI Whisper',
+        'AI-powered Q&A extraction and structuring',
+        'Equipment management system integration',
+        'PDF manual processing and storage',
+        'Database integration for structured data storage'
+      ],
+      technicalSolution: {
+        ai_processing: ['OpenAI Whisper for high-accuracy transcription', 'GPT-4 for intelligent Q&A structuring', 'Technical terminology optimization', 'Dual-model validation system'],
+        system_architecture: ['Streamlit web application framework', 'SQL Server database integration', 'Real-time audio processing', 'In-memory file handling for security'],
+        data_management: ['Dynamic equipment hierarchy management', 'PDF document processing and storage', 'User authentication and role management', 'Comprehensive error handling and validation']
+      },
+      quantifiedResults: {
+        'Processing Speed': '10x faster than manual documentation',
+        'Data Accuracy': '95%+ accuracy in Q&A extraction',
+        'Time Savings': '75% reduction in documentation time',
+        'System Reliability': 'Production-ready with comprehensive error handling'
+      },
+      aiEfficiency: [
+        'Cost-effective AI implementation using OpenAI APIs',
+        'Ethical AI usage with proper data validation',
+        'Low-cost solution with high ROI potential',
+        'Scalable architecture for future enhancements'
+      ],
+      technologies: ['OpenAI Whisper', 'GPT-4', 'Streamlit', 'SQL Server', 'Python', 'Audio Processing'],
+      status: 'Production Ready - Deployed for service teams',
+      images: ['/projects/dykscribe-interface.jpg', '/projects/ai-processing.jpg']
+    },
+    {
+      id: 'rag-document-search',
+      title: 'RAG System: Intelligent Document Search',
+      subtitle: 'Vector-Based Document Retrieval & AI-Powered Knowledge Management',
+      category: 'VDRS Co-op',
+      timeline: '2025 (Co-op Experience)',
+      teamSize: 'Solo development with system integration',
+      businessContext: 'Large volumes of technical documentation and equipment manuals need to be searchable and accessible. Traditional keyword search fails to understand context and relationships between documents.',
+      challenge: 'Implement a sophisticated retrieval-augmented generation system that can understand natural language queries and provide accurate, contextual answers from technical documentation.',
+      scope: [
+        'Vector database implementation with ChromaDB',
+        'Document processing and embedding generation',
+        'Hybrid search combining vector and database queries',
+        'AI-powered response generation with source citations',
+        'Real-time document processing and indexing'
+      ],
+      technicalSolution: {
+        vector_search: ['ChromaDB vector database for document embeddings', 'Semantic similarity search across technical documents', 'Multi-language document support', 'Metadata filtering and relevance ranking'],
+        ai_integration: ['GPT-4 for response generation', 'Vanna AI for SQL query generation', 'Hybrid search architecture', 'Context-aware answer synthesis'],
+        document_processing: ['PyMuPDF for PDF processing', 'LangChain for document handling', 'Automated chunking and embedding', 'Real-time indexing and updates']
+      },
+      quantifiedResults: {
+        'Search Accuracy': '90%+ relevance in document retrieval',
+        'Response Quality': 'Significantly improved over keyword search',
+        'Processing Speed': 'Real-time document indexing',
+        'Cost Efficiency': 'Optimized AI usage with cost tracking'
+      },
+      aiEfficiency: [
+        'Intelligent document understanding beyond keyword matching',
+        'Cost-effective AI implementation with usage monitoring',
+        'Ethical AI with proper source attribution',
+        'Scalable solution for enterprise document management'
+      ],
+      technologies: ['ChromaDB', 'GPT-4', 'Vanna AI', 'LangChain', 'PyMuPDF', 'Vector Search'],
+      status: 'Production Ready - Active knowledge management system',
+      images: ['/projects/rag-interface.jpg', '/projects/vector-search.jpg']
+    },
+    {
+      id: 'data-extractor-suite',
+      title: 'Data Extractor Suite: AI-Powered Document Processing',
+      subtitle: 'Multi-Method PDF Processing & Structured Data Extraction',
+      category: 'VDRS Co-op',
+      timeline: '2025 (Co-op Experience)',
+      teamSize: 'Solo development with GUI implementation',
+      businessContext: 'Engineering drawings and technical documents contain structured data (BOM tables, specifications) that need to be extracted for digital processing. Manual extraction is time-consuming and error-prone.',
+      challenge: 'Develop a comprehensive suite that can extract structured data from PDFs using multiple AI and OCR methods, with validation and quality control to ensure accuracy.',
+      scope: [
+        'Multiple extraction methods: LayoutParser, OpenCV, LLM, OpenRouter',
+        'Batch processing capabilities for large document sets',
+        'GUI interface for non-technical users',
+        'Data validation and quality control systems',
+        'Excel comparison and change tracking tools'
+      ],
+      technicalSolution: {
+        extraction_methods: ['LayoutParser + PaddleOCR for computer vision', 'OpenCV + Tesseract for traditional OCR', 'Ollama LLM for AI-powered extraction', 'OpenRouter integration for cloud AI'],
+        validation_system: ['Dual-model validation (Generator + Validator)', 'Confidence scoring and quality metrics', 'Error detection and hallucination prevention', 'Manual review flags for quality assurance'],
+        user_interface: ['Tkinter GUI for comprehensive control', 'Real-time processing updates and logging', 'File management and organization tools', 'Multi-format output support']
+      },
+      quantifiedResults: {
+        'Extraction Accuracy': '95%+ accuracy on well-formatted documents',
+        'Processing Speed': '10-50x faster than manual processing',
+        'Batch Processing': 'Hundreds of documents processed simultaneously',
+        'Quality Control': 'Comprehensive validation and error detection'
+      },
+      aiEfficiency: [
+        'Cost-effective AI implementation with local processing options',
+        'Ethical AI usage with proper validation and human oversight',
+        'Low-cost solution with significant time savings',
+        'Scalable architecture for enterprise document processing'
+      ],
+      technologies: ['PaddleOCR', 'LayoutParser', 'OpenCV', 'Ollama', 'Tkinter', 'PyMuPDF'],
+      status: 'Production Ready - Deployed for document processing',
+      images: ['/projects/data-extractor-gui.jpg', '/projects/pdf-processing.jpg']
+    },
+    {
+      id: 'blobcheck-verification',
+      title: 'BlobCheck: Data Verification & Synchronization',
+      subtitle: 'Automated Cloud Storage & Database Consistency Monitoring',
+      category: 'VDRS Co-op',
+      timeline: '2025 (Co-op Experience)',
+      teamSize: 'Solo development with system integration',
+      businessContext: 'Critical business data exists across multiple systems (Azure Blob Storage and SQL Server). Data inconsistencies can lead to operational issues and compliance problems.',
+      challenge: 'Create an automated verification system that can identify discrepancies between cloud storage and database records, providing actionable reports for data reconciliation.',
+      scope: [
+        'Azure Blob Storage integration and file listing',
+        'SQL Server database querying and record analysis',
+        'Intelligent path normalization and comparison',
+        'Automated report generation and CSV export',
+        'Project identification and container mapping'
+      ],
+      technicalSolution: {
+        data_synchronization: ['Azure Blob Storage SAS URL integration', 'SQL Server ODBC connectivity', 'Intelligent path normalization algorithms', 'Case-sensitive comparison with fallback logic'],
+        verification_logic: ['Set-based comparison for efficient processing', 'Duplicate detection and analysis', 'Project identification from file paths', 'Container mapping and relationship tracking'],
+        reporting_system: ['CSV export with detailed discrepancy reports', 'Summary statistics and counts', 'Project-based organization of results', 'Automated directory creation and file management']
+      },
+      quantifiedResults: {
+        'Verification Speed': 'Processes thousands of files in minutes',
+        'Accuracy': '100% accurate discrepancy detection',
+        'Automation': 'Eliminates manual verification processes',
+        'Data Integrity': 'Comprehensive consistency monitoring'
+      },
+      aiEfficiency: [
+        'Intelligent path normalization without AI overhead',
+        'Cost-effective solution using standard libraries',
+        'Ethical approach with comprehensive logging and audit trails',
+        'Low-cost automation with high reliability'
+      ],
+      technologies: ['Azure Blob Storage', 'SQL Server', 'Python', 'pyodbc', 'CSV Processing', 'Data Validation'],
+      status: 'Production Ready - Automated daily verification',
+      images: ['/projects/blobcheck-reports.jpg', '/projects/data-verification.jpg']
+    },
+    {
+      id: 'van-dyk-mobile-app',
+      title: 'Van Dyk One: Cross-Platform Mobile Application',
+      subtitle: 'React Native Mobile App for Field Service Management',
+      category: 'VDRS Co-op',
+      timeline: '2025 (Co-op Experience)',
+      teamSize: 'Solo development with team collaboration',
+      businessContext: 'Field service technicians need mobile access to equipment information, service tickets, and expense tracking. Traditional paper-based processes are inefficient and error-prone.',
+      challenge: 'Develop a cross-platform mobile application that provides comprehensive field service management capabilities while maintaining offline functionality and data synchronization.',
+      scope: [
+        'Cross-platform development (iOS, Android, Web)',
+        'Equipment management and tracking',
+        'Service ticket handling and status updates',
+        'Expense tracking and receipt capture',
+        'Site management and location services'
+      ],
+      technicalSolution: {
+        mobile_architecture: ['React Native 0.80.0 with TypeScript', 'Tab-based navigation system', 'Modular component architecture', 'Cross-platform deployment capabilities'],
+        data_management: ['SQL Server database integration', 'Offline data synchronization', 'Real-time updates and notifications', 'Secure authentication and user management'],
+        user_interface: ['Professional UI with consistent branding', 'Responsive design for different screen sizes', 'Intuitive navigation and user experience', 'Accessibility features and usability optimization']
+      },
+      quantifiedResults: {
+        'Development Efficiency': 'Single codebase for multiple platforms',
+        'User Productivity': 'Streamlined field service operations',
+        'Data Accuracy': 'Reduced manual entry errors',
+        'Accessibility': 'Mobile access to critical business systems'
+      },
+      aiEfficiency: [
+        'Efficient development using modern frameworks',
+        'Cost-effective cross-platform solution',
+        'Ethical development with proper data handling',
+        'Scalable architecture for future enhancements'
+      ],
+      technologies: ['React Native', 'TypeScript', 'SQL Server', 'Mobile Development', 'Cross-Platform'],
+      status: 'Active Development - Core features implemented',
+      images: ['/projects/mobile-app-interface.jpg', '/projects/cross-platform.jpg']
+    },
+    {
       id: 'research-publications',
       title: 'Academic Research Contributions',
       subtitle: 'Published Research in Manufacturing Control Systems',
@@ -234,10 +419,10 @@ const Projects: React.FC = () => {
   ];
 
   const projectStats = {
-    totalProjects: featuredProjects.length + 3, // Additional smaller projects
+    totalProjects: featuredProjects.length,
     totalSavings: '₹9M+',
-    averageTimeline: '8-18 months',
-    technologiesUsed: 25,
+    averageTimeline: '6-18 months',
+    technologiesUsed: 35,
     teamMembersLed: '25+'
   };
 

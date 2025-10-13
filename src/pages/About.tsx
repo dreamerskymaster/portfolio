@@ -101,56 +101,87 @@ const About: React.FC = () => {
     },
     {
       phase: "AI Innovation & Education",
-      period: "2024-Present",
-      focus: "Intelligent Manufacturing, Teaching & Sustainability",
+      period: "2024-2025",
+      focus: "Intelligent Manufacturing, Teaching & Academic Excellence",
       achievements: [
         "Developed Mano-AI troubleshooting assistant using LLaMA and edge computing",
         "IoT Smart Cell dashboard implementation with 11% availability improvement",
         "Advanced simulation modeling expertise with Simio and MATLAB",
         "Teaching and mentoring emerging engineers at Northeastern University",
-        "Sustainable manufacturing initiatives at VAN DYK Recycling Solutions",
         "Course Assistant for Advanced Manufacturing and Simulation Analysis",
         "LEAD360 Teaching Assistant for leadership development programs"
       ],
-      technologies: ["LLaMA", "Docker", "AWS IoT", "Simio", "Python", "Sustainable Manufacturing", "Edge Computing", "LLM Fine-tuning"],
+      technologies: ["LLaMA", "Docker", "AWS IoT", "Simio", "Python", "Edge Computing", "LLM Fine-tuning"],
       icon: Brain,
       color: "bg-purple-500"
+    },
+    {
+      phase: "VDRS Co-op Experience",
+      period: "2025",
+      focus: "AI-Powered Solutions & Cross-Industry Innovation",
+      achievements: [
+        "Developed DykScribe AI Q&A system with 95%+ accuracy in audio processing",
+        "Implemented RAG system for intelligent document search and knowledge management",
+        "Created comprehensive Data Extractor Suite with multi-method PDF processing",
+        "Built BlobCheck automated data verification system for cloud-database consistency",
+        "Designed Van Dyk One cross-platform mobile app for field service management",
+        "Applied automotive manufacturing expertise to recycling and sustainability challenges",
+        "Demonstrated cost-effective AI implementation with ethical usage principles"
+      ],
+      technologies: ["OpenAI Whisper", "GPT-4", "ChromaDB", "Vector Search", "React Native", "Azure Blob Storage", "SQL Server", "Streamlit", "PaddleOCR"],
+      icon: Zap,
+      color: "bg-orange-500"
+    },
+    {
+      phase: "Current Focus",
+      period: "2025-Present",
+      focus: "Sustainable Manufacturing & Advanced AI Applications",
+      achievements: [
+        "Sustainable manufacturing initiatives at VAN DYK Recycling Solutions",
+        "Bridging traditional manufacturing with circular economy principles",
+        "Cross-industry knowledge transfer from automotive to recycling",
+        "Advanced AI model deployment and production optimization",
+        "Integration of proven methodologies with emerging technologies"
+      ],
+      technologies: ["Sustainable Manufacturing", "Circular Economy", "AI Integration", "Process Optimization"],
+      icon: Globe,
+      color: "bg-emerald-500"
     }
   ];
 
   const currentLearning = [
     {
-      area: "Sustainable Manufacturing",
-      context: "Through VAN DYK internship, exploring how recycling and circular economy principles reshape traditional manufacturing",
-      skills: ["Circular Economy", "Sustainable Processes", "Waste Optimization"]
+      area: "AI-Powered Manufacturing Solutions",
+      context: "Through VDRS Co-op, developed multiple production-ready AI systems including audio processing, document search, and data extraction",
+      skills: ["OpenAI Integration", "Vector Databases", "Production AI Systems", "Cost-Effective Implementation"]
     },
     {
-      area: "Educational Technology",
-      context: "As Northeastern Course Assistant, developing innovative teaching methods for complex simulation software",
-      skills: ["Curriculum Development", "Student Mentorship", "Technical Communication"]
+      area: "Cross-Industry Application",
+      context: "Successfully applied automotive manufacturing expertise to recycling and sustainability challenges at VAN DYK",
+      skills: ["Knowledge Transfer", "Process Adaptation", "Sustainable Manufacturing", "Circular Economy"]
     },
     {
-      area: "AI Model Deployment",
-      context: "Advancing Mano-AI from proof-of-concept to production-ready manufacturing assistant",
-      skills: ["LLM Fine-tuning", "Edge Computing", "Industrial AI Applications"]
+      area: "Full-Stack Development",
+      context: "Built comprehensive solutions from mobile apps to cloud systems, demonstrating versatility in technology implementation",
+      skills: ["React Native", "Cloud Integration", "Database Design", "System Architecture"]
     }
   ];
 
   const uniqueApproach = [
     {
-      principle: "Learning Through Teaching",
-      description: "Currently mentoring students in simulation analysis while continuing to learn from industry veterans",
-      impact: "Bridges academic theory with practical manufacturing reality"
+      principle: "AI Efficiency & Ethics",
+      description: "Developed cost-effective AI solutions with proper validation, ethical usage, and human oversight - proving AI can be both powerful and responsible",
+      impact: "Demonstrates practical AI implementation that delivers value without compromising ethics"
     },
     {
-      principle: "Cross-Industry Perspective", 
-      description: "Applying automotive manufacturing expertise to recycling solutions and sustainable processes",
-      impact: "Brings fresh approaches to traditional industry challenges"
+      principle: "Cross-Industry Innovation", 
+      description: "Successfully applied automotive manufacturing expertise to recycling solutions, bringing fresh approaches to traditional industry challenges",
+      impact: "Shows ability to transfer knowledge and adapt methodologies across different sectors"
     },
     {
       principle: "Technology Integration",
-      description: "Combining proven methodologies (TPM, Six Sigma) with emerging technologies (AI, IoT)",
-      impact: "Creates practical innovation rather than technology for technology's sake"
+      description: "Combining proven methodologies (TPM, Six Sigma) with emerging technologies (AI, IoT) to create practical innovation",
+      impact: "Creates solutions that work in real-world environments rather than just theoretical concepts"
     }
   ];
 
