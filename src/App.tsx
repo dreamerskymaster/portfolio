@@ -7,6 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 // Components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -31,41 +32,43 @@ function App() {
   }, []);
 
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="App min-h-screen bg-bg transition-colors duration-300">
-          <Header />
-          <main className="flex-1">
-            <AnimatePresence mode="wait">
-              <Suspense fallback={
-                <div className="min-h-screen flex items-center justify-center bg-bg">
-                  <div className="text-center">
-                    <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                    <p className="text-muted-foreground">Loading ManuFX Portfolio...</p>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <Router>
+          <div className="App min-h-screen bg-bg transition-colors duration-300">
+            <Header />
+            <main className="flex-1">
+              <AnimatePresence mode="wait">
+                <Suspense fallback={
+                  <div className="min-h-screen flex items-center justify-center bg-bg">
+                    <div className="text-center">
+                      <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                      <p className="text-muted-foreground">Loading ManuFX Portfolio...</p>
+                    </div>
                   </div>
-                </div>
-              }>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/projects/:slug" element={<ProjectDetail />} />
-                  <Route path="/hobbies" element={<Hobbies />} />
-                  <Route path="/writings" element={<Writings />} />
-                  <Route path="/certifications" element={<Certifications />} />
-                  <Route path="/documents" element={<Documents />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/resume" element={<Resume />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Suspense>
-            </AnimatePresence>
-          </main>
-          <Footer />
-          <SpeedInsights />
-        </div>
-      </Router>
-    </HelmetProvider>
+                }>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/projects/:slug" element={<ProjectDetail />} />
+                    <Route path="/hobbies" element={<Hobbies />} />
+                    <Route path="/writings" element={<Writings />} />
+                    <Route path="/certifications" element={<Certifications />} />
+                    <Route path="/documents" element={<Documents />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/resume" element={<Resume />} />
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </Suspense>
+              </AnimatePresence>
+            </main>
+            <Footer />
+            <SpeedInsights />
+          </div>
+        </Router>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 
