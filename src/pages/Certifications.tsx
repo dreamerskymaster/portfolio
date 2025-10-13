@@ -113,7 +113,7 @@ const Certifications: React.FC = () => {
     return Object.entries(certificationData).flatMap(([category, certs]) =>
       certs.map(cert => ({ ...cert, category }))
     );
-  }, []);
+  }, [certificationData]);
 
   const filteredCertifications = useMemo(() => {
     let filtered = allCertifications;

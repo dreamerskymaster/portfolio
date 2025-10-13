@@ -5,16 +5,13 @@ import {
   MapPin, 
   Calendar, 
   ExternalLink, 
-  Phone,
   Clock,
   CheckCircle,
-  Star,
   Quote,
   Users,
   Award,
   MessageSquare,
-  LinkedinIcon,
-  Globe
+  LinkedinIcon
 } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import { testimonials, getFeaturedTestimonials } from '../data/testimonials';
