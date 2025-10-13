@@ -435,12 +435,44 @@ const Projects: React.FC = () => {
 
     if (searchTerm) {
       const term = searchTerm.toLowerCase();
-      filtered = filtered.filter(project =>
-        project.title.toLowerCase().includes(term) ||
-        project.subtitle.toLowerCase().includes(term) ||
-        project.technologies.some(tech => tech.toLowerCase().includes(term)) ||
-        Object.keys(project.quantifiedResults).some(key => key.toLowerCase().includes(term))
-      );
+      filtered = filtered.filter(project => {
+        // Search in basic fields
+        const basicMatch = 
+          project.title.toLowerCase().includes(term) ||
+          project.subtitle.toLowerCase().includes(term) ||
+          project.category.toLowerCase().includes(term) ||
+          project.status.toLowerCase().includes(term);
+        
+        // Search in technologies array
+        const techMatch = project.technologies.some(tech => 
+          tech.toLowerCase().includes(term)
+        );
+        
+        // Search in quantified results keys and values
+        const resultsMatch = Object.entries(project.quantifiedResults).some(([key, value]) =>
+          key.toLowerCase().includes(term) || 
+          (typeof value === 'string' && value.toLowerCase().includes(term))
+        );
+        
+        // Search in business context and challenge
+        const contextMatch = 
+          project.businessContext.toLowerCase().includes(term) ||
+          project.challenge.toLowerCase().includes(term);
+        
+        // Search in scope array
+        const scopeMatch = project.scope.some(item => 
+          item.toLowerCase().includes(term)
+        );
+        
+        // Search in technical solution arrays
+        const techSolutionMatch = Object.values(project.technicalSolution).some(solutionArray => 
+          Array.isArray(solutionArray) && solutionArray.some(solution => 
+            solution.toLowerCase().includes(term)
+          )
+        );
+        
+        return basicMatch || techMatch || resultsMatch || contextMatch || scopeMatch || techSolutionMatch;
+      });
     }
 
     return filtered;
@@ -509,7 +541,7 @@ const Projects: React.FC = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search projects, technologies, outcomes..."
+                placeholder="Search projects, technologies, outcomes, methodologies..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
