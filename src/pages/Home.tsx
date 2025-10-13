@@ -94,7 +94,7 @@ const Home: React.FC = () => {
             >
               <div className="relative mx-auto w-32 h-32 md:w-40 md:h-40 mb-6">
                 <img 
-                  src="/profile-pic.png" 
+                  src="/profile-pic.jpg" 
                   alt={profile.name}
                   className="w-full h-full rounded-full object-cover shadow-xl border-4 border-primary/20"
                 />

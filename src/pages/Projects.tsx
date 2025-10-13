@@ -31,8 +31,36 @@ const Projects: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeProject, setActiveProject] = useState(0);
+  const [easterEggs, setEasterEggs] = useState({
+    technicalDepth: false,
+    methodologyInsights: false,
+    innovationSecrets: false
+  });
 
   const categories = ['All', 'Hero MotoCorp', 'Northeastern', 'Research', 'VDRS Co-op', 'Current Work'];
+
+  // Easter egg functions for technical depth showcase
+  const triggerEasterEgg = (type: keyof typeof easterEggs) => {
+    setEasterEggs(prev => ({ ...prev, [type]: true }));
+    setTimeout(() => {
+      setEasterEggs(prev => ({ ...prev, [type]: false }));
+    }, 5000);
+  };
+
+  const handleTechnicalClick = () => {
+    console.log('🔧 Technical Depth Easter Egg Triggered - Manufacturing AI Specialist');
+    triggerEasterEgg('technicalDepth');
+  };
+
+  const handleMethodologyClick = () => {
+    console.log('📊 Methodology Insights Easter Egg Triggered - Operations Excellence');
+    triggerEasterEgg('methodologyInsights');
+  };
+
+  const handleInnovationClick = () => {
+    console.log('🚀 Innovation Secrets Easter Egg Triggered - Cross-Industry Innovation');
+    triggerEasterEgg('innovationSecrets');
+  };
 
   const tpmMethodology = {
     certification: "JIPM (Japan Institute of Plant Maintenance) trained",
@@ -121,7 +149,7 @@ const Projects: React.FC = () => {
         repo: 'https://github.com/ajithsrikanth/mano-ai',
         demo: 'https://demo.mano-ai.northeastern.edu'
       },
-      images: ['/projects/mano-ai-interface.jpg', '/projects/ai-architecture.jpg']
+      images: ['/ai-manufacturing-1.png', '/ai-operations-1.png']
     },
     {
       id: 'van-dyk-sustainability',
@@ -228,7 +256,7 @@ const Projects: React.FC = () => {
       ],
       technologies: ['OpenAI Whisper', 'GPT-4', 'Streamlit', 'SQL Server', 'Python', 'Audio Processing'],
       status: 'Production Ready - Deployed for service teams',
-      images: ['/projects/dykscribe-interface.jpg', '/projects/ai-processing.jpg']
+      images: ['/ai-manufacturing-2.png', '/ai-operations-2.png']
     },
     {
       id: 'rag-document-search',
@@ -265,7 +293,7 @@ const Projects: React.FC = () => {
       ],
       technologies: ['ChromaDB', 'GPT-4', 'Vanna AI', 'LangChain', 'PyMuPDF', 'Vector Search'],
       status: 'Production Ready - Active knowledge management system',
-      images: ['/projects/rag-interface.jpg', '/projects/vector-search.jpg']
+      images: ['/manufacturing-tech-1.jpg', '/manufacturing-tech-2.jpg']
     },
     {
       id: 'data-extractor-suite',
@@ -488,6 +516,63 @@ const Projects: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-bg">
+      {/* Easter Egg Overlays */}
+      <AnimatePresence>
+        {easterEggs.technicalDepth && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-4xl w-full shadow-2xl border border-slate-200 dark:border-slate-700"
+            >
+              <div className="text-center mb-6">
+                <div className="text-6xl mb-4">🔧</div>
+                <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">
+                  Technical Depth Revealed
+                </h2>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Manufacturing AI Specialist - Beyond the Surface
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white">Advanced AI Implementation:</h3>
+                  <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• Custom LLM fine-tuning for manufacturing contexts</li>
+                    <li>• Edge computing optimization for real-time processing</li>
+                    <li>• Multi-modal AI (text, audio, visual) integration</li>
+                    <li>• Production-grade error handling and validation</li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white">Manufacturing Expertise:</h3>
+                  <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• Deep understanding of production line dynamics</li>
+                    <li>• Equipment lifecycle management strategies</li>
+                    <li>• Cross-industry process optimization</li>
+                    <li>• Integration of traditional and modern methodologies</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="text-center mt-6">
+                <button
+                  onClick={() => setEasterEggs(prev => ({ ...prev, technicalDepth: false }))}
+                  className="px-6 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                >
+                  Impressive! Close
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="container mx-auto px-4 py-16">
         {/* Header with Stats */}
         <motion.div
@@ -496,7 +581,11 @@ const Projects: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 
+            className="text-4xl md:text-5xl font-bold text-foreground mb-4 cursor-pointer hover:text-primary transition-colors"
+            onClick={handleTechnicalClick}
+            title="Click to reveal technical depth!"
+          >
             Manufacturing Innovation Projects
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
@@ -571,7 +660,11 @@ const Projects: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-primary/5 to-accent-1/5 border border-primary/20 rounded-2xl p-8">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
+              <h2 
+                className="text-3xl font-bold text-foreground mb-4 cursor-pointer hover:text-primary transition-colors"
+                onClick={handleMethodologyClick}
+                title="Click to reveal methodology insights!"
+              >
                 TPM Methodology Excellence
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
