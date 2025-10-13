@@ -1,13 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 interface ChipProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'accent' | 'muted';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
-  whileHover?: any;
-  whileTap?: any;
+  whileHover?: Variants | Record<string, any>;
+  whileTap?: Variants | Record<string, any>;
 }
 
 /**

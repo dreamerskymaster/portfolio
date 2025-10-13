@@ -1,15 +1,15 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants, Transition } from 'framer-motion';
 
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-  whileHover?: any;
-  whileTap?: any;
-  variants?: any;
-  initial?: any;
-  animate?: any;
-  transition?: any;
+  whileHover?: Variants | Record<string, any>;
+  whileTap?: Variants | Record<string, any>;
+  variants?: Variants;
+  initial?: boolean | string | number | Record<string, any>;
+  animate?: boolean | string | number | Record<string, any>;
+  transition?: Transition;
 }
 
 /**

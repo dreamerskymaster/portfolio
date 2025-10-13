@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
-  const toggleSearch = () => {
+  const toggleSearch = useCallback(() => {
     setIsSearchOpen(!isSearchOpen);
     if (!isSearchOpen) {
       // Focus search input when opening
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         if (searchInput) searchInput.focus();
       }, 100);
     }
-  };
+  }, [isSearchOpen]);
 
   // Close menu when route changes
   useEffect(() => {
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isSearchOpen]);
+  }, [toggleSearch]);
 
   return (
     <header className="sticky top-0 z-50 glass-nav border-b border-border">
