@@ -403,7 +403,7 @@ const About: React.FC = () => {
                       <div className="flex flex-wrap gap-2">
                         {phase.technologies.map((tech, techIdx) => (
                           <motion.span 
-                            key={tech} 
+                            key={typeof tech === 'string' ? tech : `tech-${techIdx}`} 
                             className="px-3 py-1 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-600 dark:text-emerald-400 text-xs rounded-full border border-emerald-500/30 hover:shadow-md transition-all duration-200"
                             whileHover={{ 
                               scale: 1.05,
@@ -668,8 +668,8 @@ const About: React.FC = () => {
                       </div>
                       <p className="text-muted-foreground text-sm mb-4">{phase.focus}</p>
                       <div className="flex flex-wrap gap-1">
-                        {phase.technologies.map((tech) => (
-                          <span key={tech} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/20">
+                        {phase.technologies.map((tech, techIdx) => (
+                          <span key={typeof tech === 'string' ? tech : `tech-${techIdx}`} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full border border-primary/20">
                             {tech}
                           </span>
                         ))}

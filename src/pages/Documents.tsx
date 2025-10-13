@@ -530,7 +530,7 @@ const Documents: React.FC = () => {
                     <div className="mt-4">
                       <span className="font-medium text-slate-700 dark:text-slate-300">Key Highlights:</span>
                       <ul className="mt-2 space-y-1">
-                        {selectedDocument.highlights.map((highlight, index) => (
+                        {selectedDocument.highlights.map((highlight: string, index: number) => (
                           <li key={index} className="text-slate-600 dark:text-slate-400 flex items-center">
                             <Target className="w-3 h-3 text-emerald-500 mr-2 flex-shrink-0" />
                             {highlight}

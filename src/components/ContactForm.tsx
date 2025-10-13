@@ -139,7 +139,7 @@ const ContactForm: React.FC = () => {
           {state.submitting ? 'Sending...' : 'Send Message'}
         </motion.button>
 
-        {state.errors && state.errors.length > 0 && (
+        {state.errors && Array.isArray(state.errors) && state.errors.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}

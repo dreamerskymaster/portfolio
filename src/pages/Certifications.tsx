@@ -332,7 +332,7 @@ const Certifications: React.FC = () => {
                                   <Calendar className="w-4 h-4" />
                                   <span>{cert.year}</span>
                                 </div>
-                                {cert.score && (
+                                {'score' in cert && cert.score && (
                                   <div className="flex items-center gap-1">
                                     <BarChart3 className="w-4 h-4" />
                                     <span className="font-medium text-accent-1">{cert.score}</span>
