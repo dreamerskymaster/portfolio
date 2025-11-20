@@ -61,15 +61,19 @@ jobs:
       run: npm run build
       
     - name: Check Vercel secrets
+      id: check-secrets
       run: |
         if [ -z "${{ secrets.VERCEL_TOKEN }}" ]; then
           echo "VERCEL_TOKEN not configured - skipping deployment"
           echo "To enable deployment, configure VERCEL_TOKEN, VERCEL_ORG_ID, and VERCEL_PROJECT_ID secrets"
-          exit 0
+          echo "has_secrets=false" >> $GITHUB_OUTPUT
+        else
+          echo "Vercel secrets configured - proceeding with deployment"
+          echo "has_secrets=true" >> $GITHUB_OUTPUT
         fi
-        echo "Vercel secrets configured - proceeding with deployment"
       
     - name: Deploy to Vercel
+      if: steps.check-secrets.outputs.has_secrets == 'true'
       uses: amondnet/vercel-action@v25
       with:
         vercel-token: ${{ secrets.VERCEL_TOKEN }}
