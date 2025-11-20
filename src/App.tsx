@@ -7,6 +7,8 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 // Components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Background from './components/Background';
+import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for code splitting
@@ -18,7 +20,7 @@ const Hobbies = lazy(() => import('./pages/Hobbies'));
 const Writings = lazy(() => import('./pages/Writings'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Certifications = lazy(() => import('./pages/Certifications'));
-const Documents = lazy(() => import('./pages/Documents'));
+const CareerArtifacts = lazy(() => import('./pages/CareerArtifacts'));
 const Resume = lazy(() => import('./pages/Resume'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -35,7 +37,9 @@ function App() {
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="App min-h-screen bg-bg transition-colors duration-300">
+          <ScrollToTop />
+          <Background />
+          <div className="flex flex-col min-h-screen bg-bg transition-colors duration-300">
             <Header />
             <main className="flex-1">
               <AnimatePresence mode="wait">
@@ -55,7 +59,7 @@ function App() {
                     <Route path="/hobbies" element={<Hobbies />} />
                     <Route path="/writings" element={<Writings />} />
                     <Route path="/certifications" element={<Certifications />} />
-                    <Route path="/documents" element={<Documents />} />
+                    <Route path="/career-artifacts" element={<CareerArtifacts />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/resume" element={<Resume />} />
                     <Route path="*" element={<NotFound />} />
@@ -67,8 +71,8 @@ function App() {
             <SpeedInsights />
           </div>
         </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
+      </HelmetProvider >
+    </ErrorBoundary >
   );
 }
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, 
-  Download, 
+import {
+  ArrowRight,
+  Download,
   Calendar,
   ExternalLink,
   Award,
@@ -23,7 +23,7 @@ import Button from '../components/ui/Button';
 const Home: React.FC = () => {
   // State for Namaskaram modal visibility
   const [showNamaskaramModal, setShowNamaskaramModal] = useState(false);
-  
+
   /**
    * Smooth scroll to a section by ID
    * @param sectionId - The ID of the section to scroll to
@@ -81,20 +81,20 @@ const Home: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="text-center"
           >
             {/* Profile Image */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="mb-8"
             >
               <div className="relative mx-auto w-32 h-32 md:w-40 md:h-40 mb-6">
-                <img 
-                  src="/profile-pic.jpg" 
+                <img
+                  src="/profile-pic.jpg"
                   alt={profile.name}
                   className="w-full h-full rounded-full object-cover shadow-xl border-4 border-primary/20"
                 />
@@ -105,7 +105,7 @@ const Home: React.FC = () => {
             </motion.div>
 
             {/* Main Heading */}
-            <motion.h1 
+            <motion.h1
               variants={itemVariants}
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6"
             >
@@ -124,11 +124,11 @@ const Home: React.FC = () => {
                 Namaskaram
                 <motion.span
                   className="absolute -top-2 -right-2 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  animate={{ 
+                  animate={{
                     rotate: [0, 10, -10, 0],
                     scale: [1, 1.2, 1]
                   }}
-                  transition={{ 
+                  transition={{
                     duration: 2,
                     repeat: Infinity,
                     ease: "easeInOut"
@@ -144,22 +144,22 @@ const Home: React.FC = () => {
             </motion.h1>
 
             {/* Subtitle */}
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed"
             >
               Manufacturing Engineer who delivered{' '}
-              <span className="font-semibold text-accent-1">₹9M in annual savings</span>{' '}
+              <span className="font-semibold text-accent-1">significant annual savings</span>{' '}
               through predictive maintenance, IoT automation, and lean optimization at{' '}
               <span className="font-semibold text-foreground">Hero MotoCorp</span>
             </motion.p>
 
             {/* Quick Stats */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-3xl mx-auto"
             >
-              <motion.div 
+              <motion.div
                 variants={achievementVariants}
                 whileHover={{ scale: 1.05 }}
                 className="glass-card rounded-xl p-4 shadow-lg hover:shadow-xl transition-all"
@@ -170,8 +170,8 @@ const Home: React.FC = () => {
                 <div className="text-2xl font-bold text-blue-600">83%</div>
                 <div className="text-sm text-white/80">Downtime Reduction</div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 variants={achievementVariants}
                 whileHover={{ scale: 1.05 }}
                 className="glass-card rounded-xl p-4 shadow-lg hover:shadow-xl transition-all"
@@ -179,11 +179,11 @@ const Home: React.FC = () => {
                 <div className="flex items-center justify-center mb-2">
                   <Target className="w-6 h-6 text-green-500" />
                 </div>
-                <div className="text-2xl font-bold text-green-600">₹9M</div>
+                <div className="text-2xl font-bold text-green-600">High Impact</div>
                 <div className="text-sm text-white/80">Annual Savings</div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 variants={achievementVariants}
                 whileHover={{ scale: 1.05 }}
                 className="glass-card rounded-xl p-4 shadow-lg hover:shadow-xl transition-all"
@@ -194,8 +194,8 @@ const Home: React.FC = () => {
                 <div className="text-2xl font-bold text-purple-600">20%</div>
                 <div className="text-sm text-white/80">Cycle Time Reduction</div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 variants={achievementVariants}
                 whileHover={{ scale: 1.05 }}
                 className="glass-card rounded-xl p-4 shadow-lg hover:shadow-xl transition-all"
@@ -209,7 +209,7 @@ const Home: React.FC = () => {
             </motion.div>
 
             {/* Location and Availability */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-muted-foreground"
             >
@@ -225,7 +225,7 @@ const Home: React.FC = () => {
             </motion.div>
 
             {/* Call-to-Action Buttons */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
             >
@@ -259,7 +259,7 @@ const Home: React.FC = () => {
             </motion.div>
 
             {/* Newsletter Signup */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="mb-12"
             >
@@ -306,7 +306,7 @@ const Home: React.FC = () => {
               Manufacturing Excellence Through Innovation
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Bridging smart manufacturing, supply chain optimization, and AI-driven automation 
+              Bridging smart manufacturing, supply chain optimization, and AI-driven automation
               for Industry 4.0 transformation
             </p>
           </motion.div>
@@ -319,7 +319,7 @@ const Home: React.FC = () => {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
           >
             {/* Manufacturing Excellence */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -333,7 +333,7 @@ const Home: React.FC = () => {
                 Manufacturing Excellence
               </h3>
               <p className="text-muted-foreground mb-4">
-                TPM Special Award recipient with expertise in Kaizen, lean methodology, 
+                TPM Special Award recipient with expertise in Kaizen, lean methodology,
                 and predictive maintenance systems.
               </p>
               <ul className="text-sm text-muted-foreground space-y-1">
@@ -344,7 +344,7 @@ const Home: React.FC = () => {
             </motion.div>
 
             {/* Automation & IoT */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -358,7 +358,7 @@ const Home: React.FC = () => {
                 Automation & IoT
               </h3>
               <p className="text-muted-foreground mb-4">
-                PLC/HMI programming, IoT dashboard development, and smart manufacturing 
+                PLC/HMI programming, IoT dashboard development, and smart manufacturing
                 cell implementation.
               </p>
               <ul className="text-sm text-muted-foreground space-y-1">
@@ -369,7 +369,7 @@ const Home: React.FC = () => {
             </motion.div>
 
             {/* AI & Innovation */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -383,7 +383,7 @@ const Home: React.FC = () => {
                 AI & Innovation
               </h3>
               <p className="text-muted-foreground mb-4">
-                Developing Mano-AI for CNC troubleshooting and implementing blockchain 
+                Developing Mano-AI for CNC troubleshooting and implementing blockchain
                 solutions for supply chain transparency.
               </p>
               <ul className="text-sm text-muted-foreground space-y-1">
@@ -421,7 +421,7 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12"
           >
-            {profile.projects.slice(0, 2).map((project, index) => (
+            {profile.projects?.slice(0, 2).map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -437,7 +437,7 @@ const Home: React.FC = () => {
                   {project.summary}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.slice(0, 3).map((tech) => (
+                  {(project.technologies?.slice(0, 3) ?? []).map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
                       {tech}
                     </span>
@@ -482,7 +482,7 @@ const Home: React.FC = () => {
               Let's Transform Your Manufacturing Operations
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Ready to optimize your manufacturing processes, implement predictive maintenance, 
+              Ready to optimize your manufacturing processes, implement predictive maintenance,
               or explore AI-driven automation solutions? Let's discuss your project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -528,11 +528,11 @@ const Home: React.FC = () => {
                 <div className="flex items-center space-x-3">
                   <motion.div
                     className="text-4xl"
-                    animate={{ 
+                    animate={{
                       rotate: [0, 10, -10, 0],
                       scale: [1, 1.1, 1]
                     }}
-                    transition={{ 
+                    transition={{
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut"
@@ -567,13 +567,13 @@ const Home: React.FC = () => {
 
                 <div className="prose prose-lg dark:prose-invert max-w-none">
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                    <strong>Namaskaram</strong> is a traditional Indian greeting that means 
-                    <em className="text-emerald-600 dark:text-emerald-400"> "I bow to the divine in you"</em> - 
+                    <strong>Namaskaram</strong> is a traditional Indian greeting that means
+                    <em className="text-emerald-600 dark:text-emerald-400"> "I bow to the divine in you"</em> -
                     a respectful way to acknowledge the sacredness in every person.
                   </p>
-                  
+
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                    It's more than just 'hello' - it's a recognition of the divine spark within each of us! 
+                    It's more than just 'hello' - it's a recognition of the divine spark within each of us!
                     This greeting embodies the principle of seeing the sacred in everyone we meet.
                   </p>
 
@@ -593,14 +593,14 @@ const Home: React.FC = () => {
 
               {/* Footer */}
               <div className="flex justify-end mt-8">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setShowNamaskaramModal(false)}
-                className="px-6 py-2 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors"
-              >
-                Ajith Says Namaskaram! 🙏
-              </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setShowNamaskaramModal(false)}
+                  className="px-6 py-2 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors"
+                >
+                  Ajith Says Namaskaram! 🙏
+                </motion.button>
               </div>
             </motion.div>
           </motion.div>

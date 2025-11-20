@@ -5,9 +5,7 @@ year: 2024
 role: "Lead Engineer & Researcher"
 tech: ["IoT", "Simio", "MATLAB", "Python", "Predictive Analytics", "Smart Manufacturing"]
 summary: "Developed IoT-enabled Smart Cell Dashboard with Simio simulation modeling, achieving 20% cycle time reduction and 2000 units WIP increase through advanced manufacturing optimization."
-links:
-  demo: "https://demo.manufacturing-optimization.com"
-  repo: "https://github.com/ajithsrikanth/manufacturing-optimization"
+
 images: ["/content/media/iot-smart-cell-1.jpg", "/content/media/simio-simulation-2.jpg"]
 ---
 

@@ -12,90 +12,50 @@ const Footer: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Personal Interests', href: '/hobbies' },
     { name: 'Writings', href: '/writings' },
-    { name: 'Certifications', href: '/certifications' },
-    { name: 'Documents', href: '/documents' },
     { name: 'Contact', href: '/contact' }
   ];
 
   return (
-    <footer className="glass-nav border-t border-border">
+    <footer className="relative bg-background/50 backdrop-blur-lg border-t border-border/50 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent-1 rounded-lg flex items-center justify-center text-primary-contrast font-bold text-lg overflow-hidden">
-                <img 
-                  src="/ManuFX.png" 
-                  alt="ManuFX Logo" 
-                  className="w-full h-full object-contain p-1"
-                  onError={(e) => {
-                    // Fallback to initials if image fails to load
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    const parent = target.parentElement;
-                    if (parent) {
-                      parent.innerHTML = 'AS';
-                      parent.className = 'w-10 h-10 bg-gradient-to-br from-primary to-accent-1 rounded-lg flex items-center justify-center text-primary-contrast font-bold text-lg';
-                    }
-                  }}
-                />
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent-1 rounded-xl flex items-center justify-center text-primary-contrast font-bold text-lg shadow-lg shadow-primary/20">
+                <span className="text-white">AS</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-foreground">{profile.name}</span>
-                <span className="text-sm text-muted-foreground font-medium">ManuFX</span>
+                <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+                  {profile.name}
+                </span>
+                <span className="text-xs text-muted-foreground font-medium tracking-wider uppercase">
+                  ManuFX Portfolio
+                </span>
               </div>
             </div>
-            <p className="text-muted-foreground mb-6 max-w-md">
-              Bridging Smart Manufacturing, Supply Chain Optimization, and AI-Driven Automation for Industry 4.0 Transformation
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+              Bridging Smart Manufacturing, Supply Chain Optimization, and AI-Driven Automation.
             </p>
-            <div className="flex space-x-4">
-              <motion.a
-                href={profile.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors duration-200"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                title="GitHub"
-              >
-                <Github className="w-5 h-5 text-foreground" />
-              </motion.a>
-              <motion.a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors duration-200"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                title="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5 text-foreground" />
-              </motion.a>
-              <motion.a
-                href={`mailto:${profile.email}`}
-                className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors duration-200"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                title="Email"
-              >
-                <Mail className="w-5 h-5 text-foreground" />
-              </motion.a>
+            <div className="flex space-x-3 pt-2">
+              <SocialLink href={profile.github} icon={<Github className="w-4 h-4" />} label="GitHub" />
+              <SocialLink href={profile.linkedin} icon={<Linkedin className="w-4 h-4" />} label="LinkedIn" />
+              <SocialLink href={`mailto:${profile.email}`} icon={<Mail className="w-4 h-4" />} label="Email" />
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h3>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">Navigation</h3>
             <ul className="space-y-2">
               {navigation.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm flex items-center group"
                   >
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/0 group-hover:bg-primary mr-2 transition-all duration-200" />
                     {item.name}
                   </Link>
                 </li>
@@ -103,14 +63,20 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact/Status */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Contact</h3>
-            <div className="space-y-2 text-muted-foreground">
-              <p>{profile.location}</p>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">Status</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span>Open to opportunities</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                {profile.location}
+              </p>
               <a
                 href={`mailto:${profile.email}`}
-                className="hover:text-foreground transition-colors duration-200"
+                className="text-sm text-primary hover:text-primary/80 transition-colors inline-block border-b border-primary/20 hover:border-primary"
               >
                 {profile.email}
               </a>
@@ -119,30 +85,35 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
+        <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-muted-foreground">
             © {currentYear} {profile.name}. All rights reserved.
           </p>
-          <div className="text-muted-foreground text-sm flex flex-col items-center md:items-end mt-2 md:mt-0">
-            <p className="flex items-center mb-1">
-              Made with <Heart className="w-4 h-4 mx-1 text-accent-2" /> using
-            </p>
-            <div className="flex flex-wrap justify-center md:justify-end gap-2 text-xs">
-              <span className="px-2 py-1 bg-slate-700 rounded-full">React</span>
-              <span className="px-2 py-1 bg-slate-700 rounded-full">TypeScript</span>
-              <span className="px-2 py-1 bg-slate-700 rounded-full">Vite</span>
-              <span className="px-2 py-1 bg-slate-700 rounded-full">Tailwind CSS</span>
-              <span className="px-2 py-1 bg-slate-700 rounded-full">Framer Motion</span>
-              <span className="px-2 py-1 bg-slate-700 rounded-full">Vercel</span>
-              <span className="px-2 py-1 bg-slate-700 rounded-full">Cursor</span>
-              <span className="px-2 py-1 bg-slate-700 rounded-full">Claude</span>
-            </div>
+
+          <div className="flex items-center space-x-4 text-xs text-muted-foreground">
+            <span className="flex items-center">
+              Made with <Heart className="w-3 h-3 mx-1 text-red-500 fill-red-500" /> using React & Tailwind
+            </span>
           </div>
         </div>
       </div>
     </footer>
   );
 };
+
+const SocialLink = ({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) => (
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-2 bg-muted/50 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors duration-200 border border-transparent hover:border-primary/20"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    title={label}
+  >
+    {icon}
+  </motion.a>
+);
 
 export default Footer;
 

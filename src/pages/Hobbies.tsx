@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Play, 
-  Pause, 
-  Volume2, 
-  VolumeX, 
-  Heart, 
-  Star, 
-  Camera, 
-  Video, 
-  Music, 
-  Utensils, 
-  Plane, 
-  Bike, 
-  Mountain, 
-  Tv, 
+import {
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+  Heart,
+  Star,
+  Camera,
+  Video,
+  Music,
+  Utensils,
+  Plane,
+  Bike,
+  Mountain,
+  Tv,
   Shuffle,
   Sparkles,
   Zap,
@@ -80,8 +80,8 @@ const Hobbies: React.FC = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
@@ -92,8 +92,8 @@ const Hobbies: React.FC = () => {
 
   const mediaVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
       transition: {
         type: "spring",
@@ -116,18 +116,18 @@ const Hobbies: React.FC = () => {
             {[...Array(20)].map((_, i) => (
               <motion.div
                 key={i}
-                initial={{ 
-                  x: Math.random() * window.innerWidth, 
+                initial={{
+                  x: Math.random() * window.innerWidth,
                   y: Math.random() * window.innerHeight,
                   scale: 0,
                   rotate: 0
                 }}
-                animate={{ 
+                animate={{
                   scale: [0, 1, 0],
                   rotate: 360,
                   y: Math.random() * window.innerHeight - 100
                 }}
-                transition={{ 
+                transition={{
                   duration: 2,
                   delay: i * 0.1,
                   ease: "easeOut"
@@ -150,20 +150,32 @@ const Hobbies: React.FC = () => {
           className="text-center mb-16"
         >
           <div className="max-w-4xl mx-auto">
-            <motion.h1 
+            <motion.h1
               className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-white mb-6"
               whileHover={{ scale: 1.02 }}
             >
               Personal Interests
             </motion.h1>
-            <motion.p 
-              className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed"
+            <motion.p
+              className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6"
               variants={itemVariants}
             >
-              Beyond my professional work, I believe in maintaining a well-rounded lifestyle. 
-              These personal interests help me stay creative, maintain work-life balance, and 
+              Beyond my professional work, I believe in maintaining a well-rounded lifestyle.
+              These personal interests help me stay creative, maintain work-life balance, and
               bring fresh perspectives to my engineering solutions.
             </motion.p>
+
+            <motion.div variants={itemVariants}>
+              <a
+                href="https://instagram.com/ajith_srikanth"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-sm text-slate-500 hover:text-pink-600 transition-colors duration-300"
+              >
+                <Camera className="w-4 h-4" />
+                <span>@ajith_srikanth</span>
+              </a>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -178,7 +190,7 @@ const Hobbies: React.FC = () => {
             <motion.div
               key={hobby.id}
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.02,
                 y: -5
               }}
@@ -206,8 +218,8 @@ const Hobbies: React.FC = () => {
                     }}
                     className="text-slate-400 hover:text-red-500 transition-colors"
                   >
-                    <Heart 
-                      className={`w-5 h-5 ${likedHobbies.has(hobby.id) ? 'fill-red-500 text-red-500' : ''}`} 
+                    <Heart
+                      className={`w-5 h-5 ${likedHobbies.has(hobby.id) ? 'fill-red-500 text-red-500' : ''}`}
                     />
                   </motion.button>
                 </div>
@@ -270,13 +282,13 @@ const Hobbies: React.FC = () => {
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
               onClick={() => setSelectedHobby(null)}
             >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-700"
-              onClick={(e) => e.stopPropagation()}
-            >
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-700"
+                onClick={(e) => e.stopPropagation()}
+              >
                 {/* Modal Header */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
@@ -386,7 +398,7 @@ const Hobbies: React.FC = () => {
               Interested in learning more about my personal interests?
             </h3>
             <p className="text-slate-600 dark:text-slate-300 mb-6">
-              I believe that diverse personal interests contribute to professional growth and innovation. 
+              I believe that diverse personal interests contribute to professional growth and innovation.
               Let's connect and discuss how these experiences can bring value to your organization!
             </p>
             <motion.button

@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node node_modules/vite/bin/vite.js",
-    "build": "node scripts/build-profile.mjs && npx vite build",
-    "build:profile": "node scripts/build-profile.mjs",
+    "dev": "node scripts/generate-data.mjs && node node_modules/vite/bin/vite.js",
+    "build": "node scripts/generate-data.mjs && npx vite build",
+    "build:profile": "node scripts/generate-data.mjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 50",
     "preview": "vite preview"
   },

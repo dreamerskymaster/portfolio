@@ -90,8 +90,6 @@ export const hobbies: Hobby[] = [
     color: 'from-yellow-500 to-orange-600',
     media: [
       { type: 'image', src: '/hobbies/CAB3B256-F15D-4059-AF1F-C3EEFF4E5A16.jpg', alt: 'Biking adventure', caption: 'Mountain trail ride' },
-      { type: 'image', src: '/hobbies/IMG_1651.JPG', alt: 'Biking adventure', caption: 'City cycling' },
-      { type: 'image', src: '/hobbies/IMG_1963.JPG', alt: 'Biking adventure', caption: 'Group ride' },
       { type: 'video', src: '/hobbies/IMG_2425.MP4', alt: 'Biking video', caption: 'Downhill adventure' },
       { type: 'video', src: '/hobbies/IMG_2431.MP4', alt: 'Biking video', caption: 'Scenic route' }
     ],
@@ -112,8 +110,6 @@ export const hobbies: Hobby[] = [
     color: 'from-emerald-500 to-green-600',
     media: [
       { type: 'image', src: '/hobbies/IMG_9627.JPG', alt: 'Hiking trail', caption: 'Mountain peak view' },
-      { type: 'image', src: '/hobbies/IMG_1651.JPG', alt: 'Hiking trail', caption: 'Forest path' },
-      { type: 'image', src: '/hobbies/IMG_1963.JPG', alt: 'Hiking trail', caption: 'Summit achievement' },
       { type: 'video', src: '/hobbies/IMG_2572.MP4', alt: 'Hiking video', caption: 'Trail adventure' },
       { type: 'video', src: '/hobbies/IMG_2639.MOV', alt: 'Hiking video', caption: 'Nature exploration' }
     ],
@@ -134,8 +130,6 @@ export const hobbies: Hobby[] = [
     color: 'from-purple-500 to-pink-600',
     media: [
       { type: 'image', src: '/hobbies/Snapchat-662689688.jpg', alt: 'Music moment', caption: 'Concert experience' },
-      { type: 'image', src: '/hobbies/IMG_1651.JPG', alt: 'Music moment', caption: 'Music discovery' },
-      { type: 'image', src: '/hobbies/IMG_1963.JPG', alt: 'Music moment', caption: 'Headphone session' },
       { type: 'video', src: '/hobbies/IMG_2797.MP4', alt: 'Music video', caption: 'Live performance' },
       { type: 'video', src: '/hobbies/IMG_0195.MOV', alt: 'Music video', caption: 'Musical exploration' }
     ],
@@ -155,8 +149,6 @@ export const hobbies: Hobby[] = [
     icon: '🎬',
     color: 'from-indigo-500 to-purple-600',
     media: [
-      { type: 'image', src: '/hobbies/IMG_1651.JPG', alt: 'Entertainment setup', caption: 'Movie night setup' },
-      { type: 'image', src: '/hobbies/IMG_1963.JPG', alt: 'Entertainment setup', caption: 'Binge-watching session' },
       { type: 'image', src: '/hobbies/IMG_2481.jpg', alt: 'Entertainment setup', caption: 'Series marathon' },
       { type: 'video', src: '/hobbies/IMG_2481.mov', alt: 'Entertainment video', caption: 'Cinema experience' },
       { type: 'video', src: '/hobbies/VID20250628163928.mp4', alt: 'Entertainment video', caption: 'Documentary watching' }

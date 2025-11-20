@@ -92,7 +92,7 @@ export const timeline: TimelineItem[] = [
       'Implemented IoT-enabled Smart Cell Dashboard with Limble CMMS, gaining 11% availability improvement',
       'Reduced downtime by 83% through predictive maintenance implementation',
       'Achieved ₹28 per EV cost reduction (~$0.5/vehicle) through tool cost optimization',
-      'Contributed to ₹9M annual savings through supply chain efficiency and lean initiatives',
+      'Contributed to significant annual savings through supply chain efficiency and lean initiatives',
       'Optimized fixtures and jigs for Vida Electric Vehicle manufacturing',
       'Digitized SAP MRP for demand forecasting and inventory optimization'
     ]

@@ -4,14 +4,14 @@
 > Bridging Smart Manufacturing, Supply Chain Optimization, and AI-Driven Automation for Industry 4.0 Transformation
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-manufx.vercel.app-00D4AA?style=for-the-badge&logo=vercel)](https://manufx.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-skuller--007-181717?style=for-the-badge&logo=github)](https://github.com/skuller-007/portfolio)
+[![GitHub](https://img.shields.io/badge/GitHub-dreamerskymaster-181717?style=for-the-badge&logo=github)](https://github.com/dreamerskymaster)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ajith%20Srikanth-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/as31)
 [![Email](https://img.shields.io/badge/Email-ajithsrikanth.f@northeastern.edu-D14836?style=for-the-badge&logo=gmail)](mailto:ajithsrikanth.f@northeastern.edu)
 
 ## 🚀 Live Demo
 
 **🌐 Portfolio Website**: [https://manufx.vercel.app](https://manufx.vercel.app)  
-**📁 GitHub Repository**: [https://github.com/skuller-007/portfolio](https://github.com/skuller-007/portfolio)
+**📁 GitHub Repository**: [https://github.com/dreamerskymaster/portfolio](https://github.com/dreamerskymaster/portfolio)
 
 ## 🔄 Automatic Deployment
 
@@ -146,7 +146,7 @@ This portfolio represents **Ajith Srikanth**, an Advanced Manufacturing Engineer
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/skuller-007/portfolio.git
+   git clone https://github.com/dreamerskymaster/portfolio.git
    cd portfolio
    ```
 
@@ -312,7 +312,7 @@ Advanced Manufacturing Engineer & AI Innovation Specialist
 
 - **📧 Email**: [ajithsrikanth.f@northeastern.edu](mailto:ajithsrikanth.f@northeastern.edu)
 - **💼 LinkedIn**: [linkedin.com/in/as31](https://linkedin.com/in/as31)
-- **🐙 GitHub**: [github.com/skuller-007](https://github.com/skuller-007)
+- **🐙 GitHub**: [github.com/dreamerskymaster](https://github.com/dreamerskymaster)
 - **🌐 Portfolio**: [manufx.vercel.app](https://manufx.vercel.app)
 
 ## 🙏 Acknowledgments

@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FileText, 
-  Search, 
-  Filter, 
+import {
+  FileText,
+  Search,
+  Filter,
   Calendar,
   Download,
   ExternalLink,
@@ -23,12 +23,12 @@ import {
 } from 'lucide-react';
 import { documents, getDocumentsByType, getDocumentsByCategory } from '../data/documents';
 
-const Documents: React.FC = () => {
+const CareerArtifacts: React.FC = () => {
   // Search and filter states
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedType, setSelectedType] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  
+
   // Document viewer modal states
   const [selectedDocument, setSelectedDocument] = useState<any>(null);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
@@ -227,13 +227,13 @@ const Documents: React.FC = () => {
             {filteredDocuments.map((doc, index) => {
               const TypeIcon = getTypeIcon(doc.type);
               const CategoryIcon = getCategoryIcon(doc.category);
-              
+
               return (
                 <motion.div
                   key={doc.id}
                   variants={itemVariants}
                   layout
-                  whileHover={{ 
+                  whileHover={{
                     y: -4,
                     transition: { duration: 0.2 }
                   }}
@@ -325,7 +325,7 @@ const Documents: React.FC = () => {
                         </div>
                       )}
                     </div>
-                    
+
                     <motion.a
                       href={doc.filePath}
                       target="_blank"
@@ -549,4 +549,4 @@ const Documents: React.FC = () => {
   );
 };
 
-export default Documents;
+export default CareerArtifacts;

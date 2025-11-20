@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import TechnicalTooltip from '../components/TechnicalTooltip';
-import { 
+import {
   GraduationCap,
   Users,
   Award,
@@ -22,7 +22,7 @@ import {
 const About: React.FC = () => {
   const professionalStatus = {
     workAuthorization: "F-1 Student Visa with OPT and STEM OPT eligibility until 2029",
-    availability: "Full-time opportunities from December 2026, Pre-OPT available on discussion",
+    availability: "Open to work full time from Dec 2026 and Pre-OPT if required from May 2026. Stem OPT valid till 2029.",
     location: "Boston, MA with relocation flexibility nationwide",
     clearanceEligible: "Eligible for security clearance processes if required"
   };
@@ -47,7 +47,7 @@ const About: React.FC = () => {
     leadership: {
       title: "Teaching Assistant",
       company: "LEAD360 Program",
-      period: "January 2025 - March 2025", 
+      period: "January 2025 - March 2025",
       focus: "Developing leadership skills through interactive learning and mentorship",
       icon: Users
     }
@@ -71,7 +71,7 @@ const About: React.FC = () => {
     },
     {
       phase: "Industrial Application",
-      period: "2022-2024", 
+      period: "2022-2024",
       focus: "Manufacturing Excellence & Team Leadership at Hero MotoCorp",
       achievements: [
         "Led 25+ member cross-functional teams across multiple manufacturing plants",
@@ -85,13 +85,13 @@ const About: React.FC = () => {
         </TechnicalTooltip>,
         "Generated ₹9M+ annual savings through supply chain efficiency initiatives"
       ],
-      technologies: ["SAP", "SCADA", "IoT Sensors", "Automation Systems", 
+      technologies: ["SAP", "SCADA", "IoT Sensors", "Automation Systems",
         <TechnicalTooltip term="TPM" definition="Total Productive Maintenance - A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Like regularly maintaining your car to prevent breakdowns - oil changes, tire rotations, and check-ups keep it running smoothly." industry="Manufacturing" icon="🔧">
           TPM
-        </TechnicalTooltip>, 
+        </TechnicalTooltip>,
         <TechnicalTooltip term="Six Sigma" definition="A data-driven methodology for eliminating defects and improving quality in processes." example="Like ensuring 99.99966% of your products are perfect - if you made 1 million products, only 3.4 would be defective." industry="Quality Management" icon="📊">
           Six Sigma
-        </TechnicalTooltip>, 
+        </TechnicalTooltip>,
         <TechnicalTooltip term="Lean Manufacturing" definition="A methodology focused on minimizing waste while maximizing productivity and value for customers." example="Like organizing your kitchen - removing unused items, arranging tools efficiently, and having everything you need within reach." industry="Manufacturing" icon="♻️">
           Lean Manufacturing
         </TechnicalTooltip>
@@ -174,7 +174,7 @@ const About: React.FC = () => {
       impact: "Demonstrates practical AI implementation that delivers value without compromising ethics"
     },
     {
-      principle: "Cross-Industry Innovation", 
+      principle: "Cross-Industry Innovation",
       description: "Successfully applied automotive manufacturing expertise to recycling solutions, bringing fresh approaches to traditional industry challenges",
       impact: "Shows ability to transfer knowledge and adapt methodologies across different sectors"
     },
@@ -199,10 +199,10 @@ const About: React.FC = () => {
             Technical Journey
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            From mechatronics foundations to AI-driven manufacturing solutions - 
+            From mechatronics foundations to AI-driven manufacturing solutions -
             a continuous evolution in engineering excellence
           </p>
-          
+
           {/* Availability Status */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -211,11 +211,11 @@ const About: React.FC = () => {
             className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 rounded-full px-6 py-3 mb-8"
           >
             <motion.div
-              animate={{ 
+              animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.7, 1, 0.7]
               }}
-              transition={{ 
+              transition={{
                 duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -227,7 +227,7 @@ const About: React.FC = () => {
             </span>
             <motion.span
               animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ 
+              transition={{
                 duration: 2,
                 repeat: Infinity,
                 delay: 1
@@ -292,9 +292,9 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <motion.h2 
+          <motion.h2
             className="text-2xl font-bold text-foreground mb-8 text-center"
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               textShadow: "0 0 20px rgba(16, 185, 129, 0.3)"
             }}
@@ -302,11 +302,11 @@ const About: React.FC = () => {
             Technical Evolution
             <motion.span
               className="ml-2"
-              animate={{ 
+              animate={{
                 rotate: [0, 10, -10, 0],
                 scale: [1, 1.2, 1]
               }}
-              transition={{ 
+              transition={{
                 duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -318,7 +318,7 @@ const About: React.FC = () => {
           <div className="relative">
             {/* Enhanced Timeline Line with Gradient */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-emerald-500 via-cyan-500 to-purple-500 hidden lg:block rounded-full shadow-lg"></div>
-            
+
             <div className="space-y-8">
               {technicalEvolution.map((phase, index) => {
                 const IconComponent = phase.icon;
@@ -329,14 +329,13 @@ const About: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.2 }}
                     viewport={{ once: true }}
-                    className={`flex flex-col lg:flex-row items-center gap-8 ${
-                      index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                    }`}
+                    className={`flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                      }`}
                   >
                     {/* Content Card with Glassmorphic Effect */}
-                    <motion.div 
+                    <motion.div
                       className="flex-1 glass-card border border-white/20 rounded-2xl p-6 max-w-lg backdrop-blur-sm"
-                      whileHover={{ 
+                      whileHover={{
                         scale: 1.02,
                         boxShadow: "0 20px 40px rgba(16, 185, 129, 0.1)"
                       }}
@@ -345,9 +344,9 @@ const About: React.FC = () => {
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
                       <div className="flex items-center gap-3 mb-4">
-                        <motion.div 
+                        <motion.div
                           className={`w-12 h-12 ${phase.color} rounded-xl flex items-center justify-center shadow-lg`}
-                          whileHover={{ 
+                          whileHover={{
                             rotate: 360,
                             scale: 1.1
                           }}
@@ -362,11 +361,11 @@ const About: React.FC = () => {
                         {/* Easter egg sparkle */}
                         <motion.div
                           className="ml-auto"
-                          animate={{ 
+                          animate={{
                             rotate: [0, 180, 360],
                             scale: [1, 1.2, 1]
                           }}
-                          transition={{ 
+                          transition={{
                             duration: 4,
                             repeat: Infinity,
                             delay: index * 0.5
@@ -378,17 +377,17 @@ const About: React.FC = () => {
                       <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">{phase.focus}</p>
                       <div className="space-y-3 mb-6">
                         {phase.achievements.map((achievement, idx) => (
-                          <motion.div 
-                            key={idx} 
+                          <motion.div
+                            key={idx}
                             className="flex items-start gap-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
                             whileHover={{ x: 5 }}
                           >
                             <motion.div
-                              animate={{ 
+                              animate={{
                                 scale: [1, 1.2, 1],
                                 opacity: [0.7, 1, 0.7]
                               }}
-                              transition={{ 
+                              transition={{
                                 duration: 2,
                                 repeat: Infinity,
                                 delay: idx * 0.2
@@ -402,10 +401,10 @@ const About: React.FC = () => {
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {phase.technologies.map((tech, techIdx) => (
-                          <motion.span 
-                            key={typeof tech === 'string' ? tech : `tech-${techIdx}`} 
+                          <motion.span
+                            key={typeof tech === 'string' ? tech : `tech-${techIdx}`}
                             className="px-3 py-1 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-600 dark:text-emerald-400 text-xs rounded-full border border-emerald-500/30 hover:shadow-md transition-all duration-200"
-                            whileHover={{ 
+                            whileHover={{
                               scale: 1.05,
                               boxShadow: "0 4px 12px rgba(16, 185, 129, 0.2)"
                             }}
@@ -420,13 +419,13 @@ const About: React.FC = () => {
                     </motion.div>
 
                     {/* Enhanced Timeline Node */}
-                    <motion.div 
+                    <motion.div
                       className="hidden lg:block w-8 h-8 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-full border-4 border-white dark:border-slate-800 shadow-xl z-10"
-                      whileHover={{ 
+                      whileHover={{
                         scale: 1.3,
                         boxShadow: "0 0 20px rgba(16, 185, 129, 0.5)"
                       }}
-                      animate={{ 
+                      animate={{
                         scale: [1, 1.1, 1],
                         boxShadow: [
                           "0 0 0px rgba(16, 185, 129, 0)",
@@ -434,7 +433,7 @@ const About: React.FC = () => {
                           "0 0 0px rgba(16, 185, 129, 0)"
                         ]
                       }}
-                      transition={{ 
+                      transition={{
                         duration: 3,
                         repeat: Infinity,
                         ease: "easeInOut"
@@ -443,18 +442,18 @@ const About: React.FC = () => {
                       <motion.div
                         className="w-full h-full rounded-full bg-white/20 flex items-center justify-center"
                         animate={{ rotate: 360 }}
-                        transition={{ 
+                        transition={{
                           duration: 8,
                           repeat: Infinity,
                           ease: "linear"
                         }}
                       >
                         <motion.span
-                          animate={{ 
+                          animate={{
                             scale: [1, 1.2, 1],
                             opacity: [0.7, 1, 0.7]
                           }}
-                          transition={{ 
+                          transition={{
                             duration: 2,
                             repeat: Infinity,
                             delay: index * 0.3
@@ -764,8 +763,8 @@ const About: React.FC = () => {
             </h3>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Manufacturing isn't just about machines and processes - it's about people, systems, and continuous evolution. 
-                My approach combines the systematic rigor learned from managing legacy systems in India with the 
+                Manufacturing isn't just about machines and processes - it's about people, systems, and continuous evolution.
+                My approach combines the systematic rigor learned from managing legacy systems in India with the
                 innovation opportunities available in the US manufacturing landscape.
               </p>
               <div className="grid md:grid-cols-3 gap-6">

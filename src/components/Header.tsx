@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
+import {
+  Menu,
+  X,
   Search,
   Github,
   Linkedin,
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
     { name: 'Personal Interests', href: '/hobbies' },
     { name: 'Writings', href: '/writings' },
     { name: 'Certifications', href: '/certifications' },
-    { name: 'Documents', href: '/documents' },
+    { name: 'Career Artifacts', href: '/career-artifacts' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -66,16 +66,16 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             <motion.div
               className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-emerald-500/25 transition-all duration-300 overflow-hidden"
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 rotate: [0, -5, 5, 0],
                 boxShadow: "0 10px 25px rgba(16, 185, 129, 0.3)"
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <img 
-                src="/ManuFX.png" 
-                alt="ManuFX Logo" 
+              <img
+                src="/ManuFX.png"
+                alt="ManuFX Logo"
                 className="w-full h-full object-contain p-1"
                 onError={(e) => {
                   // Fallback to initials if image fails to load
@@ -90,13 +90,13 @@ const Header: React.FC = () => {
               />
             </motion.div>
             <div className="flex flex-col">
-              <motion.span 
+              <motion.span
                 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300"
                 whileHover={{ x: 2 }}
               >
                 {profile.name}
               </motion.span>
-              <motion.span 
+              <motion.span
                 className="text-xs text-slate-500 dark:text-slate-400 font-medium"
                 whileHover={{ x: 2 }}
               >
@@ -116,14 +116,13 @@ const Header: React.FC = () => {
               >
                 <Link
                   to={item.href}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
-                    location.pathname === item.href
-                      ? 'text-white bg-gradient-to-r from-emerald-500 to-cyan-500 shadow-lg'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-50 dark:hover:bg-slate-800/50'
-                  }`}
+                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${location.pathname === item.href
+                    ? 'text-white bg-gradient-to-r from-emerald-500 to-cyan-500 shadow-lg'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-50 dark:hover:bg-slate-800/50'
+                    }`}
                 >
                   <motion.span
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.05,
                       textShadow: location.pathname === item.href ? "0 0 8px rgba(16, 185, 129, 0.3)" : "0 0 4px rgba(16, 185, 129, 0.2)"
                     }}
@@ -141,11 +140,11 @@ const Header: React.FC = () => {
                   {/* Easter egg sparkle on hover */}
                   <motion.div
                     className="absolute -top-1 -right-1 opacity-0 group-hover:opacity-100"
-                    animate={{ 
+                    animate={{
                       rotate: [0, 180, 360],
                       scale: [0, 1, 0]
                     }}
-                    transition={{ 
+                    transition={{
                       duration: 0.6,
                       repeat: Infinity,
                       repeatDelay: 2
@@ -249,11 +248,10 @@ const Header: React.FC = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`block px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-                      location.pathname === item.href
-                        ? 'bg-primary/10 text-primary'
-                        : 'text-foreground hover:bg-muted'
-                    }`}
+                    className={`block px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${location.pathname === item.href
+                      ? 'bg-primary/10 text-primary'
+                      : 'text-foreground hover:bg-muted'
+                      }`}
                   >
                     {item.name}
                   </Link>

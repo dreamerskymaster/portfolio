@@ -1,0 +1,57 @@
+{
+    "name": "Ajith Srikanth",
+    "title": "Advanced Manufacturing Engineer & AI Innovation Specialist",
+    "location": "Boston, MA | Chennai, India",
+    "email": "ajithsrikanth.f@northeastern.edu",
+    "linkedin": "https://linkedin.com/in/as31",
+    "github": "https://github.com/dreamerskymaster",
+    "skills": {
+        "Manufacturing Excellence": [
+            "TPM",
+            "Kaizen",
+            "DMS",
+            "Lean Methodology",
+            "OEE optimization"
+        ],
+        "Automation & Systems": [
+            "PLC/HMI Programming",
+            "Siemens TIA",
+            "GX Works",
+            "Ladder Logic"
+        ],
+        "Mechatronics & R&D": [
+            "Embedded Systems",
+            "Arduino/Raspberry Pi",
+            "PCB rework",
+            "Microcontrollers"
+        ],
+        "Data & AI": [
+            "Python Programming",
+            "LLM & AI Integration",
+            "Predictive Analytics",
+            "Machine Learning"
+        ],
+        "Leadership & Collaboration": [
+            "Cross-functional Leadership",
+            "Project Management",
+            "Problem Solving"
+        ],
+        "Industry Applications": [
+            "Automotive & EV Manufacturing",
+            "Industrial Automation",
+            "Supply Chain & Operations"
+        ]
+    },
+    "certifications": [
+        "Lean Six Sigma White Belt",
+        "Lean Six Sigma Yellow Belt",
+        "TPM Special Award",
+        "Digital Manufacturing & Design Technology Specialization",
+        "Prompt Engineering for ChatGPT",
+        "AWS IoT Core Certification",
+        "Siemens TIA Portal Advanced PLC Programming",
+        "AI in the Workplace",
+        "Microcontroller Programming & PCB Design",
+        "Root Cause Analysis in Six Sigma"
+    ]
+}
