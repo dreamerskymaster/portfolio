@@ -31,7 +31,7 @@ const Certifications: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   // Comprehensive certification data organized by category
-  const certificationData = {
+  const certificationData = useMemo(() => ({
     "Six Sigma & Quality": [
       { name: "Data Analysis and Root Cause Analysis in Six Sigma with Lean Tools and FMEA", provider: "Skillsoft", year: "2024", verified: true },
       { name: "Six Sigma Statistical Process Control Basics", provider: "Skillsoft", year: "2024", verified: true },
@@ -105,7 +105,7 @@ const Certifications: React.FC = () => {
     "Smart Manufacturing": certificates.filter(cert => cert.category === 'Smart Manufacturing'),
     "Internship": certificates.filter(cert => cert.category === 'Internship'),
     "Language Proficiency": certificates.filter(cert => cert.category === 'Language Proficiency')
-  };
+  }), []);
 
   const categories = ['All', ...Object.keys(certificationData).filter(cat => !cat.startsWith('//'))];
 

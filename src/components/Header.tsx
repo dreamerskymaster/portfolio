@@ -121,22 +121,9 @@ const Header: React.FC = () => {
                     : 'text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-50 dark:hover:bg-slate-800/50'
                     }`}
                 >
-                  <motion.span
-                    whileHover={{
-                      scale: 1.05,
-                      textShadow: location.pathname === item.href ? "0 0 8px rgba(16, 185, 129, 0.3)" : "0 0 4px rgba(16, 185, 129, 0.2)"
-                    }}
-                    className="relative z-10"
-                  >
+                  <span className="relative z-10">
                     {item.name}
-                  </motion.span>
-                  {location.pathname === item.href && (
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-lg"
-                      layoutId="activeTab"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                    />
-                  )}
+                  </span>
                   {/* Easter egg sparkle on hover */}
                   <motion.div
                     className="absolute -top-1 -right-1 opacity-0 group-hover:opacity-100"

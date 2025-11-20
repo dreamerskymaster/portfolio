@@ -1257,8 +1257,9 @@ const Presentation = () => {
           </div>
 
           <div className="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-xl border-2 border-green-300">
-            <p className="font-bold text-gray-800 mb-2">PM Learning: Preventive Maintenance > Reactive Fixes</p>
+            <p className="font-bold text-gray-800 mb-2">PM Learning: Preventive Maintenance {'>'} Reactive Fixes</p>
             <p className="text-sm text-gray-700">Applied TPM principle from Hero MotoCorp: prevent problems before they occur. Daily automated checks detect issues before they impact production, saving $20K annually in downtime costs. Classic example of small investment (3-week project) preventing large losses.</p>
+            <p className="text-sm text-gray-700 mt-2">Preventive Maintenance {'>'} Reactive Fixes</p>
           </div>
         </div>
       )

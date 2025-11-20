@@ -21,7 +21,23 @@ import {
   Zap,
   Globe
 } from 'lucide-react';
-import { documents, getDocumentsByType, getDocumentsByCategory } from '../data/documents';
+import { documents } from '../data/documents';
+
+interface Document {
+  id: string;
+  title: string;
+  type: string;
+  category: string;
+  description: string;
+  company?: string;
+  year: number;
+  filePath: string;
+  verified?: boolean;
+  highlights?: string[];
+  skills?: string[];
+  pages?: number;
+  relevance: string;
+}
 
 const CareerArtifacts: React.FC = () => {
   // Search and filter states
@@ -30,21 +46,11 @@ const CareerArtifacts: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   // Document viewer modal states
-  const [selectedDocument, setSelectedDocument] = useState<any>(null);
+  const [selectedDocument, setSelectedDocument] = useState<Document | null>(null);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
   const documentTypes = ['All', 'Report', 'Experience Letter', 'Recommendation', 'Presentation', 'Manual', 'Certificate'];
   const documentCategories = ['All', ...new Set(documents.map(doc => doc.category))];
-
-  /**
-   * Opens the document viewer modal with the selected document
-   * @param document - The document to display in the viewer
-   */
-  const openDocumentViewer = (document: any) => {
-    console.log('Opening document viewer for:', document.title);
-    setSelectedDocument(document);
-    setIsViewerOpen(true);
-  };
 
   /**
    * Closes the document viewer modal and clears selected document
@@ -224,7 +230,7 @@ const CareerArtifacts: React.FC = () => {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           <AnimatePresence mode="wait">
-            {filteredDocuments.map((doc, index) => {
+            {filteredDocuments.map((doc) => {
               const TypeIcon = getTypeIcon(doc.type);
               const CategoryIcon = getCategoryIcon(doc.category);
 

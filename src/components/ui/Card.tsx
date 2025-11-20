@@ -1,15 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-interface CardProps {
+import { HTMLMotionProps, Variants, Transition } from 'framer-motion';
+
+interface CardProps extends HTMLMotionProps<'div'> {
   children: React.ReactNode;
   className?: string;
-  whileHover?: any;
-  whileTap?: any;
-  variants?: any;
-  initial?: any;
-  animate?: any;
-  transition?: any;
+  variants?: Variants;
+  transition?: Transition;
 }
 
 /**

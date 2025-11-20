@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Play,
-  Pause,
-  Volume2,
-  VolumeX,
   Heart,
   Star,
   Camera,
@@ -15,7 +11,6 @@ import {
   Bike,
   Mountain,
   Tv,
-  Shuffle,
   Sparkles,
   Zap,
   Target
@@ -24,9 +19,6 @@ import { hobbies, Hobby } from '../data/hobbies';
 
 const Hobbies: React.FC = () => {
   const [selectedHobby, setSelectedHobby] = useState<Hobby | null>(null);
-  const [selectedMedia, setSelectedMedia] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
   const [likedHobbies, setLikedHobbies] = useState<Set<string>>(new Set());
   const [easterEggs, setEasterEggs] = useState({
     sparkles: false,
@@ -186,7 +178,7 @@ const Hobbies: React.FC = () => {
           animate="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
         >
-          {hobbies.map((hobby, index) => (
+          {hobbies.map((hobby) => (
             <motion.div
               key={hobby.id}
               variants={itemVariants}
@@ -328,7 +320,6 @@ const Hobbies: React.FC = () => {
                         animate="visible"
                         whileHover={{ scale: 1.05 }}
                         className="relative cursor-pointer"
-                        onClick={() => setSelectedMedia(idx)}
                       >
                         {media.type === 'image' ? (
                           <img

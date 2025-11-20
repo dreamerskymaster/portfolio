@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-interface ChipProps {
+import { HTMLMotionProps } from 'framer-motion';
+
+interface ChipProps extends Omit<HTMLMotionProps<'span'>, 'children'> {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'accent' | 'muted';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
-  whileHover?: any;
-  whileTap?: any;
 }
 
 /**

@@ -130,7 +130,7 @@ const Writings: React.FC = () => {
           className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
         >
           <AnimatePresence mode="wait">
-            {filteredWritings.map((writing, index) => (
+            {filteredWritings.map((writing) => (
               <motion.article
                 key={writing.title}
                 variants={itemVariants}

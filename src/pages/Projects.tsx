@@ -8,7 +8,6 @@ import {
   Filter,
   Calendar,
   Users,
-  DollarSign,
   TrendingUp,
   Zap,
   Award,
@@ -20,7 +19,6 @@ import {
   Settings,
   CheckCircle,
   ArrowUpRight,
-  Clock,
   Target,
   Lightbulb,
   Wrench,
@@ -32,7 +30,6 @@ import { profile } from '../data/profile';
 const Projects: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [activeProject, setActiveProject] = useState(0);
   const [easterEggs, setEasterEggs] = useState({
     technicalDepth: false,
     methodologyInsights: false,
@@ -61,11 +58,6 @@ const Projects: React.FC = () => {
   const handleMethodologyClick = () => {
     console.log('📊 Methodology Insights Easter Egg Triggered - Operations Excellence');
     triggerEasterEgg('methodologyInsights');
-  };
-
-  const handleInnovationClick = () => {
-    console.log('🚀 Innovation Secrets Easter Egg Triggered - Cross-Industry Innovation');
-    triggerEasterEgg('innovationSecrets');
   };
 
   const tpmMethodology = {
@@ -141,9 +133,9 @@ const Projects: React.FC = () => {
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory]);
+  }, [searchTerm, selectedCategory, featuredProjects]);
 
-  const getProjectIcon = (project: any) => {
+  const getProjectIcon = (project: typeof profile.projects[0]) => {
     if (project.category === 'Hero MotoCorp') return Building;
     if (project.title.includes('AI')) return Cpu;
     if (project.category === 'Research') return FileText;

@@ -14,7 +14,7 @@ import {
   LinkedinIcon
 } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
-import { testimonials, getFeaturedTestimonials } from '../data/testimonials';
+import { testimonials } from '../data/testimonials';
 import TechnicalTooltip from '../components/TechnicalTooltip';
 
 const Contact: React.FC = () => {

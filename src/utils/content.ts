@@ -90,8 +90,16 @@ export async function processMarkdown(content: string): Promise<string> {
   return String(result);
 }
 
+export interface ProjectIndex {
+  title: string;
+  summary: string;
+  tech: string[];
+  year: number;
+  slug: string;
+}
+
 // Generate projects index for search
-export async function generateProjectsIndex(): Promise<any[]> {
+export async function generateProjectsIndex(): Promise<ProjectIndex[]> {
   const projects = await loadProjects();
   return projects.map(project => ({
     title: project.title,
@@ -103,9 +111,9 @@ export async function generateProjectsIndex(): Promise<any[]> {
 }
 
 // Search projects and writing
-export function searchContent(query: string, projects: any[], writings: any[]): {
-  projects: any[];
-  writings: any[];
+export function searchContent(query: string, projects: ProjectIndex[], writings: Writing[]): {
+  projects: ProjectIndex[];
+  writings: Writing[];
 } {
   const lowercaseQuery = query.toLowerCase();
   
