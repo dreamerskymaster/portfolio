@@ -7,6 +7,7 @@ yarn-error.log*
 # Production builds
 dist/
 build/
+*.tsbuildinfo
 
 # Environment variables
 .env
@@ -50,3 +51,5 @@ temp/
 
 # Vercel
 .vercel
+content/*.pptx
+content/*.pptx

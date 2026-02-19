@@ -17,7 +17,7 @@ export const timeline: TimelineItem[] = [
     title: 'Manufacturing Engineering Intern',
     organization: 'VAN DYK Recycling Solutions',
     location: 'Norwalk, Connecticut',
-    period: 'May 2025 - Present',
+    period: 'May 2025 - Dec 2025',
     type: 'work',
     description: 'Leading sustainable manufacturing process optimization and recycling system improvements. Focus on circular economy principles and waste optimization strategies.',
     skills: ['Sustainable Manufacturing', 'Circular Economy', 'Process Optimization', 'Waste Management', 'Recycling Systems'],
@@ -66,13 +66,13 @@ export const timeline: TimelineItem[] = [
     title: 'Master of Science in Advanced and Intelligent Manufacturing',
     organization: 'Northeastern University',
     location: 'Boston, MA',
-    period: 'September 2024 - May 2026 (Expected)',
+    period: 'September 2024 - August 2026 (Expected)',
     type: 'education',
     description: 'Specialized coursework in Process Design, Lean Manufacturing, Intelligent Manufacturing, Digital Manufacturing, and Simulation Analysis. Focus on bridging smart manufacturing, supply chain optimization, and AI-driven automation.',
     skills: ['Advanced Manufacturing', 'Process Design', 'Lean Manufacturing', 'Intelligent Manufacturing', 'Digital Manufacturing', 'Simulation Analysis'],
     achievements: [
-      'Current GPA: 3.82/4.0',
-      'Expected Graduation: May 2026',
+      'Current GPA: 3.90/4.0',
+      'Expected Graduation: August 2026',
       'Focus: Industry 4.0 and Smart Manufacturing Integration',
       'Specialized in AI-driven manufacturing solutions'
     ]

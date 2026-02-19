@@ -7,7 +7,16 @@ import {
   Search,
   Github,
   Linkedin,
-  Mail
+  Mail,
+  ChevronDown,
+  Layers,
+  BookOpen,
+  FileText,
+  Heart,
+  User,
+  Award,
+  Download,
+  Briefcase
 } from 'lucide-react';
 
 import { profile } from '../data/profile';
@@ -16,18 +25,50 @@ import ThemeToggle from './ThemeToggle';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
-  const navigation = [
+  interface NavItem {
+    name: string;
+    href?: string;
+    links?: Array<{ name: string; href: string; icon: any; desc: string }>;
+  }
+
+  const navigation: NavItem[] = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Personal Interests', href: '/hobbies' },
-    { name: 'Writings', href: '/writings' },
-    { name: 'Certifications', href: '/certifications' },
-    { name: 'Career Artifacts', href: '/career-artifacts' },
+    {
+      name: 'Experience',
+      links: [
+        { name: 'About & Journey', href: '/about', icon: User, desc: 'My engineering background & philosophy' },
+        { name: 'Resume', href: '/resume', icon: Download, desc: 'Professional summary & downloadable CV' },
+        { name: 'Certifications', href: '/certifications', icon: Award, desc: 'Verified technical & professional credentials' },
+      ]
+    },
+    {
+      name: 'Portfolio',
+      links: [
+        { name: 'Projects', href: '/projects', icon: Layers, desc: 'Detailed engineering & AI project breakdowns' },
+        { name: 'Writings', href: '/writings', icon: BookOpen, desc: 'Technical articles & industry insights' },
+        { name: 'Career Artifacts', href: '/career-artifacts', icon: FileText, desc: 'Evidence of professional impact and tools' },
+        { name: 'Hobbies & Life', href: '/hobbies', icon: Heart, desc: 'Personal interests and creative pursuits' },
+      ]
+    },
     { name: 'Contact', href: '/contact' }
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+      if (window.innerWidth >= 1024) {
+        setIsMenuOpen(false); // Auto-close menu on desktop
+      }
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const toggleSearch = useCallback(() => {
     setIsSearchOpen(!isSearchOpen);
@@ -42,8 +83,10 @@ const Header: React.FC = () => {
 
   // Close menu when route changes
   useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location.pathname]);
+    if (isMobile) {
+      setIsMenuOpen(false);
+    }
+  }, [location.pathname, isMobile]);
 
   // Handle keyboard shortcuts
   useEffect(() => {
@@ -59,13 +102,14 @@ const Header: React.FC = () => {
   }, [toggleSearch]);
 
   return (
-    <header className="sticky top-0 z-50 glass-nav border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="sticky top-0 z-50 transition-all duration-300">
+      <div className="absolute inset-0 glass-nav opacity-90"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link to="/" className="flex items-center space-x-3 group min-w-max">
             <motion.div
-              className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-emerald-500/25 transition-all duration-300 overflow-hidden"
+              className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-emerald-500/25 transition-all duration-300 overflow-hidden"
               whileHover={{
                 scale: 1.05,
                 rotate: [0, -5, 5, 0],
@@ -78,26 +122,24 @@ const Header: React.FC = () => {
                 alt="ManuFX Logo"
                 className="w-full h-full object-contain p-1"
                 onError={(e) => {
-                  // Fallback to initials if image fails to load
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
                   const parent = target.parentElement;
                   if (parent) {
                     parent.innerHTML = 'AS';
-                    parent.className = 'w-10 h-10 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-emerald-500/25 transition-all duration-300';
                   }
                 }}
               />
             </motion.div>
             <div className="flex flex-col">
               <motion.span
-                className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300"
+                className="text-lg sm:text-xl font-bold text-slate-800 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300 tracking-tight"
                 whileHover={{ x: 2 }}
               >
                 {profile.name}
               </motion.span>
               <motion.span
-                className="text-xs text-slate-500 dark:text-slate-400 font-medium"
+                className="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wider uppercase"
                 whileHover={{ x: 2 }}
               >
                 ManuFX
@@ -106,65 +148,100 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-2">
+          <nav className="hidden xl:flex items-center space-x-2">
             {navigation.map((item, index) => (
-              <motion.div
+              <div
                 key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                className="relative"
+                onMouseEnter={() => 'links' in item && setActiveDropdown(item.name)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                <Link
-                  to={item.href}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${location.pathname === item.href
-                    ? 'text-white bg-gradient-to-r from-emerald-500 to-cyan-500 shadow-lg'
-                    : 'text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-50 dark:hover:bg-slate-800/50'
-                    }`}
-                >
-                  <span className="relative z-10">
-                    {item.name}
-                  </span>
-                  {/* Easter egg sparkle on hover */}
-                  <motion.div
-                    className="absolute -top-1 -right-1 opacity-0 group-hover:opacity-100"
-                    animate={{
-                      rotate: [0, 180, 360],
-                      scale: [0, 1, 0]
-                    }}
-                    transition={{
-                      duration: 0.6,
-                      repeat: Infinity,
-                      repeatDelay: 2
-                    }}
+                {'links' in item ? (
+                  <>
+                    <button
+                      className={`flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${activeDropdown === item.name || (item.links && item.links.some(l => location.pathname === l.href))
+                        ? 'text-primary bg-primary/10'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                        }`}
+                    >
+                      {item.name}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                    </button>
+
+                    <AnimatePresence>
+                      {activeDropdown === item.name && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          transition={{ duration: 0.2, ease: "easeOut" }}
+                          className="absolute top-full left-0 mt-2 w-80 bg-card border border-border rounded-2xl shadow-2xl p-4 z-50 overflow-hidden"
+                        >
+                          <div className="grid gap-2">
+                            {item.links?.map((link) => {
+                              const Icon = link.icon;
+                              const isActive = location.pathname === link.href;
+                              return (
+                                <Link
+                                  key={link.name}
+                                  to={link.href}
+                                  className={`flex items-start gap-3 p-3 rounded-xl transition-all ${isActive
+                                    ? 'bg-primary/10 border border-primary/20'
+                                    : 'hover:bg-muted/50 border border-transparent'
+                                    }`}
+                                >
+                                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${isActive ? 'bg-primary text-primary-contrast' : 'bg-muted text-muted-foreground'
+                                    }`}>
+                                    <Icon className="w-5 h-5" />
+                                  </div>
+                                  <div>
+                                    <div className={`text-sm font-bold ${isActive ? 'text-primary' : 'text-foreground'}`}>
+                                      {link.name}
+                                    </div>
+                                    <div className="text-xs text-muted-foreground line-clamp-1">{link.desc}</div>
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </>
+                ) : (
+                  <Link
+                    to={item.href || '#'}
+                    className={`px-5 py-2 text-sm font-bold rounded-full transition-all duration-300 ${location.pathname === item.href
+                      ? 'text-primary bg-primary/10'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                      }`}
                   >
-                    ✨
-                  </motion.div>
-                </Link>
-              </motion.div>
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Search Button */}
+          <div className="hidden md:flex items-center gap-3">
+            {/* Render simplified nav for tablet/smaller laptops if needed, or just keep actions */}
             <button
               onClick={toggleSearch}
-              className="p-2 text-foreground hover:text-primary transition-colors"
+              className="p-2.5 text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all"
               title="Search (Ctrl+K)"
             >
               <Search className="w-5 h-5" />
             </button>
 
-            {/* Theme Toggle */}
             <ThemeToggle />
 
-            {/* Social Links */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-700">
               <a
                 href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-foreground hover:text-primary transition-colors"
+                className="p-2.5 text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all"
                 title="GitHub"
               >
                 <Github className="w-5 h-5" />
@@ -173,7 +250,7 @@ const Header: React.FC = () => {
                 href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-foreground hover:text-primary transition-colors"
+                className="p-2.5 text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all"
                 title="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
@@ -182,19 +259,13 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <button
-              onClick={toggleSearch}
-              className="p-2 text-foreground hover:text-primary transition-colors"
-            >
-              <Search className="w-5 h-5" />
-            </button>
+          <div className="xl:hidden flex items-center gap-2">
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-foreground hover:text-primary transition-colors"
+              className="p-2 text-foreground hover:text-primary transition-colors focus:outline-none"
             >
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -228,20 +299,40 @@ const Header: React.FC = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-border"
+              className={`lg:hidden border-t border-border mobile-nav-menu ${isMenuOpen ? 'open block' : ''}`}
             >
               <nav className="py-4 space-y-2">
                 {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`block px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${location.pathname === item.href
-                      ? 'bg-primary/10 text-primary'
-                      : 'text-foreground hover:bg-muted'
-                      }`}
-                  >
-                    {item.name}
-                  </Link>
+                  <div key={item.name}>
+                    {'links' in item ? (
+                      <div className="space-y-1">
+                        <div className="px-4 py-2 text-xs font-bold uppercase tracking-widest text-muted-foreground">{item.name}</div>
+                        {item.links?.map((link) => (
+                          <Link
+                            key={link.name}
+                            to={link.href}
+                            className={`flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-lg transition-colors duration-200 ${location.pathname === link.href
+                              ? 'bg-primary/10 text-primary'
+                              : 'text-foreground hover:bg-muted'
+                              }`}
+                          >
+                            <link.icon className="w-5 h-5 opacity-60" />
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <Link
+                        to={item.href || '#'}
+                        className={`block px-4 py-2.5 text-sm font-bold rounded-lg transition-colors duration-200 ${location.pathname === item.href
+                          ? 'bg-primary/10 text-primary'
+                          : 'text-foreground hover:bg-muted'
+                          }`}
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+                  </div>
                 ))}
                 <div className="px-4 py-2 flex items-center space-x-4">
                   <a

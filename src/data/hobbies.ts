@@ -161,6 +161,25 @@ export const hobbies: Hobby[] = [
     ],
     funFact: 'I once watched an entire season in one day and then spent the next day analyzing the plot holes!',
     emoji: '🍿'
+  },
+  {
+    id: 'automotive',
+    name: 'Automotive Repair & Upgrades',
+    description: "There's something uniquely satisfying about the mechanical purity of an internal combustion engine. I spend my weekends maintaining, repairing, and upgrading my car, applying the same precision I use in industrial manufacturing to my own vehicle.",
+    icon: '🚗',
+    color: 'from-slate-700 to-slate-900',
+    media: [
+      { type: 'image', src: '/hobbies/IMG_1963.JPG', alt: 'Car maintenance', caption: 'Weekend garage session' },
+      { type: 'video', src: '/hobbies/IMG_0755.MP4', alt: 'Engine detail', caption: 'Diagnostic and tuning' }
+    ],
+    highlights: [
+      'Engine diagnostic mastery',
+      'Performance upgrades implementation',
+      'Preventative maintenance specialist',
+      'Suspension and brake tuning'
+    ],
+    funFact: "I once spent a whole weekend upgrading my car's suspension system just to feel the difference in a single corner!",
+    emoji: '🔧'
   }
 ];
 

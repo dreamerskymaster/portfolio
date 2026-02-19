@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight, TrendingUp, DollarSign, Clock, Target, Lightbulb, Rocket, Users, Settings, Database, Cloud, Zap, CheckCircle, AlertTriangle, Award, BarChart3, GitBranch, Layout, Camera } from 'lucide-react';
+import PageTransition from '../components/PageTransition';
 
 const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,7 +18,7 @@ const Presentation = () => {
           <div className="relative z-10 flex flex-col items-center justify-center h-full p-12">
             <div className="mb-8 flex items-center space-x-4">
               <Rocket size={64} className="text-blue-400" />
-              <Settings size={64} className="text-purple-400 animate-spin" style={{animationDuration: '3s'}} />
+              <Settings size={64} className="text-purple-400 animate-spin" style={{ animationDuration: '3s' }} />
               <Database size={64} className="text-green-400" />
             </div>
             <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -48,7 +49,7 @@ const Presentation = () => {
         </div>
       )
     },
-    
+
     // Executive Dashboard
     {
       type: 'content',
@@ -466,7 +467,7 @@ const Presentation = () => {
                 <p className="font-bold text-yellow-800 mb-2 flex items-center"><span className="bg-yellow-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm">S</span>SITUATION</p>
                 <p className="text-sm text-gray-700">Field service technicians spending 2-3 hours weekly manually typing Q&A documentation from customer site visits. Knowledge trapped in inconsistent formats across email threads and Word docs. When senior techs retired, 30+ years of tribal knowledge vanished. No searchable database of equipment troubleshooting insights.</p>
               </div>
-              
+
               <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                 <p className="font-bold text-blue-800 mb-2 flex items-center"><span className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm">T</span>TASK</p>
                 <p className="text-sm text-gray-700 mb-3">Build a system that: (1) Reduces documentation time by 80%+, (2) Standardizes Q&A format across all technicians, (3) Creates searchable knowledge base, (4) Enables audio-to-text workflow for field use, (5) Integrates with existing SQL database infrastructure</p>
@@ -480,7 +481,7 @@ const Presentation = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
                 <p className="font-bold text-green-800 mb-3 flex items-center"><span className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm">A</span>ACTION</p>
                 <div className="space-y-3">
@@ -514,7 +515,7 @@ const Presentation = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
                 <p className="font-bold text-purple-800 mb-3 flex items-center"><span className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm">R</span>RESULT</p>
                 <div className="grid grid-cols-3 gap-3 mb-3">
@@ -596,12 +597,12 @@ const Presentation = () => {
                   <p className="font-bold text-yellow-800 mb-1 text-sm">SITUATION</p>
                   <p className="text-xs text-gray-700">1000+ equipment manuals scattered across G:\ and Z:\ drives. Techs spending 30+ minutes searching for specifications. No way to search across documents. Senior techs fielding 10-15 calls daily from field asking "Where is the manual for X?"</p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
                   <p className="font-bold text-blue-800 mb-1 text-sm">TASK</p>
                   <p className="text-xs text-gray-700">Create AI chatbot that: Searches all documents semantically, Answers in natural language with source citations, Integrates SQL database queries, Provides 24/7 instant access. Target: Under 2 minutes response time.</p>
                 </div>
-                
+
                 <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
                   <p className="font-bold text-green-800 mb-1 text-sm">ACTION</p>
                   <div className="text-xs text-gray-700 space-y-1">
@@ -618,7 +619,7 @@ const Presentation = () => {
                     <p>• Optimized response time to under 2 seconds</p>
                   </div>
                 </div>
-                
+
                 <div className="bg-purple-50 p-3 rounded-lg border-l-4 border-purple-500">
                   <p className="font-bold text-purple-800 mb-1 text-sm">RESULT</p>
                   <div className="text-xs text-gray-700">
@@ -726,7 +727,7 @@ const Presentation = () => {
                     </p>
                     <p className="text-xs text-gray-700">VDRS shipping operations tracking 500+ containers across 20+ projects. Documents scattered: PDFs in folders, metadata in Excel, no centralized system. Suppliers emailing files with inconsistent naming. Compliance audits taking 40+ hours to compile documentation.</p>
                   </div>
-                  
+
                   <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
                     <p className="font-bold text-blue-800 mb-1 text-sm flex items-center">
                       <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 text-xs">T</span>
@@ -734,7 +735,7 @@ const Presentation = () => {
                     </p>
                     <p className="text-xs text-gray-700">Build enterprise-grade container management system with: Role-based access (VDRS vs Supplier), Document upload with auto-categorization, Project-based organization, Real-time collaboration, Audit trail for compliance. Tech constraint: Must integrate with existing SQL Server infrastructure.</p>
                   </div>
-                  
+
                   <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
                     <p className="font-bold text-green-800 mb-1 text-sm flex items-center">
                       <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2 text-xs">A</span>
@@ -880,7 +881,7 @@ const Presentation = () => {
                   <p className="font-bold text-yellow-800 mb-2 text-sm">SITUATION</p>
                   <p className="text-xs text-gray-700">Engineering team managing 50,000+ PDF files across G:\ and Z:\ network drives. Manual file operations taking 8-10 hours weekly. No bulk operations capability. File moves causing production delays when wrong files deleted. Need to process 1000+ files weekly for project organization.</p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                   <p className="font-bold text-blue-800 mb-2 text-sm">TASK</p>
                   <p className="text-xs text-gray-700 mb-2">Build enterprise file operations platform with:</p>
@@ -1002,12 +1003,12 @@ const Presentation = () => {
                   <p className="font-bold text-red-800 mb-1 text-xs">SITUATION</p>
                   <p className="text-xs text-gray-700">200+ engineering BOM drawings arriving weekly. Manual Excel entry taking 45 min/document. 15% error rate causing rework. 2-week backlog of unprocessed drawings. Production delays waiting for BOM data.</p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
                   <p className="font-bold text-blue-800 mb-1 text-xs">TASK</p>
                   <p className="text-xs text-gray-700">Create automated BOM extraction system supporting multiple document qualities (scanned, digital, mixed). Target: 3 min/document, under 2% error rate. Must handle varying table formats from different suppliers.</p>
                 </div>
-                
+
                 <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
                   <p className="font-bold text-green-800 mb-1 text-xs">ACTION</p>
                   <div className="text-xs text-gray-700 space-y-1">
@@ -1180,12 +1181,12 @@ const Presentation = () => {
                   <p className="font-bold text-red-800 mb-2 text-sm">SITUATION</p>
                   <p className="text-xs text-gray-700">Files stored in Azure Blob Storage, metadata in SQL Server. Sync failures causing ~200 mismatches. Production delays when files missing from either system. Manual verification taking 8 hours monthly. 4-6 downtime incidents yearly costing $20K.</p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                   <p className="font-bold text-blue-800 mb-2 text-sm">TASK</p>
                   <p className="text-xs text-gray-700">Build automated verification system to: Identify Azure-SQL mismatches daily, Generate detailed CSV reports, Detect duplicate database entries, Run in under 15 minutes, Enable proactive issue resolution. Target 100% data accuracy.</p>
                 </div>
-                
+
                 <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
                   <p className="font-bold text-green-800 mb-2 text-sm">ACTION</p>
                   <div className="text-xs text-gray-700 space-y-1">
@@ -1292,12 +1293,12 @@ const Presentation = () => {
                   <p className="font-bold text-red-800 mb-1 text-xs">SITUATION</p>
                   <p className="text-xs text-gray-700">After-sales team manually transcribing equipment specifications from nameplate photos and motor tags. Processing 50-100 equipment records monthly. Each record taking 15-20 minutes of manual data entry. High error rate (12%) due to blurry photos, worn nameplates, and illegible text. Database incomplete with 30% missing specifications.</p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
                   <p className="font-bold text-blue-800 mb-1 text-xs">TASK</p>
                   <p className="text-xs text-gray-700">Build AI vision system to: Extract specs from nameplate/tag photos automatically, Support multiple motor types and formats, Validate extracted data with human review interface, Integrate with EquipmentDB SQL Server, Achieve under 5% error rate. Target: 5 minutes/record including validation.</p>
                 </div>
-                
+
                 <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
                   <p className="font-bold text-green-800 mb-1 text-xs">ACTION</p>
                   <div className="text-xs text-gray-700 space-y-1">
@@ -1407,12 +1408,12 @@ const Presentation = () => {
                   <p className="font-bold text-yellow-800 mb-1 text-xs">SITUATION</p>
                   <p className="text-xs text-gray-700">Equipment data scattered across Excel files, SharePoint, and legacy databases. No centralized system for equipment lifecycle tracking. Equipment specifications varying by type (balers have different specs than optical sorters). Cross-referencing customer-project-equipment relationships taking hours. Network analysis impossible without visual tools.</p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
                   <p className="font-bold text-blue-800 mb-1 text-xs">TASK</p>
                   <p className="text-xs text-gray-700">Build enterprise equipment management platform with: Dynamic specification mapping per equipment type, Excel-like editing interface, Advanced multi-field search, Network visualization of relationships, Dual-database architecture (TestDB + PowerApps), Complete audit trail. Must handle 5000+ equipment records efficiently.</p>
                 </div>
-                
+
                 <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
                   <p className="font-bold text-green-800 mb-1 text-xs">ACTION</p>
                   <div className="text-xs text-gray-700 space-y-1">
@@ -1554,12 +1555,12 @@ const Presentation = () => {
                   <p className="font-bold text-red-800 mb-1 text-xs">SITUATION</p>
                   <p className="text-xs text-gray-700">Existing website outdated, slow loading, not mobile-responsive. No intelligent search or chatbot assistance. Lead generation forms basic with no smart routing. No PWA capabilities or offline support. Competitor sites more modern, impacting brand perception and lead quality.</p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
                   <p className="font-bold text-blue-800 mb-1 text-xs">TASK</p>
                   <p className="text-xs text-gray-700">Modernize corporate website with: React 18 + TypeScript stack, Mobile-first responsive design, AI-powered chatbot, Real-time search functionality, Progressive Web App capabilities, Comprehensive equipment showcase. Target: Under 2-second load time, 90+ Lighthouse score.</p>
                 </div>
-                
+
                 <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
                   <p className="font-bold text-green-800 mb-1 text-xs">ACTION</p>
                   <div className="text-xs text-gray-700 space-y-1">
@@ -1704,12 +1705,12 @@ const Presentation = () => {
                   <p className="font-bold text-yellow-800 mb-1 text-xs">SITUATION</p>
                   <p className="text-xs text-gray-700">7 separate tools running independently: PDF Matcher, RAG System, Data Extractor, etc. Each with own config, logging, and launch procedure. Users confused about which tool to use when. No centralized monitoring or configuration management. Duplicate code across projects.</p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
                   <p className="font-bold text-blue-800 mb-1 text-xs">TASK</p>
                   <p className="text-xs text-gray-700">Create unified platform that: Integrates all tools in single web interface, Centralizes configuration management, Provides unified logging and monitoring, Enables one-click launch, Shares common utilities across tools, Maintains individual tool functionality while reducing overhead.</p>
                 </div>
-                
+
                 <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
                   <p className="font-bold text-green-800 mb-1 text-xs">ACTION</p>
                   <div className="text-xs text-gray-700 space-y-1">
@@ -1879,12 +1880,12 @@ const Presentation = () => {
                   <p className="font-bold text-yellow-800 mb-1 text-xs">SITUATION</p>
                   <p className="text-xs text-gray-700">Field technicians managing equipment, tickets, expenses using paper forms and phone calls. No mobile access to equipment database. Expense reports requiring office time post-visit. Service ticket updates delayed by 1-2 days. No offline capability during site visits.</p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
                   <p className="font-bold text-blue-800 mb-1 text-xs">TASK</p>
                   <p className="text-xs text-gray-700">Build cross-platform mobile app (iOS + Android + Web) with: Equipment management, Service ticket handling, Expense tracking, Site information, Offline-first architecture, Integration with existing SQL database. Based on Hero MotoCorp mobile success reducing admin by 60%.</p>
                 </div>
-                
+
                 <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
                   <p className="font-bold text-green-800 mb-1 text-xs">ACTION</p>
                   <div className="text-xs text-gray-700 space-y-1">
@@ -1912,7 +1913,7 @@ const Presentation = () => {
                       <span className="bg-green-500 text-white px-2 py-1 rounded text-xs">Complete</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-500 h-2 rounded-full" style={{width: '100%'}}></div>
+                      <div className="bg-green-500 h-2 rounded-full" style={{ width: '100%' }}></div>
                     </div>
                   </div>
                   <div className="bg-white p-3 rounded-lg shadow-sm">
@@ -1921,7 +1922,7 @@ const Presentation = () => {
                       <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs">70% Done</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-500 h-2 rounded-full" style={{width: '70%'}}></div>
+                      <div className="bg-blue-500 h-2 rounded-full" style={{ width: '70%' }}></div>
                     </div>
                   </div>
                   <div className="bg-white p-3 rounded-lg shadow-sm">
@@ -1930,7 +1931,7 @@ const Presentation = () => {
                       <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs">In Progress</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-orange-500 h-2 rounded-full" style={{width: '40%'}}></div>
+                      <div className="bg-orange-500 h-2 rounded-full" style={{ width: '40%' }}></div>
                     </div>
                   </div>
                   <div className="bg-white p-3 rounded-lg shadow-sm">
@@ -1939,7 +1940,7 @@ const Presentation = () => {
                       <span className="bg-gray-400 text-white px-2 py-1 rounded text-xs">Planned</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-gray-400 h-2 rounded-full" style={{width: '0%'}}></div>
+                      <div className="bg-gray-400 h-2 rounded-full" style={{ width: '0%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -2813,7 +2814,7 @@ const Presentation = () => {
               <div>
                 <p className="font-semibold text-sm mb-3 text-blue-600">Immediate Goals (2025-2026)</p>
                 <ul className="text-xs text-gray-700 space-y-1">
-                  <li>• Complete MS in Advanced & Intelligent Manufacturing (May 2026)</li>
+                  <li>• Complete MS in Advanced & Intelligent Manufacturing (August 2026)</li>
                   <li>• Deploy remaining VDRS systems (Mobile App, Phase 2 enhancements)</li>
                   <li>• Publish case studies on AI in manufacturing operations</li>
                   <li>• Build portfolio showcasing technical + business impact</li>
@@ -3000,7 +3001,7 @@ const Presentation = () => {
             </div>
           </div>
           <h2 className="text-6xl font-bold mb-8">Questions?</h2>
-          
+
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl max-w-2xl mb-8">
             <h3 className="text-2xl font-bold mb-6 text-center">Contact Information</h3>
             <div className="space-y-3 text-lg">
@@ -3055,68 +3056,69 @@ const Presentation = () => {
   const IconComponent = currentSlideData.icon;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col">
-      <div className="flex-1 bg-white shadow-2xl m-4 rounded-2xl overflow-hidden">
-        {currentSlideData.type === 'title' ? (
-          currentSlideData.content
-        ) : (
-          <div className="h-full flex flex-col">
-            <div className="bg-gradient-to-r from-slate-800 via-blue-900 to-slate-800 text-white px-8 py-6">
-              <div className="flex items-center space-x-4">
-                {IconComponent && (
-                  <div className="bg-white/20 p-3 rounded-lg">
-                    <IconComponent size={32} />
-                  </div>
-                )}
-                <h2 className="text-3xl font-bold">{currentSlideData.title}</h2>
+    <PageTransition>
+      <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col">
+        <div className="flex-1 bg-white shadow-2xl m-4 rounded-2xl overflow-hidden">
+          {currentSlideData.type === 'title' ? (
+            currentSlideData.content
+          ) : (
+            <div className="h-full flex flex-col">
+              <div className="bg-gradient-to-r from-slate-800 via-blue-900 to-slate-800 text-white px-8 py-6">
+                <div className="flex items-center space-x-4">
+                  {IconComponent && (
+                    <div className="bg-white/20 p-3 rounded-lg">
+                      <IconComponent size={32} />
+                    </div>
+                  )}
+                  <h2 className="text-3xl font-bold">{currentSlideData.title}</h2>
+                </div>
+              </div>
+              <div className="flex-1 overflow-y-auto p-8 bg-gradient-to-br from-gray-50 to-white">
+                {currentSlideData.content}
               </div>
             </div>
-            <div className="flex-1 overflow-y-auto p-8 bg-gradient-to-br from-gray-50 to-white">
-              {currentSlideData.content}
-            </div>
-          </div>
-        )}
-      </div>
-
-      <div className="bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 text-white px-8 py-5 flex items-center justify-between shadow-2xl">
-        <button
-          onClick={prevSlide}
-          disabled={currentSlide === 0}
-          className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed hover:from-blue-500 hover:to-blue-600 transition-all shadow-lg transform hover:scale-105 disabled:hover:scale-100"
-        >
-          <ChevronLeft size={20} />
-          <span className="font-semibold">Previous</span>
-        </button>
-
-        <div className="text-center">
-          <p className="text-sm mb-2 text-gray-300">
-            Slide {currentSlide + 1} of {slides.length}
-          </p>
-          <div className="flex space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentSlide 
-                    ? 'w-8 bg-gradient-to-r from-blue-500 to-purple-500' 
-                    : 'w-2 bg-gray-600 hover:bg-gray-500'
-                }`}
-              />
-            ))}
-          </div>
+          )}
         </div>
 
-        <button
-          onClick={nextSlide}
-          disabled={currentSlide === slides.length - 1}
-          className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed hover:from-blue-500 hover:to-blue-600 transition-all shadow-lg transform hover:scale-105 disabled:hover:scale-100"
-        >
-          <span className="font-semibold">Next</span>
-          <ChevronRight size={20} />
-        </button>
+        <div className="bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 text-white px-8 py-5 flex items-center justify-between shadow-2xl">
+          <button
+            onClick={prevSlide}
+            disabled={currentSlide === 0}
+            className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed hover:from-blue-500 hover:to-blue-600 transition-all shadow-lg transform hover:scale-105 disabled:hover:scale-100"
+          >
+            <ChevronLeft size={20} />
+            <span className="font-semibold">Previous</span>
+          </button>
+
+          <div className="text-center">
+            <p className="text-sm mb-2 text-gray-300">
+              Slide {currentSlide + 1} of {slides.length}
+            </p>
+            <div className="flex space-x-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-2 rounded-full transition-all ${index === currentSlide
+                    ? 'w-8 bg-gradient-to-r from-blue-500 to-purple-500'
+                    : 'w-2 bg-gray-600 hover:bg-gray-500'
+                    }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          <button
+            onClick={nextSlide}
+            disabled={currentSlide === slides.length - 1}
+            className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed hover:from-blue-500 hover:to-blue-600 transition-all shadow-lg transform hover:scale-105 disabled:hover:scale-100"
+          >
+            <span className="font-semibold">Next</span>
+            <ChevronRight size={20} />
+          </button>
+        </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

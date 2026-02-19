@@ -13,23 +13,26 @@ export default defineConfig({
   // Handle markdown files as assets
   assetsInclude: ['**/*.md'],
   build: {
+    target: 'esnext',
+    minify: 'esbuild',
+    reportCompressedSize: false,
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
         manualChunks: {
-          // Vendor chunks for better caching
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          animations: ['framer-motion'],
-          ui: ['lucide-react'],
-          helmet: ['react-helmet-async'],
-          vercel: ['@vercel/speed-insights/react'],
+          'vendor': ['react', 'react-dom'],
+          'router': ['react-router-dom'],
+          'animations': ['framer-motion'],
+          'ui': ['lucide-react', 'react-vertical-timeline-component'],
+          'markdown': ['unified', 'remark-parse', 'remark-gfm', 'remark-rehype', 'rehype-slug', 'rehype-stringify', 'gray-matter'],
         },
       },
+      // Cache settings to potentially speed up builds on OneDrive
+      cache: true
     },
-    // Increase chunk size warning limit
-    chunkSizeWarningLimit: 1000,
+    // Speed up build by avoiding some disk writes if possible
+    emptyOutDir: true,
   },
-  // Optimize dependencies
   optimizeDeps: {
     include: [
       'react',
@@ -37,8 +40,14 @@ export default defineConfig({
       'react-router-dom',
       'framer-motion',
       'lucide-react',
-      'react-helmet-async',
-      '@vercel/speed-insights/react',
+      'react-vertical-timeline-component',
+      'unified',
+      'remark-parse',
+      'remark-gfm',
+      'remark-rehype',
+      'rehype-slug',
+      'rehype-stringify',
+      'gray-matter'
     ],
   },
   // Development server configuration

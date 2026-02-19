@@ -14,45 +14,8 @@ export interface Testimonial {
 }
 
 export const testimonials: Testimonial[] = [
-  {
-    id: 'beslam-sir',
-    name: 'Beslam Sir',
-    title: 'Senior Manager',
-    company: 'Hero MotoCorp',
-    relationship: 'Direct Supervisor',
-    content: 'Ajith demonstrated exceptional technical skills and leadership during his tenure at Hero MotoCorp. His implementation of TPM methodology resulted in 83% downtime reduction across 36 machines, generating ₹9M+ in annual savings. His ability to train and motivate cross-functional teams was remarkable. He consistently delivered results with minimal supervision and showed excellent problem-solving capabilities.',
-    rating: 5,
-    verified: true,
-    avatar: 'BS',
-    date: '2024',
-    category: 'Professional',
-    highlights: [
-      '83% downtime reduction achieved',
-      '₹9M+ annual cost savings',
-      'Exceptional team leadership',
-      'TPM methodology expertise',
-      'Minimal supervision required'
-    ]
-  },
-  {
-    id: 'mrl-sir',
-    name: 'MRLT Sir',
-    title: 'Plant Manager',
-    company: 'Hero MotoCorp',
-    relationship: 'Plant Leadership',
-    content: 'Ajith\'s innovative approach to predictive maintenance and IoT integration transformed our manufacturing operations. His technical expertise in SAP, SCADA, and automation systems, combined with his strong communication skills, made him an invaluable asset to our team.',
-    rating: 5,
-    verified: true,
-    avatar: 'MR',
-    date: '2024',
-    category: 'Professional',
-    highlights: [
-      'Innovative IoT integration',
-      'SAP and SCADA expertise',
-      'Strong communication skills',
-      'Transformational impact'
-    ]
-  },
+
+
   {
     id: 'vasanth-sir',
     name: 'Vasanth Sir',

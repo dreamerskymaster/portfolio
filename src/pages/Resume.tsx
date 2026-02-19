@@ -6,6 +6,7 @@ import { Download, Printer, Eye, EyeOff } from 'lucide-react';
 import { profile } from '../data/profile';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
+import PageTransition from '../components/PageTransition';
 
 const Resume: React.FC = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -33,19 +34,19 @@ const Resume: React.FC = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/content/resume/Ajith_Srikanth_Resume.pdf';
-    link.download = 'Ajith_Srikanth_Resume.pdf';
+    link.href = '/Ajith_Srikanth_Resume_M.pdf';
+    link.download = 'Ajith_Srikanth_Resume_M.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const handlePrint = () => {
-    window.open('/content/resume/Ajith_Srikanth_Resume.pdf', '_blank');
+    window.open('/Ajith_Srikanth_Resume_M.pdf', '_blank');
   };
 
   return (
-    <>
+    <PageTransition>
       <Helmet>
         <title>Resume - {profile.name}</title>
         <meta name="description" content="Download Ajith Srikanth's resume and professional experience." />
@@ -112,7 +113,7 @@ const Resume: React.FC = () => {
             <Card className={`${isFullscreen ? 'fixed inset-4 z-50' : ''}`}>
               <div className={`${isFullscreen ? 'h-full' : 'h-96 md:h-[800px]'}`}>
                 <iframe
-                  src="/content/resume/Ajith_Srikanth_Resume.pdf"
+                  src="/Ajith_Srikanth_Resume_M.pdf"
                   className="w-full h-full rounded-lg"
                   title="Ajith Srikanth Resume"
                 />
@@ -128,11 +129,11 @@ const Resume: React.FC = () => {
                   Interested in Working Together?
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  I'm always open to discussing new opportunities and collaborations. 
+                  I'm always open to discussing new opportunities and collaborations.
                   Feel free to reach out if you'd like to connect.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button href="/contact" size="lg">
+                  <Button to="/contact" size="lg">
                     Get In Touch
                   </Button>
                   <Button href={profile.linkedin} target="_blank" variant="outline" size="lg">
@@ -144,7 +145,7 @@ const Resume: React.FC = () => {
           </motion.div>
         </div>
       </motion.div>
-    </>
+    </PageTransition>
   );
 };
 

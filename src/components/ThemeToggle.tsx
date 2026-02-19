@@ -1,53 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Sun, Moon } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 const ThemeToggle: React.FC = () => {
-  const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    
-    // Check for saved theme preference or default to system preference
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    const shouldBeDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
-    
-    setIsDark(shouldBeDark);
-    
-    // Apply theme to document
-    if (shouldBeDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    
-    // Update localStorage
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
-    
-    // Apply theme to document
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  };
-
-  // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
-    return (
-      <div className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center">
-        <div className="w-5 h-5" />
-      </div>
-    );
-  }
+  const { isDark, toggleTheme } = useTheme();
 
   return (
     <motion.button

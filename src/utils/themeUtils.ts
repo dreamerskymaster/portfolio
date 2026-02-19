@@ -1,6 +1,13 @@
+/**
+ * Defines the available color themes for the application.
+ */
 export type Theme = 'light' | 'dark';
 
-// Get initial theme from localStorage or system preference
+/**
+ * Retrieves the initial theme preference.
+ * Priority: LocalStorage > System Preference > Default ('light').
+ * @returns {Theme} The determined initial theme.
+ */
 export function getInitialTheme(): Theme {
   if (typeof window === 'undefined') return 'light';
   
@@ -10,7 +17,10 @@ export function getInitialTheme(): Theme {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-// Set theme and update DOM
+/**
+ * Sets the active theme by updating the DOM and LocalStorage.
+ * @param {Theme} theme - The theme to set ('light' or 'dark').
+ */
 export function setTheme(theme: Theme): void {
   if (typeof window === 'undefined') return;
   
@@ -25,7 +35,10 @@ export function setTheme(theme: Theme): void {
   localStorage.setItem('theme', theme);
 }
 
-// Toggle between light and dark themes
+/**
+ * Toggles the current theme between 'light' and 'dark'.
+ * @returns {Theme} The new active theme.
+ */
 export function toggleTheme(): Theme {
   const currentTheme = getInitialTheme();
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -33,7 +46,11 @@ export function toggleTheme(): Theme {
   return newTheme;
 }
 
-// Listen for system theme changes
+/**
+ * Subscribes to system color scheme changes.
+ * @param {function} callback - Function to call when system preference changes.
+ * @returns {function} Cleanup function to remove the event listener.
+ */
 export function watchSystemTheme(callback: (theme: Theme) => void): () => void {
   if (typeof window === 'undefined') return () => {};
   
@@ -49,7 +66,9 @@ export function watchSystemTheme(callback: (theme: Theme) => void): () => void {
   return () => mediaQuery.removeEventListener('change', handleChange);
 }
 
-// Initialize theme on app load
+/**
+ * Initializes the theme system on application load.
+ */
 export function initializeTheme(): void {
   const theme = getInitialTheme();
   setTheme(theme);

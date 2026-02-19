@@ -1,3 +1,6 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&f[]=general-sans@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @import './styles/theme.css';
 @tailwind base;
 @tailwind components;
@@ -19,12 +22,12 @@
   }
 
   /* Light mode gradient background */
-  body:not(.dark) {
+  html:not(.dark) body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 
   /* Dark mode gradient background */
-  body.dark {
+  html.dark body {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   }
 }
@@ -174,6 +177,24 @@
   .hover-scale:hover {
     transform: scale(1.05);
   }
+
+  .link-underline {
+    position: relative;
+    text-decoration: none;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+  }
+  .link-underline:hover::after {
+    width: 100%;
+  }
 }
 
 @keyframes fadeInUp {
@@ -279,6 +300,19 @@
   100% { transform: translateY(100vh); opacity: 0; }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -332,4 +366,196 @@ button, a, input, textarea {
 .card-hover:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS OVERHAUL
+   ========================================= */
+
+:root {
+  --breakpoint-xs: 375px;  /* Small phones */
+  --breakpoint-sm: 640px;  /* Large phones landscape */
+  --breakpoint-md: 768px;  /* Tablets */
+  --breakpoint-lg: 1024px; /* Laptops */
+  --breakpoint-xl: 1280px; /* Desktops */
+  --breakpoint-2xl: 1536px; /* Large desktops */
+}
+
+/* Projects Section - Skills Tech Stack Grey Boxes */
+.tech-stack-container,
+.skills-grid,
+.technologies-used {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  background: #1a1a1a; /* Grey background */
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* Mobile First: 3 columns */
+.tech-stack-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tech-stack-item,
+.skill-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  min-height: 90px;
+}
+
+.tech-stack-item img,
+.skill-icon img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.tech-stack-item p,
+.skill-icon p {
+  font-size: 11px;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.2;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Tablet: 4 columns */
+@media (min-width: 640px) {
+  .tech-stack-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  
+  .tech-stack-item img,
+  .skill-icon img {
+    height: 65px;
+    width: 65px;
+  }
+  
+  .tech-stack-item p,
+  .skill-icon p {
+    font-size: 12px;
+  }
+}
+
+/* Desktop: 6 columns */
+@media (min-width: 1024px) {
+  .tech-stack-container {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+  
+  .tech-stack-item img,
+  .skill-icon img {
+    height: 80px;
+    width: 80px;
+  }
+  
+  .tech-stack-item p,
+  .skill-icon p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Navigation Styles */
+.mobile-nav-menu {
+  position: fixed;
+  top: 70px; /* Below header */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  z-index: 999;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav-menu.open {
+  transform: translateY(0);
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 16px 20px;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.2s;
+}
+
+.mobile-nav-link:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .mobile-nav-menu,
+  .hamburger-button {
+    display: none;
+  }
+}
+
+/* Projects Layout Responsive Grid */
+.projects-grid {
+  display: grid;
+  gap: 24px;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Mobile: Single column */
+.projects-grid {
+  grid-template-columns: 1fr;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1280px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 40px;
+  }
+}
+
+/* Header Logo Styles */
+.header-logo {
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .header-logo {
+    width: 80px;
+    height: 80px;
+  }
 }

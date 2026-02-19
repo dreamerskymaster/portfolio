@@ -237,45 +237,8 @@ export const documents: Document[] = [
     skills: ['Ritter Systems', 'Laser Marking', 'Steel Processing', 'Equipment Training']
   },
 
-  // Letters of Recommendation
-  {
-    id: 'beslam-lor',
-    title: 'Letter of Recommendation - Beslam Sir',
-    type: 'Recommendation',
-    category: 'Professional Reference',
-    company: 'Hero MotoCorp',
-    year: '2024',
-    description: 'Professional recommendation from senior manager highlighting technical expertise and leadership',
-    filePath: '/documents/AjithSri_LOR-2- Beslam Sir.docx',
-    verified: true,
-    highlights: [
-      'Technical expertise recognition',
-      'Leadership qualities highlighted',
-      'Professional growth documented',
-      'Team collaboration skills'
-    ],
-    relevance: 'Professional validation of skills and achievements',
-    skills: ['Leadership', 'Technical Expertise', 'Team Management', 'Professional Development']
-  },
-  {
-    id: 'mrl-lor',
-    title: 'Letter of Recommendation - MRLT Sir',
-    type: 'Recommendation',
-    category: 'Professional Reference',
-    company: 'Hero MotoCorp',
-    year: '2024',
-    description: 'Professional recommendation from plant manager emphasizing manufacturing expertise and innovation',
-    filePath: '/documents/AjithSri_LOR-3_MRLT Sir.docx',
-    verified: true,
-    highlights: [
-      'Manufacturing innovation recognition',
-      'Process optimization expertise',
-      'Cross-functional collaboration',
-      'Technical problem-solving skills'
-    ],
-    relevance: 'Validates manufacturing engineering capabilities and innovation',
-    skills: ['Manufacturing Engineering', 'Process Innovation', 'Cross-functional Leadership', 'Technical Problem Solving']
-  },
+
+
   {
     id: 'vasanth-lor',
     title: 'Letter of Recommendation - Vasanth Sir',

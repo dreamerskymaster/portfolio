@@ -3,10 +3,16 @@
 > **Advanced Manufacturing Engineer & AI Innovation Specialist**  
 > Bridging Smart Manufacturing, Supply Chain Optimization, and AI-Driven Automation for Industry 4.0 Transformation
 
+<div align="center">
+
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-manufx.vercel.app-00D4AA?style=for-the-badge&logo=vercel)](https://manufx.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-dreamerskymaster-181717?style=for-the-badge&logo=github)](https://github.com/dreamerskymaster)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ajith%20Srikanth-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/as31)
 [![Email](https://img.shields.io/badge/Email-ajithsrikanth.f@northeastern.edu-D14836?style=for-the-badge&logo=gmail)](mailto:ajithsrikanth.f@northeastern.edu)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdreamerskymaster%2Fportfolio)
+
+</div>
 
 ## 🚀 Live Demo
 
@@ -32,6 +38,7 @@ This portfolio features **GitHub Actions** for seamless CI/CD:
 - [Development](#development)
 - [Deployment](#deployment)
 - [Key Sections](#key-sections)
+- [Media & Assets](#media--assets)
 - [Performance](#performance)
 - [Contributing](#contributing)
 - [License](#license)
@@ -45,31 +52,27 @@ This portfolio represents **Ajith Srikanth**, an Advanced Manufacturing Engineer
 - **🧠 AI & Innovation**: Machine Learning, Computer Vision, Predictive Analytics
 - **👥 Leadership**: Cross-functional team management, Training & Development
 
-## ✨ Features
+## ✨ Features (Overhaul v2.0)
 
-### 🎨 **Modern UI/UX**
-- **Glassmorphic Design**: Modern glassmorphic effects with gradient backgrounds
-- **Dark/Light Mode**: Seamless theme switching with system preference detection
-- **Responsive Design**: Mobile-first approach with perfect scaling across devices
-- **Smooth Animations**: Framer Motion powered micro-interactions and transitions
-- **Easter Eggs**: Interactive elements and delightful surprises throughout
+### 🎨 **Premium UI/UX**
+- **OLED Dark Mode**: True black background for incredible contrast.
+- **Warm Light Mode**: Editorial-style warm paper theme for readability.
+- **Typography System**: Integrated Satoshi, Instrument Serif, and JetBrains Mono for a premium feel.
+- **Glassmorphic Design**: Modern glassmorphic effects with dynamic gradient backgrounds.
+- **Micro-Interactions**: Custom trailing cursor, section parallax, and animated link underlines.
 
 ### 📱 **Interactive Sections**
-- **Dynamic Homepage**: Hero section with animated statistics and call-to-actions
-- **Professional Timeline**: Interactive career progression with detailed achievements
-- **Project Showcase**: Comprehensive project portfolio with live demos and case studies
-- **Research Publications**: Academic papers and research contributions
-- **Document Viewer**: In-browser document viewing (Resume, Reports, LORs)
-- **Personal Interests**: Interactive hobbies section with media galleries
-- **Testimonials**: Professional recommendations and LinkedIn endorsements
+- **Impact Dashboard**: Dynamic metrics grid with animated counters (`useCountUp`).
+- **3D Tilt Cards**: Project cards with interactive 3D tilt and glow effects.
+- **Professional Timeline**: Interactive career progression with detailed achievements.
+- **Personal Interests**: Gamified hobbies section with media galleries.
+- **Technical Tooltips**: Interactive explanations for industry-specific terms.
 
-### 🔧 **Technical Features**
-- **Formspree Integration**: Direct email contact form with validation
-- **Document Management**: In-browser PDF, PowerPoint, and Word document viewing
-- **Technical Tooltips**: Interactive explanations for industry-specific terms
-- **Search Functionality**: Global search with keyboard shortcuts (Ctrl+K)
-- **SEO Optimized**: Meta tags, Open Graph, and structured data
-- **Performance**: Code splitting, lazy loading, and optimized assets
+### 🔧 **Technical Excellence**
+- **SPA Routing**: Seamless Single Page Application transitions via `react-router-dom`.
+- **SEO Optimized**: Helmet-powered metadata and JSON-LD Structured Data for high search rankings.
+- **Accessibility**: ARIA labels, skip-links, and full keyboard navigation support.
+- **Performance**: Code splitting, lazy loading, and zero build-time syntax errors.
 
 ## 🛠️ Tech Stack
 
@@ -85,54 +88,27 @@ This portfolio represents **Ajith Srikanth**, an Advanced Manufacturing Engineer
 - **Vercel** - Cloud platform for deployment
 - **GitHub Actions** - CI/CD automation
 
-### **Content Management**
-- **Markdown** - Content authoring
-- **Gray Matter** - Frontmatter parsing
-- **Rehype** - HTML processing
-
-### **Icons & UI**
-- **Lucide React** - Beautiful icon library
-- **Custom Components** - Reusable UI elements
-
 ## 📁 Project Structure
 
 ```
 ├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── Header.tsx      # Navigation with ManuFX branding
-│   │   ├── Footer.tsx      # Site footer
-│   │   ├── ContactForm.tsx # Formspree contact form
-│   │   └── TechnicalTooltip.tsx # Interactive tooltips
-│   ├── pages/              # Page components
-│   │   ├── Home.tsx        # Landing page
-│   │   ├── About.tsx       # Professional timeline
-│   │   ├── Projects.tsx    # Project showcase
-│   │   ├── Hobbies.tsx     # Personal interests
-│   │   ├── Writings.tsx    # Research publications
-│   │   ├── Certifications.tsx # Professional certifications
-│   │   ├── Documents.tsx   # Document viewer
-│   │   └── Contact.tsx     # Contact information
-│   ├── data/               # Static data
-│   │   ├── profile.ts      # Personal information
-│   │   ├── skills.ts       # Technical skills
-│   │   ├── timeline.ts     # Career timeline
-│   │   ├── certificates.ts # Certifications data
-│   │   ├── documents.ts    # Document metadata
-│   │   ├── hobbies.ts      # Personal interests
-│   │   └── testimonials.ts # Professional recommendations
-│   ├── styles/             # Styling
-│   │   └── theme.css       # CSS variables
-│   └── utils/              # Utility functions
-├── public/                 # Static assets
-│   ├── ManuFX.png         # Brand logo
-│   ├── profile-pic.png    # Profile picture
-│   ├── certificates/      # Certification images
-│   ├── documents/         # Professional documents
-│   └── hobbies/           # Personal media
-├── content/               # Markdown content
-│   ├── projects/          # Project descriptions
-│   ├── writing/           # Research articles
-│   └── resume/            # Resume PDF
+│   ├── components/          # UI Components
+│   │   ├── ui/              # Atom-level components (Button, Card, Chip)
+│   │   ├── CustomCursor.tsx # Trailing cursor logic
+│   │   ├── ImpactDashboard.tsx # Animated metrics
+│   │   ├── PageTransition.tsx  # Global blur-fade wrapper
+│   │   ├── ScrollProgress.tsx  # Vertical reading indicator
+│   │   └── ParallaxHeading.tsx # Parallax header effects
+│   ├── pages/              # Routed Page Components
+│   ├── data/               # Static Data Modules
+│   │   ├── profile.ts      # Main career & project data
+│   │   └── technicalTerms.ts # Tooltip definitions
+│   ├── utils/              # Hooks & Logic
+│   │   ├── useTiltEffect.ts # 3D interaction hook
+│   │   └── useCountUp.ts    # Counter animation hook
+│   └── styles/             # Global CSS & Tokens
+├── public/                 # Static Assets (ManuFX logo, etc.)
+├── content/               # Markdown content (Projects, Articles)
 └── .github/workflows/     # CI/CD configuration
 ```
 
@@ -140,7 +116,7 @@ This portfolio represents **Ajith Srikanth**, an Advanced Manufacturing Engineer
 
 ### Prerequisites
 - **Node.js 18+**
-- **npm** or **yarn**
+- **npm**
 
 ### Quick Start
 
@@ -160,9 +136,6 @@ This portfolio represents **Ajith Srikanth**, an Advanced Manufacturing Engineer
    npm run dev
    ```
 
-4. **Open your browser**
-   Navigate to `http://localhost:5173`
-
 ## 🔧 Development
 
 ### Available Scripts
@@ -178,154 +151,20 @@ npm run lint         # Run ESLint
 npm run typecheck    # TypeScript type checking
 ```
 
-### Environment Variables
+## 🖼️ Media & Assets
 
-Create a `.env` file based on `env.example`:
-
-```env
-VITE_SITE_URL=https://manufx.vercel.app
-VITE_SITE_NAME="ManuFX - Ajith Srikanth Portfolio"
-VITE_FORMSPREE_ENDPOINT=xzzanvdl
-VITE_CONTACT_EMAIL=ajithsrikanth.f@northeastern.edu
-```
-
-## 🚀 Deployment
-
-### Automatic Deployment (Recommended)
-
-This portfolio is configured for automatic deployment to Vercel:
-
-1. **Connect GitHub to Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Import repository: `skuller-007/portfolio`
-   - Vercel auto-detects Vite configuration
-
-2. **Set Environment Variables**
-   - `VITE_SITE_URL`: `https://manufx.vercel.app`
-   - `VITE_FORMSPREE_ENDPOINT`: `xzzanvdl`
-   - `VITE_CONTACT_EMAIL`: `ajithsrikanth.f@northeastern.edu`
-
-3. **Deploy**
-   - Push to `main` branch → Automatic production deployment
-   - Create pull request → Preview deployment
-
-### Manual Deployment
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Login and deploy
-vercel login
-vercel --prod
-```
-
-## 📊 Key Sections
-
-### 🏠 **Homepage**
-- **Hero Section**: Animated introduction with ManuFX branding
-- **Statistics**: Key achievements and metrics
-- **Call-to-Actions**: Contact and project links
-- **Easter Eggs**: Interactive "Namaskaram" modal
-
-### 👨‍💼 **About**
-- **Professional Timeline**: Career progression with achievements
-- **Technical Evolution**: Skills development over time
-- **Availability**: "Available from December 2026 for Full-time Roles"
-- **Interactive Tooltips**: Technical term explanations
-
-### 🚀 **Projects**
-- **Manufacturing Innovation**: TPM implementation, OEE optimization
-- **AI & Automation**: Machine learning, computer vision projects
-- **Research Publications**: Academic papers and studies
-- **Live Demos**: Interactive project showcases
-
-### 🎯 **Personal Interests**
-- **Cultural Exploration**: Travel photography and videos
-- **Culinary Adventures**: Cooking and cuisine exploration
-- **Outdoor Activities**: Biking, hiking adventures
-- **Entertainment**: Music, TV shows, and movies
-
-### 📜 **Certifications**
-- **Six Sigma & Quality**: Lean methodology, process improvement
-- **Cloud & AI**: AWS, machine learning certifications
-- **Manufacturing**: TPM, smart manufacturing credentials
-- **Project Management**: Agile, waterfall methodologies
-
-### 📄 **Documents**
-- **Resume**: Interactive PDF viewer
-- **Letters of Recommendation**: Professional endorsements
-- **Research Papers**: Academic publications
-- **Training Materials**: Presentations and reports
-
-## ⚡ Performance
-
-### **Optimizations**
-- **Code Splitting**: Lazy loading for optimal performance
-- **Image Optimization**: Compressed and responsive images
-- **Bundle Analysis**: Optimized JavaScript bundles
-- **Caching**: Strategic cache headers for static assets
-
-### **Metrics**
-- **Lighthouse Score**: 95+ across all categories
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
-
-### **Browser Support**
-- **Chrome**: 90+
-- **Firefox**: 88+
-- **Safari**: 14+
-- **Edge**: 90+
+This project uses a centralized mapping system for all visual content. See the [Media & Assets Mapping Guide](MEDIA_GUIDE.md) for details.
 
 ## 🤝 Contributing
 
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Make your changes**
-4. **Test thoroughly**
-   ```bash
-   npm run lint
-   npm run build
-   ```
-5. **Commit your changes**
-   ```bash
-   git commit -m "Add amazing feature"
-   ```
-6. **Push to the branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-7. **Open a Pull Request**
+This is a personal professional portfolio. While it is public, it is maintained for individual professional representation.
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-**Ajith Srikanth**  
-Advanced Manufacturing Engineer & AI Innovation Specialist
-
-- **📧 Email**: [ajithsrikanth.f@northeastern.edu](mailto:ajithsrikanth.f@northeastern.edu)
-- **💼 LinkedIn**: [linkedin.com/in/as31](https://linkedin.com/in/as31)
-- **🐙 GitHub**: [github.com/dreamerskymaster](https://github.com/dreamerskymaster)
-- **🌐 Portfolio**: [manufx.vercel.app](https://manufx.vercel.app)
-
-## 🙏 Acknowledgments
-
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **Lucide React** - Icon library
-- **Vite** - Build tool
-- **Vercel** - Deployment platform
-- **Formspree** - Contact form service
+This project is licensed under the **MIT License**.
 
 ---
 
 **Built with ❤️ by Ajith Srikanth | ManuFX Branding**
 
-*Last updated: January 2025*
+*Last updated: February 2026*

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import {
   Heart,
   Star,
@@ -13,25 +14,218 @@ import {
   Tv,
   Sparkles,
   Zap,
-  Target
+  Target,
+  Trophy,
+  Gamepad2,
+  Cpu,
+  Lock,
+  Wrench
 } from 'lucide-react';
 import { hobbies, Hobby } from '../data/hobbies';
+import HobbyGame from '../components/HobbyGame';
+import PageTransition from '../components/PageTransition';
+
+// --- Gamification Components ---
+
+const XPBar: React.FC<{ xp: number; level: number; nextLevelXp: number }> = ({ xp, level, nextLevelXp }) => {
+  const progress = (xp / nextLevelXp) * 100;
+
+  return (
+    <div className="fixed top-24 right-4 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 w-64 md:w-80 transform transition-all hover:scale-105 hidden lg:block">
+      <div className="flex justify-between items-center mb-2">
+        <div className="flex items-center gap-2">
+          <div className="bg-gradient-to-r from-amber-400 to-orange-500 p-1.5 rounded-lg text-white">
+            <Trophy className="w-4 h-4" />
+          </div>
+          <span className="font-bold text-slate-800 dark:text-white">Player Level {level}</span>
+        </div>
+        <span className="text-xs font-mono text-slate-500 dark:text-slate-400">{Math.floor(xp)} / {nextLevelXp} XP</span>
+      </div>
+      <div className="h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+        <motion.div
+          className="h-full bg-gradient-to-r from-emerald-400 to-cyan-500"
+          initial={{ width: 0 }}
+          animate={{ width: `${progress}%` }}
+          transition={{ type: "spring", stiffness: 50 }}
+        />
+      </div>
+    </div>
+  );
+};
+
+// 3D Tilt Card Component
+const GamifiedCard: React.FC<{
+  hobby: Hobby;
+  onClick: () => void;
+  onHover: () => void;
+  isLiked: boolean;
+  isLocked: boolean;
+  toggleLike: (e: React.MouseEvent) => void;
+  getIcon: (id: string) => React.ReactNode;
+}> = ({ hobby, onClick, onHover, isLiked, isLocked, toggleLike, getIcon }) => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const rotateX = useTransform(y, [-100, 100], [5, -5]);
+  const rotateY = useTransform(x, [-100, 100], [-5, 5]);
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (isLocked) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    x.set(event.clientX - centerX);
+    y.set(event.clientY - centerY);
+    onHover();
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      style={{ rotateX, rotateY, perspective: 1000 }}
+      className={`relative group h-full ${isLocked ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+      onClick={isLocked ? undefined : onClick}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      whileHover={isLocked ? {} : { scale: 1.02, zIndex: 10 }}
+    >
+      <div className={`absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl opacity-0 transition duration-500 ${isLocked ? '' : 'group-hover:opacity-75 blur'}`}></div>
+      <div className={`relative bg-white dark:bg-slate-800 rounded-2xl p-6 h-full shadow-lg border border-slate-200 dark:border-slate-700 flex flex-col justify-between transition-all duration-700 ${isLocked ? 'opacity-40 grayscale blur-[2px]' : 'opacity-100 grayscale-0 blur-0'}`}>
+
+        {isLocked && (
+          <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-slate-400 group-hover:text-indigo-500 transition-colors">
+            <Lock className="w-12 h-12 mb-2" />
+            <span className="text-[10px] font-black uppercase tracking-widest">Capture in game to unlock</span>
+          </div>
+        )}
+
+        {/* Header */}
+        <div>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className={`p-3 rounded-xl bg-gradient-to-r ${hobby.color} text-white shadow-lg`}>
+                {getIcon(hobby.id)}
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-slate-800 dark:text-white">{hobby.name}</h3>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">{hobby.emoji}</span>
+                  {!isLocked && <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 font-medium font-mono">ID #{hobby.id.slice(0, 3).toUpperCase()}</span>}
+                </div>
+              </div>
+            </div>
+            {!isLocked && (
+              <motion.button
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.8 }}
+                onClick={toggleLike}
+                className="z-20 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+              >
+                <Heart className={`w-6 h-6 ${isLiked ? 'fill-rose-500 text-rose-500' : 'text-slate-300'}`} />
+              </motion.button>
+            )}
+          </div>
+
+          <p className="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3 text-sm leading-relaxed">
+            {hobby.description}
+          </p>
+
+          {/* Skill Bar */}
+          {!isLocked && (
+            <div className="mb-4">
+              <div className="flex justify-between text-xs mb-1 font-semibold text-slate-400 uppercase tracking-wider">
+                <span>Discovery Status</span>
+                <span>100%</span>
+              </div>
+              <div className="h-1.5 w-full bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: '100%' }}
+                  className={`h-full bg-gradient-to-r ${hobby.color}`}
+                ></motion.div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div>
+          <div className="flex gap-2 mb-4 overflow-x-auto pb-2 scrollbar-none">
+            {hobby.highlights.slice(0, 3).map((h, i) => (
+              <span key={i} className={`text-[9px] px-2 py-1 rounded border bg-slate-50 dark:bg-slate-800 text-slate-500 border-slate-200 dark:border-slate-700 whitespace-nowrap`}>
+                {h.slice(0, 15)}...
+              </span>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-between mt-2 pt-4 border-t border-slate-100 dark:border-slate-700">
+            <span className="text-[10px] font-mono text-slate-400">UNLOCKED</span>
+            <div className="flex -space-x-2">
+              {hobby.media.slice(0, 3).map((m, i) => (
+                <div key={i} className="w-6 h-6 rounded-full bg-slate-200 border-2 border-white dark:border-slate-800 overflow-hidden shadow-sm">
+                  {m.type === 'image' && <img src={m.src} className="w-full h-full object-cover" alt={`Hobby ${hobby.name} thumbnail`} />}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </motion.div>
+  );
+};
+
 
 const Hobbies: React.FC = () => {
   const [selectedHobby, setSelectedHobby] = useState<Hobby | null>(null);
   const [likedHobbies, setLikedHobbies] = useState<Set<string>>(new Set());
-  const [easterEggs, setEasterEggs] = useState({
-    sparkles: false,
-    rainbow: false,
+  const [unlockedHobbies, setUnlockedHobbies] = useState<Set<string>>(new Set(['music'])); // Music unlocked by default for flavor
+
+  // Game State
+  const [xp, setXp] = useState(1250);
+  const [level, setLevel] = useState(5);
+  const nextLevelXp = 2000;
+
+  // Effects
+  const lastHoverTime = useRef(0);
+
+  const [activeEffects, setActiveEffects] = useState({
+    levelup: false,
     confetti: false
   });
 
-  // Easter egg triggers
-  const triggerEasterEgg = (type: keyof typeof easterEggs) => {
-    setEasterEggs(prev => ({ ...prev, [type]: true }));
+  const triggerEffect = (effect: keyof typeof activeEffects) => {
+    setActiveEffects(prev => ({ ...prev, [effect]: true }));
     setTimeout(() => {
-      setEasterEggs(prev => ({ ...prev, [type]: false }));
+      setActiveEffects(prev => ({ ...prev, [effect]: false }));
     }, 3000);
+  };
+
+  const addXp = (amount: number) => {
+    setXp(prev => {
+      const newXp = prev + amount;
+      if (newXp >= nextLevelXp) {
+        triggerEffect('levelup');
+        triggerEffect('confetti');
+        setLevel(l => l + 1);
+        return newXp - nextLevelXp;
+      }
+      return newXp;
+    });
+  };
+
+  const handleHobbyUnlock = (hobbyId: string) => {
+    if (!unlockedHobbies.has(hobbyId)) {
+      setUnlockedHobbies(prev => new Set([...prev, hobbyId]));
+      addXp(250);
+    }
   };
 
   const toggleLike = (hobbyId: string) => {
@@ -41,7 +235,7 @@ const Hobbies: React.FC = () => {
         newSet.delete(hobbyId);
       } else {
         newSet.add(hobbyId);
-        triggerEasterEgg('sparkles');
+        addXp(500);
       }
       return newSet;
     });
@@ -55,356 +249,231 @@ const Hobbies: React.FC = () => {
       biking: <Bike className="w-6 h-6" />,
       hiking: <Mountain className="w-6 h-6" />,
       music: <Music className="w-6 h-6" />,
-      'tv-movies': <Tv className="w-6 h-6" />
+      'tv-movies': <Tv className="w-6 h-6" />,
+      automotive: <Wrench className="w-6 h-6" />
     };
-    return icons[hobbyId] || <Star className="w-6 h-6" />;
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100
-      }
-    }
-  };
-
-  const mediaVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 200
-      }
-    }
+    return icons[hobbyId] || <Gamepad2 className="w-6 h-6" />;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 p-4">
-      {/* Easter Eggs */}
-      <AnimatePresence>
-        {easterEggs.sparkles && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 pointer-events-none z-50"
-          >
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-                key={i}
-                initial={{
-                  x: Math.random() * window.innerWidth,
-                  y: Math.random() * window.innerHeight,
-                  scale: 0,
-                  rotate: 0
-                }}
-                animate={{
-                  scale: [0, 1, 0],
-                  rotate: 360,
-                  y: Math.random() * window.innerHeight - 100
-                }}
-                transition={{
-                  duration: 2,
-                  delay: i * 0.1,
-                  ease: "easeOut"
-                }}
-                className="absolute text-yellow-400 text-2xl"
-              >
-                ✨
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <PageTransition>
+      <Helmet>
+        <title>Personal Quests | Ajith Srikanth Hobbies</title>
+        <meta name="description" content="Explore the personal interests and 'quests' of Ajith Srikanth: from automotive engineering and biking to music and culinary exploration." />
+      </Helmet>
+      <div
+        onContextMenu={(e) => e.preventDefault()}
+        className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-900/10 dark:to-slate-900 p-4 pb-32"
+      >
 
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-center mb-16"
-        >
-          <div className="max-w-4xl mx-auto">
-            <motion.h1
-              className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-white mb-6"
-              whileHover={{ scale: 1.02 }}
-            >
-              Personal Interests
-            </motion.h1>
-            <motion.p
-              className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6"
-              variants={itemVariants}
-            >
-              Beyond my professional work, I believe in maintaining a well-rounded lifestyle.
-              These personal interests help me stay creative, maintain work-life balance, and
-              bring fresh perspectives to my engineering solutions.
-            </motion.p>
+        {/* Background Ambience */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-400/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
 
-            <motion.div variants={itemVariants}>
-              <a
-                href="https://instagram.com/ajith_srikanth"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-sm text-slate-500 hover:text-pink-600 transition-colors duration-300"
-              >
-                <Camera className="w-4 h-4" />
-                <span>@ajith_srikanth</span>
-              </a>
-            </motion.div>
-          </div>
-        </motion.div>
+        <XPBar xp={xp} level={level} nextLevelXp={nextLevelXp} />
 
-        {/* Hobbies Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-        >
-          {hobbies.map((hobby) => (
+        <AnimatePresence>
+          {activeEffects.levelup && (
             <motion.div
-              key={hobby.id}
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.02,
-                y: -5
-              }}
-              className="relative group cursor-pointer"
-              onClick={() => setSelectedHobby(hobby)}
+              initial={{ opacity: 0, scale: 0.5, y: 100 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 1.5, y: -100 }}
+              className="fixed inset-0 z-[60] flex items-center justify-center pointer-events-none"
             >
-              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 h-full shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700">
-                {/* Hobby Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${hobby.color} text-white shadow-lg`}>
-                      {getHobbyIcon(hobby.id)}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-slate-800 dark:text-white">{hobby.name}</h3>
-                      <p className="text-slate-500 dark:text-slate-400 text-sm">{hobby.emoji}</p>
-                    </div>
-                  </div>
-                  <motion.button
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.8 }}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggleLike(hobby.id);
-                    }}
-                    className="text-slate-400 hover:text-red-500 transition-colors"
-                  >
-                    <Heart
-                      className={`w-5 h-5 ${likedHobbies.has(hobby.id) ? 'fill-red-500 text-red-500' : ''}`}
-                    />
-                  </motion.button>
-                </div>
-
-                {/* Description */}
-                <p className="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3 leading-relaxed">{hobby.description}</p>
-
-                {/* Highlights */}
-                <div className="space-y-2 mb-4">
-                  {hobby.highlights.slice(0, 2).map((highlight, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
-                      <Star className="w-4 h-4 text-amber-500" />
-                      <span className="text-sm text-slate-600 dark:text-slate-300">{highlight}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Fun Fact */}
-                <div className="bg-slate-50 dark:bg-slate-700 rounded-lg p-3 mb-4">
-                  <p className="text-sm text-slate-600 dark:text-slate-300 italic">
-                    💡 {hobby.funFact}
-                  </p>
-                </div>
-
-                {/* Media Preview */}
-                <div className="flex space-x-2 overflow-x-auto pb-2">
-                  {hobby.media.slice(0, 4).map((media, idx) => (
-                    <div key={idx} className="flex-shrink-0">
-                      {media.type === 'image' ? (
-                        <img
-                          src={media.src}
-                          alt={media.alt}
-                          className="w-16 h-16 rounded-lg object-cover shadow-md"
-                        />
-                      ) : (
-                        <div className="w-16 h-16 rounded-lg bg-slate-200 dark:bg-slate-600 flex items-center justify-center shadow-md">
-                          <Video className="w-6 h-6 text-slate-600 dark:text-slate-300" />
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                  {hobby.media.length > 4 && (
-                    <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-slate-200 dark:bg-slate-600 flex items-center justify-center shadow-md">
-                      <span className="text-slate-600 dark:text-slate-300 text-sm font-medium">+{hobby.media.length - 4}</span>
-                    </div>
-                  )}
+              <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-1 rounded-3xl shadow-2xl skew-y-3">
+                <div className="bg-slate-900 text-white px-12 py-6 rounded-2xl border-4 border-yellow-300 text-center">
+                  <Trophy className="w-16 h-16 text-yellow-300 mx-auto mb-2 animate-bounce" />
+                  <h2 className="text-4xl font-black italic uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 to-orange-400 drop-shadow-sm">Level Up!</h2>
+                  <p className="text-xl font-bold mt-2 text-yellow-100">You reached Level {level}!</p>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Selected Hobby Modal */}
-        <AnimatePresence>
-          {selectedHobby && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-              onClick={() => setSelectedHobby(null)}
-            >
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 dark:border-slate-700"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {/* Modal Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-4">
-                    <motion.div
-                      className={`p-4 rounded-full bg-gradient-to-r ${selectedHobby.color} text-white`}
-                      whileHover={{ rotate: 360 }}
-                    >
-                      {getHobbyIcon(selectedHobby.id)}
-                    </motion.div>
-                    <div>
-                      <h2 className="text-3xl font-bold text-slate-800 dark:text-white">{selectedHobby.name}</h2>
-                      <p className="text-slate-600 dark:text-slate-300">{selectedHobby.emoji} {selectedHobby.description}</p>
-                    </div>
-                  </div>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={() => setSelectedHobby(null)}
-                    className="text-slate-400 hover:text-slate-600 dark:hover:text-white text-2xl"
-                  >
-                    ×
-                  </motion.button>
-                </div>
-
-                {/* Media Gallery */}
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-4 flex items-center">
-                    <Camera className="w-6 h-6 mr-2" />
-                    Media Gallery
-                  </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {selectedHobby.media.map((media, idx) => (
-                      <motion.div
-                        key={idx}
-                        variants={mediaVariants}
-                        initial="hidden"
-                        animate="visible"
-                        whileHover={{ scale: 1.05 }}
-                        className="relative cursor-pointer"
-                      >
-                        {media.type === 'image' ? (
-                          <img
-                            src={media.src}
-                            alt={media.alt}
-                            className="w-full h-32 object-cover rounded-lg shadow-md"
-                          />
-                        ) : (
-                          <div className="w-full h-32 bg-slate-200 dark:bg-slate-600 rounded-lg flex items-center justify-center shadow-md">
-                            <Video className="w-8 h-8 text-slate-600 dark:text-slate-300" />
-                          </div>
-                        )}
-                        <div className="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                          {media.type === 'image' ? '📷' : '🎥'}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Highlights */}
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-4 flex items-center">
-                    <Target className="w-6 h-6 mr-2" />
-                    Highlights
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {selectedHobby.highlights.map((highlight, idx) => (
-                      <motion.div
-                        key={idx}
-                        whileHover={{ scale: 1.02 }}
-                        className="flex items-center space-x-3 p-3 bg-slate-50 dark:bg-slate-700 rounded-lg"
-                      >
-                        <Star className="w-5 h-5 text-amber-500" />
-                        <span className="text-slate-600 dark:text-slate-300">{highlight}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Fun Fact */}
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-slate-50 dark:bg-slate-700 rounded-lg p-4"
-                >
-                  <h4 className="text-lg font-bold text-slate-800 dark:text-white mb-2 flex items-center">
-                    <Sparkles className="w-5 h-5 mr-2" />
-                    Fun Fact
-                  </h4>
-                  <p className="text-slate-600 dark:text-slate-300 italic">{selectedHobby.funFact}</p>
-                </motion.div>
-              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Footer CTA */}
-        <motion.div
-          variants={itemVariants}
-          className="text-center mt-16"
-        >
+        <div className="max-w-7xl mx-auto relative z-10 pt-16">
+
+          {/* Header */}
           <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-2xl mx-auto shadow-lg border border-slate-200 dark:border-slate-700"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
           >
-            <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-4">
-              Interested in learning more about my personal interests?
-            </h3>
-            <p className="text-slate-600 dark:text-slate-300 mb-6">
-              I believe that diverse personal interests contribute to professional growth and innovation.
-              Let's connect and discuss how these experiences can bring value to your organization!
+            <h1 className="text-5xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 mb-6 tracking-tighter">
+              Personal Quests
+            </h1>
+            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium mb-12">
+              The journey doesn't end at the office.
+              <span className="text-indigo-500 font-bold ml-1">Play the terminal below to unlock my interests.</span>
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-              onClick={() => triggerEasterEgg('confetti')}
-            >
-              <Zap className="w-5 h-5 inline mr-2" />
-              Let's Connect!
-            </motion.button>
           </motion.div>
-        </motion.div>
+
+          {/* Playable Game Section */}
+          <div className="mb-24 flex justify-center">
+            <div className="w-full max-w-4xl px-4">
+              <HobbyGame
+                hobbies={hobbies.map(h => ({ id: h.id, emoji: h.emoji }))}
+                onHobbyUnlock={handleHobbyUnlock}
+              />
+            </div>
+          </div>
+
+          {/* Hobbies Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4">
+            {hobbies.map((hobby) => (
+              <div key={hobby.id} className="h-[400px]">
+                <GamifiedCard
+                  hobby={hobby}
+                  isLocked={!unlockedHobbies.has(hobby.id)}
+                  onClick={() => {
+                    setSelectedHobby(hobby);
+                    addXp(100);
+                  }}
+                  onHover={() => {
+                    const now = Date.now();
+                    // Throttle XP updates to once per 100ms prevents render spam
+                    if (now - lastHoverTime.current > 100) {
+                      addXp(1);
+                      lastHoverTime.current = now;
+                    }
+                  }}
+                  isLiked={likedHobbies.has(hobby.id)}
+                  toggleLike={(e) => {
+                    e.stopPropagation();
+                    toggleLike(hobby.id);
+                  }}
+                  getIcon={getHobbyIcon}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Modal */}
+          <AnimatePresence>
+            {selectedHobby && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 bg-black/95 backdrop-blur-xl z-50 flex items-center justify-center p-4"
+                onClick={() => setSelectedHobby(null)}
+              >
+                <motion.div
+                  initial={{ scale: 0.9, y: 50 }}
+                  animate={{ scale: 1, y: 0 }}
+                  exit={{ scale: 0.9, y: 50 }}
+                  className="bg-white dark:bg-slate-900 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-white/10"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="relative">
+                    <div className={`h-64 bg-gradient-to-r ${selectedHobby.color} relative overflow-hidden`}>
+                      <div className="absolute top-4 right-4 z-20">
+                        <button onClick={() => setSelectedHobby(null)} className="p-2 bg-black/20 hover:bg-black/40 rounded-full text-white backdrop-blur-md">
+                          <Cpu className="w-6 h-6" />
+                        </button>
+                      </div>
+                      <div className="absolute inset-0 opacity-20 mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+                      <div className="absolute bottom-8 left-8 flex items-end gap-6">
+                        <div className="p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl">
+                          {getHobbyIcon(selectedHobby.id)}
+                        </div>
+                        <div className="text-white drop-shadow-lg p-2">
+                          <h2 className="text-6xl font-black italic tracking-tighter uppercase mb-2">{selectedHobby.name}</h2>
+                          <div className="flex items-center gap-3">
+                            <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">{selectedHobby.emoji} Mission Complete</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-12">
+                      <div className="grid md:grid-cols-2 gap-16">
+                        <div className="space-y-12">
+                          <section>
+                            <div className="flex items-center gap-2 mb-6 text-indigo-500">
+                              <Target className="w-6 h-6" />
+                              <h3 className="text-xs font-black uppercase tracking-[0.3em]">The Objective</h3>
+                            </div>
+                            <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-light font-serif">
+                              {selectedHobby.description}
+                            </p>
+                          </section>
+
+                          <section>
+                            <div className="flex items-center gap-2 mb-6 text-indigo-500">
+                              <Camera className="w-6 h-6" />
+                              <h3 className="text-xs font-black uppercase tracking-[0.3em]">Evidence Log</h3>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                              {selectedHobby.media.map((m, i) => (
+                                <div key={i} className="group relative aspect-video bg-slate-100 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg">
+                                  {m.type === 'image' ? (
+                                    <img
+                                      src={m.src}
+                                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                      alt={m.alt}
+                                      draggable="false"
+                                      onContextMenu={(e) => e.preventDefault()}
+                                      onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.src = 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800'; // Generic placeholder
+                                      }}
+                                    />
+                                  ) : (
+                                    <video
+                                      src={m.src}
+                                      controls
+                                      controlsList="nodownload noremoteplayback"
+                                      preload="metadata"
+                                      className="w-full h-full object-cover"
+                                      poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800"
+                                      onContextMenu={(e) => e.preventDefault()}
+                                    >
+                                      Your browser does not support the video tag.
+                                    </video>
+                                  )}
+                                  <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <p className="text-white text-[10px] uppercase font-bold tracking-widest">{m.alt}</p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </section>
+                        </div>
+
+                        <div className="space-y-8">
+                          <div className="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-3xl border border-slate-100 dark:border-slate-800">
+                            <h3 className="font-black text-slate-400 text-[10px] uppercase tracking-[0.2em] mb-8">Achievements Unlocked</h3>
+                            <div className="space-y-6">
+                              {selectedHobby.highlights.map((h, i) => (
+                                <div key={i} className="flex gap-4">
+                                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center shrink-0">
+                                    <Star className="w-4 h-4 text-amber-500" />
+                                  </div>
+                                  <p className="text-sm text-slate-600 dark:text-slate-400 font-medium leading-tight">{h}</p>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          <div className="p-8 rounded-3xl bg-indigo-500/5 border border-indigo-500/10">
+                            <span className="text-indigo-500 font-black text-[10px] uppercase tracking-[0.2em] block mb-2">Secret Intel</span>
+                            <p className="text-indigo-600 dark:text-indigo-300 italic">"{selectedHobby.funFact}"</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+        </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

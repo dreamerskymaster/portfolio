@@ -1,19 +1,19 @@
 ---
-title: "Mano-AI - CLI AI Model for CNC & Robotics Troubleshooting"
-subtitle: "LLM-Powered Troubleshooting for CNC & Robotics Systems"
+title: "ManoAI - Manufacturing AI Agent"
+subtitle: "Secure, Local & Intelligent Troubleshooting for Manufacturing"
 category: "Northeastern"
 timeline: "Jan 2025 - Ongoing"
 teamSize: "Solo Developer"
 status: "Active Development"
-summary: "A CLI-based AI system leveraging Llama 3b to provide intelligent troubleshooting for CNC machines and robotics, reducing downtime by 40%."
-tech: ["Llama 3b", "Python", "Docker", "CLI", "AI/ML"]
+summary: "A secure, privacy-focused AI agent for manufacturing troubleshooting. Runs locally via Docker using Llama 3 to ensure data safety within the shop floor."
+tech: ["Llama 3", "Python", "Docker", "Open WebUI", "RAG"]
 impact:
   - "75% reduction in troubleshooting time"
   - "60% improvement in first-time fix rates"
   - "40% decrease in unplanned downtime"
 links:
   demo: "#"
-  repo: "#"
+  repo: "https://github.com/skymaster31/ManoAI"
 date: "2025-04-01"
 businessContext: "Manufacturing operators waste significant time troubleshooting equipment issues. Knowledge transfer from experienced workers to newer operators is inconsistent."
 challenge: "Create AI assistant that can provide accurate, context-aware troubleshooting guidance for manufacturing equipment using domain-specific knowledge."
@@ -32,7 +32,7 @@ technicalSolution:
     - "Offline capability"
 quantifiedResults:
   "Speed": "75% reduction in resolution time"
-  "Accuracy": "Significant improvement vs baseline"
+  "Privacy": "100% Data Localization"
   "Timeline": "8 months from concept to prototype"
 images: []
 ---
@@ -40,7 +40,7 @@ images: []
 # Mano-AI - CLI AI Model for CNC & Robotics Troubleshooting
 
 ## Overview
-Mano-AI represents a groundbreaking advancement in industrial automation troubleshooting, combining the power of large language models with real-time manufacturing data analysis. This innovative CLI-based AI system leverages the Llama 3b model to provide intelligent, context-aware troubleshooting assistance for CNC machines and robotics systems.
+Mano-AI represents a groundbreaking advancement in industrial automation troubleshooting, combining the power of large language models with real-time manufacturing data analysis. This innovative CLI-based AI system leverages the Llama 3 model (running locally via Ollama) to provide intelligent, context-aware troubleshooting assistance for CNC machines and robotics systems, ensuring complete data privacy by operating 100% offline.
 
 ## Key Features
 *   **Intelligent Troubleshooting**: Real-time equipment monitoring with instant issue detection.
