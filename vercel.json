@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "source": "/((?!.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|mp4|mov|mp3|woff|woff2|ttf|eot|pdf|json|heic|heif|JPG|PNG|MP4|MOV|HEIC|HEIF)).*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
