@@ -613,7 +613,7 @@ const Globe3D = () => {
       earthMat.dispose();
       trailGeometry.dispose();
     };
-  }, [isDark]);
+  }, [isDark]); // Re-run when theme changes to update star colors
 
   return (
     <div ref={containerRef} className={`fixed inset-0 -z-10 w-full h-full ${isDark ? 'bg-[#020617]' : 'bg-gradient-to-br from-slate-50 to-slate-200'} pointer-events-none transition-colors duration-500`}>

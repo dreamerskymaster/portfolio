@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { HelmetProvider } from 'react-helmet-async';
 import { AnimatePresence } from 'framer-motion';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from "@vercel/analytics/react";
 
 // Components
 import Header from './components/Header';
@@ -54,6 +55,7 @@ function App() {
               </main>
               <Footer />
               <SpeedInsights />
+              <Analytics />
             </div>
           </Router>
         </HelmetProvider >
