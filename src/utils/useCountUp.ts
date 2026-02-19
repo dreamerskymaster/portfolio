@@ -11,7 +11,6 @@ export const useCountUp = (target: number, duration: number = 2000, delay: numbe
 
   useEffect(() => {
     let startTimestamp: number | null = null;
-    let timer: NodeJS.Timeout;
     let animationFrameId: number;
 
     const step = (timestamp: number) => {
@@ -30,7 +29,7 @@ export const useCountUp = (target: number, duration: number = 2000, delay: numbe
       }
     };
 
-    timer = setTimeout(() => {
+    const timer = setTimeout(() => {
       animationFrameId = window.requestAnimationFrame(step);
     }, delay);
 

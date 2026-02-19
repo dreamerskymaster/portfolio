@@ -192,17 +192,19 @@ const Globe3D = () => {
 
       // Procedural Monuments
       switch (city.label) {
-        case "Paris": // Eiffel Tower Simplified
+        case "Paris": { // Eiffel Tower Simplified
           const tower = new THREE.Mesh(new THREE.CylinderGeometry(0.01, 0.15, 0.6, 4), monMat);
           monumentGroup.add(tower);
           break;
-        case "New York": // Empire State / Statue Simplified
+        }
+        case "New York": { // Empire State / Statue Simplified
           const base = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.1, 0.15), monMat);
           const spire = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.4, 0.05), monMat);
           spire.position.y = 0.2;
           monumentGroup.add(base, spire);
           break;
-        case "Mumbai": // Gateway Arch Simplified
+        }
+        case "Mumbai": { // Gateway Arch Simplified
           const gateBase = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.04, 0.1), monMat);
           const lCol = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.2, 0.04), monMat);
           const rCol = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.2, 0.04), monMat);
@@ -212,13 +214,15 @@ const Globe3D = () => {
           gateTop.position.y = 0.2;
           monumentGroup.add(gateBase, lCol, rCol, gateTop);
           break;
-        case "Delhi": // India Gate Simplified
+        }
+        case "Delhi": { // India Gate Simplified
           const dBase = new THREE.Mesh(new THREE.BoxGeometry(0.18, 0.2, 0.08), monMat);
           const hole = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.12, 0.1), new THREE.MeshBasicMaterial({ color: 0x000000 }));
           hole.position.y = -0.04;
           monumentGroup.add(dBase, hole);
           break;
-        case "Chennai": // Temple Gopuram
+        }
+        case "Chennai": { // Temple Gopuram
           const gopuram = new THREE.Group();
           for (let i = 0; i < 4; i++) {
             const floor = new THREE.Mesh(new THREE.BoxGeometry(0.15 - i * 0.03, 0.06, 0.15 - i * 0.03), monMat);
@@ -227,13 +231,15 @@ const Globe3D = () => {
           }
           monumentGroup.add(gopuram);
           break;
-        case "Haridwar": // Temple / Ghat Ghanta Simplified
+        }
+        case "Haridwar": { // Temple / Ghat Ghanta Simplified
           const innerTemple = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.12, 0.2, 4), monMat);
           const topSpire = new THREE.Mesh(new THREE.CylinderGeometry(0.01, 0.05, 0.15, 4), monMat);
           topSpire.position.y = 0.15;
           monumentGroup.add(innerTemple, topSpire);
           break;
-        case "Tirupati": // High Gopuram
+        }
+        case "Tirupati": { // High Gopuram
           const tGopuram = new THREE.Group();
           for (let i = 0; i < 6; i++) {
             const level = new THREE.Mesh(new THREE.BoxGeometry(0.18 - i * 0.03, 0.05, 0.18 - i * 0.03), monMat);
@@ -242,15 +248,18 @@ const Globe3D = () => {
           }
           monumentGroup.add(tGopuram);
           break;
-        case "Boston": // Custom Skyscraper
+        }
+        case "Boston": { // Custom Skyscraper
           const bBase = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.4, 0.1), monMat);
           const bSpire = new THREE.Mesh(new THREE.CylinderGeometry(0.01, 0.01, 0.15), monMat);
           bSpire.position.y = 0.25;
           monumentGroup.add(bBase, bSpire);
           break;
-        default:
+        }
+        default: {
           const building = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.2, 0.12), monMat);
           monumentGroup.add(building);
+        }
       }
 
       monumentGroup.position.copy(pos);
@@ -395,7 +404,7 @@ const Globe3D = () => {
     earth.add(pathGlow);
 
     let frameId: number;
-    let startTime = performance.now();
+    const startTime = performance.now();
 
     // Reusable objects for animation loop to avoid GC pressure
     const currentPoint = new THREE.Vector3();

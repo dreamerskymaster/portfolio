@@ -46,8 +46,9 @@ const HobbyGame: React.FC<HobbyGameProps> = ({ hobbies, onHobbyUnlock }) => {
     if (!hobbies || hobbies.length === 0) return;
 
     const randomHobby = hobbies[Math.floor(Math.random() * hobbies.length)];
-    let newFood: Point;
-    while (true) {
+    let newFood: Point = { x: 0, y: 0 };
+    let attempts = 0;
+    while (attempts < 100) {
       newFood = {
         x: Math.floor(Math.random() * GRID_SIZE),
         y: Math.floor(Math.random() * GRID_SIZE)
@@ -56,6 +57,7 @@ const HobbyGame: React.FC<HobbyGameProps> = ({ hobbies, onHobbyUnlock }) => {
       if (!currentSnake.some(segment => segment.x === newFood.x && segment.y === newFood.y)) {
         break;
       }
+      attempts++;
     }
     setFood({ ...randomHobby, point: newFood });
   }, [hobbies]);
