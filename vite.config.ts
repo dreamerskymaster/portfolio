@@ -47,7 +47,8 @@ export default defineConfig({
       'remark-rehype',
       'rehype-slug',
       'rehype-stringify',
-      'gray-matter'
+      'gray-matter',
+      '@vercel/analytics/react'
     ],
   },
   // Development server configuration
