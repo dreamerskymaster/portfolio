@@ -56,7 +56,7 @@ const IntroOverlay: React.FC<IntroOverlayProps> = ({ onComplete }) => {
           >
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-2xl relative z-50">
               <img
-                src="/documents/profile-pic (1).png"
+                src="/documents/profile-pic-1.png"
                 alt="Ajith Srikanth"
                 className="w-full h-full object-cover"
               />

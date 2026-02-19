@@ -468,7 +468,7 @@ export const profile: Profile = {
       "images": [
         "/vdrs-presentation/RAG/rag1.png",
         "/vdrs-presentation/RAG/rag2.png",
-        "/vdrs-presentation/RAG/Screenshot 2025-12-11 151205.png",
+        "/vdrs-presentation/RAG/Screenshot-2025-12-11-151205.png",
         "/vdrs-presentation/RAG/cmdchat.png",
         "/vdrs-presentation/RAG/cmdch2.png"
       ],
@@ -535,7 +535,7 @@ export const profile: Profile = {
         "/vdrs-presentation/cdms/cdms2.png",
         "/vdrs-presentation/cdms/cdms3.png",
         "/vdrs-presentation/cdms/cdms4.png",
-        "/vdrs-presentation/cdms/Screenshot 2025-11-18 134917.png"
+        "/vdrs-presentation/cdms/Screenshot-2025-11-18-134917.png"
       ],
       "recognition": [],
       "date": "2025-09-01"
@@ -596,7 +596,7 @@ export const profile: Profile = {
         "/vdrs-presentation/vdt/vdt1.png",
         "/vdrs-presentation/vdt/vdt2.png",
         "/vdrs-presentation/vdt/vdt3.png",
-        "/vdrs-presentation/vdt/Screenshot 2025-10-27 110500.png"
+        "/vdrs-presentation/vdt/Screenshot-2025-10-27-110500.png"
       ],
       "recognition": [],
       "date": "2025-11-20"
@@ -645,8 +645,8 @@ export const profile: Profile = {
         "Accuracy": "Zero data conflicts"
       },
       "images": [
-        "/vdrs-presentation/vdt/Screenshot 2025-10-27 110500.png",
-        "/vdrs-presentation/vdt/Screenshot 2025-11-10 161206.png"
+        "/vdrs-presentation/vdt/Screenshot-2025-10-27-110500.png",
+        "/vdrs-presentation/vdt/Screenshot-2025-11-10-161206.png"
       ],
       "recognition": [],
       "date": "2025-11-15"
@@ -743,11 +743,11 @@ export const profile: Profile = {
         "Security": "Zero data leaks"
       },
       "images": [
-        "/vdrs-presentation/vdrsex/Screenshot 2025-10-30 104013.png",
-        "/vdrs-presentation/vdrsex/Screenshot 2025-10-29 175510.png",
-        "/vdrs-presentation/vdrsex/Screenshot 2025-10-30 153958.png",
-        "/vdrs-presentation/vdrsex/Screenshot 2025-12-02 160008.png",
-        "/vdrs-presentation/vdrsex/Screenshot 2025-12-02 160049.png"
+        "/vdrs-presentation/vdrsex/Screenshot-2025-10-30-104013.png",
+        "/vdrs-presentation/vdrsex/Screenshot-2025-10-29-175510.png",
+        "/vdrs-presentation/vdrsex/Screenshot-2025-10-30-153958.png",
+        "/vdrs-presentation/vdrsex/Screenshot-2025-12-02-160008.png",
+        "/vdrs-presentation/vdrsex/Screenshot-2025-12-02-160049.png"
       ],
       "recognition": [],
       "date": "2025-12-01"
@@ -797,10 +797,10 @@ export const profile: Profile = {
         "Speed": "100 Lighthouse Score"
       },
       "images": [
-        "/vdrs-presentation/vdrs/Screenshot 2025-10-07 115533.png",
-        "/vdrs-presentation/vdrs/Screenshot 2025-10-14 153414.png",
-        "/vdrs-presentation/vdrs/Screenshot 2025-11-05 165643.png",
-        "/vdrs-presentation/vdrs/Screenshot 2025-11-17 114656.png"
+        "/vdrs-presentation/vdrs/Screenshot-2025-10-07-115533.png",
+        "/vdrs-presentation/vdrs/Screenshot-2025-10-14-153414.png",
+        "/vdrs-presentation/vdrs/Screenshot-2025-11-05-165643.png",
+        "/vdrs-presentation/vdrs/Screenshot-2025-11-17-114656.png"
       ],
       "recognition": [],
       "date": "2025-11-01"
