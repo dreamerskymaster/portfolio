@@ -24,10 +24,10 @@ function MobileApp() {
       <div style={{ margin: '15px 0' }}>
         <ImageCarousel 
           images={[
-            { src: "/images/vdo/4704B4FF-0C76-4DCD-94C5-94300162EBED.png", alt: "Van Dyk One App Interface 1" },
-            { src: "/images/vdo/84E2F081-BF0A-4246-92BF-744FF2CEB67F_1_105_c.jpeg", alt: "Van Dyk One App Interface 2" },
-            { src: "/images/vdo/FD3E46EB-678E-4194-B0AF-53E63BD6E868_1_105_c.jpeg", alt: "Van Dyk One App Interface 3" },
-            { src: "/images/vdo/FDFE392E-B997-4C29-9551-618B44F8B1AF.png", alt: "Van Dyk One App Interface 4" }
+            { src: "/vdrs-presentation/vdo/4704B4FF-0C76-4DCD-94C5-94300162EBED.png", alt: "Van Dyk One App Interface 1" },
+            { src: "/vdrs-presentation/vdo/84E2F081-BF0A-4246-92BF-744FF2CEB67F_1_105_c.jpeg", alt: "Van Dyk One App Interface 2" },
+            { src: "/vdrs-presentation/vdo/FD3E46EB-678E-4194-B0AF-53E63BD6E868_1_105_c.jpeg", alt: "Van Dyk One App Interface 3" },
+            { src: "/vdrs-presentation/vdo/FDFE392E-B997-4C29-9551-618B44F8B1AF.png", alt: "Van Dyk One App Interface 4" }
           ]} 
           autoPlay={true}
         />

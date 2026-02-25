@@ -58,6 +58,17 @@ export interface Writing {
   date?: string;
 }
 
+export interface Volunteering {
+  id: string;
+  role: string;
+  organization: string;
+  location?: string;
+  start: string;
+  end?: string;
+  description: string;
+  bullets?: string[];
+}
+
 /**
  * Root profile interface containing all professional metadata.
  */
@@ -74,6 +85,7 @@ export interface Profile {
   projects: Project[];
   writings: Writing[];
   certifications: string[];
+  volunteering?: Volunteering[];
 }
 
 export const profile: Profile = {
@@ -224,6 +236,18 @@ export const profile: Profile = {
       ]
     },
     {
+      "company": "Northeastern University",
+      "role": "Teaching Assistant - LEAD360",
+      "location": "Boston, MA",
+      "start": "Jan 2025",
+      "end": "Mar 2025",
+      "bullets": [
+        "Assisted students in enhancing their leadership skills through interactive games and assignments.",
+        "Collaborated with students to improve communication and teamwork abilities.",
+        "Graded assignments and provided constructive feedback to support student growth."
+      ]
+    },
+    {
       "company": "Hero MotoCorp",
       "role": "Team Manager - Manufacturing Excellence",
       "location": "India",
@@ -236,9 +260,194 @@ export const profile: Profile = {
         "Achieved ₹28 per EV cost reduction (~$0.5/vehicle) through tool cost optimization",
         "Contributed to significant annual savings through supply chain efficiency and lean initiatives"
       ]
+    },
+    {
+      "company": "Techsnap",
+      "role": "Python Blogger / Software Development Intern",
+      "location": "Remote",
+      "start": "Jun 2021",
+      "end": "Aug 2021",
+      "bullets": [
+        "Developing and debugging Python scripts to automate data processing tasks.",
+        "Utilizing Python's built-in functions for efficient data input/output operations.",
+        "Implementing type casting techniques to ensure data integrity.",
+        "Collaborating with team members to design and implement Python modules."
+      ]
+    },
+    {
+        "company": "Schneider Electric",
+        "role": "Global Student Experience - Supply Chain",
+        "location": "Remote",
+        "start": "Jun 2021",
+        "end": "Aug 2021",
+        "bullets": [
+            "Contributed to the digital transformation of Schneider Electric's supply chain by exploring solutions to enhance safety, quality, and productivity.",
+            "Developed and proposed strategies for integrating digital supply chain technologies, including AI, predictive analytics, and digital control towers.",
+            "Aimed to replace manual data entry and eliminate paper-based processes for real-time visibility."
+        ]
+    },
+    {
+        "company": "Bosch Rexroth",
+        "role": "Engineering Trainee",
+        "location": "Sanand, Gujarat, India",
+        "start": "May 2019",
+        "end": "Jun 2019",
+        "bullets": [
+            "Gained hands-on experience with hydraulic systems and components, including hydraulic pumps, cylinders, and control valves.",
+            "Conducted plant visits to observe various manufacturing processes such as machining, deburring, honing, and assembly lines.",
+            "Assisted in hydraulic circuit reading and understanding DIN ISO 1219 symbols."
+        ]
     }
   ],
+  "volunteering": [
+      {
+          "id": "vol-1",
+          "role": "Level 5 Local Guide",
+          "organization": "Google Local Guides",
+          "start": "Jun 2012",
+          "end": "Present",
+          "description": "Making people aware of the shops, restaurants, landmarks and non-existent roads in and around the area where I reside irrespective of my current location."
+      },
+      {
+          "id": "vol-2",
+          "role": "Participant - Climate & Sustainability Job Simulation",
+          "organization": "Boston Consulting Group (BCG) on Forage",
+          "start": "Jun 2022",
+          "end": "Jun 2022",
+          "description": "Completed a carbon emissions analysis simulation for the Sustainability Team, using Excel to calculate baselines and recommended carbon reduction initiatives."
+      },
+      {
+          "id": "vol-3",
+          "role": "Committed Head / Committee Member",
+          "organization": "Aaruush",
+          "start": "Jul 2018",
+          "end": "Aug 2020",
+          "description": "Served multiple roles including Volunteer, Committee Member, and Committed Head over several years for the national-level techno-management fest."
+      },
+      {
+          "id": "vol-4",
+          "role": "Committee Member",
+          "organization": "SRMMUN & SRMIEC",
+          "start": "Jan 2019",
+          "end": "Feb 2020",
+          "description": "Active organizing member for the SRM Model United Nations and the Engineering Congress."
+      },
+      {
+          "id": "vol-5",
+          "role": "Volunteer - Environmental Cleaning",
+          "organization": "SRM University (NSS)",
+          "start": "Jun 2018",
+          "end": "Dec 2018",
+          "description": "Cleaned nearby villages and gave sanitation advice to the villagers."
+      }
+  ],
   "projects": [
+    {
+      "id": "airport-operations-lean",
+      "title": "Streamlining Airport Operations with Lean Management",
+      "subtitle": "Lean Implementation at Frankfurt Airport",
+      "category": "Operations Research",
+      "timeline": "Feb 2025 - Apr 2025",
+      "status": "Completed",
+      "summary": "Major Lean implementation (DMAIC Framework) at Frankfurt Airport to resolve operational inefficiencies, reducing baggage wait time by 35% and improving ground crew efficiency.",
+      "content": "# Streamlining Airport Operations with Lean Management\n\n## Overview\nFrankfurt Airport faced major operational inefficiencies including high baggage wait times (28 mins), 120 mishandling incidents per day, and low staff productivity (68%).\n\n## Lean Implementation (DMAIC Framework)\n*   **Define**: Identified critical areas – baggage, security, gate turnaround.\n*   **Measure**: Baselines KPIs from Terminal 1 operations.\n*   **Analyze**: Fishbone diagrams, time-motion studies, spaghetti diagrams.\n*   **Improve**: Lean tools deployed (5S, Standard Work, Kaizen events, Visual Boards).\n*   **Control**: Process standardization, training, dashboard integration.\n\n## Results & KPIs Improved\n### Baggage Handling\n*   Wait time reduced 28 → 18.2 mins (↓35%)\n*   Mishandling reduced 120 → 78/day (↓35%)\n*   Staff productivity increased 68% → 83%\n\n### Security & Gate Turnaround\n*   Security wait time reduced 22 → 12.8 mins (↓42%)\n*   Turnaround time reduced by 12 mins (↓18%)\n*   On-time departure improved 76% → 89%\n\n## Financial ROI\n*   32% fewer baggage compensation claims\n*   ROI: 285% within the first year",
+      "technologies": ["Lean Management", "DMAIC", "5S", "Kaizen", "Root Cause Analysis", "Klipfolio"],
+      "impact": ["Reduced baggage wait time by 35%", "Improved on-time departure to 89%", "285% Year-1 ROI"],
+      "links": {},
+      "businessContext": "Major airport operational bottlenecks led to missed connections, overworked staff, and passenger dissatisfaction.",
+      "challenge": "Optimize airport operations using Lean methodologies without physical expansion.",
+      "scope": ["Baggage Handling", "Security Checkpoints", "Gate Turnaround"],
+      "technicalSolution": {"tools": ["Fishbone diagrams", "Time-motion studies", "Spaghetti diagrams", "Visual Boards"]},
+      "quantifiedResults": {"ROI": "285%", "Wait Time Reduction": "35%"},
+      "images": ["/vdrs-presentation/Editorial/DSC01424.JPG", "/vdrs-presentation/Editorial/DSC01425.JPG"],
+      "recognition": [],
+      "date": "2025-04-01"
+    },
+    {
+      "id": "connecting-rod-assembly",
+      "title": "Optimized Connecting Rod Assembly Line",
+      "subtitle": "Process Optimization for Leading Two-Wheeler Manufacturer",
+      "category": "Manufacturing Engineering",
+      "timeline": "Oct 2024 - Dec 2024",
+      "status": "Completed",
+      "summary": "Enhanced the efficiency of a major motorcycle manufacturer's connecting rod assembly line using IoT and Simio simulation, increasing WIP by 25% and reducing cycle time.",
+      "content": "# Optimized Connecting Rod Assembly Line\n\n## Overview\nLed a case-study to enhance the efficiency of a major motorcycle manufacturer's connecting rod assembly line.\n\n## Key Improvements\n1.  Increased Work-in-Process (WIP) levels by 25%, from 7,800 to 9,800 connecting rods daily.\n2.  Reduced cycle time by 15-20% through improved worker allocation and maintenance strategies.\n3.  Boosted overall machine availability by 8-10%.\n4.  Decreased Mean Time To Repair (MTTR) by 33%.\n5.  Implemented IoT-based predictive maintenance, reducing the defect rate by 15%.\n6.  Utilized Simio simulation software to validate improvements before implementation.",
+      "technologies": ["Simio", "IoT", "Predictive Maintenance", "Process Optimization"],
+      "impact": ["Increased WIP by 25%", "Decreased MTTR by 33%", "Reduced defect rate by 15%"],
+      "links": {},
+      "businessContext": "Need to maximize throughput and minimize downtime on a critical automotive assembly line.",
+      "challenge": "Validating complex line-balancing and maintenance improvements before causing costly physical disruptions.",
+      "scope": ["Simulation modeling", "IoT implementation", "Maintenance strategy overhaul"],
+      "technicalSolution": {"simulation": ["Simio software modeling"], "hardware": ["IoT sensors for predictive maintenance"]},
+      "quantifiedResults": {"WIP Increase": "25%", "Cycle Time Reduction": "15-20%"},
+      "images": ["/vdrs-presentation/Editorial/DSC01481.JPG", "/vdrs-presentation/Editorial/DSC01492.JPG"],
+      "recognition": [],
+      "date": "2024-12-01"
+    },
+
+    {
+      "id": "schneider-supply-chain",
+      "title": "Digital Supply Chain Strategy - Schneider Electric",
+      "subtitle": "Global Student Experience Program",
+      "category": "Supply Chain",
+      "timeline": "Jun 2021 - Aug 2021",
+      "status": "Completed",
+      "summary": "Proposed strategies for integrating AI, predictive analytics, and digital control towers to enhance safety, quality, and productivity across Schneider Electric's supply chain.",
+      "content": "# Digital Supply Chain Strategy\n\n## Overview\nDuring the Schneider Electric Global Student Experience Program, I contributed to the digital transformation of Schneider Electric's supply chain. \n\n## Projects & Proposals\n*   **Digital Integration**: Developed and proposed strategies for integrating digital supply chain technologies, including AI, predictive analytics, and digital control towers.\n*   **Paperless Workflows**: Aimed to replace manual data entry and eliminate paper-based processes for real-time visibility and efficient management.\n*   **Performance Focus**: Solutions targeted at enhancing safety, quality, and productivity across manufacturing and distribution centers.",
+      "technologies": ["Supply Chain Optimization", "Predictive Analytics", "Digital Control Towers"],
+      "impact": ["Proposed AI/Predictive Analytics integration strategies", "Designed frameworks for paperless workflows"],
+      "links": {},
+      "businessContext": "Global supply chains require real-time visibility to manage disruptions and minimize inventory carrying costs.",
+      "challenge": "Developing a modernization strategy that can scale across a massive global enterprise network like Schneider Electric.",
+      "scope": ["Strategy Development", "Process Blueprinting"],
+      "technicalSolution": {"strategy": ["AI and predictive analytics roadmaps"]},
+      "quantifiedResults": {},
+      "images": ["/vdrs-presentation/Editorial/DSC01427.JPG"],
+      "recognition": [],
+      "date": "2021-08-01"
+    },
+    {
+      "id": "diy-lifi-communication",
+      "title": "Diy LiFi Communication",
+      "subtitle": "Audio and Data Transmission using Light",
+      "category": "Electronics & Communication",
+      "timeline": "Aug 2019 - Dec 2019",
+      "status": "Completed",
+      "summary": "Demonstrated the principles of Light Fidelity (LiFi) by successfully transmitting audio data via an LED array to a solar-panel receiver connected to speakers.",
+      "content": "# DIY LiFi Communication System\n\n## Overview\nThis project explored Light Fidelity (LiFi), a wireless communication technology that uses light to transmit data and position between devices. LiFi is considered a potential successor to Wi-Fi in certain applications due to its high bandwidth and security characteristics.\n\n## Methodology\n1.  **Transmitter**: Audio signals from a standard 3.5mm jack were amplified and modulated to drive an array of high-intensity white LEDs. The intensity of the LEDs fluctuated imperceptibly to encode the audio data.\n2.  **Receiver**: A small solar panel was used as a photodetector. It received the fluctuating light from the LEDs and converted it back into an electrical signal.\n3.  **Output**: The electrical signal from the solar panel was fed directly into an audio amplifier and speaker system, reproducing the original audio.\n\n## Results\nSuccessfully transmitted clear audio over short distances using visible light. Demonstrated the viability of visible light communication (VLC) using inexpensive, off-the-shelf components.",
+      "technologies": ["Electronics", "Signal Modulation", "Optoelectronics", "Circuit Design"],
+      "impact": ["Demonstrated working visible light communication", "Built functional audio transmission system"],
+      "links": {},
+      "businessContext": "Exploring high-bandwidth, secure alternatives to radio-frequency (RF) communication in electromagnetic-sensitive environments.",
+      "challenge": "Designing analog circuits to properly modulate LED intensity without significant audio distortion.",
+      "scope": ["Circuit Design", "Component Sourcing", "System Prototyping"],
+      "technicalSolution": {"hardware": ["LED Array", "Solar Panel Receiver", "Audio Amplifiers"]},
+      "quantifiedResults": {},
+      "images": ["/vdrs-presentation/Editorial/DSC01451.JPG"],
+      "recognition": [],
+      "date": "2019-12-01"
+    },
+    {
+      "id": "peizoelectric-bag",
+      "title": "PeizoElectric Bag",
+      "subtitle": "Energy Harvesting from Structural Deformation",
+      "category": "Mechatronics Engineering",
+      "timeline": "Jan 2019 - May 2019",
+      "status": "Completed",
+      "summary": "Designed a prototype backpack equipped with piezoelectric sensors to harvest electrical energy from the mechanical stress of walking, providing a portable power source.",
+      "content": "# Piezoelectric Energy Harvesting Bag\n\n## Overview\nThis project aimed to harness the kinetic energy generated during human walking and convert it into usable electrical energy. The core concept utilized the piezoelectric effect, where certain materials generate an electric charge in response to applied mechanical stress.\n\n## Design & Implementation\n1.  **Sensor Placement**: Piezoelectric transducers (sensors) were strategically integrated into the straps and base of a standard backpack where mechanical stress (stretching and compression) is highest during motion.\n2.  **Energy Harvesting Circuit**: Designed a bridge rectifier circuit to convert the alternating current (AC) generated by the piezoelectric sensors into direct current (DC).\n3.  **Storage**: The rectified DC voltage was fed into a capacitor bank / small battery assembly to store the harvested energy.\n4.  **Application**: The stored energy was sufficient to trickle-charge small mobile devices via a standard USB port.\n\n## Conclusion\nDemonstrated a conceptually viable method for portable, renewable energy generation utilizing everyday human motion.",
+      "technologies": ["Piezoelectric effect", "Energy Harvesting", "Circuit Design", "Prototyping"],
+      "impact": ["Prototyped kinetic energy harvesting system", "Demonstrated portable power generation"],
+      "links": {},
+      "businessContext": "Growing demand for off-grid, portable, and renewable charging solutions for personal electronics.",
+      "challenge": "Efficiently converting very small, high-voltage/low-current AC pulses from piezoelectric materials into usable, stable DC power.",
+      "scope": ["Sensor Integration", "Rectifier Circuit Design", "Prototype Assembly"],
+      "technicalSolution": {"hardware": ["Piezoelectric Discs", "Bridge Rectifiers", "Capacitors"]},
+      "quantifiedResults": {},
+      "images": ["/vdrs-presentation/Editorial/DSC01454.JPG"],
+      "recognition": [],
+      "date": "2019-05-01"
+    },
     {
       "id": "f1-race-strategy-predictor",
       "title": "F1 Race Strategy Predictor — MLOps Pipeline",
@@ -1003,8 +1212,7 @@ export const profile: Profile = {
         "Efficiency": "25% response time improvement"
       },
       "images": [
-        "/internship/DSC01499.JPG",
-        "/internship/DSC01498.JPG"
+        "/vdrs-presentation/Editorial/DSC01499.JPG"
       ],
       "recognition": [],
       "date": "2022-01-01"
@@ -1052,8 +1260,8 @@ export const profile: Profile = {
       "technicalSolution": {},
       "quantifiedResults": {},
       "images": [
-        "/content/media/iot-smart-cell-1.jpg",
-        "/content/media/simio-simulation-2.jpg"
+        "/ai-manufacturing-1.png",
+        "/manufacturing-tech-1.jpg"
       ],
       "recognition": []
     },

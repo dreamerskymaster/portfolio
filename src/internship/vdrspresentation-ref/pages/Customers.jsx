@@ -4,7 +4,7 @@ import CustomerMap from '../components/CustomerMap';
 
 const Customers = () => {
   return (
-    <PresentationSlide backgroundImage="/images/customers_bg.jpg">
+    <PresentationSlide backgroundImage="/vdrs-presentation/customers_bg.jpg">
       <div className="slide-header">
         <h1>Customers Worked On</h1>
         <h2>Delivering Value Across North America</h2>

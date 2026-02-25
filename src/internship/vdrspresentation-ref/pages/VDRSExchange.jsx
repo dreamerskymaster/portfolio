@@ -96,11 +96,11 @@ function VDRSExchange() {
         <motion.div variants={itemVariants} style={{ margin: '15px 0' }}>
           <ImageCarousel 
             images={[
-              { src: "/images/vdrsex/Screenshot 2025-10-29 175510.png", alt: "VDRS Exchange Dashboard" },
-              { src: "/images/vdrsex/Screenshot 2025-10-30 104013.png", alt: "File Management Interface" },
-              { src: "/images/vdrsex/Screenshot 2025-10-30 153958.png", alt: "Enterprise Portal View" },
-              { src: "/images/vdrsex/Screenshot 2025-12-02 160008.png", alt: "File Upload Interface" },
-              { src: "/images/vdrsex/Screenshot 2025-12-02 160049.png", alt: "Secure File Exchange" }
+              { src: "/vdrs-presentation/vdrsex/Screenshot 2025-10-29 175510.png", alt: "VDRS Exchange Dashboard" },
+              { src: "/vdrs-presentation/vdrsex/Screenshot 2025-10-30 104013.png", alt: "File Management Interface" },
+              { src: "/vdrs-presentation/vdrsex/Screenshot 2025-10-30 153958.png", alt: "Enterprise Portal View" },
+              { src: "/vdrs-presentation/vdrsex/Screenshot 2025-12-02 160008.png", alt: "File Upload Interface" },
+              { src: "/vdrs-presentation/vdrsex/Screenshot 2025-12-02 160049.png", alt: "Secure File Exchange" }
             ]} 
             autoPlay={true}
           />

@@ -23,18 +23,18 @@ function DataExtractor() {
 
       <div className="image-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: '15px', margin: '15px 0' }}>
         {[
-          { src: "/images/vdt/Screenshot 2025-10-27 110500.png", alt: "Data Extractor Interface" },
-          { src: "/images/vdt/Screenshot 2025-10-28 112718.png", alt: "PDF Processing" },
-          { src: "/images/vdt/Screenshot 2025-11-10 161206.png", alt: "Extraction Results" }
+          { src: "/vdrs-presentation/vdt/Screenshot 2025-10-27 110500.png", alt: "Data Extractor Interface" },
+          { src: "/vdrs-presentation/vdt/Screenshot 2025-10-28 112718.png", alt: "PDF Processing" },
+          { src: "/vdrs-presentation/vdt/Screenshot 2025-11-10 161206.png", alt: "Extraction Results" }
         ].map((img, index) => (
           <ClickableImage
             key={index}
             src={img.src}
             alt={img.alt}
             images={[
-              { src: "/images/vdt/Screenshot 2025-10-27 110500.png", alt: "Data Extractor Interface" },
-              { src: "/images/vdt/Screenshot 2025-10-28 112718.png", alt: "PDF Processing" },
-              { src: "/images/vdt/Screenshot 2025-11-10 161206.png", alt: "Extraction Results" }
+              { src: "/vdrs-presentation/vdt/Screenshot 2025-10-27 110500.png", alt: "Data Extractor Interface" },
+              { src: "/vdrs-presentation/vdt/Screenshot 2025-10-28 112718.png", alt: "PDF Processing" },
+              { src: "/vdrs-presentation/vdt/Screenshot 2025-11-10 161206.png", alt: "Extraction Results" }
             ]}
             index={index}
             className="grid-image"

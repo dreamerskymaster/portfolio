@@ -38,7 +38,7 @@ function Home() {
         <motion.div className="profile-section" variants={fadeInScale}>
             <motion.div whileHover={{ scale: 1.05 }}>
               <ClickableImage
-                src="/images/Editorial/DSC01481.JPG"
+                src="/vdrs-presentation/Editorial/DSC01481.JPG"
                 alt="Ajith Srikanth"
                 className="profile-image"
               />
@@ -60,7 +60,7 @@ function Home() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <img src="/images/exp/husky.gif" alt="Husky" style={{ height: '40px' }} />
+          {/* Husky gif removed as it missing from assets */}
           <div>
             <span style={{ fontSize: '0.8rem', color: 'var(--vd-neutral-dark)' }}>
               Master's in Advanced and Intelligent Manufacturing

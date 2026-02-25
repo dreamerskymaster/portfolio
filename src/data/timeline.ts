@@ -99,34 +99,47 @@ export const timeline: TimelineItem[] = [
   },
   {
     id: 'techsnap-intern-2021',
-    title: 'Software Development Intern',
-    organization: 'TechSnap',
+    title: 'Python Blogger / Software Development Intern',
+    organization: 'Techsnap',
     location: 'Remote',
-    period: 'June 2021 - August 2021',
+    period: 'Jun 2021 - Aug 2021',
     type: 'work',
-    description: 'Developed modular Python applications with focus on creating reusable codebase for scalable projects and software architecture.',
-    skills: ['Python Programming', 'Modular Development', 'Software Architecture', 'Code Reusability', 'Scalable Systems'],
+    description: 'Developing and debugging Python scripts to automate data processing tasks. Collaborating with team members to design and implement Python modules.',
+    skills: ['Python Programming', 'Modular Development', 'Software Architecture', 'Data I/O', 'Automation'],
     achievements: [
-      'Developed modular Python applications for scalable projects',
-      'Created reusable codebase architecture',
-      'Implemented best practices for software development',
-      'Contributed to scalable project frameworks'
+      'Developed and debugged Python scripts to automate data processing tasks',
+      'Utilized Python built-in functions for efficient data input/output operations',
+      'Implemented type casting techniques to ensure data integrity',
+      'Collaborated with team members to design and implement Python modules'
     ]
   },
   {
+      id: 'schneider-intern-2021',
+      title: 'Global Student Experience - Supply Chain',
+      organization: 'Schneider Electric',
+      location: 'Remote',
+      period: 'Jun 2021 - Aug 2021',
+      type: 'work',
+      description: 'Contributed to the digital transformation of Schneider Electric supply chain by exploring solutions to enhance safety, quality, and productivity.',
+      skills: ['Supply Chain Optimization', 'Predictive Analytics', 'Digital Control Towers', 'Process Digitization'],
+      achievements: [
+          'Developed strategies for integrating digital supply chain technologies, including AI and predictive analytics',
+          'Proposed methods to replace manual data entry and eliminate paper-based processes for real-time visibility'
+      ]
+  },
+  {
     id: 'bosch-rexroth-intern-2019',
-    title: 'Engineering Intern - Fluid Power Systems',
+    title: 'Engineering Trainee',
     organization: 'Bosch Rexroth',
-    location: 'India',
-    period: 'June 2019 - August 2019',
+    location: 'Sanand, Gujarat, India',
+    period: 'May 2019 - Jun 2019',
     type: 'work',
     description: 'Specialized in fluid power and hydraulics design, focusing on valves, actuators, and pneumatic systems integration with control systems for automotive applications.',
-    skills: ['Fluid Power Design', 'Hydraulics', 'Valves & Actuators', 'Pneumatic Systems', 'Control Systems Integration', 'High-speed Automation'],
+    skills: ['Fluid Power Design', 'Hydraulics', 'Valves & Actuators', 'Pneumatic Systems', 'Control Systems Integration'],
     achievements: [
-      'Designed fluid power systems for automotive applications',
-      'Integrated control systems with hydraulics for improved reliability',
-      'Gained exposure to high-speed automation systems',
-      'Contributed to system reliability improvements through control integration'
+      'Gained hands-on experience with hydraulic systems and components',
+      'Conducted plant visits to observe manufacturing processes such as machining and assembly lines',
+      'Assisted in hydraulic circuit reading and understanding DIN ISO 1219 symbols'
     ]
   },
   // Education

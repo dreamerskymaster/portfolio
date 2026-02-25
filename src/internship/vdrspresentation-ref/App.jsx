@@ -149,7 +149,7 @@ function Navbar() {
       <div className="nav-logo-container">
         <Link to="/">
           <motion.img 
-            src="/images/logo/realvdrs.png" 
+            src="/vdrs-presentation/logo/realvdrs.png" 
             alt="VAN DYK" 
             className="nav-logo" 
             whileHover={{ scale: 1.05 }}

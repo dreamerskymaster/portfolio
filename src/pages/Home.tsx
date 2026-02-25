@@ -145,10 +145,6 @@ const Home: React.FC = () => {
                 </motion.div>
               </div>
 
-              {/* Impact Dashboard Bridge */}
-              <motion.div variants={itemVariants} className="w-full mt-16 pt-8 border-t border-border/50">
-                <ImpactDashboard />
-              </motion.div>
             </motion.div>
           </div>
 
@@ -160,7 +156,7 @@ const Home: React.FC = () => {
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
           >
             <motion.button
-              onClick={() => scrollToSection('featured-work')}
+              onClick={() => scrollToSection('impact-dashboard')}
               animate={useReducedMotion() ? {} : { y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
               className="text-muted-foreground hover:text-foreground p-2"
@@ -168,6 +164,19 @@ const Home: React.FC = () => {
             >
               <ChevronDown className="w-6 h-6" />
             </motion.button>
+          </motion.div>
+        </section>
+
+        {/* Impact Dashboard Bridge - Moved out of the tightly centered hero for more breathing room */}
+        <section id="impact-dashboard" className="relative z-10 w-full pb-24 px-6 container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="w-full pt-12 border-t border-border/50"
+          >
+            <ImpactDashboard />
           </motion.div>
         </section>
 

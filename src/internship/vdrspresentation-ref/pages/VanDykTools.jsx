@@ -185,7 +185,7 @@ function VanDykTools() {
     <PresentationSlide>
       <div className="slide-header">
         <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
-          <img src="/images/vdt/VanDykTools.png" alt="Van Dyk Tools Logo" style={{ height: '50px', width: 'auto' }} />
+          <img src="/vdrs-presentation/vdt/VanDykTools.png" alt="Van Dyk Tools Logo" style={{ height: '50px', width: 'auto' }} />
           <div>
             <h1 style={{ margin: 0 }}>Van Dyk Tools Hub</h1>
             <h2 style={{ margin: 0, fontSize: '1.1em' }}>All-in-One Platform for Internal Tools</h2>
@@ -208,12 +208,12 @@ function VanDykTools() {
       <div style={{ margin: '30px 0' }}>
         <ImageCarousel 
           images={[
-            { src: "/images/vdt/vdt1.png", alt: "Van Dyk Tools Hub Dashboard" },
-            { src: "/images/vdt/vdt2.png", alt: "Van Dyk Tools Login" },
-            { src: "/images/vdt/vdt3.png", alt: "Van Dyk Tools Features" },
-            { src: "/images/vdt/Screenshot 2025-10-27 110500.png", alt: "Van Dyk Tools Interface" },
-            { src: "/images/vdt/Screenshot 2025-10-28 112718.png", alt: "Van Dyk Tools Reports" },
-            { src: "/images/vdt/Screenshot 2025-11-10 161206.png", alt: "Van Dyk Tools Analytics" }
+            { src: "/vdrs-presentation/vdt/vdt1.png", alt: "Van Dyk Tools Hub Dashboard" },
+            { src: "/vdrs-presentation/vdt/vdt2.png", alt: "Van Dyk Tools Login" },
+            { src: "/vdrs-presentation/vdt/vdt3.png", alt: "Van Dyk Tools Features" },
+            { src: "/vdrs-presentation/vdt/Screenshot 2025-10-27 110500.png", alt: "Van Dyk Tools Interface" },
+            { src: "/vdrs-presentation/vdt/Screenshot 2025-10-28 112718.png", alt: "Van Dyk Tools Reports" },
+            { src: "/vdrs-presentation/vdt/Screenshot 2025-11-10 161206.png", alt: "Van Dyk Tools Analytics" }
           ]} 
         />
       </div>

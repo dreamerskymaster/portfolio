@@ -28,6 +28,7 @@ import {
 import { profile } from '../data/profile';
 import PersonalPhilosophy from '../components/PersonalPhilosophy';
 import CliftonStrengths from '../components/CliftonStrengths';
+import VolunteeringExperience from '../components/VolunteeringExperience';
 import Chip from '../components/ui/Chip';
 import ParallaxHeading from '../components/ParallaxHeading';
 
@@ -349,6 +350,9 @@ const About: React.FC = () => {
               })}
             </VerticalTimeline>
           </div>
+
+          {/* Volunteering Experience */}
+          <VolunteeringExperience />
 
           {/* Professional Status */}
           <motion.div

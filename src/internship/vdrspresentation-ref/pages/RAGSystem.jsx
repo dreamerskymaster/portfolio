@@ -19,11 +19,11 @@ function RAGSystem() {
   };
 
   const ragImages = [
-    { src: "/images/RAG/rag1.png", alt: "RAG System Interface 1" },
-    { src: "/images/RAG/rag2.png", alt: "RAG System Interface 2" },
-    { src: "/images/RAG/cmdchat.png", alt: "RAG Command Chat Interface" },
-    { src: "/images/RAG/cmdch2.png", alt: "RAG Command Chat Interface 2" },
-    { src: "/images/RAG/Screenshot 2025-12-11 151205.png", alt: "RAG System Screenshot" }
+    { src: "/vdrs-presentation/RAG/rag1.png", alt: "RAG System Interface 1" },
+    { src: "/vdrs-presentation/RAG/rag2.png", alt: "RAG System Interface 2" },
+    { src: "/vdrs-presentation/RAG/cmdchat.png", alt: "RAG Command Chat Interface" },
+    { src: "/vdrs-presentation/RAG/cmdch2.png", alt: "RAG Command Chat Interface 2" },
+    { src: "/vdrs-presentation/RAG/Screenshot 2025-12-11 151205.png", alt: "RAG System Screenshot" }
   ];
 
   return (

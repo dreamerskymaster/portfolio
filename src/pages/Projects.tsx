@@ -51,13 +51,20 @@ const Projects: React.FC = () => {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 gap-20 max-w-6xl mx-auto">
-            {profile.projects.map((project, index) => (
-              <EnhancedProjectCard
-                key={project.id}
-                project={project}
-                index={index}
-              />
-            ))}
+            {profile.projects
+              .slice()
+              .sort((a, b) => {
+                if (!a.date) return 1;
+                if (!b.date) return -1;
+                return new Date(b.date).getTime() - new Date(a.date).getTime();
+              })
+              .map((project, index) => (
+                <EnhancedProjectCard
+                  key={project.id}
+                  project={project}
+                  index={index}
+                />
+              ))}
           </div>
         </div>
       </div>

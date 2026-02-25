@@ -7,15 +7,15 @@ import ImageCarousel from '../components/ImageCarousel';
 function Summary() {
 
   const eventImages = [
-    "/images/exp/Screenshot%202025-10-07%20163516.png",
-    "/images/exp/Screenshot%202025-11-11%20093620.png",
-    "/images/exp/Screenshot%202025-11-11%20093641.png",
-    "/images/exp/IMG_9627.JPG",
-    "/images/Editorial/DSC01492.JPG"
+    "/vdrs-presentation/vdrs/Screenshot-2025-10-07-115533.png",
+    "/vdrs-presentation/vdrs360/Screenshot-2025-11-11-093620.png",
+    "/vdrs-presentation/vdrs360/Screenshot-2025-11-11-093641.png",
+    "/vdrs-presentation/Editorial/DSC01481.JPG",
+    "/vdrs-presentation/Editorial/DSC01492.JPG"
   ];
 
   return (
-    <PresentationSlide backgroundImage="/images/life_at_vdrs.png">
+    <PresentationSlide backgroundImage="/vdrs-presentation/life_at_vdrs.png">
       <div className="slide-header">
         <h1>Life at Van Dyk</h1>
         <h2>Impact, Culture, and Family</h2>
@@ -134,7 +134,7 @@ function Summary() {
       >
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', marginBottom: '20px' }}>
           <img 
-            src="/images/exp/Profile%20Pic%20M%20(1)%20(1).jpg" 
+            src="/profile-pic.png" 
             alt="Ajith Srikanth"
             style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover', border: '3px solid var(--vdrs-blue)' }}
           />

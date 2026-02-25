@@ -108,8 +108,8 @@ const CustomCursor: React.FC = () => {
                         }}
                         animate={{
                             scale: isClicking ? 0.8 : 1,
-                            backgroundColor: isHovering ? 'rgba(var(--primary-rgb), 0.1)' : 'transparent',
-                            borderColor: isHovering ? 'rgba(var(--primary-rgb), 0.8)' : 'rgba(var(--primary-rgb), 0.4)',
+                            backgroundColor: isHovering ? 'rgba(16, 185, 129, 0.1)' : 'rgba(16, 185, 129, 0)',
+                            borderColor: isHovering ? 'rgba(16, 185, 129, 0.8)' : 'rgba(16, 185, 129, 0.4)',
                         }}
                         transition={{
                             type: 'spring',

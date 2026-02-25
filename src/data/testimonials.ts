@@ -17,79 +17,78 @@ export const testimonials: Testimonial[] = [
 
 
   {
-    id: 'vasanth-sir',
-    name: 'Vasanth Sir',
-    title: 'Engineering Manager',
+    id: 'udit-vashistha',
+    name: 'Udit Vashistha',
+    title: 'Assistant General Manager',
     company: 'Hero MotoCorp',
-    relationship: 'Technical Supervisor',
-    content: 'Working with Ajith was a pleasure. His deep understanding of manufacturing processes, combined with his ability to implement cutting-edge technologies like AI and machine learning, positioned him as a forward-thinking engineer. His contributions to our digital transformation initiatives were outstanding.',
+    relationship: 'Senior Colleague / Mentor',
+    content: 'Ajith had done internship in my team while pursuing engineering.. at Hero MotoCorp ltd gurgaon...Ajith has great potential... grasping power ...can analyse deeply and articulate well...i have seen him delivering consistently well...i wish all success to ajith in his professional growth!!',
+    rating: 5,
+    verified: true,
+    avatar: 'UV',
+    date: 'February 6, 2024',
+    category: 'Professional',
+    highlights: [
+      'Deep analytical skills',
+      'Consistent top delivery',
+      'High grasping power',
+      'Great potential'
+    ]
+  },
+  {
+    id: 'mahesh-babu-valleru',
+    name: 'Mahesh babu valleru',
+    title: 'Deputy General Manager',
+    company: 'Hero MotoCorp',
+    relationship: 'Direct Manager',
+    content: 'Ajith had joined hero MotoCorp as GET, later on seeing his enthusiasm & fast learning, i put him in Vida - Electric vehicle project from equipment installation & commissioning side under ME.\nSince team was new & Vida team was short on manpower, Ajith had stepped-up took additional responsibilities beyond ME to ensure Vida SOP happens on time without any delay.\nI highly recommend him as he will be a asset to any organisation he works.',
+    rating: 5,
+    verified: true,
+    avatar: 'MB',
+    date: 'February 3, 2024',
+    category: 'Professional',
+    highlights: [
+      'Enthusiastic and fast learner',
+      'Took additional responsibilities',
+      'Ensured on-time project delivery',
+      'Asset to any organization'
+    ]
+  },
+  {
+    id: 'anoop-gupta',
+    name: 'Anoop Gupta',
+    title: 'Senior Manager',
+    company: 'Hero MotoCorp',
+    relationship: 'Manager',
+    content: 'Very hard working, well behaved person. Gives his 100% to everything he does.',
+    rating: 5,
+    verified: true,
+    avatar: 'AG',
+    date: 'February 2, 2024',
+    category: 'Professional',
+    highlights: [
+      'Very hard working',
+      'Well behaved',
+      'Gives 100%'
+    ]
+  },
+  {
+    id: 'vivekanand-singh',
+    name: 'Vivekanand Singh',
+    title: 'Manufacturing Engineer',
+    company: 'Hero MotoCorp',
+    relationship: 'Colleague',
+    content: 'One of the best human to associate. A good and supportive friend and excellent colleague. Dedicated to the work with a positive and helpful character towards others. Always keep smile on his face 😊 which is the strongest character i like in him.',
     rating: 5,
     verified: true,
     avatar: 'VS',
-    date: '2024',
+    date: 'February 2, 2024',
     category: 'Professional',
     highlights: [
-      'Deep manufacturing expertise',
-      'AI/ML implementation',
-      'Digital transformation leadership',
-      'Forward-thinking approach'
-    ]
-  },
-  {
-    id: 'vikas-bharati',
-    name: 'Prof. Vikas Bharati',
-    title: 'Professor',
-    company: 'SRM Institute of Science and Technology',
-    relationship: 'Academic Advisor',
-    content: 'Ajith was an outstanding student who consistently demonstrated excellence in both theoretical knowledge and practical applications. His research work on EDM controllers and elevator systems using PLC showcased his strong engineering fundamentals and innovative thinking.',
-    rating: 5,
-    verified: true,
-    avatar: 'VB',
-    date: '2023',
-    category: 'Academic',
-    highlights: [
-      'Outstanding academic performance',
-      'Strong research capabilities',
-      'Innovative engineering solutions',
-      'Excellent practical skills'
-    ]
-  },
-  {
-    id: 'northeastern-colleague',
-    name: 'Northeastern Colleague',
-    title: 'Graduate Student',
-    company: 'Northeastern University',
-    relationship: 'Peer',
-    content: 'Ajith\'s teaching approach in the Simulation Analysis course was exceptional. His ability to break down complex concepts and make them accessible to students, combined with his real-world industry experience, made him an outstanding Course Assistant.',
-    rating: 5,
-    verified: true,
-    avatar: 'NC',
-    date: '2025',
-    category: 'Academic',
-    highlights: [
-      'Exceptional teaching ability',
-      'Complex concept explanation',
-      'Real-world industry experience',
-      'Outstanding mentorship'
-    ]
-  },
-  {
-    id: 'lead360-participant',
-    name: 'LEAD360 Participant',
-    title: 'Student',
-    company: 'Northeastern University',
-    relationship: 'Program Participant',
-    content: 'Ajith\'s leadership in the LEAD360 program was inspiring. His ability to facilitate discussions, encourage participation, and create an inclusive learning environment made him an exceptional Teaching Assistant. His guidance helped many students develop their leadership skills.',
-    rating: 5,
-    verified: true,
-    avatar: 'LP',
-    date: '2025',
-    category: 'Leadership',
-    highlights: [
-      'Inspiring leadership',
-      'Inclusive facilitation',
-      'Student development focus',
-      'Exceptional mentorship'
+      'Excellent colleague',
+      'Dedicated to work',
+      'Positive and supportive',
+      'Helpful character'
     ]
   }
 ];
