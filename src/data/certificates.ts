@@ -270,6 +270,42 @@ export const certificates: Certificate[] = [
     description: 'Project management methodologies and tools',
     skills: ['Project Management', 'Planning', 'Execution'],
     relevance: 'Structured project delivery for manufacturing initiatives'
+  },
+  {
+    id: 'bcg-sustainability',
+    name: 'Climate & Sustainability Virtual Experience',
+    provider: 'BCG (Forage)',
+    category: 'Quality Management',
+    year: '2022',
+    verified: true,
+    filePath: '/certificates/Extras/BCG Virtual Experience Program Badge.png',
+    description: 'Sustainability strategy and carbon footprint analysis simulation',
+    skills: ['Sustainability', 'Analysis', 'Strategy'],
+    relevance: 'Relevant to green manufacturing and ESG initiatives'
+  },
+  {
+    id: 'techsnap-python',
+    name: 'Python Developer Internship Certificate',
+    provider: 'TechSnap',
+    category: 'Internship',
+    year: '2021',
+    verified: true,
+    filePath: '/certificates/Internships/TechSnap.pdf',
+    description: 'Software development and automation using Python',
+    skills: ['Python', 'Automation', 'Scripting'],
+    relevance: 'Fundamental coding for AI and automation solutions'
+  },
+  {
+    id: 'srm-python',
+    name: 'Advanced Python Programming',
+    provider: 'SRM Institute',
+    category: 'Data Science',
+    year: '2020',
+    verified: true,
+    filePath: '/certificates/SRM/Python Certificate.jpg',
+    description: 'Advanced Python data structures and development patterns',
+    skills: ['Python', 'Data Science', 'Programming'],
+    relevance: 'Core data processing for manufacturing intelligence'
   }
 ];
 

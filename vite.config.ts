@@ -14,21 +14,23 @@ export default defineConfig({
   assetsInclude: ['**/*.md'],
   build: {
     target: 'esnext',
-    minify: 'esbuild',
+    minify: 'oxc',
     reportCompressedSize: false,
-    chunkSizeWarningLimit: 2000,
+    chunkSizeWarningLimit: 3000,
+    sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
-          'animations': ['framer-motion'],
-          'ui': ['lucide-react', 'react-vertical-timeline-component'],
-          'markdown': ['unified', 'remark-parse', 'remark-gfm', 'remark-rehype', 'rehype-slug', 'rehype-stringify', 'gray-matter'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react')) return 'vendor';
+            if (id.includes('three')) return 'three';
+            if (id.includes('framer-motion')) return 'animations';
+            if (id.includes('lucide-react')) return 'ui';
+            return 'libs';
+          }
         },
       },
-      // Cache settings to potentially speed up builds on OneDrive
-      cache: true
+      // Cache settings should be handled by Rolldown automatically or via specific cache plugins if needed
     },
     // Speed up build by avoiding some disk writes if possible
     emptyOutDir: true,
@@ -55,6 +57,10 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true,
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
   },
   // Preview server configuration
   preview: {

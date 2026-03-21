@@ -116,7 +116,6 @@ const GamifiedCard: React.FC<{
               <div>
                 <h3 className="text-xl font-bold text-slate-800 dark:text-white">{hobby.name}</h3>
                 <div className="flex items-center gap-2">
-                  <span className="text-xl">{hobby.emoji}</span>
                   {!isLocked && <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 font-medium font-mono">ID #{hobby.id.slice(0, 3).toUpperCase()}</span>}
                 </div>
               </div>
@@ -314,7 +313,7 @@ const Hobbies: React.FC = () => {
           <div className="mb-24 flex justify-center">
             <div className="w-full max-w-4xl px-4">
               <HobbyGame
-                hobbies={hobbies.map(h => ({ id: h.id, emoji: h.emoji }))}
+                hobbies={hobbies.map(h => ({ id: h.id }))}
                 onHobbyUnlock={handleHobbyUnlock}
               />
             </div>
@@ -382,7 +381,7 @@ const Hobbies: React.FC = () => {
                         <div className="text-white drop-shadow-lg p-2">
                           <h2 className="text-6xl font-black italic tracking-tighter uppercase mb-2">{selectedHobby.name}</h2>
                           <div className="flex items-center gap-3">
-                            <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">{selectedHobby.emoji} Mission Complete</span>
+                            <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Mission Complete</span>
                           </div>
                         </div>
                       </div>

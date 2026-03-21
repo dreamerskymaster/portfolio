@@ -10,6 +10,11 @@ import PageTransition from '../components/PageTransition';
 
 const Resume: React.FC = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+  const resumeUrl = '/Ajith_Srikanth_Resume_M.pdf';
+  const googleDocsUrl = `https://docs.google.com/gview?url=${encodeURIComponent(window.location.origin + resumeUrl)}&embedded=true`;
+  const pdfSource = isDev ? resumeUrl : googleDocsUrl;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -111,12 +116,27 @@ const Resume: React.FC = () => {
           {/* PDF Viewer */}
           <motion.div variants={itemVariants}>
             <Card className={`${isFullscreen ? 'fixed inset-4 z-50' : ''}`}>
-              <div className={`${isFullscreen ? 'h-full' : 'h-96 md:h-[800px]'}`}>
+              <div className={`${isFullscreen ? 'h-full' : 'h-96 md:h-[800px]'} relative`}>
                 <iframe
-                  src="/Ajith_Srikanth_Resume_M.pdf"
-                  className="w-full h-full rounded-lg"
+                  src={pdfSource}
+                  className="w-full h-full rounded-lg bg-white/50"
                   title="Ajith Srikanth Resume"
+                  onLoad={(e) => {
+                    // Modern browsers handle PDF natively, no special scripts needed
+                    console.log('PDF Loaded');
+                  }}
                 />
+                {/* Fallback link if iframe fails */}
+                <div className="absolute bottom-4 right-4">
+                  <a
+                    href="/Ajith_Srikanth_Resume_M.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-muted-foreground hover:text-primary underline transition-colors"
+                  >
+                    Open PDF directly ↗
+                  </a>
+                </div>
               </div>
             </Card>
           </motion.div>
@@ -133,7 +153,7 @@ const Resume: React.FC = () => {
                   Feel free to reach out if you'd like to connect.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button to="/contact" size="lg">
+                  <Button href="https://calendly.com/d/cqp7-3p3-jwq/30-minute-meeting" target="_blank" size="lg">
                     Get In Touch
                   </Button>
                   <Button href={profile.linkedin} target="_blank" variant="outline" size="lg">

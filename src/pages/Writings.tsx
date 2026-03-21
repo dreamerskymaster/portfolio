@@ -15,6 +15,24 @@ import newsletterData from '../data/newsletter.json';
 import PageTransition from '../components/PageTransition';
 import Button from '../components/ui/Button';
 
+/**
+ * Converts an ISO date string (e.g. '2025-01-20') to a
+ * human-readable format like 'Jan 20, 2025'.
+ */
+const formatDate = (dateStr: string): string => {
+  const date = new Date(dateStr + 'T00:00:00');
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+};
+
+/** Newsletter entries sorted newest-first. */
+const sortedNewsletter = [...newsletterData].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
 const Writings: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState('All');
@@ -186,7 +204,7 @@ const Writings: React.FC = () => {
                       {writing.date && (
                         <div className="flex items-center gap-2 text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full">
                           <Calendar className="w-4 h-4" />
-                          <span>{writing.date}</span>
+                          <span>{formatDate(writing.date)}</span>
                         </div>
                       )}
                     </div>
@@ -245,7 +263,7 @@ const Writings: React.FC = () => {
               animate="visible"
               className="grid grid-cols-1 gap-6 max-w-4xl mx-auto"
             >
-              {newsletterData.map((article) => (
+              {sortedNewsletter.map((article) => (
                 <motion.a
                   key={article.id}
                   href={article.url}
@@ -262,7 +280,7 @@ const Writings: React.FC = () => {
                   <div className="p-8">
                     <div className="flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider mb-2">
                       <Calendar className="w-3 h-3" />
-                      {article.date}
+                      {formatDate(article.date)}
                     </div>
                     <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{article.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">{article.summary}</p>

@@ -11,12 +11,12 @@ const PreLoader = () => {
     // Timeline
     const moveTimer = setTimeout(() => {
       setStage('moving');
-    }, 2000); // Start moving after 2s
+    }, 800); // Start moving after 0.8s
 
     const doneTimer = setTimeout(() => {
       setStage('done');
       document.body.style.overflow = 'unset';
-    }, 3500); // Completely unmount after transition
+    }, 1800); // Completely unmount after 1.8s
 
     return () => {
       clearTimeout(moveTimer);
@@ -56,7 +56,7 @@ const PreLoader = () => {
         >
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-gradient-to-br from-emerald-500 to-cyan-500 p-1 shadow-2xl shadow-emerald-500/30">
             <img
-              src="/ManuFX.png"
+              src="/ManuFX.jpg"
               alt="Profile"
               className="w-full h-full object-contain bg-white/10 rounded-2xl backdrop-blur-sm"
               onError={(e) => (e.currentTarget.style.display = 'none')}

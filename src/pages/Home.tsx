@@ -8,6 +8,7 @@ import {
   Calendar,
   ChevronDown,
   Zap,
+  Heart,
 } from 'lucide-react';
 
 import { profile } from '../data/profile';
@@ -54,9 +55,9 @@ const Home: React.FC = () => {
   return (
     <PageTransition>
       <Helmet>
-        <title>Ajith Srikanth | Manufacturing Engineer & Intelligent Automation</title>
-        <meta name="description" content="Portfolio of Ajith Srikanth, a Manufacturing Engineer specializing in Intelligent Automation, Industrial IoT, and AI-driven efficiency solutions. Exploring the intersection of hardware and intelligence." />
-        <meta property="og:title" content="Ajith Srikanth | Manufacturing Engineer & Intelligent Automation" />
+        <title>Ajith Srikanth | Engineering & AI Innovation Portfolio</title>
+        <meta name="description" content="Portfolio of Ajith Srikanth — bridging Manufacturing Excellence, AI Innovation, and Industrial IoT. Building high-efficiency systems and deploying intelligent automation solutions that deliver measurable business value." />
+        <meta property="og:title" content="Ajith Srikanth | Engineering & AI Innovation Portfolio" />
         <meta property="og:description" content="Building high-efficiency systems and AI-driven industrial solutions." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -67,10 +68,11 @@ const Home: React.FC = () => {
         {/* Hero Section */}
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20 pb-10">
 
-          {/* Subtle Background Elements */}
-          <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-            <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-            <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-accent-1 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+          {/* Subtle Background Elements - Specialized for Light Mode depth */}
+          <div className="absolute inset-0 z-0 opacity-10 dark:opacity-10 pointer-events-none">
+            <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+            <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-accent-1/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+            <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(var(--border)_1px,transparent_1px)] [background-size:32px_32px] opacity-20 dark:opacity-5"></div>
           </div>
 
           <div className="container mx-auto px-6 relative z-10">
@@ -98,11 +100,11 @@ const Home: React.FC = () => {
                   className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground mb-8 leading-[1.1] font-serif"
                 >
                   <motion.span
-                    className="cursor-pointer hover:text-primary transition-colors inline-block"
+                    className="cursor-pointer hover:text-primary transition-colors inline-block group"
                     onClick={() => setShowNamaskaramModal(true)}
                     whileHover={{ scale: 1.02 }}
-                    title="Namaskaram!"
                   >
+                    <Heart className="w-10 h-10 md:w-16 md:h-16 text-primary fill-primary/20 inline-block mr-4 align-middle transition-transform group-hover:scale-110" />
                     Namaskaram
                   </motion.span>, I'm Ajith.
                 </motion.h1>
@@ -112,7 +114,7 @@ const Home: React.FC = () => {
                   variants={itemVariants}
                   className="text-xl md:text-3xl text-muted-foreground mb-10 font-light leading-relaxed max-w-4xl"
                 >
-                  "Where Manufacturing Excellence meets Intelligent Automation. I build high-efficiency systems, optimize industrial operations, and deploy AI-driven solutions that deliver measurable business value."
+                  "Bridging the physical and digital worlds. I build intelligent systems, optimize complex operations, and deploy AI-driven solutions that solve real-world challenges with measurable impact."
                 </motion.p>
 
                 {/* CTAs */}
@@ -198,7 +200,7 @@ const Home: React.FC = () => {
                 <TiltWrapper key={project.id} className="rounded-3xl">
                   <Link
                     to={`/projects/${project.id}`}
-                    className="group block bg-card border border-border rounded-3xl h-full overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="group block bg-card border border-border dark:border-white/5 rounded-3xl h-full overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                   >
                     <div className="aspect-video overflow-hidden relative">
                       {project.images && project.images.length > 0 ? (
@@ -273,9 +275,9 @@ const Home: React.FC = () => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="text-center">
-                  <div className="text-6xl mb-4">🙏</div>
-                  <h2 className="text-3xl font-bold mb-2">Namaskaram</h2>
-                  <p className="text-xl text-primary font-medium mb-6">"I bow to the divine in you"</p>
+                  <Heart className="w-16 h-16 text-primary mx-auto mb-4 fill-primary/20" />
+                  <h2 className="text-3xl font-bold mb-2">Respectful Connection</h2>
+                  <p className="text-xl text-primary font-medium mb-6">"Recognizing the spark within"</p>
                   <p className="text-muted-foreground leading-relaxed mb-8">
                     It's more than just 'hello' - it's a recognition of the spark within each of us.
                     A respectful way to acknowledge the sacredness in every person we meet.

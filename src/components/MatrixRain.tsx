@@ -14,11 +14,13 @@ const MatrixRain: React.FC = () => {
 
     const characters = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const fontSize = 16;
-    let columns = Math.floor(canvas.width / fontSize);
+    let columns = 0;
     let drops: number[] = [];
+    let logicalWidth = 0;
+    let logicalHeight = 0;
 
     const initDrops = (): void => {
-      columns = Math.floor(canvas.width / fontSize);
+      columns = Math.floor(logicalWidth / fontSize);
       drops = [];
       for (let i = 0; i < columns; i++) {
         drops[i] = 1;
@@ -26,19 +28,23 @@ const MatrixRain: React.FC = () => {
     };
 
     const resizeCanvas = (): void => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      logicalWidth = window.innerWidth;
+      logicalHeight = window.innerHeight;
+      
+      canvas.width = logicalWidth * dpr;
+      canvas.height = logicalHeight * dpr;
+      
+      ctx.scale(dpr, dpr);
       initDrops();
     };
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-
-
     const draw = (): void => {
       ctx.fillStyle = isDark ? 'rgba(2, 6, 23, 0.05)' : 'rgba(255, 255, 255, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, logicalWidth, logicalHeight);
 
       ctx.fillStyle = isDark ? '#10b981' : '#6366f1'; // emerald-500 in dark, indigo-500 in light
       ctx.font = `${fontSize}px monospace`;
@@ -47,7 +53,7 @@ const MatrixRain: React.FC = () => {
         const text = characters.charAt(Math.floor(Math.random() * characters.length));
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        if (drops[i] * fontSize > logicalHeight && Math.random() > 0.975) {
           drops[i] = 0;
         }
 

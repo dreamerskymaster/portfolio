@@ -73,10 +73,10 @@ const CliftonStrengths: React.FC = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="mb-24 relative py-12 px-4"
+      className="mb-24 relative py-12 px-4 overflow-hidden"
     >
       {/* Dynamic DNA Helix Backdrop */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden blur-[2px]">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden blur-[2px] hidden md:block">
         <svg width="100%" height="100%" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" className="opacity-20">
           <defs>
             <linearGradient id="dna-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -148,7 +148,7 @@ const CliftonStrengths: React.FC = () => {
             <span className="text-xs font-bold text-primary uppercase tracking-widest">Psychometric Talent Analysis</span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-6xl font-black text-foreground mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-foreground mb-6 tracking-tight">
             My <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent-1">Strengths DNA</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -156,7 +156,7 @@ const CliftonStrengths: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Main Hero Strength: Discipline */}
           <div className="lg:col-span-12 xl:col-span-5">
             <motion.div

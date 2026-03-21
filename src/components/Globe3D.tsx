@@ -94,11 +94,15 @@ const Globe3D = () => {
     // Earth
     const earthGeom = new THREE.SphereGeometry(globeRadius, 64, 64);
     const earthMat = new THREE.MeshStandardMaterial({
-      map: earthMap,
-      bumpMap: earthBump,
+      map: isDark ? earthMap : null,
+      bumpMap: isDark ? earthBump : null,
+      color: isDark ? 0xffffff : 0x2A2825, // Deep ink color
+      wireframe: !isDark,
       bumpScale: 0.15,
       roughness: 0.8,
-      metalness: 0.1
+      metalness: 0.1,
+      transparent: !isDark,
+      opacity: isDark ? 1 : 0.15
     });
     const earth = new THREE.Mesh(earthGeom, earthMat);
     scene.add(earth);
@@ -106,11 +110,11 @@ const Globe3D = () => {
     // Atmosphere
     const atmosphereGeom = new THREE.SphereGeometry(globeRadius * 1.025, 64, 64);
     const atmosphereMat = new THREE.MeshBasicMaterial({
-      color: 0x44aaff,
+      color: isDark ? 0x44aaff : 0x2A2825,
       transparent: true,
-      opacity: 0.05,
+      opacity: isDark ? 0.05 : 0.02,
       side: THREE.BackSide,
-      blending: THREE.AdditiveBlending
+      blending: isDark ? THREE.AdditiveBlending : THREE.NormalBlending
     });
     scene.add(new THREE.Mesh(atmosphereGeom, atmosphereMat));
 
@@ -122,13 +126,13 @@ const Globe3D = () => {
 
     // Sun (Visual)
     const sunGeom = new THREE.SphereGeometry(5, 32, 32);
-    const sunMat = new THREE.MeshBasicMaterial({ color: 0xffcc33 });
+    const sunMat = new THREE.MeshBasicMaterial({ color: isDark ? 0xffcc33 : 0x2A2825, wireframe: !isDark, transparent: !isDark, opacity: isDark ? 1 : 0.1 });
     const sunSphere = new THREE.Mesh(sunGeom, sunMat);
     sunSphere.position.set(200, 100, 250);
     scene.add(sunSphere);
 
     // Sun Glow
-    const sunGlow = new THREE.PointLight(0xffcc33, 10000, 1000);
+    const sunGlow = new THREE.PointLight(0xffcc33, isDark ? 10000 : 0, 1000);
     sunGlow.position.copy(sunSphere.position);
     scene.add(sunGlow);
 
@@ -138,9 +142,13 @@ const Globe3D = () => {
     const moonGeom = new THREE.SphereGeometry(moonRadius, 32, 32);
     const moonMap = textureLoader.load('https://unpkg.com/three-globe/example/img/earth-night.jpg'); // Moonlight map
     const moonMat = new THREE.MeshStandardMaterial({
-      map: moonMap,
+      map: isDark ? moonMap : null,
+      color: isDark ? 0xffffff : 0x2A2825,
       roughness: 1,
-      metalness: 0
+      metalness: 0,
+      wireframe: !isDark,
+      transparent: !isDark,
+      opacity: isDark ? 1 : 0.1
     });
     const moon = new THREE.Mesh(moonGeom, moonMat);
     moon.position.set(35, 0, 0); // Distance from earth
@@ -149,7 +157,7 @@ const Globe3D = () => {
 
     // Mars (Distant)
     const marsGeom = new THREE.SphereGeometry(1.5, 32, 32);
-    const marsMat = new THREE.MeshStandardMaterial({ color: 0xbc2732, roughness: 0.8 });
+    const marsMat = new THREE.MeshStandardMaterial({ color: isDark ? 0xbc2732 : 0x2A2825, roughness: 0.8, wireframe: !isDark, transparent: !isDark, opacity: isDark ? 1 : 0.1 });
     const mars = new THREE.Mesh(marsGeom, marsMat);
     mars.position.set(-150, 50, -200);
     scene.add(mars);
@@ -158,11 +166,14 @@ const Globe3D = () => {
     const venusGroup = new THREE.Group();
     const venusGeom = new THREE.SphereGeometry(2.2, 32, 32);
     const venusMat = new THREE.MeshStandardMaterial({
-      color: 0xe3bb76,
+      color: isDark ? 0xe3bb76 : 0x2A2825,
       roughness: 0.5,
       metalness: 0,
-      emissive: 0xe3bb76,
-      emissiveIntensity: 0.1
+      emissive: isDark ? 0xe3bb76 : 0x000000,
+      emissiveIntensity: 0.1,
+      wireframe: !isDark,
+      transparent: !isDark,
+      opacity: isDark ? 1 : 0.1
     });
     const venus = new THREE.Mesh(venusGeom, venusMat);
     venus.position.set(100, 20, 80);
@@ -172,7 +183,7 @@ const Globe3D = () => {
     // Mercury
     const mercuryGroup = new THREE.Group();
     const mercuryGeom = new THREE.SphereGeometry(0.8, 32, 32);
-    const mercuryMat = new THREE.MeshStandardMaterial({ color: 0x8c8c8c, roughness: 0.9 });
+    const mercuryMat = new THREE.MeshStandardMaterial({ color: isDark ? 0x8c8c8c : 0x2A2825, roughness: 0.9, wireframe: !isDark, transparent: !isDark, opacity: isDark ? 1 : 0.1 });
     const mercury = new THREE.Mesh(mercuryGeom, mercuryMat);
     mercury.position.set(150, -10, 120);
     mercuryGroup.add(mercury);
@@ -283,10 +294,12 @@ const Globe3D = () => {
         canvas.width = 256;
         canvas.height = 64;
         ctx.font = 'Bold 40px Inter, sans-serif';
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = isDark ? 'white' : '#181614';
         ctx.textAlign = 'center';
-        ctx.shadowColor = 'black';
-        ctx.shadowBlur = 8;
+        if (isDark) {
+          ctx.shadowColor = 'black';
+          ctx.shadowBlur = 8;
+        }
         ctx.fillText(city.label, 128, 48);
 
         const texture = new THREE.CanvasTexture(canvas);
@@ -616,9 +629,9 @@ const Globe3D = () => {
   }, [isDark]); // Re-run when theme changes to update star colors
 
   return (
-    <div ref={containerRef} className={`fixed inset-0 -z-10 w-full h-full ${isDark ? 'bg-[#020617]' : 'bg-gradient-to-br from-slate-50 to-slate-200'} pointer-events-none transition-colors duration-500`}>
+    <div ref={containerRef} className={`fixed inset-0 -z-10 w-full h-full ${isDark ? 'bg-[#020617]' : 'bg-bg'} pointer-events-none transition-colors duration-500`}>
       {/* Dark overlay to make content readable, Light overlay subtle tint */}
-      <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-[#020617]/80 via-[#020617]/40 to-[#020617]/80' : 'from-white/40 via-transparent to-white/60'} z-0`}></div>
+      <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-[#020617]/80 via-[#020617]/40 to-[#020617]/80' : 'from-bg/60 via-transparent to-bg/90'} z-0`}></div>
       <canvas ref={canvasRef} className="w-full h-full opacity-60" />
     </div>
   );

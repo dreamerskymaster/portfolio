@@ -122,7 +122,7 @@ const Contact: React.FC = () => {
               Let's Collaborate
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to transform your <TechnicalTooltip term="Manufacturing Operations" definition="The complete set of activities involved in producing goods, from raw materials to finished products." example="Like running a restaurant kitchen - coordinating ingredients, equipment, staff, and processes to deliver quality meals efficiently." industry="Manufacturing" icon="🏭">
+              Ready to transform your <TechnicalTooltip term="Manufacturing Operations" definition="The complete set of activities involved in producing goods, from raw materials to finished products." example="Like running a restaurant kitchen - coordinating ingredients, equipment, staff, and processes to deliver quality meals efficiently." industry="Manufacturing" icon="factory">
                 manufacturing operations
               </TechnicalTooltip>? Let's discuss opportunities or
               send a message to discuss your specific challenges and opportunities.
@@ -260,7 +260,7 @@ const Contact: React.FC = () => {
                     <div className="space-y-3">
                       {featuredTestimonials.map((testimonial, index) => (
                         <motion.button
-                          key={testimonial.name}
+                          key={`${testimonial.name}-${index}`}
                           onClick={() => setActiveTestimonial(index)}
                           whileHover={{ x: 4 }}
                           className={`w-full text-left p-4 rounded-lg transition-all ${activeTestimonial === index
@@ -373,13 +373,15 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="text-center">
-                  <Link
-                    to="/contact"
+                  <a
+                    href="https://calendly.com/d/cqp7-3p3-jwq/30-minute-meeting"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-contrast rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
                   >
                     <MessageSquare className="w-5 h-5" />
                     Get in Touch
-                  </Link>
+                  </a>
                 </div>
               </div>
             </motion.div>

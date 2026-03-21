@@ -380,7 +380,12 @@ export const profile: Profile = {
       "scope": ["Simulation modeling", "IoT implementation", "Maintenance strategy overhaul"],
       "technicalSolution": {"simulation": ["Simio software modeling"], "hardware": ["IoT sensors for predictive maintenance"]},
       "quantifiedResults": {"WIP Increase": "25%", "Cycle Time Reduction": "15-20%"},
-      "images": ["/vdrs-presentation/Editorial/DSC01481.JPG", "/vdrs-presentation/Editorial/DSC01492.JPG"],
+      "images": [
+        "/vdrs-presentation/Editorial/DSC01481.JPG", 
+        "/vdrs-presentation/Editorial/DSC01492.JPG",
+        "/internship/DSC01498.JPG", 
+        "/internship/DSC01499.JPG"
+      ],
       "recognition": [],
       "date": "2024-12-01"
     },
@@ -402,9 +407,32 @@ export const profile: Profile = {
       "scope": ["Strategy Development", "Process Blueprinting"],
       "technicalSolution": {"strategy": ["AI and predictive analytics roadmaps"]},
       "quantifiedResults": {},
-      "images": ["/vdrs-presentation/Editorial/DSC01427.JPG"],
+      "images": ["/vdrs-presentation/Editorial/DSC01427.JPG", "/certificates/Internships/Intellectual Property Virtual Experience - Forage Ajith Srikanth.pdf"],
       "recognition": [],
       "date": "2021-08-01"
+    },
+    {
+      "id": "bosch-rexroth-hydraulics",
+      "title": "Industrial Hydraulics & Component Manufacturing",
+      "subtitle": "Engineering Trainee - Bosch Rexroth",
+      "category": "Mechanical Engineering",
+      "timeline": "May 2019 - Jun 2019",
+      "status": "Completed",
+      "summary": "Deep-dive into high-precision hydraulic systems, from component machining to final assembly line troubleshooting for industrial applications.",
+      "content": "# Industrial Hydraulics & Component Manufacturing\n\n## Overview\nDuring my tenure at Bosch Rexroth (Sanand), I gained comprehensive exposure to the lifecycle of industrial hydraulic components. This included studying the manufacturing processes for hydraulic pumps, cylinders, and control valves.\n\n## Key Learnings\n- **Component Manufacturing**: Observed precision machining, deburing, and honing processes for high-tolerance hydraulic parts.\n- **System Integration**: Assisted in reading complex hydraulic circuits adhering to DIN ISO 1219 standards.\n- **Assembly Excellence**: Evaluated assembly line workflows for component-level quality control.\n",
+      "technologies": ["Hydraulics", "Precision Machining", "DIN ISO 1219", "Assembly Lines"],
+      "impact": ["Mastered hydraulic circuit analysis", "Optimized component-level inspection workflows", "Documented plant-wide manufacturing best practices"],
+      "links": {
+        "case_study": "/certificates/Internships/Bosch Rexroth Internship Certificate.pdf"
+      },
+      "businessContext": "Understanding the core mechanical components that power industrial automation is critical for any manufacturing systems engineer.",
+      "challenge": "Translating complex hydraulic circuit diagrams into physical component layouts during high-speed assembly.",
+      "scope": ["Circuit Analysis", "Manufacturing Audit", "Component Testing"],
+      "technicalSolution": {"circuitry": ["Study of hydraulic pumps and control valves"]},
+      "quantifiedResults": {"Plant Efficiency": "Observation of lean cell assembly"},
+      "images": ["/internship/DSC01498.JPG", "/internship/DSC01499.JPG"],
+      "recognition": ["Internship Excellence Certificate"],
+      "date": "2019-06-01"
     },
     {
       "id": "diy-lifi-communication",
@@ -1153,7 +1181,7 @@ export const profile: Profile = {
         "/hero-motocorp/IMG-20240208-WA0012.jpg",
         "/hero-motocorp/IMG-20240208-WA0013.jpg",
         "/hero-motocorp/IMG-20230731-WA0017.jpg",
-        "/hero-motocorp/IMG-20240912-WA0037.jpg",
+
         "/hero-motocorp/IMG-20230808-WA0010.jpg",
         "/hero-motocorp/IMG-20230808-WA0011.jpg"
       ],

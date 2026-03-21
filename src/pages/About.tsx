@@ -11,7 +11,6 @@ import {
   Users,
   Award,
   BookOpen,
-  Lightbulb,
   Globe,
   Clock,
   MapPin,
@@ -23,7 +22,11 @@ import {
   Calendar,
   Linkedin,
   Github,
-  Mail
+  Mail,
+  BarChart,
+  RefreshCw,
+  Rocket,
+  Info
 } from 'lucide-react';
 import { profile } from '../data/profile';
 import PersonalPhilosophy from '../components/PersonalPhilosophy';
@@ -88,24 +91,24 @@ const About: React.FC = () => {
       focus: "Manufacturing Excellence & Team Leadership at Hero MotoCorp",
       achievements: [
         "Led 25+ member cross-functional teams across multiple manufacturing plants",
-        <TechnicalTooltip key="tpm" term="TPM (Total Productive Maintenance)" definition="A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Like regularly maintaining your car to prevent breakdowns - oil changes, tire rotations, and check-ups keep it running smoothly." industry="Manufacturing" icon="🔧">
+        <TechnicalTooltip key="tpm" term="TPM (Total Productive Maintenance)" definition="A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Like regularly maintaining your car to prevent breakdowns - oil changes, tire rotations, and check-ups keep it running smoothly." industry="Manufacturing" icon="wrench">
           TPM Special Award for maintenance excellence and process optimization
         </TechnicalTooltip>,
         "Managed Vida EV production line tools and equipment worth ₹50M+",
         "Delivered 36+ hours of technical training to 200+ engineers",
-        <TechnicalTooltip key="downtime" term="Downtime Reduction" definition="The process of minimizing the time when equipment or systems are not operational due to maintenance, breakdowns, or other issues." example="Like reducing the time your car spends in the repair shop - the less time it's broken, the more you can use it productively." industry="Manufacturing" icon="⏱️">
+        <TechnicalTooltip key="downtime" term="Downtime Reduction" definition="The process of minimizing the time when equipment or systems are not operational due to maintenance, breakdowns, or other issues." example="Like reducing the time your car spends in the repair shop - the less time it's broken, the more you can use it productively." industry="Manufacturing" icon="clock">
           Achieved 83% downtime reduction through predictive maintenance implementation
         </TechnicalTooltip>,
         "Generated ₹9M+ annual savings through supply chain efficiency initiatives"
       ],
       technologies: ["SAP", "SCADA", "IoT Sensors", "Automation Systems",
-        <TechnicalTooltip key="tpm-tech" term="TPM" definition="Total Productive Maintenance - A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Like regularly maintaining your car to prevent breakdowns - oil changes, tire rotations, and check-ups keep it running smoothly." industry="Manufacturing" icon="🔧">
+        <TechnicalTooltip key="tpm-tech" term="TPM" definition="Total Productive Maintenance - A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Like regularly maintaining your car to prevent breakdowns - oil changes, tire rotations, and check-ups keep it running smoothly." industry="Manufacturing" icon="wrench">
           TPM
         </TechnicalTooltip>,
-        <TechnicalTooltip key="six-sigma" term="Six Sigma" definition="A data-driven methodology for eliminating defects and improving quality in processes." example="Like ensuring 99.99966% of your products are perfect - if you made 1 million products, only 3.4 would be defective." industry="Quality Management" icon="📊">
+        <TechnicalTooltip key="six-sigma" term="Six Sigma" definition="A data-driven methodology for eliminating defects and improving quality in processes." example="Like ensuring 99.99966% of your products are perfect - if you made 1 million products, only 3.4 would be defective." industry="Quality Management" icon={<BarChart className="w-4 h-4" />}>
           Six Sigma
         </TechnicalTooltip>,
-        <TechnicalTooltip key="lean" term="Lean Manufacturing" definition="A methodology focused on minimizing waste while maximizing productivity and value for customers." example="Like organizing your kitchen - removing unused items, arranging tools efficiently, and having everything you need within reach." industry="Manufacturing" icon="♻️">
+        <TechnicalTooltip key="lean" term="Lean Manufacturing" definition="A methodology focused on minimizing waste while maximizing productivity and value for customers." example="Like organizing your kitchen - removing unused items, arranging tools efficiently, and having everything you need within reach." industry="Manufacturing" icon={<RefreshCw className="w-4 h-4" />}>
           Lean Manufacturing
         </TechnicalTooltip>
       ],
@@ -242,7 +245,7 @@ const About: React.FC = () => {
                 }}
                 className="text-emerald-500"
               >
-                🚀
+                <Rocket className="w-5 h-5" />
               </motion.span>
             </motion.div>
           </motion.div>

@@ -7,8 +7,8 @@ const FeaturedArticle: React.FC = () => {
     <section className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 rounded-3xl p-8 md:p-12 overflow-hidden shadow-2xl border border-white/10"

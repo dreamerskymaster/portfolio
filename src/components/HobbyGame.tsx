@@ -7,14 +7,13 @@ interface Point {
   y: number;
 }
 
-interface HobbyIcon {
+interface HobbyItem {
   id: string;
-  emoji: string;
   point: Point;
 }
 
 interface HobbyGameProps {
-  hobbies: { id: string; emoji: string }[];
+  hobbies: { id: string }[];
   onHobbyUnlock: (id: string) => void;
 }
 
@@ -27,7 +26,7 @@ const HobbyGame: React.FC<HobbyGameProps> = ({ hobbies, onHobbyUnlock }) => {
   const [gameState, setGameState] = useState<'IDLE' | 'PLAYING' | 'GAMEOVER' | 'PAUSED'>('IDLE');
   const [snake, setSnake] = useState<Point[]>([{ x: 10, y: 10 }]);
   const [direction, setDirection] = useState<Point>({ x: 1, y: 0 });
-  const [food, setFood] = useState<HobbyIcon | null>(null);
+  const [food, setFood] = useState<HobbyItem | null>(null);
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [speed, setSpeed] = useState(INITIAL_SPEED);
@@ -151,21 +150,34 @@ const HobbyGame: React.FC<HobbyGameProps> = ({ hobbies, onHobbyUnlock }) => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const size = canvas.width / GRID_SIZE;
+    // DPI Scaling
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    
+    // Set actual size in memory to match display size * DPR
+    if (canvas.width !== Math.floor(rect.width * dpr) || canvas.height !== Math.floor(rect.height * dpr)) {
+      canvas.width = Math.floor(rect.width * dpr);
+      canvas.height = Math.floor(rect.height * dpr);
+      ctx.scale(dpr, dpr);
+    }
+
+    const logicalWidth = rect.width;
+    const logicalHeight = rect.height;
+    const size = logicalWidth / GRID_SIZE;
 
     // Clear
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, logicalWidth, logicalHeight);
 
     // Draw Board (Subtle grid)
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
     for (let i = 0; i <= GRID_SIZE; i++) {
       ctx.beginPath();
       ctx.moveTo(i * size, 0);
-      ctx.lineTo(i * size, canvas.height);
+      ctx.lineTo(i * size, logicalHeight);
       ctx.stroke();
       ctx.beginPath();
       ctx.moveTo(0, i * size);
-      ctx.lineTo(canvas.width, i * size);
+      ctx.lineTo(logicalWidth, i * size);
       ctx.stroke();
     }
 
@@ -205,14 +217,15 @@ const HobbyGame: React.FC<HobbyGameProps> = ({ hobbies, onHobbyUnlock }) => {
 
     // Draw Food
     if (food) {
-      ctx.font = `${size * 0.8}px serif`;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(
-        food.emoji,
-        food.point.x * size + size / 2,
-        food.point.y * size + size / 2
-      );
+      const cx = food.point.x * size + size / 2;
+      const cy = food.point.y * size + size / 2;
+      ctx.beginPath();
+      ctx.arc(cx, cy, size * 0.4, 0, Math.PI * 2);
+      ctx.fillStyle = '#f59e0b';
+      ctx.shadowColor = '#fcd34d';
+      ctx.shadowBlur = 10;
+      ctx.fill();
+      ctx.shadowBlur = 0; // reset
     }
   }, [snake, food]);
 
@@ -256,9 +269,7 @@ const HobbyGame: React.FC<HobbyGameProps> = ({ hobbies, onHobbyUnlock }) => {
         <div className="relative aspect-square bg-slate-950 rounded-2xl overflow-hidden border-2 border-slate-800/50">
           <canvas
             ref={canvasRef}
-            width={500}
-            height={500}
-            className="w-full h-full"
+            className="w-full h-full block"
           />
 
           {/* Overlays */}

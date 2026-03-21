@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
   transition,
   ...props 
 }) => {
-  const baseClasses = 'glass-card border border-white/20 rounded-2xl backdrop-blur-sm';
+  const baseClasses = 'glass-card border border-border dark:border-white/10 rounded-2xl backdrop-blur-sm shadow-sm dark:shadow-none hover:shadow-md transition-all duration-300';
   const combinedClasses = `${baseClasses} ${className}`.trim();
 
   return (

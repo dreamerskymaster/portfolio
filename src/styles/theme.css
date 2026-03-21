@@ -1,30 +1,38 @@
-/* Color tokens for light and dark themes */
+/* Premium Light Theme - Frost & Energy */
 :root {
-  --bg: #faf8f5; /* Warm editorial cream */
-  --fg: #1c1917;
-  --muted: #78716c;
-  --primary: #0284c7; /* slightly softer blue */
-  --primary-rgb: 2, 132, 199;
-  --primary-contrast: #ffffff;
-  --accent-1: #059669;
-  --accent-2: #dc2626;
-  --card: #ffffff;
-  --border: #e7e5e4;
-  --muted-foreground: #a8a29e;
-  --foreground: #1c1917;
+  --bg: #FAFAFB; /* Clean, slightly cool off-white */
+  --bg-grid: #E5E7EB; /* Subtle grid */
+  --fg: #111827; /* Deep strong dark grey */
+  --muted: #F3F4F6; /* Gray 100 */
+  --primary: #0047FF; /* Electric Royal Blue */
+  --primary-rgb: 0, 71, 255;
+  --primary-contrast: #FFFFFF;
+  --accent-1: #7000FF; /* Vivid Violet */
+  --accent-2: #00D1FF; /* Cyan */
+  --card: #FFFFFF; /* Pure white surface */
+  --card-header: #F9FAFB;
+  --border: #E5E7EB; /* Subtle boundaries */
+  --muted-foreground: #4B5563; /* Gray 600 - readable secondary text */
+  --foreground: #030712; /* Gray 950 - essentially black for max contrast */
+  
+  /* Typography Tokens */
+  --font-serif: 'Instrument Serif', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
 }
 
 :root.dark {
   --bg: #09090b; /* OLED Black */
+  --bg-grid: #18181b; 
   --fg: #f1f5f9;
-  --muted: #27272a; /* Zinc 800 */
+  --muted: #27272a;
   --primary: #38bdf8;
   --primary-rgb: 56, 189, 248;
   --primary-contrast: #0f172a;
   --accent-1: #10b981;
   --accent-2: #f43f5e;
-  --card: #18181b; /* Zinc 900 for cards */
-  --border: #27272a; /* Zinc 800 for borders */
+  --card: #18181b;
+  --border: #27272a;
   --muted-foreground: #71717a;
   --foreground: #fafafa;
 }
@@ -41,14 +49,27 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg);
+  background-image: radial-gradient(var(--bg-grid) 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
   color: var(--fg);
+  line-height: 1.6;
+  letter-spacing: -0.011em;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
 }
 
 /* Focus styles for accessibility */

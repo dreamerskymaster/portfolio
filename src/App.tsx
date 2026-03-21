@@ -30,8 +30,12 @@ const Presentation = lazy(() => import('./internship/Presentation'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 import { ThemeProvider } from './context/ThemeContext';
+import { useEasterEggs } from './hooks/useEasterEggs';
+import EasterEggOverlays from './components/EasterEggOverlays';
 
 function App() {
+  const easterEggs = useEasterEggs();
+
   return (
     <ThemeProvider>
       <ErrorBoundary>
@@ -49,7 +53,7 @@ function App() {
             <ScrollProgress />
             <CustomCursor />
             <div className="flex flex-col min-h-screen transition-colors duration-300">
-              <Header />
+              <Header onLogoTap={easterEggs.handleLogoTap} />
               <main id="main-content" className="flex-1 outline-none" tabIndex={-1}>
                 <AnimatedRoutes />
               </main>
@@ -57,6 +61,7 @@ function App() {
               <SpeedInsights />
               <Analytics />
             </div>
+            <EasterEggOverlays {...easterEggs} />
           </Router>
         </HelmetProvider >
       </ErrorBoundary >

@@ -1,41 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ajithsrikanth.com/</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://manufx.vercel.app/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ajithsrikanth.com/about</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://manufx.vercel.app/about</loc>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ajithsrikanth.com/projects</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ajithsrikanth.com/writing</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://manufx.vercel.app/projects</loc>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ajithsrikanth.com/contact</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://manufx.vercel.app/hobbies</loc>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://manufx.vercel.app/writings</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ajithsrikanth.com/resume</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://manufx.vercel.app/certifications</loc>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://manufx.vercel.app/career-artifacts</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://manufx.vercel.app/contact</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://manufx.vercel.app/resume</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Project Slugs -->
+  <url><loc>https://manufx.vercel.app/projects/airport-operations-lean</loc><priority>0.6</priority></url>
+  <url><loc>https://manufx.vercel.app/projects/connecting-rod-assembly</loc><priority>0.6</priority></url>
+  <url><loc>https://manufx.vercel.app/projects/schneider-supply-chain</loc><priority>0.6</priority></url>
+  <url><loc>https://manufx.vercel.app/projects/bosch-rexroth-hydraulics</loc><priority>0.6</priority></url>
+  <url><loc>https://manufx.vercel.app/projects/diy-lifi-communication</loc><priority>0.6</priority></url>
+  <url><loc>https://manufx.vercel.app/projects/peizoelectric-bag</loc><priority>0.6</priority></url>
+  <url><loc>https://manufx.vercel.app/projects/f1-race-strategy-predictor</loc><priority>0.6</priority></url>
+  <url><loc>https://manufx.vercel.app/projects/vigilance-decrement-research</loc><priority>0.6</priority></url>
+  <url><loc>https://manufx.vercel.app/projects/van-dyk-one</loc><priority>0.6</priority></url>
+  <url><loc>https://manufx.vercel.app/projects/dykscribe</loc><priority>0.6</priority></url>
 </urlset>
-
-

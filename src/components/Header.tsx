@@ -22,7 +22,11 @@ import {
 import { profile } from '../data/profile';
 import ThemeToggle from './ThemeToggle';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onLogoTap?: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -116,9 +120,10 @@ const Header: React.FC = () => {
                 boxShadow: "0 10px 25px rgba(16, 185, 129, 0.3)"
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={onLogoTap}
             >
               <img
-                src="/ManuFX.png"
+                src="/ManuFX.jpg"
                 alt="ManuFX Logo"
                 className="w-full h-full object-contain p-1"
                 onError={(e) => {
