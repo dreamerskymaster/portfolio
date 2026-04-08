@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { searchPortfolio, SearchResult } from '../utils/search';
 import {
   Menu,
   X,
@@ -29,9 +30,13 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [isMobile, setIsMobile] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  
   const location = useLocation();
+  const navigate = useNavigate();
 
   interface NavItem {
     name: string;
@@ -82,8 +87,23 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
         const searchInput = document.getElementById('search-input');
         if (searchInput) searchInput.focus();
       }, 100);
+    } else {
+      setSearchQuery('');
+      setSearchResults([]);
     }
   }, [isSearchOpen]);
+
+  const handleSearch = (value: string) => {
+    setSearchQuery(value);
+    setSearchResults(searchPortfolio(value));
+  };
+
+  const handleResultClick = (result: SearchResult) => {
+    navigate(result.href);
+    setIsSearchOpen(false);
+    setSearchQuery('');
+    setSearchResults([]);
+  };
 
   // Close menu when route changes
   useEffect(() => {
@@ -99,11 +119,16 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
         e.preventDefault();
         toggleSearch();
       }
+      if (e.key === 'Escape' && isSearchOpen) {
+        setIsSearchOpen(false);
+        setSearchQuery('');
+        setSearchResults([]);
+      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [toggleSearch]);
+  }, [toggleSearch, isSearchOpen]);
 
   return (
     <header className="sticky top-0 z-50 transition-all duration-300">
@@ -123,9 +148,10 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
               onClick={onLogoTap}
             >
               <img
-                src="/ManuFX.jpg"
+                src="/logo/ManuFX.jpg"
                 alt="ManuFX Logo"
                 className="w-full h-full object-contain p-1"
+                fetchpriority="high"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
@@ -288,10 +314,48 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
                 <input
                   id="search-input"
                   type="text"
+                  value={searchQuery}
+                  onChange={(e) => handleSearch(e.target.value)}
                   placeholder="Search projects, writings, or skills... (Ctrl+K)"
                   className="w-full px-4 py-2 pl-10 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-foreground placeholder-muted-foreground"
+                  autoFocus
                 />
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+
+                {/* Search Results Dropdown */}
+                {searchResults.length > 0 && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-card border border-border rounded-xl shadow-2xl overflow-hidden z-50">
+                    {searchResults.map((result, index) => (
+                      <button
+                        key={`${result.type}-${index}`}
+                        onClick={() => handleResultClick(result)}
+                        className="w-full flex items-start gap-3 px-4 py-3 hover:bg-muted/50 transition-colors text-left border-b border-border last:border-0"
+                      >
+                        <span className={`inline-block px-2 py-0.5 text-[10px] font-bold uppercase rounded-full mt-0.5 ${result.type === 'project' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
+                          result.type === 'writing' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
+                            'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400'
+                          }`}>
+                          {result.type}
+                        </span>
+                        <div>
+                          <div className="text-sm font-medium text-foreground">{result.title}</div>
+                          {result.subtitle && (
+                            <div className="text-xs text-muted-foreground">{result.subtitle}</div>
+                          )}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* No results message */}
+                {searchQuery.length >= 2 && searchResults.length === 0 && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-card border border-border rounded-xl shadow-2xl p-4 z-50">
+                    <p className="text-sm text-muted-foreground text-center">
+                      No results found for "{searchQuery}"
+                    </p>
+                  </div>
+                )}
               </div>
             </motion.div>
           )}

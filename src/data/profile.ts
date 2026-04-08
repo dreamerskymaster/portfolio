@@ -202,7 +202,7 @@ export const profile: Profile = {
     },
     {
       "company": "Van Dyk Recycling Solutions",
-      "role": "Manufacturing Intern (AI & Automation Focus)",
+      "role": "After Sales / Systems Developer Intern",
       "location": "Norwalk, CT",
       "start": "May 2025",
       "end": "Dec 2025",
@@ -359,7 +359,7 @@ export const profile: Profile = {
       "scope": ["Baggage Handling", "Security Checkpoints", "Gate Turnaround"],
       "technicalSolution": {"tools": ["Fishbone diagrams", "Time-motion studies", "Spaghetti diagrams", "Visual Boards"]},
       "quantifiedResults": {"ROI": "285%", "Wait Time Reduction": "35%"},
-      "images": ["/vdrs-presentation/Editorial/DSC01424.JPG", "/vdrs-presentation/Editorial/DSC01425.JPG"],
+      "images": [],
       "recognition": [],
       "date": "2025-04-01"
     },
@@ -407,7 +407,7 @@ export const profile: Profile = {
       "scope": ["Strategy Development", "Process Blueprinting"],
       "technicalSolution": {"strategy": ["AI and predictive analytics roadmaps"]},
       "quantifiedResults": {},
-      "images": ["/vdrs-presentation/Editorial/DSC01427.JPG", "/certificates/Internships/Intellectual Property Virtual Experience - Forage Ajith Srikanth.pdf"],
+      "images": [],
       "recognition": [],
       "date": "2021-08-01"
     },
@@ -451,7 +451,7 @@ export const profile: Profile = {
       "scope": ["Circuit Design", "Component Sourcing", "System Prototyping"],
       "technicalSolution": {"hardware": ["LED Array", "Solar Panel Receiver", "Audio Amplifiers"]},
       "quantifiedResults": {},
-      "images": ["/vdrs-presentation/Editorial/DSC01451.JPG"],
+      "images": [],
       "recognition": [],
       "date": "2019-12-01"
     },
@@ -472,7 +472,7 @@ export const profile: Profile = {
       "scope": ["Sensor Integration", "Rectifier Circuit Design", "Prototype Assembly"],
       "technicalSolution": {"hardware": ["Piezoelectric Discs", "Bridge Rectifiers", "Capacitors"]},
       "quantifiedResults": {},
-      "images": ["/vdrs-presentation/Editorial/DSC01454.JPG"],
+      "images": [],
       "recognition": [],
       "date": "2019-05-01"
     },
@@ -543,10 +543,7 @@ export const profile: Profile = {
         "Offline capability for remote sites",
         "Used by 60+ field engineers"
       ],
-      "links": {
-        "demo": "#",
-        "repo": "#"
-      },
+      "links": {},
       "businessContext": "Field technicians rely on disparate tools and have limited connectivity in recycling plants. A unified, offline-capable mobile solution was critical for operational efficiency.",
       "challenge": "Develop a robust, offline-first mobile application that integrates existing web tools (DykScribe, RAG) and provides new field capabilities without sacrificing performance.",
       "scope": [
@@ -605,8 +602,7 @@ export const profile: Profile = {
         "Captured 400+ Q&A sessions"
       ],
       "links": {
-        "demo": "https://dykscribe.streamlit.app/",
-        "repo": "#"
+        "demo": "https://dykscribe.streamlit.app/"
       },
       "businessContext": "When experienced engineers retire or move on, their invaluable troubleshooting knowledge and field expertise leaves with them. There was no systematic way to capture, store, and share this institutional knowledge with new employees, leading to repeated mistakes and slower problem resolution.",
       "challenge": "\"DykScribe\" = \"Van Dyk\" + \"Describe\". It's about describing technical problems to build a shared brain for the company. The goal was to create a system that captures this knowledge through voice and manual input.",
@@ -668,10 +664,7 @@ export const profile: Profile = {
         "Indexed 10,000+ technical documents",
         "40% reduction in L1 support calls"
       ],
-      "links": {
-        "demo": "#",
-        "repo": "#"
-      },
+      "links": {},
       "businessContext": "Large volumes of technical documentation and equipment manuals need to be searchable and accessible. Traditional keyword search fails to understand context, leading to long search times for technicians.",
       "challenge": "Implement a sophisticated retrieval-augmented generation system that can understand natural language queries and provide accurate, contextual answers from technical documentation.",
       "scope": [
@@ -736,8 +729,7 @@ export const profile: Profile = {
         "Streamlined document exchange"
       ],
       "links": {
-        "demo": "https://cdms.vdrs.com/",
-        "repo": "#"
+        "demo": "https://cdms.vdrs.com/"
       },
       "businessContext": "Managing shipping documents for 500+ containers across 20+ projects was a manual, error-prone process using Excel and email, leading to compliance risks and delays.",
       "challenge": "Build a centralized, secure platform to manage shipping documentation, track container status in real-time, and ensure compliance with international trade regulations.",
@@ -802,8 +794,7 @@ export const profile: Profile = {
         "Unified access point for automation"
       ],
       "links": {
-        "demo": "https://vdrs-costiq.onrender.com/",
-        "repo": "#"
+        "demo": "https://vdrs-costiq.onrender.com/"
       },
       "businessContext": "Fragmentation of internal tools led to inefficiency. A centralized platform was needed to standardize operations and host critical automations.",
       "challenge": "Consolidate diverse standalone tools (scripts, macros, executables) into a single, user-friendly web application while preserving their specific functionality.",
@@ -860,10 +851,7 @@ export const profile: Profile = {
         "Unified operational oversight",
         "Replaced manual data compilation"
       ],
-      "links": {
-        "demo": "#",
-        "repo": "#"
-      },
+      "links": {},
       "businessContext": "Operations teams relied on disconnected Excel sheets for asset tracking, leading to data discrepancies. A centralized system was needed that didn't disrupt existing workflows.",
       "challenge": "Create a robust database-backed system that still allowed users to work with their preferred Excel interfaces.",
       "scope": [
@@ -912,8 +900,7 @@ export const profile: Profile = {
         "Accessible via web browser"
       ],
       "links": {
-        "demo": "https://vdrs-costiq.onrender.com/",
-        "repo": "#"
+        "demo": "https://vdrs-costiq.onrender.com/"
       },
       "businessContext": "Sales engineers struggled with complex, error-prone spreadsheets for quoting. A modern, centralized tool was needed to standardize pricing.",
       "challenge": "Translating complex tiered pricing logic from Excel macros into a robust web application.",
@@ -959,8 +946,7 @@ export const profile: Profile = {
         "Replaced Shadow IT solutions"
       ],
       "links": {
-        "demo": "https://brave-bay-025aaec0f.3.azurestaticapps.net/",
-        "repo": "#"
+        "demo": "https://brave-bay-025aaec0f.3.azurestaticapps.net/"
       },
       "businessContext": "Engineering teams frequently needed to share massive CAD files with vendors. Email limits and security policies made this difficult, leading to insecure workarounds.",
       "challenge": "Build a secure, easy-to-use alternative to Dropbox/WeTransfer that integrates with corporate identity providers.",
@@ -1012,8 +998,7 @@ export const profile: Profile = {
         "Mobile-First Responsive Design"
       ],
       "links": {
-        "demo": "https://vdrsweb.vercel.app/",
-        "repo": "#"
+        "demo": "https://vdrsweb.vercel.app/"
       },
       "businessContext": "The aging corporate website was difficult to navigate and did not perform well on mobile devices, potentially costing sales opportunities.",
       "challenge": "Modernize the digital presence of a major industrial equipment supplier without alienating existing customers or disrupting SEO equity.",
@@ -1065,7 +1050,6 @@ export const profile: Profile = {
         "Multi-Model Interface Support"
       ],
       "links": {
-        "demo": "#",
         "repo": "https://github.com/open-webui/open-webui"
       },
       "businessContext": "Designed for factories where data security is paramount. Enables AI adoption without regulatory or IP risks.",
@@ -1130,8 +1114,6 @@ export const profile: Profile = {
       ],
       "businessContext": "Hero MotoCorp needed to modernize aging manufacturing infrastructure while maintaining production targets for both traditional vehicles and new Vida Electric Vehicle line.",
       "links": {
-        "demo": "#",
-        "repo": "#",
         "case_study": "/hero-motocorp/Presentations/Chairman Visit 7th Mar'25.pptx",
         "papers": "/hero-motocorp/Presentations/Maintenance PPT - Final.pptx"
       },
@@ -1211,9 +1193,7 @@ export const profile: Profile = {
         "Published research findings"
       ],
       "links": {
-        "paper": "https://www.academia.edu/85356749/Comparison_between_Bang_Bang_PID_and_LQR_Controller_for_Electrical_Discharge_Machining_Process",
-        "demo": "#",
-        "repo": "#"
+        "paper": "https://www.academia.edu/85356749/Comparison_between_Bang_Bang_PID_and_LQR_Controller_for_Electrical_Discharge_Machining_Process"
       },
       "businessContext": "Manufacturing precision improvements require advanced control system optimization, particularly in EDM processes where gap control is critical for quality.",
       "challenge": "Develop and validate improved control strategies for manufacturing processes through rigorous academic research and simulation analysis, comparing traditional vs optimal control methods.",
@@ -1239,9 +1219,7 @@ export const profile: Profile = {
         "Variability": "10% reduction",
         "Efficiency": "25% response time improvement"
       },
-      "images": [
-        "/vdrs-presentation/Editorial/DSC01499.JPG"
-      ],
+      "images": [],
       "recognition": [],
       "date": "2022-01-01"
     },
@@ -1271,47 +1249,57 @@ export const profile: Profile = {
     {
       "id": "ai-powered-manufacturing",
       "title": "Optimization of Manufacturing Line - IoT Smart Cell & Simio Simulation",
-      "category": "Other",
-      "summary": "Developed IoT-enabled Smart Cell Dashboard with Simio simulation modeling, achieving 20% cycle time reduction and 2000 units WIP increase through advanced manufacturing optimization.",
-      "content": "# Optimization of Manufacturing Line - IoT Smart Cell & Simio Simulation\n\n## Overview\n\nThis comprehensive manufacturing optimization project addresses the critical need for intelligent production line management in modern manufacturing environments. By integrating IoT-enabled Smart Cell technology with advanced Simio simulation modeling, we developed a revolutionary system that transforms traditional manufacturing operations into intelligent, data-driven processes.\n\n## Technical Architecture\n\nThe system integrates multiple cutting-edge technologies:\n\n### IoT Smart Cell Dashboard\n- **Real-time sensor integration** for comprehensive production monitoring\n- **Edge computing capabilities** for immediate data processing\n- **Cloud connectivity** for centralized analytics and reporting\n- **Predictive maintenance algorithms** for proactive equipment management\n\n### Simio Simulation Modeling\n- **Discrete event simulation** for production line optimization\n- **What-if scenario analysis** for capacity planning\n- **Resource allocation optimization** for maximum efficiency\n- **Bottleneck identification** and resolution strategies\n\n### Advanced Analytics Platform\n- **MATLAB integration** for complex mathematical modeling\n- **Python-based data processing** for real-time analytics\n- **Machine learning algorithms** for predictive insights\n- **Statistical process control** for quality assurance\n\n## Key Features\n\n### Smart Manufacturing Integration\n- **Real-time production monitoring** with IoT sensors\n- **Automated data collection** from multiple production stations\n- **Intelligent alerting system** for quality and efficiency issues\n- **Seamless integration** with existing manufacturing systems\n\n### Advanced Simulation Capabilities\n- **3D visualization** of production line operations\n- **Dynamic modeling** of production scenarios\n- **Optimization algorithms** for resource utilization\n- **Performance prediction** for different production volumes\n\n### Predictive Analytics\n- **Demand forecasting** using historical data analysis\n- **Maintenance scheduling** based on equipment condition monitoring\n- **Quality prediction** through process parameter analysis\n- **Capacity planning** for future production requirements\n\n## Results & Impact\n\n### Quantified Achievements\n- **20% cycle time reduction** through optimized production flow\n- **2000 units WIP increase** through improved work-in-progress management\n- **15% overall efficiency improvement** across the production line\n- **30% reduction in unplanned downtime** through predictive maintenance\n\n### Business Impact\n- **Significant cost savings** through improved resource utilization\n- **Enhanced product quality** through better process control\n- **Increased production capacity** without additional capital investment\n- **Improved customer satisfaction** through consistent delivery performance\n\n## Technical Challenges & Solutions\n\n### IoT Integration Complexity\n**Challenge**: Integrating diverse IoT sensors and devices from multiple manufacturers\n**Solution**: Developed a unified IoT platform with standardized communication protocols and adaptive device drivers\n\n### Simulation Accuracy\n**Challenge**: Creating accurate simulation models that reflect real-world manufacturing variability\n**Solution**: Implemented machine learning algorithms to continuously calibrate simulation parameters based on actual production data\n\n### Real-time Processing\n**Challenge**: Processing large volumes of sensor data in real-time without impacting production systems\n**Solution**: Deployed edge computing infrastructure with intelligent data filtering and local processing capabilities\n\n## Industry Applications\n\nThis solution is particularly valuable for:\n- **Automotive manufacturing** - Optimizing assembly line operations\n- **Electronics production** - Managing complex multi-stage processes\n- **Pharmaceutical manufacturing** - Ensuring quality and compliance\n- **Food and beverage processing** - Maintaining consistent product quality\n\n## Future Enhancements\n\n### Advanced AI Integration\n- **Machine learning models** for autonomous optimization\n- **Natural language processing** for voice-controlled operations\n- **Computer vision** for quality inspection automation\n\n### Extended Connectivity\n- **5G integration** for ultra-low latency communication\n- **Blockchain technology** for supply chain transparency\n- **Augmented reality** for maintenance and training applications\n\n## Lessons Learned\n\nThis project demonstrated the critical importance of:\n\n- **Cross-functional collaboration** between engineering, IT, and operations teams\n- **Iterative development** with continuous feedback from production floor personnel\n- **Scalable architecture** that can adapt to changing production requirements\n- **Comprehensive testing** in real-world manufacturing environments before full deployment\n\n## Technical Specifications\n\n- **IoT Platform**: Custom-built with support for 50+ sensor types\n- **Simulation Engine**: Simio Professional with custom optimization modules\n- **Data Processing**: Python-based analytics with MATLAB integration\n- **Cloud Infrastructure**: AWS-based with edge computing capabilities\n- **Security**: End-to-end encryption with role-based access control",
+      "category": "Manufacturing Engineering",
+      "timeline": "Oct 2024 - Dec 2024",
+      "status": "Completed",
+      "summary": "IoT-enabled Smart Cell Dashboard with Simio simulation modeling for a connecting rod assembly line, achieving 20% cycle time reduction and 2,000 units WIP increase through data-driven process optimization.",
+      "content": "# IoT Smart Cell Dashboard & Simio Simulation\n\n## Overview\nThis project combined IoT-enabled Smart Cell technology with Simio discrete event simulation to optimize a connecting rod assembly line for a major two-wheeler manufacturer.\n\n## IoT Smart Cell Dashboard\nDesigned and deployed a real-time production monitoring dashboard integrated with Limble CMMS. The system collected data from shop floor sensors across CNC machines and welding stations, enabling data-driven decision-making and predictive maintenance scheduling.\n\n## Simio Simulation Modeling\nBuilt a discrete event simulation model in Simio to validate proposed line improvements before physical implementation. The model accurately predicted bottlenecks and optimized worker allocation strategies.\n\n## Key Results\n- 20% cycle time reduction through optimized production flow\n- 2,000 units increase in daily Work-in-Process throughput\n- 15% overall efficiency improvement across the production line\n- 11% machine availability gain through IoT-driven predictive maintenance\n\n## Technical Approach\n- Simio Professional for discrete event simulation and 3D visualization\n- IoT sensors integrated with Limble CMMS for condition-based monitoring\n- MATLAB for statistical process control and data analysis\n- Python scripts for automated data processing and reporting",
       "technologies": [
         "IoT",
         "Simio",
         "MATLAB",
         "Python",
-        "Predictive Analytics",
-        "Smart Manufacturing"
+        "Limble CMMS",
+        "Predictive Maintenance"
       ],
-      "impact": [],
+      "impact": [
+        "20% cycle time reduction",
+        "2,000 units WIP increase",
+        "15% overall efficiency improvement",
+        "11% machine availability gain"
+      ],
       "links": {},
-      "scope": [],
+      "scope": ["IoT Smart Cell Dashboard", "Simio Simulation", "Predictive Maintenance"],
       "technicalSolution": {},
-      "quantifiedResults": {},
-      "images": [
-        "/ai-manufacturing-1.png",
-        "/manufacturing-tech-1.jpg"
-      ],
+      "quantifiedResults": {
+        "Cycle Time": "20% reduction",
+        "WIP": "+2,000 units/day",
+        "Efficiency": "15% improvement"
+      },
+      "images": [],
       "recognition": []
     },
     {
       "id": "blockchain-supply-chain",
-      "title": "Blockchain Supply Chain - Schneider Electric Collaboration",
-      "category": "Other",
-      "summary": "Developed blockchain-based supply chain solution in collaboration with Schneider Electric, achieving 15% improvement in transparency and accountability through smart contract implementation.",
-      "content": "# Blockchain Supply Chain - Schneider Electric Collaboration\n\n## Overview\n\nThis innovative project represents a groundbreaking collaboration with Schneider Electric to develop a blockchain-based supply chain management system that enhances transparency, accountability, and traceability across complex manufacturing networks. The solution leverages smart contracts and distributed ledger technology to create an immutable, transparent record of supply chain transactions and processes.\n\n## Technical Architecture\n\nThe system is built on a robust blockchain infrastructure designed for enterprise-scale supply chain operations:\n\n### Blockchain Infrastructure\n- **Ethereum-based smart contracts** for automated transaction processing\n- **IPFS integration** for decentralized file storage and document management\n- **Consensus mechanisms** optimized for supply chain validation\n- **Scalable architecture** supporting high transaction volumes\n\n### Smart Contract Implementation\n```solidity\n// Supply Chain Smart Contract\ncontract SupplyChainContract {\n    struct Product {\n        uint256 productId;\n        string name;\n        address manufacturer;\n        address currentOwner;\n        uint256 timestamp;\n        string[] certifications;\n        bool isVerified;\n    }\n    \n    mapping(uint256 => Product) public products;\n    mapping(uint256 => address[]) public productHistory;\n    \n    function addProduct(uint256 _productId, string memory _name) public {\n        products[_productId] = Product({\n            productId: _productId,\n            name: _name,\n            manufacturer: msg.sender,\n            currentOwner: msg.sender,\n            timestamp: block.timestamp,\n            certifications: new string[](0),\n            isVerified: false\n        });\n    }\n    \n    function transferOwnership(uint256 _productId, address _newOwner) public {\n        require(products[_productId].currentOwner == msg.sender, \"Not authorized\");\n        products[_productId].currentOwner = _newOwner;\n        productHistory[_productId].push(_newOwner);\n    }\n}\n```\n\n### Supply Chain Integration\n- **ERP system connectivity** for seamless data integration\n- **IoT sensor integration** for real-time tracking\n- **API endpoints** for third-party system integration\n- **Mobile applications** for field operations\n\n## Key Features\n\n### Transparency & Traceability\n- **Complete product journey** tracking from raw materials to end customer\n- **Immutable transaction records** ensuring data integrity\n- **Real-time visibility** into supply chain operations\n- **Automated compliance** checking and reporting\n\n### Smart Contract Automation\n- **Automated payments** based on delivery confirmations\n- **Quality assurance** triggers for inspection requirements\n- **Compliance verification** for regulatory requirements\n- **Dispute resolution** mechanisms for conflict management\n\n### Advanced Analytics\n- **Supply chain optimization** through data analysis\n- **Risk assessment** and mitigation strategies\n- **Performance metrics** and KPI tracking\n- **Predictive analytics** for demand forecasting\n\n## Results & Impact\n\n### Transparency Improvements\n- **15% improvement** in supply chain transparency and accountability\n- **100% traceability** for all tracked products\n- **Real-time visibility** into supplier performance\n- **Automated compliance** reporting reducing manual effort by 80%\n\n### Operational Efficiency\n- **30% reduction** in supply chain disputes\n- **25% improvement** in delivery accuracy\n- **20% decrease** in administrative overhead\n- **40% faster** dispute resolution processes\n\n### Business Impact\n- **Enhanced supplier relationships** through transparent operations\n- **Improved customer trust** through verifiable product information\n- **Reduced compliance costs** through automated reporting\n- **Increased operational efficiency** through streamlined processes\n\n## Technical Implementation\n\n### Blockchain Network Setup\n```javascript\n// Web3 integration for blockchain connectivity\nconst Web3 = require('web3');\nconst web3 = new Web3('https://mainnet.infura.io/v3/YOUR_PROJECT_ID');\n\n// Smart contract interaction\nconst contract = new web3.eth.Contract(contractABI, contractAddress);\n\n// Product tracking function\nasync function trackProduct(productId) {\n    const product = await contract.methods.products(productId).call();\n    const history = await contract.methods.getProductHistory(productId).call();\n    \n    return {\n        product: product,\n        history: history,\n        currentStatus: await getCurrentStatus(productId)\n    };\n}\n```\n\n### Integration Architecture\n- **Microservices architecture** for scalable deployment\n- **RESTful APIs** for system integration\n- **Event-driven processing** for real-time updates\n- **Data synchronization** across multiple systems\n\n## Industry Applications\n\n### Manufacturing Supply Chains\n- **Automotive industry** - Parts tracking and quality assurance\n- **Electronics manufacturing** - Component traceability and compliance\n- **Pharmaceutical industry** - Drug safety and regulatory compliance\n- **Food and beverage** - Safety tracking and quality assurance\n\n### Logistics & Transportation\n- **Freight tracking** with real-time location updates\n- **Customs clearance** with automated documentation\n- **Insurance claims** with verifiable incident data\n- **Delivery confirmation** with digital signatures\n\n### Quality Assurance\n- **Certification tracking** for compliance requirements\n- **Inspection records** with immutable documentation\n- **Quality metrics** with automated reporting\n- **Audit trails** for regulatory compliance\n\n## Advanced Features\n\n### IoT Integration\n- **Sensor data integration** for real-time monitoring\n- **Environmental tracking** for temperature and humidity\n- **Location tracking** with GPS integration\n- **Condition monitoring** for product quality\n\n### AI & Machine Learning\n- **Predictive analytics** for supply chain optimization\n- **Anomaly detection** for fraud prevention\n- **Demand forecasting** using historical data\n- **Risk assessment** through pattern analysis\n\n### Mobile Applications\n- **Field operations** support for mobile workers\n- **QR code scanning** for product identification\n- **Offline capability** for remote locations\n- **Push notifications** for important updates\n\n## Security & Compliance\n\n### Data Security\n- **End-to-end encryption** for sensitive data\n- **Access control** with role-based permissions\n- **Audit logging** for compliance tracking\n- **Data privacy** protection for personal information\n\n### Regulatory Compliance\n- **GDPR compliance** for data protection\n- **Industry standards** adherence (ISO 9001, ISO 14001)\n- **Regulatory reporting** automation\n- **Compliance monitoring** with real-time alerts\n\n## Future Enhancements\n\n### Advanced Blockchain Features\n- **Cross-chain interoperability** for multi-network support\n- **Privacy-preserving** techniques for sensitive data\n- **Scalability improvements** for high-volume transactions\n- **Energy efficiency** optimization for sustainable operations\n\n### AI Integration\n- **Machine learning models** for predictive analytics\n- **Natural language processing** for document analysis\n- **Computer vision** for product identification\n- **Automated decision making** for routine operations\n\n## Lessons Learned\n\nThis project demonstrated several key insights:\n\n- **Stakeholder collaboration** is essential for successful blockchain implementation\n- **User experience design** must prioritize simplicity and usability\n- **Scalability planning** is crucial for enterprise adoption\n- **Integration complexity** requires careful architecture design\n- **Change management** is critical for user adoption\n\n## Technical Specifications\n\n- **Blockchain Platform**: Ethereum with custom smart contracts\n- **Development Language**: Solidity for smart contracts, JavaScript for applications\n- **Database**: PostgreSQL with blockchain integration\n- **API**: RESTful services with GraphQL support\n- **Frontend**: React.js with responsive design\n- **Mobile**: React Native for cross-platform support\n- **Cloud**: AWS with containerized deployment\n- **Security**: Multi-layer security with encryption and access control",
+      "title": "Digital Supply Chain Strategy - Schneider Electric",
+      "category": "Supply Chain",
+      "timeline": "Jun 2021 - Aug 2021",
+      "status": "Completed",
+      "summary": "Proposed strategies for integrating AI, predictive analytics, and digital control towers to enhance Schneider Electric's global supply chain during the Global Student Experience Program.",
+      "content": "# Digital Supply Chain Strategy - Schneider Electric\n\n## Overview\nDuring the Schneider Electric Global Student Experience Program (Summer 2021), I contributed to developing digital transformation strategies for Schneider Electric's global supply chain operations.\n\n## My Contribution\nI researched and proposed strategies for integrating AI, predictive analytics, and digital control towers into Schneider Electric's existing supply chain infrastructure. The focus was on eliminating paper-based processes and enabling real-time visibility across distribution centers.\n\n## Key Deliverables\n- Digital integration roadmap for AI and predictive analytics adoption\n- Framework for transitioning manual data entry to automated real-time tracking systems\n- Proposal for digital control tower implementation across manufacturing and distribution facilities\n\n## Learning Outcomes\nThis program gave me exposure to enterprise-scale supply chain challenges and the role of digital transformation in global manufacturing operations. It reinforced my understanding that technology adoption in manufacturing requires both technical feasibility and change management strategies.",
       "technologies": [
-        "Blockchain",
-        "Smart Contracts",
-        "Supply Chain",
-        "Transparency",
-        "Ethereum"
+        "Supply Chain Strategy",
+        "Predictive Analytics",
+        "Digital Transformation",
+        "Process Mapping"
       ],
-      "impact": [],
-      "links": {
-        "demo": "https://demo.blockchain-supplychain.com",
-        "repo": "https://github.com/ajithsrikanth/blockchain-supplychain"
-      },
-      "scope": [],
+      "impact": [
+        "Digital integration roadmap for AI adoption",
+        "Framework for paperless workflow transition",
+        "Digital control tower implementation proposal"
+      ],
+      "links": {},
+      "scope": ["Strategy Development", "Process Blueprinting", "Digital Transformation"],
       "technicalSolution": {},
       "quantifiedResults": {},
       "images": [],
@@ -1321,30 +1309,11 @@ export const profile: Profile = {
   ],
   "writings": [
     {
-      "title": "Engineer driven by logic, solutions, and repairs. Machines + Data runs in my blood.",
-      "summary": "# Sustainable Energy Solutions: A Path to Net Zero\n\n*Published on February 20, 2024*\n\nThe global energy landscape is undergoing a profound transformation as we transition from fossil fuels to renewable energy sources. This shift is not just about reducing carbon emissions—it's about creating a more resilient, equitable, and sustainable energy system for future generations.\n\n## The Renewable Energy Revolution\n\nRenewable energy technologies have matured significantly over the past decade, making them increasingly competitive with traditional fossil fuel sources.\n\n### Solar Power Innovation\nSolar photovoltaic technology has seen remarkable improvements in efficiency and cost reduction. Modern solar panels can convert more than 20% of sunlight into electricity, and costs have fallen by more than 80% since 2010.\n\n**Key Developments:**\n- **Perovskite solar cells** with potential efficiencies above 30%\n- **Bifacial panels** that capture reflected light\n- **Floating solar farms** that reduce land use conflicts\n- **Building-integrated photovoltaics** that blend seamlessly with architecture\n\n### Wind Energy Advancements\nWind power has become one of the most cost-effective energy sources in many regions. Offshore wind farms, in particular, are unlocking vast energy potential.\n\n**Recent Innovations:**\n- **Larger, more efficient turbines** with capacities exceeding 15 MW\n- **Floating offshore wind** platforms for deep-water deployment\n- **Smart wind farm management** using AI and IoT\n- **Hybrid wind-solar** installations for complementary generation\n\n### Energy Storage Breakthroughs\nEnergy storage is the key to unlocking the full potential of renewable energy. Recent advances in battery technology are revolutionizing the sector.\n\n**Storage Solutions:**\n- **Lithium-ion batteries** with improved energy density and cycle life\n- **Flow batteries** for long-duration storage\n- **Pumped hydro storage** for large-scale energy management\n- **Hydrogen storage** for seasonal energy needs\n\n## Smart Grid Technology\n\nThe traditional electrical grid is evolving into an intelligent, responsive system that can handle the variability of renewable energy sources.\n\n### Grid Modernization\nSmart grids use advanced sensors, communication networks, and control systems to optimize energy flow and improve reliability.\n\n**Key Features:**\n- **Real-time monitoring** of energy consumption and generation\n- **Automated demand response** to balance supply and demand\n- **Distributed energy resources** integration\n- **Advanced metering infrastructure** for consumer engagement\n\n### Microgrids and Energy Communities\nMicrogrids are localized energy systems that can operate independently or in conjunction with the main grid.\n\n**Benefits:**\n- **Enhanced resilience** during grid outages\n- **Local energy generation** and consumption\n- **Community ownership** and control\n- **Integration of multiple energy sources**\n\n## Energy Efficiency and Conservation\n\nWhile renewable energy generation is crucial, energy efficiency remains the most cost-effective way to reduce emissions.\n\n### Building Efficiency\nBuildings account for nearly 40% of global energy consumption. Modern building technologies are dramatically improving efficiency.\n\n**Innovations:**\n- **Smart building management systems** that optimize HVAC and lighting\n- **Advanced insulation materials** with superior thermal performance\n- **Energy-efficient appliances** and equipment\n- **Passive design strategies** that minimize energy needs\n\n### Industrial Efficiency\nManufacturing and industrial processes are major energy consumers. New technologies are making these processes more efficient.\n\n**Improvements:**\n- **Waste heat recovery** systems\n- **Advanced process control** using AI and machine learning\n- **Energy-efficient motors** and drives\n- **Circular economy** practices that reduce energy-intensive production\n\n## Policy and Market Mechanisms\n\nAchieving net-zero emissions requires supportive policies and market structures that encourage sustainable energy adoption.\n\n### Carbon Pricing\nCarbon pricing mechanisms, such as carbon taxes or cap-and-trade systems, create economic incentives for emissions reduction.\n\n**Implementation Strategies:**\n- **Revenue-neutral carbon taxes** that return proceeds to citizens\n- **Cap-and-trade systems** with declining emission caps\n- **Border carbon adjustments** to prevent carbon leakage\n- **Carbon removal credits** for negative emissions technologies\n\n### Renewable Energy Standards\nMany jurisdictions have implemented renewable portfolio standards that require utilities to source a percentage of their energy from renewable sources.\n\n**Policy Approaches:**\n- **Feed-in tariffs** that guarantee prices for renewable energy\n- **Net metering** that compensates distributed generation\n- **Green certificate** trading systems\n- **Renewable energy auctions** for competitive procurement\n\n## Challenges and Solutions\n\nThe transition to sustainable energy faces several significant challenges that require innovative solutions.\n\n### Intermittency and Reliability\nRenewable energy sources are variable, creating challenges for grid stability and reliability.\n\n**Solutions:**\n- **Energy storage** systems for short-term balancing\n- **Demand-side management** to shift consumption patterns\n- **Geographic diversity** to reduce variability\n- **Hybrid renewable systems** that combine multiple sources\n\n### Infrastructure Investment\nThe energy transition requires massive investment in new infrastructure and grid upgrades.\n\n**Financing Mechanisms:**\n- **Green bonds** and climate finance instruments\n- **Public-private partnerships** for infrastructure development\n- **International cooperation** and development assistance\n- **Innovative financing** models for emerging markets\n\n### Social Equity\nThe energy transition must be just and equitable, ensuring that all communities benefit from the changes.\n\n**Equity Considerations:**\n- **Energy access** for underserved communities\n- **Workforce transition** programs for fossil fuel workers\n- **Community ownership** of renewable energy projects\n- **Affordable energy** for low-income households\n\n## The Path Forward\n\nAchieving net-zero emissions by 2050 is an ambitious but achievable goal. Success requires coordinated action across multiple sectors and stakeholders.\n\n### Immediate Actions\n1. **Accelerate renewable energy deployment** in all sectors\n2. **Invest in energy storage** and grid infrastructure\n3. **Implement energy efficiency** measures across the economy\n4. **Develop carbon removal** technologies and practices\n\n### Long-term Strategy\n1. **Electrify transportation** and heating systems\n2. **Decarbonize industrial processes** through innovation\n3. **Build resilient energy systems** that can adapt to climate change\n4. **Foster international cooperation** on energy and climate issues\n\n## Conclusion\n\nThe transition to sustainable energy is not just a technical challenge—it's a societal transformation that requires innovation, investment, and cooperation. By embracing renewable energy, energy efficiency, and smart grid technologies, we can create a cleaner, more resilient, and more equitable energy system.\n\nThe path to net zero is clear, but the journey requires sustained commitment from governments, businesses, and individuals. The technologies exist, the economics are favorable, and the imperative is urgent. Now is the time to accelerate the energy transition and build a sustainable future for all.\n\n---\n\n*Ajith Srikanth is passionate about sustainable energy solutions and has worked on numerous projects involving renewable energy, energy efficiency, and smart grid technologies. He believes that technology innovation combined with thoughtful policy can solve our most pressing energy challenges.*",
-      "url": "#",
-      "tags": [
-        "Sustainability",
-        "Energy",
-        "Renewables",
-        "Climate Change",
-        "Technology"
-      ],
-      "date": "2024-02-20"
-    },
-    {
-      "title": "The Future of Manufacturing: AI, IoT, and Sustainable Innovation",
-      "summary": "# The Future of Manufacturing: AI, IoT, and Sustainable Innovation\n\n*Published on January 15, 2024*\n\nThe manufacturing industry stands at the precipice of a technological revolution that promises to fundamentally transform how we design, produce, and distribute goods. As we move deeper into the 21st century, three key technologies—Artificial Intelligence (AI), the Internet of Things (IoT), and sustainable innovation—are converging to create what many call Industry 4.0.\n\n## The AI Revolution in Manufacturing\n\nArtificial Intelligence is no longer a futuristic concept; it's actively reshaping manufacturing processes across the globe. From predictive maintenance to quality control, AI applications are delivering unprecedented efficiency and accuracy.\n\n### Predictive Maintenance\nTraditional maintenance schedules are giving way to AI-powered predictive systems that can anticipate equipment failures before they occur. By analyzing vast amounts of sensor data, machine learning algorithms can identify patterns that human operators might miss, reducing downtime and extending equipment lifespan.\n\n### Quality Control Automation\nComputer vision systems powered by AI are revolutionizing quality control processes. These systems can inspect products with superhuman precision, detecting defects that might escape human eyes. The result? Higher quality products and reduced waste.\n\n### Supply Chain Optimization\nAI algorithms are optimizing supply chains by predicting demand fluctuations, identifying optimal inventory levels, and suggesting the most efficient routes for logistics. This leads to reduced costs and improved customer satisfaction.\n\n## The IoT Ecosystem\n\nThe Internet of Things is creating a connected manufacturing environment where every machine, sensor, and device communicates seamlessly.\n\n### Smart Factories\nModern factories are becoming increasingly connected, with sensors monitoring everything from temperature and humidity to machine performance and energy consumption. This real-time data enables immediate response to changing conditions and optimization opportunities.\n\n### Digital Twins\nDigital twin technology creates virtual replicas of physical manufacturing systems, allowing engineers to simulate and optimize processes before implementing changes in the real world. This reduces risk and accelerates innovation.\n\n### Worker Safety\nIoT devices are enhancing worker safety through wearable technology that monitors vital signs, environmental conditions, and proximity to hazardous areas. This proactive approach to safety is preventing accidents and improving workplace conditions.\n\n## Sustainable Innovation\n\nSustainability is no longer optional—it's a business imperative. Manufacturers are embracing green technologies and circular economy principles.\n\n### Energy Efficiency\nSmart manufacturing systems are optimizing energy consumption through intelligent scheduling, renewable energy integration, and waste heat recovery. These initiatives not only reduce environmental impact but also lower operational costs.\n\n### Circular Economy\nThe concept of a circular economy is gaining traction, where products are designed for reuse, repair, and recycling. This approach reduces waste and creates new business opportunities in the process.\n\n### Green Materials\nManufacturers are increasingly turning to sustainable materials and processes. From biodegradable packaging to low-carbon production methods, these innovations are meeting consumer demand for environmentally responsible products.\n\n## Challenges and Opportunities\n\nWhile the future of manufacturing is bright, significant challenges remain.\n\n### Skills Gap\nThe rapid pace of technological change is creating a skills gap in the manufacturing workforce. Companies must invest in training and education to ensure their employees can work effectively with new technologies.\n\n### Cybersecurity\nAs manufacturing systems become more connected, they also become more vulnerable to cyber threats. Robust cybersecurity measures are essential to protect critical infrastructure and intellectual property.\n\n### Investment Requirements\nImplementing Industry 4.0 technologies requires significant investment in infrastructure, training, and technology. However, the long-term benefits often outweigh the initial costs.\n\n## Looking Ahead\n\nThe future of manufacturing is not about replacing humans with machines—it's about augmenting human capabilities with intelligent technology. The most successful manufacturers will be those that can effectively integrate AI, IoT, and sustainable practices while maintaining a focus on human-centered design.\n\n### Key Trends to Watch\n\n1. **Edge Computing**: Processing data closer to where it's generated for faster response times\n2. **5G Networks**: Enabling faster, more reliable communication between devices\n3. **Additive Manufacturing**: 3D printing and related technologies for flexible, on-demand production\n4. **Collaborative Robots**: Robots that work safely alongside humans\n5. **Blockchain**: Transparent, secure supply chain management\n\n## Conclusion\n\nThe future of manufacturing is being written today through the convergence of AI, IoT, and sustainable innovation. Companies that embrace these technologies while addressing the associated challenges will be well-positioned to thrive in the coming decades.\n\nThe transformation won't happen overnight, but the companies that start their journey now will have a significant advantage over those that wait. The question isn't whether these changes will occur—it's whether your organization will be ready for them.\n\n---\n\n*Ajith Srikanth is a mechanical engineer and researcher passionate about the intersection of technology and manufacturing. He has worked on numerous projects involving AI, IoT, and sustainable manufacturing practices.*",
-      "url": "#",
-      "tags": [
-        "Manufacturing",
-        "AI",
-        "IoT",
-        "Sustainability",
-        "Industry 4.0"
-      ],
-      "date": "2024-01-15"
+      "title": "How This Northeastern Co-op Built 13 AI Projects for a Recycling Company",
+      "summary": "Featured article on Northeastern University News about Ajith Srikanth's co-op experience at Van Dyk Recycling Solutions. During a 7-month internship, Ajith developed 13 AI-powered systems that transformed manufacturing operations at a recycling equipment company, delivering an estimated 819% average ROI across all deployed solutions. The article covers his journey from manufacturing engineering to AI systems development.",
+      "url": "https://news.northeastern.edu/2025/12/08/ai-recycling-manufacturing-co-op/",
+      "tags": ["AI", "Manufacturing", "Co-op", "Northeastern", "Van Dyk", "Featured Article"],
+      "date": "2025-12-08"
     },
     {
       "title": "Comparison between Bang Bang, PID and LQR Controller for Electrical Discharge Machining Process",

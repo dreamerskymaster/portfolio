@@ -66,10 +66,10 @@ const Home: React.FC = () => {
       <div className="min-h-screen">
 
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20 pb-10">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20 pb-10 w-full max-w-full">
 
           {/* Subtle Background Elements - Specialized for Light Mode depth */}
-          <div className="absolute inset-0 z-0 opacity-10 dark:opacity-10 pointer-events-none">
+          <div className="absolute inset-0 z-0 opacity-10 dark:opacity-10 pointer-events-none overflow-hidden">
             <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
             <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-accent-1/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
             <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(var(--border)_1px,transparent_1px)] [background-size:32px_32px] opacity-20 dark:opacity-5"></div>
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
                 {/* Main Statement */}
                 <motion.h1
                   variants={itemVariants}
-                  className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground mb-8 leading-[1.1] font-serif"
+                  className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground mb-8 leading-[1.1] font-serif"
                 >
                   <motion.span
                     className="cursor-pointer hover:text-primary transition-colors inline-block group"

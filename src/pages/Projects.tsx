@@ -9,7 +9,8 @@ import {
   Award,
   Zap,
   Clock,
-  Layers
+  Layers,
+  Lock
 } from 'lucide-react';
 import Chip from '../components/ui/Chip';
 
@@ -159,11 +160,16 @@ const EnhancedProjectCard: React.FC<{
 
               {/* Tech Stack Bubbles */}
               <div className="flex flex-wrap gap-2 mb-8">
-                {project.technologies.slice(0, 5).map(tech => (
+                {project.technologies.slice(0, 6).map(tech => (
                   <Chip key={tech} variant="secondary" size="sm">
                     {tech}
                   </Chip>
                 ))}
+                {project.technologies.length > 6 && (
+                  <Chip variant="muted" size="sm" className="opacity-60">
+                    +{project.technologies.length - 6} more
+                  </Chip>
+                )}
               </div>
 
               {/* Impact Stats */}
@@ -184,7 +190,7 @@ const EnhancedProjectCard: React.FC<{
                   View Case Study <ArrowRight className="w-4 h-4" />
                 </Link>
 
-                {project.links?.repo && (
+                {project.links?.repo && project.links.repo !== '#' && (
                   <a
                     href={project.links.repo}
                     target="_blank"
@@ -194,6 +200,14 @@ const EnhancedProjectCard: React.FC<{
                   >
                     <Github className="w-5 h-5" />
                   </a>
+                )}
+
+                {/* NDA Badge for Van Dyk projects with no public repo */}
+                {project.category === 'Van Dyk Recycling Solutions' && (!project.links?.repo || project.links.repo === '#') && (
+                  <div className="flex items-center gap-2 px-3 py-2 bg-amber-500/10 border border-amber-500/20 rounded-xl text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider">
+                    <Lock className="w-3.5 h-3.5" />
+                    NDA
+                  </div>
                 )}
               </div>
             </div>

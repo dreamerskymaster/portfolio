@@ -169,7 +169,7 @@ const GamifiedCard: React.FC<{
             <div className="flex -space-x-2">
               {hobby.media.slice(0, 3).map((m, i) => (
                 <div key={i} className="w-6 h-6 rounded-full bg-slate-200 border-2 border-white dark:border-slate-800 overflow-hidden shadow-sm">
-                  {m.type === 'image' && <img src={m.src} className="w-full h-full object-cover" alt={`Hobby ${hobby.name} thumbnail`} />}
+                  {m.type === 'image' && <img src={m.src} className="w-full h-full object-cover" alt={`Hobby ${hobby.name} thumbnail`} loading="lazy" />}
                 </div>
               ))}
             </div>
@@ -413,6 +413,7 @@ const Hobbies: React.FC = () => {
                                       src={m.src}
                                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                       alt={m.alt}
+                                      loading="lazy"
                                       draggable="false"
                                       onContextMenu={(e) => e.preventDefault()}
                                       onError={(e) => {

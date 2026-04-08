@@ -104,7 +104,7 @@ export const hobbies: Hobby[] = [
     icon: 'mountain',
     color: 'from-emerald-500 to-green-600',
     media: [
-      { type: 'image', src: '/hobbies/IMG_9627.JPG', alt: 'Hiking trail', caption: 'Mountain peak view' },
+      { type: 'image', src: '/hobbies/CAB3B256-F15D-4059-AF1F-C3EEFF4E5A16.jpg', alt: 'Hiking trail', caption: 'Mountain peak view' },
       { type: 'video', src: '/hobbies/IMG_2572.MP4', alt: 'Hiking video', caption: 'Trail adventure' },
       { type: 'video', src: '/hobbies/IMG_2639.MOV', alt: 'Hiking video', caption: 'Nature exploration' }
     ],

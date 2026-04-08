@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Github, ExternalLink, Calendar, User, Target, BarChart, Settings, Briefcase } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, Calendar, User, Target, BarChart, Settings, Briefcase, Lock } from 'lucide-react';
 
 import { loadProjects, Project, processMarkdown } from '../utils/content';
 import { profile, Project as ProfileProject } from '../data/profile';
@@ -170,7 +170,7 @@ const ProjectDetail: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  {project.links.demo && (
+                  {project.links.demo && project.links.demo !== '#' && (
                     <Button
                       href={project.links.demo}
                       target="_blank"
@@ -180,7 +180,7 @@ const ProjectDetail: React.FC = () => {
                       View Demo
                     </Button>
                   )}
-                  {project.links.repo && (
+                  {project.links.repo && project.links.repo !== '#' && (
                     <Button
                       href={project.links.repo}
                       target="_blank"
@@ -190,6 +190,13 @@ const ProjectDetail: React.FC = () => {
                       <Github className="w-4 h-4 mr-2" />
                       View Code
                     </Button>
+                  )}
+                  {/* NDA Badge for Van Dyk projects with no public repo */}
+                  {project.category === 'Van Dyk Recycling Solutions' && (!project.links.repo || project.links.repo === '#') && (
+                    <div className="inline-flex items-center px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-lg text-amber-600 dark:text-amber-400 text-sm font-medium">
+                      <Lock className="w-4 h-4 mr-2" />
+                      Confidential (NDA)
+                    </div>
                   )}
                 </div>
               </div>
