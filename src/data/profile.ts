@@ -370,21 +370,30 @@ export const profile: Profile = {
       "category": "Manufacturing Engineering",
       "timeline": "Oct 2024 - Dec 2024",
       "status": "Completed",
-      "summary": "Enhanced the efficiency of a major motorcycle manufacturer's connecting rod assembly line using IoT and Simio simulation, increasing WIP by 25% and reducing cycle time.",
-      "content": "# Optimized Connecting Rod Assembly Line\n\n## Overview\nLed a case-study to enhance the efficiency of a major motorcycle manufacturer's connecting rod assembly line.\n\n## Key Improvements\n1.  Increased Work-in-Process (WIP) levels by 25%, from 7,800 to 9,800 connecting rods daily.\n2.  Reduced cycle time by 15-20% through improved worker allocation and maintenance strategies.\n3.  Boosted overall machine availability by 8-10%.\n4.  Decreased Mean Time To Repair (MTTR) by 33%.\n5.  Implemented IoT-based predictive maintenance, reducing the defect rate by 15%.\n6.  Utilized Simio simulation software to validate improvements before implementation.",
-      "technologies": ["Simio", "IoT", "Predictive Maintenance", "Process Optimization"],
-      "impact": ["Increased WIP by 25%", "Decreased MTTR by 33%", "Reduced defect rate by 15%"],
+      "summary": "Enhanced the efficiency of a major motorcycle manufacturer's connecting rod assembly line using IoT and Simio simulation, achieving 20% cycle time reduction and a significant WIP increase.",
+      "content": "# Optimized Connecting Rod Assembly Line\n\n## Overview\nLed a comprehensive optimization of a major motorcycle manufacturer's connecting rod assembly line using IoT-enabled Smart Cell technology and Simio simulation.\n\n## Key Improvements\n1.  **Increased Throughput**: Boosted daily Work-in-Process (WIP) levels by 25%, increasing output by 2,000 units daily.\n2.  **Cycle Time Reduction**: Achieved 15-20% reduction in cycle time through optimized worker allocation.\n3.  **Machine Availability**: Improved overall availability by 11% using IoT-driven predictive maintenance.\n4.  **Maintenance Excellence**: Decreased Mean Time To Repair (MTTR) by 33%.\n\n## Technical Implementation\n*   **Simio Simulation**: Built discrete event simulation models to validate line-balancing and worker allocation strategies before physical deployment.\n*   **IoT Smart Cell Dashboard**: Deployed real-time production monitoring integrated with Limble CMMS to track machine health and uptime.\n*   **Predictive Maintenance**: Implemented condition-based monitoring, reducing defect rates by 15%.\n",
+      "technologies": ["Simio", "IoT", "MATLAB", "Python", "Limble CMMS", "Predictive Maintenance", "Process Optimization"],
+      "impact": [
+        "Increased daily WIP by 2,000 units (25%)", 
+        "Reduced cycle time by 20%",
+        "Decreased MTTR by 33%", 
+        "Improved machine availability by 11%"
+      ],
       "links": {},
       "businessContext": "Need to maximize throughput and minimize downtime on a critical automotive assembly line.",
       "challenge": "Validating complex line-balancing and maintenance improvements before causing costly physical disruptions.",
-      "scope": ["Simulation modeling", "IoT implementation", "Maintenance strategy overhaul"],
-      "technicalSolution": {"simulation": ["Simio software modeling"], "hardware": ["IoT sensors for predictive maintenance"]},
-      "quantifiedResults": {"WIP Increase": "25%", "Cycle Time Reduction": "15-20%"},
+      "scope": ["IoT Smart Cell Dashboard", "Simio Simulation modeling", "Maintenance strategy overhaul"],
+      "technicalSolution": {
+        "simulation": ["Simio Professional 3D modeling"], 
+        "hardware": ["IoT sensors integrated with Limble CMMS"]
+      },
+      "quantifiedResults": {
+        "WIP Increase": "+2,000 units/day", 
+        "Cycle Time": "20% reduction",
+        "MTTR": "33% reduction"
+      },
       "images": [
-        "/vdrs-presentation/Editorial/DSC01481.JPG", 
-        "/vdrs-presentation/Editorial/DSC01492.JPG",
-        "/internship/DSC01498.JPG", 
-        "/internship/DSC01499.JPG"
+        "/projects/connecting-rod-assembly.png"
       ],
       "recognition": [],
       "date": "2024-12-01"
@@ -397,14 +406,18 @@ export const profile: Profile = {
       "category": "Supply Chain",
       "timeline": "Jun 2021 - Aug 2021",
       "status": "Completed",
-      "summary": "Proposed strategies for integrating AI, predictive analytics, and digital control towers to enhance safety, quality, and productivity across Schneider Electric's supply chain.",
-      "content": "# Digital Supply Chain Strategy\n\n## Overview\nDuring the Schneider Electric Global Student Experience Program, I contributed to the digital transformation of Schneider Electric's supply chain. \n\n## Projects & Proposals\n*   **Digital Integration**: Developed and proposed strategies for integrating digital supply chain technologies, including AI, predictive analytics, and digital control towers.\n*   **Paperless Workflows**: Aimed to replace manual data entry and eliminate paper-based processes for real-time visibility and efficient management.\n*   **Performance Focus**: Solutions targeted at enhancing safety, quality, and productivity across manufacturing and distribution centers.",
-      "technologies": ["Supply Chain Optimization", "Predictive Analytics", "Digital Control Towers"],
-      "impact": ["Proposed AI/Predictive Analytics integration strategies", "Designed frameworks for paperless workflows"],
+      "summary": "Strategic digital transformation roadmap for Schneider Electric's global supply chain. Proposed AI-driven predictive analytics and digital control towers to enhance safety, quality, and productivity.",
+      "content": "# Digital Supply Chain Strategy — Schneider Electric\n\n## Overview\nDuring the Schneider Electric Global Student Experience Program, I developed a modernization strategy for global supply chain operations, focusing on digital transformation and real-time visibility.\n\n## Key Proposals\n*   **Digital Integration Roadmap**: Framework for integrating AI and predictive analytics into existing supply chain infrastructure.\n*   **Paperless Workflows**: Designed systems to replace manual data entry with automated real-time tracking, eliminating paper-based bottlenecks.\n*   **Digital Control Towers**: Proposed centralized digital hubs for real-time monitoring of manufacturing and distribution facilities.\n\n## Impact & Outcomes\nThis strategy provided a scalable blueprint for enhancing safety and productivity across global distribution centers, reinforcing the role of technology in large-scale industrial operations.",
+      "technologies": ["Supply Chain Optimization", "Predictive Analytics", "Digital Control Towers", "Process Mapping", "Digital Transformation"],
+      "impact": [
+        "Proposed AI/Predictive Analytics integration strategies", 
+        "Designed frameworks for paperless workflows",
+        "Developed digital integration roadmap for global operations"
+      ],
       "links": {},
       "businessContext": "Global supply chains require real-time visibility to manage disruptions and minimize inventory carrying costs.",
       "challenge": "Developing a modernization strategy that can scale across a massive global enterprise network like Schneider Electric.",
-      "scope": ["Strategy Development", "Process Blueprinting"],
+      "scope": ["Strategy Development", "Process Blueprinting", "Digital Transformation"],
       "technicalSolution": {"strategy": ["AI and predictive analytics roadmaps"]},
       "quantifiedResults": {},
       "images": ["/projects/schneider-supply-chain.png"],
@@ -430,7 +443,7 @@ export const profile: Profile = {
       "scope": ["Circuit Analysis", "Manufacturing Audit", "Component Testing"],
       "technicalSolution": {"circuitry": ["Study of hydraulic pumps and control valves"]},
       "quantifiedResults": {"Plant Efficiency": "Observation of lean cell assembly"},
-      "images": ["/internship/DSC01498.JPG", "/internship/DSC01499.JPG"],
+      "images": ["/projects/bosch-rexroth-hydraulics.png"],
       "recognition": ["Internship Excellence Certificate"],
       "date": "2019-06-01"
     },
@@ -568,12 +581,7 @@ export const profile: Profile = {
         "Performance": "Native-speed interactions",
 
       },
-      "images": [
-        "/vdrs-presentation/vdo/4704B4FF-0C76-4DCD-94C5-94300162EBED.png",
-        "/vdrs-presentation/vdo/FDFE392E-B997-4C29-9551-618B44F8B1AF.png",
-        "/vdrs-presentation/vdo/84E2F081-BF0A-4246-92BF-744FF2CEB67F_1_105_c.jpeg",
-        "/vdrs-presentation/vdo/FD3E46EB-678E-4194-B0AF-53E63BD6E868_1_105_c.jpeg"
-      ],
+      "images": ["/projects/van-dyk-one.png"],
       "recognition": [],
       "date": "2025-12-01"
     },
@@ -695,13 +703,7 @@ export const profile: Profile = {
         "Speed": "Instant retrieval (<2s)",
         "Scale": "10,000+ Documents"
       },
-      "images": [
-        "/vdrs-presentation/RAG/rag1.png",
-        "/vdrs-presentation/RAG/rag2.png",
-        "/vdrs-presentation/RAG/Screenshot-2025-12-11-151205.png",
-        "/vdrs-presentation/RAG/cmdchat.png",
-        "/vdrs-presentation/RAG/cmdch2.png"
-      ],
+      "images": ["/projects/rag-knowledge.png"],
       "recognition": [],
       "date": "2025-10-15"
     },
@@ -759,13 +761,7 @@ export const profile: Profile = {
         "Scale": "40+ Active Users",
         "Codebase": "4K+ Lines"
       },
-      "images": [
-        "/vdrs-presentation/cdms/cdms1.png",
-        "/vdrs-presentation/cdms/cdms2.png",
-        "/vdrs-presentation/cdms/cdms3.png",
-        "/vdrs-presentation/cdms/cdms4.png",
-        "/vdrs-presentation/cdms/Screenshot-2025-11-18-134917.png"
-      ],
+      "images": ["/projects/cdms-logistics.png"],
       "recognition": [],
       "date": "2025-09-01"
     },
@@ -1152,22 +1148,7 @@ export const profile: Profile = {
         "Material Flow": "65% NRR, 2 manpower saved with AGV",
         "CAPEX Savings": "₹5L through vendor negotiations"
       },
-      "images": [
-        "/hero-motocorp/IMG-20240906-WA0034.jpg",
-        "/hero-motocorp/IMG-20240906-WA0036.jpg",
-        "/hero-motocorp/IMG-20221021-WA0005.jpg",
-        "/hero-motocorp/IMG-20221021-WA0006.jpg",
-        "/hero-motocorp/IMG-20230123-WA0011.jpg",
-        "/hero-motocorp/IMG-20230221-WA0012.jpg",
-        "/hero-motocorp/IMG-20221116-WA0002.jpg",
-        "/hero-motocorp/IMG-20230113-WA0005.jpg",
-        "/hero-motocorp/IMG-20240208-WA0012.jpg",
-        "/hero-motocorp/IMG-20240208-WA0013.jpg",
-        "/hero-motocorp/IMG-20230731-WA0017.jpg",
-
-        "/hero-motocorp/IMG-20230808-WA0010.jpg",
-        "/hero-motocorp/IMG-20230808-WA0011.jpg"
-      ],
+      "images": ["/projects/hero-motocorp.png"],
       "recognition": [],
       "date": "2024-01-01"
     },
@@ -1220,7 +1201,7 @@ export const profile: Profile = {
         "Variability": "10% reduction",
         "Efficiency": "25% response time improvement"
       },
-      "images": [],
+      "images": ["/projects/edm-study.png"],
       "recognition": [],
       "date": "2022-01-01"
     },
@@ -1242,70 +1223,12 @@ export const profile: Profile = {
       "scope": ["PLC ladder logic design", "Safety interlock implementation", "Multi-floor scheduling algorithm", "Simulation and validation"],
       "technicalSolution": {"control": ["Ladder logic programming", "Timer and counter implementation", "Safety interlock design"], "simulation": ["MATLAB validation", "Performance benchmarking"]},
       "quantifiedResults": {"Response Time": "25% improvement", "Reliability": "30% increase", "Publication": "IRJET Journal"},
-      "images": [],
+      "images": ["/projects/plc-elevator.png"],
       "recognition": ["Published in IRJET Journal"],
       "date": "2022-01-01"
     },
 
-    {
-      "id": "ai-powered-manufacturing",
-      "title": "Optimization of Manufacturing Line - IoT Smart Cell & Simio Simulation",
-      "category": "Manufacturing Engineering",
-      "timeline": "Oct 2024 - Dec 2024",
-      "status": "Completed",
-      "summary": "IoT-enabled Smart Cell Dashboard with Simio simulation modeling for a connecting rod assembly line, achieving 20% cycle time reduction and 2,000 units WIP increase through data-driven process optimization.",
-      "content": "# IoT Smart Cell Dashboard & Simio Simulation\n\n## Overview\nThis project combined IoT-enabled Smart Cell technology with Simio discrete event simulation to optimize a connecting rod assembly line for a major two-wheeler manufacturer.\n\n## IoT Smart Cell Dashboard\nDesigned and deployed a real-time production monitoring dashboard integrated with Limble CMMS. The system collected data from shop floor sensors across CNC machines and welding stations, enabling data-driven decision-making and predictive maintenance scheduling.\n\n## Simio Simulation Modeling\nBuilt a discrete event simulation model in Simio to validate proposed line improvements before physical implementation. The model accurately predicted bottlenecks and optimized worker allocation strategies.\n\n## Key Results\n- 20% cycle time reduction through optimized production flow\n- 2,000 units increase in daily Work-in-Process throughput\n- 15% overall efficiency improvement across the production line\n- 11% machine availability gain through IoT-driven predictive maintenance\n\n## Technical Approach\n- Simio Professional for discrete event simulation and 3D visualization\n- IoT sensors integrated with Limble CMMS for condition-based monitoring\n- MATLAB for statistical process control and data analysis\n- Python scripts for automated data processing and reporting",
-      "technologies": [
-        "IoT",
-        "Simio",
-        "MATLAB",
-        "Python",
-        "Limble CMMS",
-        "Predictive Maintenance"
-      ],
-      "impact": [
-        "20% cycle time reduction",
-        "2,000 units WIP increase",
-        "15% overall efficiency improvement",
-        "11% machine availability gain"
-      ],
-      "links": {},
-      "scope": ["IoT Smart Cell Dashboard", "Simio Simulation", "Predictive Maintenance"],
-      "technicalSolution": {},
-      "quantifiedResults": {
-        "Cycle Time": "20% reduction",
-        "WIP": "+2,000 units/day",
-        "Efficiency": "15% improvement"
-      },
-      "images": [],
-      "recognition": []
-    },
-    {
-      "id": "blockchain-supply-chain",
-      "title": "Digital Supply Chain Strategy - Schneider Electric",
-      "category": "Supply Chain",
-      "timeline": "Jun 2021 - Aug 2021",
-      "status": "Completed",
-      "summary": "Proposed strategies for integrating AI, predictive analytics, and digital control towers to enhance Schneider Electric's global supply chain during the Global Student Experience Program.",
-      "content": "# Digital Supply Chain Strategy - Schneider Electric\n\n## Overview\nDuring the Schneider Electric Global Student Experience Program (Summer 2021), I contributed to developing digital transformation strategies for Schneider Electric's global supply chain operations.\n\n## My Contribution\nI researched and proposed strategies for integrating AI, predictive analytics, and digital control towers into Schneider Electric's existing supply chain infrastructure. The focus was on eliminating paper-based processes and enabling real-time visibility across distribution centers.\n\n## Key Deliverables\n- Digital integration roadmap for AI and predictive analytics adoption\n- Framework for transitioning manual data entry to automated real-time tracking systems\n- Proposal for digital control tower implementation across manufacturing and distribution facilities\n\n## Learning Outcomes\nThis program gave me exposure to enterprise-scale supply chain challenges and the role of digital transformation in global manufacturing operations. It reinforced my understanding that technology adoption in manufacturing requires both technical feasibility and change management strategies.",
-      "technologies": [
-        "Supply Chain Strategy",
-        "Predictive Analytics",
-        "Digital Transformation",
-        "Process Mapping"
-      ],
-      "impact": [
-        "Digital integration roadmap for AI adoption",
-        "Framework for paperless workflow transition",
-        "Digital control tower implementation proposal"
-      ],
-      "links": {},
-      "scope": ["Strategy Development", "Process Blueprinting", "Digital Transformation"],
-      "technicalSolution": {},
-      "quantifiedResults": {},
-      "images": [],
-      "recognition": []
-    },
+
 
   ],
   "writings": [
