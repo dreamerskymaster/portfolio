@@ -13,6 +13,8 @@ import Marquee from '../components/ui/Marquee';
 import PageTransition from '../components/PageTransition';
 
 interface ExtendedProject extends Project {
+  heroImage?: string;
+  category: string;
   id: string;
   date?: string;
   businessContext?: string;

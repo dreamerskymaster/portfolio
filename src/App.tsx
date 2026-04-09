@@ -40,7 +40,7 @@ function App() {
     <ThemeProvider>
       <ErrorBoundary>
         <HelmetProvider>
-          <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <Router>
             <a
               href="#main-content"
               className="sr-only focus:not-sr-only fixed top-4 left-4 z-[100] bg-primary text-primary-contrast px-4 py-2 rounded-lg font-bold shadow-2xl transition-all"

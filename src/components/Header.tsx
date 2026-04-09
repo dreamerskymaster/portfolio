@@ -151,7 +151,7 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
                 src="/logo/ManuFX.jpg"
                 alt="ManuFX Logo"
                 className="w-full h-full object-contain p-1"
-                fetchpriority="high"
+                fetchPriority="high"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';

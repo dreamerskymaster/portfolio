@@ -48,7 +48,7 @@ const Home: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.175, 0.885, 0.32, 1.275] as any }
     }
   };
 
