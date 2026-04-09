@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:profile": "node scripts/generate-data.mjs",
     "lint": "eslint . --max-warnings 50",
+    "test": "vitest run",
     "preview": "vite preview"
   },
   "dependencies": {
