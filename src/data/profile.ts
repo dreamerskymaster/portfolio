@@ -359,7 +359,7 @@ export const profile: Profile = {
       "scope": ["Baggage Handling", "Security Checkpoints", "Gate Turnaround"],
       "technicalSolution": {"tools": ["Fishbone diagrams", "Time-motion studies", "Spaghetti diagrams", "Visual Boards"]},
       "quantifiedResults": {"ROI": "285%", "Wait Time Reduction": "35%"},
-      "images": [],
+      "images": ["/projects/airport-lean.png"],
       "recognition": [],
       "date": "2025-04-01"
     },
@@ -407,7 +407,7 @@ export const profile: Profile = {
       "scope": ["Strategy Development", "Process Blueprinting"],
       "technicalSolution": {"strategy": ["AI and predictive analytics roadmaps"]},
       "quantifiedResults": {},
-      "images": [],
+      "images": ["/projects/schneider-supply-chain.png"],
       "recognition": [],
       "date": "2021-08-01"
     },
@@ -451,7 +451,7 @@ export const profile: Profile = {
       "scope": ["Circuit Design", "Component Sourcing", "System Prototyping"],
       "technicalSolution": {"hardware": ["LED Array", "Solar Panel Receiver", "Audio Amplifiers"]},
       "quantifiedResults": {},
-      "images": [],
+      "images": ["/projects/lifi-comm.png"],
       "recognition": [],
       "date": "2019-12-01"
     },
@@ -472,7 +472,7 @@ export const profile: Profile = {
       "scope": ["Sensor Integration", "Rectifier Circuit Design", "Prototype Assembly"],
       "technicalSolution": {"hardware": ["Piezoelectric Discs", "Bridge Rectifiers", "Capacitors"]},
       "quantifiedResults": {},
-      "images": [],
+      "images": ["/projects/piezo-bag.png"],
       "recognition": [],
       "date": "2019-05-01"
     },
@@ -494,7 +494,7 @@ export const profile: Profile = {
       "scope": ["Historical data pipeline", "Feature engineering", "Model training on Vertex AI", "API deployment", "Monitoring dashboard"],
       "technicalSolution": {"pipeline": ["GCP Vertex AI Pipelines", "Docker containerized training", "Automated retraining"], "modeling": ["Gradient Boosted Trees", "Neural Networks", "Ensemble Methods"]},
       "quantifiedResults": {"Status": "ML Modeling Phase", "Team": "6 members", "Platform": "GCP Vertex AI"},
-      "images": [],
+      "images": ["/projects/f1-strategy.png"],
       "recognition": [],
       "date": "2026-02-01"
     },
@@ -516,7 +516,7 @@ export const profile: Profile = {
       "scope": ["Literature review on vigilance decrement", "Experimental protocol design", "Data collection and analysis", "AI assistance evaluation"],
       "technicalSolution": {"research": ["Controlled experiments", "Eye-tracking analysis", "Signal detection theory"], "analysis": ["ANOVA", "Regression modeling", "Effect size estimation"]},
       "quantifiedResults": {"Status": "Active Research", "Domain": "Human Performance + AI"},
-      "images": [],
+      "images": ["/projects/vigilance-research.png"],
       "recognition": [],
       "date": "2026-02-01"
     },
@@ -637,7 +637,7 @@ export const profile: Profile = {
         "Improved Service": "Instant access to proven solutions",
         "Data Security": "Hash-based duplicate prevention"
       },
-      "images": [],
+      "images": ["/projects/dykscribe.png"],
       "recognition": [],
       "date": "2025-11-01"
     },
@@ -820,6 +820,7 @@ export const profile: Profile = {
         "Tools": "30+ Consolidated"
       },
       "images": [
+        "/projects/vdt-hub.png",
         "/vdrs-presentation/vdt/VanDykTools.png",
         "/vdrs-presentation/vdt/vdt1.png",
         "/vdrs-presentation/vdt/vdt2.png",
@@ -919,7 +920,7 @@ export const profile: Profile = {
         "User Adoption": "Used by 100% of sales team",
         "Speed": "<5 mins per quote"
       },
-      "images": [],
+      "images": ["/projects/costiq.png"],
       "recognition": [],
       "date": "2025-11-25"
     },
