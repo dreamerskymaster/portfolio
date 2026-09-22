@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ajithsrikanth.com/sitemap.xml
+Sitemap: https://manufx.vercel.app/sitemap.xml
 
 

@@ -155,6 +155,20 @@ export const profile: Profile = {
   ],
   "experience": [
     {
+      "company": "Van Dyk Recycling Solutions",
+      "role": "Inventory Forecast Analyst",
+      "location": "Norwalk, CT",
+      "start": "Jul 2026",
+      "end": "Present",
+      "bullets": [
+        "# Inventory Forecast Analyst",
+        "Full-time role at Van Dyk Recycling Solutions, working on inventory and spare parts analytics for the service parts operation.",
+        "## Focus",
+        "*   **Forecasting & Operations Research**: Applying forecasting and modeling methods to spare parts demand and maintenance planning.",
+        "*   **Returning to VDRS**: Continuing from the 2025 AI and engineering co-op, now focused on the inventory and forecasting side of the business."
+      ]
+    },
+    {
       "company": "Northeastern University",
       "role": "Off-Campus Northeastern Ambassador",
       "location": "Boston, MA",
@@ -202,12 +216,12 @@ export const profile: Profile = {
     },
     {
       "company": "Van Dyk Recycling Solutions",
-      "role": "After Sales / Systems Developer Intern",
+      "role": "Manufacturing Engineering Intern",
       "location": "Norwalk, CT",
       "start": "May 2025",
       "end": "Dec 2025",
       "bullets": [
-        "# Manufacturing Intern (AI & Automation Focus)",
+        "# Manufacturing Engineering Intern",
         "At Van Dyk Recycling Solutions, I operated at the intersection of manufacturing engineering and artificial intelligence. My primary focus was to identify operational inefficiencies and solve them using cutting-edge AI and automation technologies.",
         "## Key Achievements",
         "*   **$153K+ Annual Savings**: Delivered quantifiable value through productivity improvements and error reduction.",
@@ -254,11 +268,17 @@ export const profile: Profile = {
       "start": "2022",
       "end": "2024",
       "bullets": [
-        "Achieved 15% efficiency boost through PLC/HMI automation for robotic welding systems",
-        "Implemented IoT-enabled Smart Cell Dashboard with Limble CMMS, gaining 11% availability improvement",
-        "Reduced downtime by 83% through predictive maintenance implementation",
-        "Achieved ₹28 per EV cost reduction (~$0.5/vehicle) through tool cost optimization",
-        "Contributed to significant annual savings through supply chain efficiency and lean initiatives"
+        "# Team Manager — Manufacturing Excellence",
+        "As a Team Manager at Hero MotoCorp's largest manufacturing plants (Haridwar & Tirupati), I led cross-functional teams of 25+ operators and engineers to drive operational excellence across Engine, Weld, and EV shops. My work focused on stabilizing production, optimizing capital expenditure, and leading digital transformation initiatives.",
+        "## High-Impact Systems & Automations",
+        "* **PLC & IoT Modernization**: Led the migration of 7 robotic welding lines to Mitsubishi FX5U PLCs, integrating real-time IoT dashboards for predictive maintenance and pulse-control welding, resulting in a 15% defect reduction.",
+        "* **Machine Reliability**: Optimized high-precision Honing machines by migrating from HDD to SSD Siemens controllers, extending machine service life from 2 to 5 years.",
+        "* **SAP Process Automation**: Developed custom SAP scripts and VBA macros that slashed monthly Preventive Maintenance (PM) planning time from 30 hours to just 2 hours.",
+        "* **EV Manufacturing (Vida Line)**: Spearheaded the redesign of battery assembly fixtures and specialized tooling, boosting production throughput by 23% for Hero's flagship EV.",
+        "## Operational Strategy",
+        "* **Material Flow optimization**: Replaced manual trolley systems with Automated Guided Vehicle (AGV) routes, achieving a 65% Net Resource Reduction (NRR).",
+        "* **CAPEX Procurement**: Successfully negotiated commercial and technical terms for EV plant equipment, delivering ₹5 Lakh in direct savings.",
+        "* **TPM & Lean Leadership**: Successfully implemented Autonomous and Planned Maintenance pillars, contributing to a plant-wide 83% downtime reduction."
       ]
     },
     {
@@ -275,317 +295,205 @@ export const profile: Profile = {
       ]
     },
     {
-        "company": "Schneider Electric",
-        "role": "Global Student Experience - Supply Chain",
-        "location": "Remote",
-        "start": "Jun 2021",
-        "end": "Aug 2021",
-        "bullets": [
-            "Contributed to the digital transformation of Schneider Electric's supply chain by exploring solutions to enhance safety, quality, and productivity.",
-            "Developed and proposed strategies for integrating digital supply chain technologies, including AI, predictive analytics, and digital control towers.",
-            "Aimed to replace manual data entry and eliminate paper-based processes for real-time visibility."
-        ]
+      "company": "Schneider Electric",
+      "role": "Global Student Experience - Supply Chain",
+      "location": "Remote",
+      "start": "Jun 2021",
+      "end": "Aug 2021",
+      "bullets": [
+        "Contributed to the digital transformation of Schneider Electric's supply chain by exploring solutions to enhance safety, quality, and productivity.",
+        "Developed and proposed strategies for integrating digital supply chain technologies, including AI, predictive analytics, and digital control towers.",
+        "Aimed to replace manual data entry and eliminate paper-based processes for real-time visibility."
+      ]
     },
     {
-        "company": "Bosch Rexroth",
-        "role": "Engineering Trainee",
-        "location": "Sanand, Gujarat, India",
-        "start": "May 2019",
-        "end": "Jun 2019",
-        "bullets": [
-            "Gained hands-on experience with hydraulic systems and components, including hydraulic pumps, cylinders, and control valves.",
-            "Conducted plant visits to observe various manufacturing processes such as machining, deburring, honing, and assembly lines.",
-            "Assisted in hydraulic circuit reading and understanding DIN ISO 1219 symbols."
-        ]
+      "company": "Bosch Rexroth",
+      "role": "Engineering Trainee",
+      "location": "Sanand, Gujarat, India",
+      "start": "May 2019",
+      "end": "Jun 2019",
+      "bullets": [
+        "Gained hands-on experience with hydraulic systems and components, including hydraulic pumps, cylinders, and control valves.",
+        "Conducted plant visits to observe various manufacturing processes such as machining, deburring, honing, and assembly lines.",
+        "Assisted in hydraulic circuit reading and understanding DIN ISO 1219 symbols."
+      ]
     }
   ],
   "volunteering": [
-      {
-          "id": "vol-1",
-          "role": "Level 5 Local Guide",
-          "organization": "Google Local Guides",
-          "start": "Jun 2012",
-          "end": "Present",
-          "description": "Making people aware of the shops, restaurants, landmarks and non-existent roads in and around the area where I reside irrespective of my current location."
-      },
-      {
-          "id": "vol-2",
-          "role": "Participant - Climate & Sustainability Job Simulation",
-          "organization": "Boston Consulting Group (BCG) on Forage",
-          "start": "Jun 2022",
-          "end": "Jun 2022",
-          "description": "Completed a carbon emissions analysis simulation for the Sustainability Team, using Excel to calculate baselines and recommended carbon reduction initiatives."
-      },
-      {
-          "id": "vol-3",
-          "role": "Committed Head / Committee Member",
-          "organization": "Aaruush",
-          "start": "Jul 2018",
-          "end": "Aug 2020",
-          "description": "Served multiple roles including Volunteer, Committee Member, and Committed Head over several years for the national-level techno-management fest."
-      },
-      {
-          "id": "vol-4",
-          "role": "Committee Member",
-          "organization": "SRMMUN & SRMIEC",
-          "start": "Jan 2019",
-          "end": "Feb 2020",
-          "description": "Active organizing member for the SRM Model United Nations and the Engineering Congress."
-      },
-      {
-          "id": "vol-5",
-          "role": "Volunteer - Environmental Cleaning",
-          "organization": "SRM University (NSS)",
-          "start": "Jun 2018",
-          "end": "Dec 2018",
-          "description": "Cleaned nearby villages and gave sanitation advice to the villagers."
-      }
+    {
+      "id": "vol-1",
+      "role": "Level 5 Local Guide",
+      "organization": "Google Local Guides",
+      "start": "Jun 2012",
+      "end": "Present",
+      "description": "Making people aware of the shops, restaurants, landmarks and non-existent roads in and around the area where I reside irrespective of my current location."
+    },
+    {
+      "id": "vol-2",
+      "role": "Participant - Climate & Sustainability Job Simulation",
+      "organization": "Boston Consulting Group (BCG) on Forage",
+      "start": "Jun 2022",
+      "end": "Jun 2022",
+      "description": "Completed a carbon emissions analysis simulation for the Sustainability Team, using Excel to calculate baselines and recommended carbon reduction initiatives."
+    },
+    {
+      "id": "vol-3",
+      "role": "Committed Head / Committee Member",
+      "organization": "Aaruush",
+      "start": "Jul 2018",
+      "end": "Aug 2020",
+      "description": "Served multiple roles including Volunteer, Committee Member, and Committed Head over several years for the national-level techno-management fest."
+    },
+    {
+      "id": "vol-4",
+      "role": "Committee Member",
+      "organization": "SRMMUN & SRMIEC",
+      "start": "Jan 2019",
+      "end": "Feb 2020",
+      "description": "Active organizing member for the SRM Model United Nations and the Engineering Congress."
+    },
+    {
+      "id": "vol-5",
+      "role": "Volunteer - Environmental Cleaning",
+      "organization": "SRM University (NSS)",
+      "start": "Jun 2018",
+      "end": "Dec 2018",
+      "description": "Cleaned nearby villages and gave sanitation advice to the villagers."
+    }
   ],
   "projects": [
     {
-      "id": "airport-operations-lean",
-      "title": "Streamlining Airport Operations with Lean Management",
-      "subtitle": "Lean Implementation at Frankfurt Airport",
-      "category": "Operations Research",
-      "timeline": "Feb 2025 - Apr 2025",
-      "status": "Completed",
-      "summary": "Major Lean implementation (DMAIC Framework) at Frankfurt Airport to resolve operational inefficiencies, reducing baggage wait time by 35% and improving ground crew efficiency.",
-      "content": "# Streamlining Airport Operations with Lean Management\n\n## Overview\nFrankfurt Airport faced major operational inefficiencies including high baggage wait times (28 mins), 120 mishandling incidents per day, and low staff productivity (68%).\n\n## Lean Implementation (DMAIC Framework)\n*   **Define**: Identified critical areas – baggage, security, gate turnaround.\n*   **Measure**: Baselines KPIs from Terminal 1 operations.\n*   **Analyze**: Fishbone diagrams, time-motion studies, spaghetti diagrams.\n*   **Improve**: Lean tools deployed (5S, Standard Work, Kaizen events, Visual Boards).\n*   **Control**: Process standardization, training, dashboard integration.\n\n## Results & KPIs Improved\n### Baggage Handling\n*   Wait time reduced 28 → 18.2 mins (↓35%)\n*   Mishandling reduced 120 → 78/day (↓35%)\n*   Staff productivity increased 68% → 83%\n\n### Security & Gate Turnaround\n*   Security wait time reduced 22 → 12.8 mins (↓42%)\n*   Turnaround time reduced by 12 mins (↓18%)\n*   On-time departure improved 76% → 89%\n\n## Financial ROI\n*   32% fewer baggage compensation claims\n*   ROI: 285% within the first year",
-      "technologies": ["Lean Management", "DMAIC", "5S", "Kaizen", "Root Cause Analysis", "Klipfolio"],
-      "impact": ["Reduced baggage wait time by 35%", "Improved on-time departure to 89%", "285% Year-1 ROI"],
-      "links": {},
-      "businessContext": "Major airport operational bottlenecks led to missed connections, overworked staff, and passenger dissatisfaction.",
-      "challenge": "Optimize airport operations using Lean methodologies without physical expansion.",
-      "scope": ["Baggage Handling", "Security Checkpoints", "Gate Turnaround"],
-      "technicalSolution": {"tools": ["Fishbone diagrams", "Time-motion studies", "Spaghetti diagrams", "Visual Boards"]},
-      "quantifiedResults": {"ROI": "285%", "Wait Time Reduction": "35%"},
-      "images": ["/projects/airport-lean.png"],
-      "recognition": [],
-      "date": "2025-04-01"
-    },
-    {
-      "id": "connecting-rod-assembly",
-      "title": "Optimized Connecting Rod Assembly Line",
-      "subtitle": "Process Optimization for Leading Two-Wheeler Manufacturer",
-      "category": "Manufacturing Engineering",
-      "timeline": "Oct 2024 - Dec 2024",
-      "status": "Completed",
-      "summary": "Enhanced the efficiency of a major motorcycle manufacturer's connecting rod assembly line using IoT and Simio simulation, achieving 20% cycle time reduction and a significant WIP increase.",
-      "content": "# Optimized Connecting Rod Assembly Line\n\n## Overview\nLed a comprehensive optimization of a major motorcycle manufacturer's connecting rod assembly line using IoT-enabled Smart Cell technology and Simio simulation.\n\n## Key Improvements\n1.  **Increased Throughput**: Boosted daily Work-in-Process (WIP) levels by 25%, increasing output by 2,000 units daily.\n2.  **Cycle Time Reduction**: Achieved 15-20% reduction in cycle time through optimized worker allocation.\n3.  **Machine Availability**: Improved overall availability by 11% using IoT-driven predictive maintenance.\n4.  **Maintenance Excellence**: Decreased Mean Time To Repair (MTTR) by 33%.\n\n## Technical Implementation\n*   **Simio Simulation**: Built discrete event simulation models to validate line-balancing and worker allocation strategies before physical deployment.\n*   **IoT Smart Cell Dashboard**: Deployed real-time production monitoring integrated with Limble CMMS to track machine health and uptime.\n*   **Predictive Maintenance**: Implemented condition-based monitoring, reducing defect rates by 15%.\n",
-      "technologies": ["Simio", "IoT", "MATLAB", "Python", "Limble CMMS", "Predictive Maintenance", "Process Optimization"],
-      "impact": [
-        "Increased daily WIP by 2,000 units (25%)", 
-        "Reduced cycle time by 20%",
-        "Decreased MTTR by 33%", 
-        "Improved machine availability by 11%"
-      ],
-      "links": {},
-      "businessContext": "Need to maximize throughput and minimize downtime on a critical automotive assembly line.",
-      "challenge": "Validating complex line-balancing and maintenance improvements before causing costly physical disruptions.",
-      "scope": ["IoT Smart Cell Dashboard", "Simio Simulation modeling", "Maintenance strategy overhaul"],
-      "technicalSolution": {
-        "simulation": ["Simio Professional 3D modeling"], 
-        "hardware": ["IoT sensors integrated with Limble CMMS"]
-      },
-      "quantifiedResults": {
-        "WIP Increase": "+2,000 units/day", 
-        "Cycle Time": "20% reduction",
-        "MTTR": "33% reduction"
-      },
-      "images": [
-        "/projects/connecting-rod-assembly.png"
-      ],
-      "recognition": [],
-      "date": "2024-12-01"
-    },
-
-    {
-      "id": "schneider-supply-chain",
-      "title": "Digital Supply Chain Strategy - Schneider Electric",
-      "subtitle": "Global Student Experience Program",
-      "category": "Supply Chain",
-      "timeline": "Jun 2021 - Aug 2021",
-      "status": "Completed",
-      "summary": "Strategic digital transformation roadmap for Schneider Electric's global supply chain. Proposed AI-driven predictive analytics and digital control towers to enhance safety, quality, and productivity.",
-      "content": "# Digital Supply Chain Strategy — Schneider Electric\n\n## Overview\nDuring the Schneider Electric Global Student Experience Program, I developed a modernization strategy for global supply chain operations, focusing on digital transformation and real-time visibility.\n\n## Key Proposals\n*   **Digital Integration Roadmap**: Framework for integrating AI and predictive analytics into existing supply chain infrastructure.\n*   **Paperless Workflows**: Designed systems to replace manual data entry with automated real-time tracking, eliminating paper-based bottlenecks.\n*   **Digital Control Towers**: Proposed centralized digital hubs for real-time monitoring of manufacturing and distribution facilities.\n\n## Impact & Outcomes\nThis strategy provided a scalable blueprint for enhancing safety and productivity across global distribution centers, reinforcing the role of technology in large-scale industrial operations.",
-      "technologies": ["Supply Chain Optimization", "Predictive Analytics", "Digital Control Towers", "Process Mapping", "Digital Transformation"],
-      "impact": [
-        "Proposed AI/Predictive Analytics integration strategies", 
-        "Designed frameworks for paperless workflows",
-        "Developed digital integration roadmap for global operations"
-      ],
-      "links": {},
-      "businessContext": "Global supply chains require real-time visibility to manage disruptions and minimize inventory carrying costs.",
-      "challenge": "Developing a modernization strategy that can scale across a massive global enterprise network like Schneider Electric.",
-      "scope": ["Strategy Development", "Process Blueprinting", "Digital Transformation"],
-      "technicalSolution": {"strategy": ["AI and predictive analytics roadmaps"]},
-      "quantifiedResults": {},
-      "images": ["/projects/schneider-supply-chain.png"],
-      "recognition": [],
-      "date": "2021-08-01"
-    },
-    {
-      "id": "bosch-rexroth-hydraulics",
-      "title": "Industrial Hydraulics & Component Manufacturing",
-      "subtitle": "Engineering Trainee - Bosch Rexroth",
-      "category": "Mechanical Engineering",
-      "timeline": "May 2019 - Jun 2019",
-      "status": "Completed",
-      "summary": "Deep-dive into high-precision hydraulic systems, from component machining to final assembly line troubleshooting for industrial applications.",
-      "content": "# Industrial Hydraulics & Component Manufacturing\n\n## Overview\nDuring my tenure at Bosch Rexroth (Sanand), I gained comprehensive exposure to the lifecycle of industrial hydraulic components. This included studying the manufacturing processes for hydraulic pumps, cylinders, and control valves.\n\n## Key Learnings\n- **Component Manufacturing**: Observed precision machining, deburing, and honing processes for high-tolerance hydraulic parts.\n- **System Integration**: Assisted in reading complex hydraulic circuits adhering to DIN ISO 1219 standards.\n- **Assembly Excellence**: Evaluated assembly line workflows for component-level quality control.\n",
-      "technologies": ["Hydraulics", "Precision Machining", "DIN ISO 1219", "Assembly Lines"],
-      "impact": ["Mastered hydraulic circuit analysis", "Optimized component-level inspection workflows", "Documented plant-wide manufacturing best practices"],
-      "links": {
-        "case_study": "/certificates/Internships/Bosch Rexroth Internship Certificate.pdf"
-      },
-      "businessContext": "Understanding the core mechanical components that power industrial automation is critical for any manufacturing systems engineer.",
-      "challenge": "Translating complex hydraulic circuit diagrams into physical component layouts during high-speed assembly.",
-      "scope": ["Circuit Analysis", "Manufacturing Audit", "Component Testing"],
-      "technicalSolution": {"circuitry": ["Study of hydraulic pumps and control valves"]},
-      "quantifiedResults": {"Plant Efficiency": "Observation of lean cell assembly"},
-      "images": ["/projects/bosch-rexroth-hydraulics.png"],
-      "recognition": ["Internship Excellence Certificate"],
-      "date": "2019-06-01"
-    },
-    {
-      "id": "diy-lifi-communication",
-      "title": "Diy LiFi Communication",
-      "subtitle": "Audio and Data Transmission using Light",
-      "category": "Electronics & Communication",
-      "timeline": "Aug 2019 - Dec 2019",
-      "status": "Completed",
-      "summary": "Demonstrated the principles of Light Fidelity (LiFi) by successfully transmitting audio data via an LED array to a solar-panel receiver connected to speakers.",
-      "content": "# DIY LiFi Communication System\n\n## Overview\nThis project explored Light Fidelity (LiFi), a wireless communication technology that uses light to transmit data and position between devices. LiFi is considered a potential successor to Wi-Fi in certain applications due to its high bandwidth and security characteristics.\n\n## Methodology\n1.  **Transmitter**: Audio signals from a standard 3.5mm jack were amplified and modulated to drive an array of high-intensity white LEDs. The intensity of the LEDs fluctuated imperceptibly to encode the audio data.\n2.  **Receiver**: A small solar panel was used as a photodetector. It received the fluctuating light from the LEDs and converted it back into an electrical signal.\n3.  **Output**: The electrical signal from the solar panel was fed directly into an audio amplifier and speaker system, reproducing the original audio.\n\n## Results\nSuccessfully transmitted clear audio over short distances using visible light. Demonstrated the viability of visible light communication (VLC) using inexpensive, off-the-shelf components.",
-      "technologies": ["Electronics", "Signal Modulation", "Optoelectronics", "Circuit Design"],
-      "impact": ["Demonstrated working visible light communication", "Built functional audio transmission system"],
-      "links": {},
-      "businessContext": "Exploring high-bandwidth, secure alternatives to radio-frequency (RF) communication in electromagnetic-sensitive environments.",
-      "challenge": "Designing analog circuits to properly modulate LED intensity without significant audio distortion.",
-      "scope": ["Circuit Design", "Component Sourcing", "System Prototyping"],
-      "technicalSolution": {"hardware": ["LED Array", "Solar Panel Receiver", "Audio Amplifiers"]},
-      "quantifiedResults": {},
-      "images": ["/projects/lifi-comm.png"],
-      "recognition": [],
-      "date": "2019-12-01"
-    },
-    {
-      "id": "peizoelectric-bag",
-      "title": "PeizoElectric Bag",
-      "subtitle": "Energy Harvesting from Structural Deformation",
-      "category": "Mechatronics Engineering",
-      "timeline": "Jan 2019 - May 2019",
-      "status": "Completed",
-      "summary": "Designed a prototype backpack equipped with piezoelectric sensors to harvest electrical energy from the mechanical stress of walking, providing a portable power source.",
-      "content": "# Piezoelectric Energy Harvesting Bag\n\n## Overview\nThis project aimed to harness the kinetic energy generated during human walking and convert it into usable electrical energy. The core concept utilized the piezoelectric effect, where certain materials generate an electric charge in response to applied mechanical stress.\n\n## Design & Implementation\n1.  **Sensor Placement**: Piezoelectric transducers (sensors) were strategically integrated into the straps and base of a standard backpack where mechanical stress (stretching and compression) is highest during motion.\n2.  **Energy Harvesting Circuit**: Designed a bridge rectifier circuit to convert the alternating current (AC) generated by the piezoelectric sensors into direct current (DC).\n3.  **Storage**: The rectified DC voltage was fed into a capacitor bank / small battery assembly to store the harvested energy.\n4.  **Application**: The stored energy was sufficient to trickle-charge small mobile devices via a standard USB port.\n\n## Conclusion\nDemonstrated a conceptually viable method for portable, renewable energy generation utilizing everyday human motion.",
-      "technologies": ["Piezoelectric effect", "Energy Harvesting", "Circuit Design", "Prototyping"],
-      "impact": ["Prototyped kinetic energy harvesting system", "Demonstrated portable power generation"],
-      "links": {},
-      "businessContext": "Growing demand for off-grid, portable, and renewable charging solutions for personal electronics.",
-      "challenge": "Efficiently converting very small, high-voltage/low-current AC pulses from piezoelectric materials into usable, stable DC power.",
-      "scope": ["Sensor Integration", "Rectifier Circuit Design", "Prototype Assembly"],
-      "technicalSolution": {"hardware": ["Piezoelectric Discs", "Bridge Rectifiers", "Capacitors"]},
-      "quantifiedResults": {},
-      "images": ["/projects/piezo-bag.png"],
-      "recognition": [],
-      "date": "2019-05-01"
-    },
-    {
-      "id": "f1-race-strategy-predictor",
-      "title": "F1 Race Strategy Predictor — MLOps Pipeline",
-      "subtitle": "End-to-End ML Pipeline for Formula 1 Race Strategy Prediction",
-      "category": "Northeastern — IE 7374 MLOps",
-      "timeline": "Spring 2026",
-      "teamSize": "Team of 6",
-      "status": "In Progress",
-      "summary": "Building an end-to-end MLOps pipeline for predicting Formula 1 race strategies based on driver profiles, historical performance data, and race conditions. Deployed on Google Cloud Platform with Vertex AI for model training and serving.",
-      "content": "# F1 Race Strategy Predictor\n\n## Overview\nThis MLOps class project builds a complete machine learning pipeline for predicting F1 race strategies. The system ingests historical race data, driver profiles, and real-time race conditions to recommend optimal pit stop timing, tire compound selection, and defensive/offensive strategies.\n\n## Current Status\nCurrently in the ML modeling phase — building and training prediction models on GCP Vertex AI.\n\n## Technical Architecture\n- **Data Pipeline**: Ingestion of historical F1 data (Ergast API, FastF1)\n- **Feature Engineering**: Driver profiles, track characteristics, weather conditions\n- **Model Training**: Vertex AI managed training with hyperparameter tuning\n- **Deployment**: GCP-hosted prediction endpoints\n- **Monitoring**: Model performance tracking and drift detection",
-      "technologies": ["Python", "Google Cloud Platform", "Vertex AI", "MLOps", "Machine Learning", "Docker", "CI/CD"],
-      "impact": ["End-to-end ML pipeline from data ingestion to model serving", "Driver profile-based strategy prediction", "GCP Vertex AI deployment", "Currently in ML modeling phase"],
-      "links": {},
-      "businessContext": "F1 teams make split-second strategy decisions worth millions. ML-driven predictions can provide data-backed recommendations faster than human analysis.",
-      "challenge": "Build a production-grade MLOps pipeline that can ingest real-time race data, train models, and serve predictions with low latency.",
-      "scope": ["Historical data pipeline", "Feature engineering", "Model training on Vertex AI", "API deployment", "Monitoring dashboard"],
-      "technicalSolution": {"pipeline": ["GCP Vertex AI Pipelines", "Docker containerized training", "Automated retraining"], "modeling": ["Gradient Boosted Trees", "Neural Networks", "Ensemble Methods"]},
-      "quantifiedResults": {"Status": "ML Modeling Phase", "Team": "6 members", "Platform": "GCP Vertex AI"},
-      "images": ["/projects/f1-strategy.png"],
-      "recognition": [],
-      "date": "2026-02-01"
-    },
-    {
-      "id": "vigilance-decrement-research",
-      "title": "Vigilance Decrement in Visual Inspection",
-      "subtitle": "Quantifying Mental Fatigue Effects and Role of AI Assistance",
-      "category": "Northeastern — IE 6500 Human Performance",
-      "timeline": "Spring 2026",
-      "teamSize": "Research Team",
-      "status": "In Progress",
-      "summary": "Research project investigating how mental fatigue from sustained visual inspection tasks degrades defect detection performance in manufacturing quality control, and evaluating whether AI-assisted inspection systems can mitigate vigilance decrement effects.",
-      "content": "# Vigilance Decrement in Visual Inspection\n\n## Overview\nThis research investigates the well-documented phenomenon of vigilance decrement — the decline in detection performance during sustained monitoring tasks — specifically in manufacturing visual inspection contexts.\n\n## Research Questions\n1. How does sustained visual inspection affect defect detection accuracy over time?\n2. Can AI-assisted inspection tools mitigate the cognitive fatigue effects?\n3. What is the optimal human-AI teaming model for quality inspection?\n\n## Methodology\n- Experimental design with control and AI-assisted groups\n- Eye-tracking and reaction time measurements\n- Statistical analysis of detection accuracy over time\n- Comparison of human-only vs. AI-augmented inspection performance",
-      "technologies": ["Human Factors Engineering", "Statistical Analysis", "AI-Assisted Quality Control", "Experimental Design", "Python", "Data Analysis"],
-      "impact": ["Quantifying fatigue effects on inspection accuracy", "Evaluating AI assistance for quality control", "Manufacturing human factors research", "Bridging quality engineering and cognitive science"],
-      "links": {},
-      "businessContext": "Visual inspection remains critical in manufacturing quality control, but human inspectors suffer from vigilance decrement after 20-30 minutes. Understanding and mitigating this could prevent costly defect escapes.",
-      "challenge": "Design rigorous experiments to quantify vigilance decrement and measure the effectiveness of AI assistance in real manufacturing inspection scenarios.",
-      "scope": ["Literature review on vigilance decrement", "Experimental protocol design", "Data collection and analysis", "AI assistance evaluation"],
-      "technicalSolution": {"research": ["Controlled experiments", "Eye-tracking analysis", "Signal detection theory"], "analysis": ["ANOVA", "Regression modeling", "Effect size estimation"]},
-      "quantifiedResults": {"Status": "Active Research", "Domain": "Human Performance + AI"},
-      "images": ["/projects/vigilance-research.png"],
-      "recognition": [],
-      "date": "2026-02-01"
-    },
-    {
-      "id": "van-dyk-one",
-      "title": "Van Dyk One Mobile App",
-      "subtitle": "Cross-Platform Field Service Management App",
+      "id": "spare-parts-data-quality",
+      "title": "Spare Parts Inventory Data Quality",
+      "subtitle": "An A3 study of why replenishment recommendations could not be trusted",
       "category": "Van Dyk Recycling Solutions",
-      "timeline": "May 2025 - Dec 2025",
-      "teamSize": "Solo Developer",
-      "status": "Developed (Internal)",
-      "summary": "A cross-platform mobile application for field operations, aiming to unify all field tools into a single interface.",
-
-      "content": "# Van Dyk One: Field Service Operations Platform\n\n## Overview\nVan Dyk One is a robust mobile platform designed to empower field service engineers with offline-capable tools. It mirrors the functionality of legacy PowerApps but delivers a native, high-performance experience on iOS and Android.\n\n## The Challenge\n*   **Performance**: The existing PowerApp solution was slow, clunky, and frustrated users.\n*   **Connectivity**: Field engineers often work in remote plants with poor internet, making online-only apps useless.\n*   **Usability**: The legacy interface lacked the intuitive feel of modern mobile apps.\n\n## The Solution\nI engineered a cross-platform mobile application using React Native that features:\n*   **Offline-First Architecture**: Uses SQLite to persist data locally, syncing seamlessly when connectivity is restored.\n*   **High Performance**: Native code execution provides smooth animations and instant feedback.\n*   **Feature Parity**: Replicated 100% of the legacy system's functionality while adding new capabilities like spare parts ordering.\n\n## Impact\n*   **Adoption**: Deployed to 60+ active users.\n*   **Reliability**: Zero downtime reported during field operations.\n*   **Efficiency**: Streamlined data collection reduces time-on-site for technicians.",
+      "timeline": "2026",
+      "teamSize": "Solo Analyst",
+      "status": "Ongoing",
+      "summary": "A Lean A3 investigation into a two-system spare parts planning stack — an ERP as the system of record and an inventory optimizer producing the ordering recommendations — establishing which numbers were real, which were inherited, and which were being computed from bad inputs.",
+      "content": "# Spare Parts Inventory Data Quality\n\n## The problem\nSpare parts planning ran across two systems: Acumatica as the ERP and system of record, and NetStock as the optimization layer that turns that data into reorder points and order quantities. Reported symptoms were unreliable fill rates, reorder points that fired late, and stock levels nobody trusted.\n\nThe open question was whether those symptoms came from *planning policy* or from *bad data moving between the two systems*. Until that was settled, tuning the policy would have been guesswork.\n\n## Approach\nI ran this as an A3, because the discipline matters more than the format: state the current condition with evidence before proposing a countermeasure.\n\n- **Mapped the data lineage field by field** — establishing exactly which values are inherited from the ERP (minimums, order multiples, costs) and which are computed by the optimizer's own policy engine (forecast, safety stock, reorder point). This distinction turned out to be the crux: several fields everyone assumed were ERP-driven were in fact model outputs.\n- **Worked at the individual item level** rather than through catalog-wide averages, because averages hide exactly the cases that cause backorders.\n- **Adopted a standing rule that raw exports are not evidence** — every critical figure gets validated against the live system before it informs a decision. This caught a material discrepancy between an export's demand signal and what the optimizer was actually planning against.\n\n## What it found\nTwo distinct and opposite failure modes, which had been blurred together as \"inventory problems\":\n\n1. **Order-size overstock** — items holding excessive supply because of large fixed minimum order quantities, not because of over-generous safety stock. The buffer was not the culprit; the lot size was.\n2. **Thin-buffer exposure** — fast-moving items on long lead times carrying only the minimum allowed safety cushion, one late shipment away from a stockout.\n\nThese need opposite countermeasures, which is why separating them mattered.\n\n## Why this is engineering, not administration\nThe instinct with a misbehaving planning system is to adjust its settings. The useful move was to prove what the system was actually reading first — and to be willing to report that the initial hypothesis was wrong.",
       "technologies": [
-        "React Native",
-        "SQLite",
-        "React Navigation",
-        "SQL Server",
-        ".NET API"
+        "Acumatica ERP",
+        "NetStock",
+        "SQL",
+        "Excel",
+        "A3 Problem Solving",
+        "Lean"
       ],
       "impact": [
-        "100% feature parity with legacy system",
-        "Offline capability for remote sites",
-        "Used by 60+ field engineers"
+        "Separated two opposite stocking failure modes that had been treated as one problem",
+        "Established a repeatable item-level reconciliation method",
+        "Documented data lineage between ERP and optimizer field by field"
       ],
-      "links": {},
-      "businessContext": "Field technicians rely on disparate tools and have limited connectivity in recycling plants. A unified, offline-capable mobile solution was critical for operational efficiency.",
-      "challenge": "Develop a robust, offline-first mobile application that integrates existing web tools (DykScribe, RAG) and provides new field capabilities without sacrificing performance.",
+      "businessContext": "Spare parts availability is a direct service-level commitment — a part that is not on the shelf stops a customer's line. Planning ran across two systems with no documented account of which system owned which number.",
+      "challenge": "Determine whether unreliable replenishment came from planning policy or from the data feeding it, before changing any settings.",
       "scope": [
-        "Cross-platform (iOS/Android) development",
-        "Offline data synchronization with SQLite",
-        "Integration with DykScribe & RAG APIs",
-        "Spare parts ordering system"
-      ],
-      "technicalSolution": {
-        "mobile": [
-          "React Native for cross-platform code",
-          "Expo for rapid development",
-          "SQLite for offline storage"
-        ],
-        "backend": [
-          "Azure Mobile Apps for sync",
-          ".NET API for business logic"
-        ]
-      },
-      "quantifiedResults": {
-        "User Base": "60 Users",
-        "Performance": "Native-speed interactions",
-
-      },
-      "images": ["/projects/van-dyk-one.png"],
-      "recognition": [],
-      "date": "2025-12-01"
+        "Field-by-field data lineage mapping between ERP and optimizer",
+        "Item-level reconciliation methodology",
+        "Catalog-wide screen to classify failure modes",
+        "Validation of demand history against the live planning system",
+        "Service-target alignment review against the stated shipping promise"
+      ]
     },
-
+    {
+      "id": "lead-time-measurement",
+      "title": "Measuring Real Supplier Lead Times",
+      "subtitle": "Replacing assumed lead times with values derived from receipt history",
+      "category": "Van Dyk Recycling Solutions",
+      "timeline": "2026",
+      "teamSize": "Solo Analyst",
+      "status": "In Production Use",
+      "summary": "Derived true supplier lead times from purchase receipt history rather than trusting ERP defaults, and proved the defaults were wrong in both directions — some suppliers far slower than assumed, others considerably faster.",
+      "content": "# Measuring Real Supplier Lead Times\n\n## Three numbers, all called \"lead time\"\nThe first useful contribution was terminological, and it changed how the team talked about the problem:\n\n- **Measured** — computed from purchase receipt history: order date to receipt date. What the vendor actually did.\n- **Planned** — the parameter the optimizer uses when it decides when to reorder. What the model *assumes*.\n- **Quoted** — what the supplier said. In practice, stored nowhere at all.\n\nConflating these is how a reorder point ends up firing late every single cycle: if the planned lead time is shorter than reality, the trigger is structurally too late, and no amount of safety stock tuning fixes the root cause.\n\n## Method\n- Computed measured lead time per part from receipt-line history.\n- Filtered for data integrity — expedited receipts, and records with logically impossible date ordering.\n- Cross-checked measured against planned across every part where both existed. In aggregate the two agreed closely; **the damage was concentrated entirely in the outliers**, which is precisely why averages had hidden the problem.\n- Routed parts whose planned and measured values diverged beyond a threshold to manual verification, rather than silently overwriting the model.\n\n## A result worth keeping\nMeasured history showed ERP default lead times were wrong in *both* directions. Some suppliers were substantially slower than their defaults — chronic lateness that had been quietly absorbed as backorders. Others were consistently early, and had been carrying blame they did not deserve. Supplier performance conversations changed once they were anchored to receipt history rather than to assumptions.\n\n## Disproving a standing belief\nThe planning system was configured to exclude statistical outliers from its lead-time calculation, and the team believed emergency receipts were therefore being trimmed automatically.\n\nThey were not. With a small number of receipts, a single extreme value inflates the standard deviation it is being measured against, so its own outlier score is mathematically capped — the cut-off can essentially never fire on a part with sparse history. The exclusion rule was inert.\n\nThat mattered: it meant a control everyone assumed was protecting the data had never once operated.",
+      "technologies": [
+        "SQL",
+        "Acumatica ERP",
+        "NetStock",
+        "Python",
+        "Excel",
+        "Statistical Analysis"
+      ],
+      "impact": [
+        "Replaced assumed supplier lead times with values measured from receipt history",
+        "Identified suppliers whose real performance diverged sharply from ERP defaults, in both directions",
+        "Proved a long-assumed outlier-exclusion control was mathematically inert"
+      ],
+      "businessContext": "Reorder timing depends entirely on lead time. Where the assumed value is shorter than reality, every replenishment cycle triggers too late and the shortfall surfaces as a backorder.",
+      "challenge": "Establish real supplier lead times from evidence, and separate genuine supplier variability from artifacts of bad data.",
+      "scope": [
+        "Lead time derivation from purchase receipt history",
+        "Data integrity filtering for expedited and invalid records",
+        "Measured vs planned correlation analysis across the catalog",
+        "Exception routing for parts with material divergence",
+        "Review of the optimizer's outlier-exclusion behaviour"
+      ]
+    },
+    {
+      "id": "parts-classification-engine",
+      "title": "Spare Parts Criticality Classification",
+      "subtitle": "Seven iterations to learn that demand data cannot identify a critical part",
+      "category": "Van Dyk Recycling Solutions",
+      "timeline": "2026",
+      "teamSize": "Solo Analyst",
+      "status": "In Production Use",
+      "summary": "An iteratively rebuilt classification engine segmenting the spare parts catalog by criticality and demand pattern — where each discarded version taught something the next one depended on, and the decisive insight inverted the original approach.",
+      "content": "# Spare Parts Criticality Classification\n\n## Why seven versions\nClassifying a spare parts catalog into stocking tiers looks like a data exercise. It is actually a domain-knowledge exercise wearing a data exercise's clothes, and I only learned that by getting it wrong repeatedly.\n\nThe versions, and what each one cost:\n\n- **v1** mapped legacy codes by guessing from how often each appeared. Deleted. *Never map a code before its meaning is confirmed.*\n- **v2** mapped the optimizer's value classes onto stocking tiers. Deleted — the mapping was exactly backwards and would have de-stocked some of the most important parts. *A plausible mapping can be inverted; test it against reality before trusting it.*\n- **v3** used the documented internal policy once the code semantics were actually confirmed. *The same letters had meant different things in different eras of the business.*\n- **v4** brought in full demand history, including decades-old legacy system exports, after discovering the optimizer's activity measure used a rolling recent window — so parts that had sold just outside it looked dead.\n- **v5** added line-by-line reverification with a plain-English reason recorded per part. This caught a misread order type that would have wrongly demoted hundreds of routine items.\n- **v6** was the inversion. Ground-truth testing against a domain expert's manual list agreed with my demand-driven output less than half the time, and misclassified a substantial set of genuinely critical parts.\n- **v7** joined per-machine OEM recommendations to the active installed base — the structure the problem had needed from the start.\n\n## The insight that reframed the project\n**Demand evidence can never identify a critical part.** Insurance spares are stocked precisely so they are *not* consumed; a part that has never sold is indistinguishable, in demand data alone, from a part whose absence would stop a customer's machine.\n\nCriticality has to come first, from engineering knowledge of what the machine cannot run without. Demand data is excellent at the next question — how *much* to hold, and how to split the non-critical remainder — but it cannot answer the first one. Every version before v6 had the dependency backwards.\n\n## Method\n- Reconciled legacy classification codes across multiple system eras before using them.\n- Integrated demand history well beyond the optimizer's default window.\n- Recorded a human-readable justification per part, which is what made reverification possible at all.\n- Validated against an independent expert-labelled sample, and treated disagreement as a signal the model was wrong rather than the expert.\n- Kept unresolved parts in an explicit hold state for review rather than forcing a classification.\n\n## Outcome\nThe classification drives an automated daily pre-flagging routine, and unresolved cases are worked through recurring review sessions with the service team rather than decided unilaterally.",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Acumatica ERP",
+        "NetStock",
+        "Excel",
+        "ABC Analysis"
+      ],
+      "impact": [
+        "Rebuilt the catalog-wide criticality and demand segmentation used for stocking policy",
+        "Established that criticality must be sourced from engineering evidence, not demand history",
+        "Feeds an automated daily pre-flagging routine"
+      ],
+      "businessContext": "Stocking policy depends on knowing which parts are critical. Legacy classification codes had shifted meaning across system generations and could not be taken at face value.",
+      "challenge": "Segment a large spare parts catalog by criticality and demand pattern when the historical codes are ambiguous and demand data alone cannot express criticality.",
+      "scope": [
+        "Legacy classification code reconciliation across system eras",
+        "Demand history integration beyond the default activity window",
+        "Per-part plain-English justification for auditability",
+        "Ground-truth validation against expert-labelled samples",
+        "Per-machine OEM recommendation join to the active installed base",
+        "Explicit hold state for unresolved parts"
+      ]
+    },
+    {
+      "id": "drawing-bom-extraction",
+      "title": "Deterministic BOM Extraction from Engineering Drawings",
+      "subtitle": "Reading parts tables out of CAD drawings geometrically — and deliberately not using AI",
+      "category": "Van Dyk Recycling Solutions",
+      "timeline": "2026",
+      "teamSize": "Solo Developer",
+      "status": "In Production Use",
+      "summary": "A pipeline that extracts the spare-parts table from a large archive of CAD-produced engineering drawings into searchable workbooks, using text coordinate geometry rather than OCR or a language model — so transcription error is not a possible failure mode.",
+      "content": "# Deterministic BOM Extraction from Engineering Drawings\n\n## The problem\nThe after-sales team needed to look up which parts belong to a given machine. That information existed, but only inside a very large archive of engineering drawing PDFs — so answering the question meant opening drawings one at a time.\n\n## The decision worth defending: no AI here\nAn earlier in-house tool flattened each drawing to a text string and asked a language model to return the parts table. Its own sample output contained invented rows — a description that was three repeated numbers, a part number field containing title-block labels, a literal separator row parsed as data.\n\nThe root cause was not the model. It was that **flattening destroys layout**. On these drawings each table row comes out of a naive text extraction in reverse column order, interleaved with dimension callouts and title-block text. Given that input, a model will pattern-match a plausible table onto noise — and confident, well-formed fabrication is the worst possible failure mode for a parts list someone will order from.\n\nA large share of these PDFs were produced by CAD and already contain the parts table as **real text objects with exact x/y coordinates**. So the table does not need to be inferred. It can simply be read:\n\n1. Read every word together with its position.\n2. Group words into visual rows by their vertical centre.\n3. Locate the header row.\n4. Derive column boundaries from the table's own ruling lines.\n5. Assign each word to a column by its horizontal position.\n\nEvery value is the literal string the CAD system embedded. A transcription error is not merely unlikely — it is not a category of error the method can produce.\n\nIt is also dramatically faster than model inference, costs nothing per document, needs two Python libraries and no GPU, and runs on an ordinary office machine.\n\n## Engineering detail that mattered\n- **Page rotation.** Word coordinates are returned in the page's *unrotated* space. On a rotated page the table arrives effectively transposed — what prints as a column shares a single vertical coordinate and steps sideways. The page's rotation matrix has to be applied first or nothing aligns.\n- **Ruling lines over whitespace.** Inferring columns from gaps between words breaks on long description fields; the table's own drawn lines are authoritative.\n- **Output that stays traceable.** Each generated workbook hyperlinks back to its source drawing, so any row can be checked against the original.\n\n## The general lesson\nThe interesting judgement was not how to prompt a model well. It was recognising that the structure had never been lost — it was sitting in the coordinate data — and that reaching for inference would have thrown away a guarantee of correctness in exchange for a plausible guess.",
+      "technologies": [
+        "Python",
+        "PyMuPDF",
+        "openpyxl",
+        "Coordinate Geometry",
+        "Excel"
+      ],
+      "impact": [
+        "Made machine parts lists searchable instead of locked inside individual drawings",
+        "Eliminated hallucinated rows by removing inference from the pipeline entirely",
+        "Runs on standard office hardware with no GPU and no per-document cost"
+      ],
+      "businessContext": "After-sales staff needed to identify the parts belonging to a given machine, but that information was only available inside individual engineering drawings.",
+      "challenge": "Extract structured parts tables from a large CAD drawing archive with an accuracy guarantee strong enough that the output can be ordered from.",
+      "scope": [
+        "Coordinate-based text extraction from CAD-produced PDFs",
+        "Header detection and ruling-line column boundary derivation",
+        "Page rotation handling",
+        "Per-drawing and per-machine roll-up workbook generation",
+        "Source hyperlinking for traceability"
+      ]
+    },
     {
       "id": "dykscribe",
       "title": "DykScribe: AI-Powered Knowledge Capture",
@@ -595,7 +503,7 @@ export const profile: Profile = {
       "teamSize": "Solo Developer",
       "status": "Production Ready",
       "summary": "An AI-powered Q&A system using OpenAI Whisper and GPT-4 that reduced documentation time by 87% and captured tribal knowledge from retiring technicians.",
-      "content": "# DykScribe: AI-Powered Knowledge Capture\n\n## Overview\nDykScribe is an intelligent Q&A system designed to capture and digitize the \"tribal knowledge\" of field service technicians. By leveraging OpenAI's Whisper for transcription and GPT-4 for information extraction, it transforms spoken troubleshooting sessions into structured, searchable data.\n\n## The Challenge\n*   **Knowledge Loss**: 30+ years of expertise was leaving with retiring technicians.\n*   **Manual Burden**: Technicians spent 2-3 hours weekly typing reports.\n*   **Data Silos**: Valuable troubleshooting insights were trapped in emails and unsearchable documents.\n\n## The Solution\nI built a browser-based application that allows technicians to record audio summaries of their site visits. The system automatically:\n1.  **Transcribes** the audio using OpenAI Whisper.\n2.  **Extracts** key Q&A pairs using GPT-4.\n3.  **Structures** the data into a standardized format.\n4.  **Stores** it in a SQL Server database for future retrieval.\n\n## Impact\n*   **Efficiency**: Reduced reporting time from 2 hours to 15 minutes per week.\n*   **Knowledge Retention**: Successfully captured hundreds of troubleshooting scenarios that would have otherwise been lost.\n*   **ROI**: Delivered a 900% return on investment in the first year through productivity gains and error reduction.",
+      "content": "# DykScribe: AI-Powered Knowledge Capture\n\n## Overview\nDykScribe is an intelligent Q&A system designed to capture and digitize the \"tribal knowledge\" of field service technicians. By leveraging OpenAI's Whisper for transcription and GPT-4 for information extraction, it transforms spoken troubleshooting sessions into structured, searchable data.\n\n## The Challenge\n*   **Knowledge Loss**: 30+ years of expertise was leaving with retiring technicians.\n*   **Manual Burden**: Technicians spent 2-3 hours weekly typing reports.\n*   **Data Silos**: Valuable troubleshooting insights were trapped in emails and unsearchable documents.\n\n## The Solution\nI built a browser-based application that allows technicians to record audio summaries of their site visits. The system automatically:\n1.  **Transcribes** the audio using OpenAI Whisper.\n2.  **Extracts** key Q&A pairs using GPT-4.\n3.  **Structures** the data into a standardized format.\n4.  **Stores** it in a SQL Server database for future retrieval.\n\n## Impact\n*   **Efficiency**: Reduced reporting time from 2 hours to 15 minutes per week.\n*   **Knowledge Retention**: Successfully captured hundreds of troubleshooting scenarios that would have otherwise been lost.\n*   **ROI**: Delivered a 900% return on investment in the first year through productivity gains and error reduction.\n\n\n## How It Was Built & Evolved\nDykScribe went from concept to working webapp in one week, built using GenAI-assisted development (Cursor) and deployed on Streamlit. The idea for knowledge transfer had been floating around the company for a long time, but nobody was implementing it. I took the initiative to build it and get it into technicians' hands immediately.\n\nOnce deployed, the system evolved based on real usage feedback:\n- **PDF Transcription**: Technicians wanted to upload equipment manuals alongside their Q&A entries, so I added PDF upload support (up to 25MB).\n- **Points/Rewards System**: To incentivize knowledge sharing (1 point per valid Q&A pair), I added a gamification layer that drove adoption.\n- **Voice Input**: Integrated OpenAI Whisper for speech-to-text, so technicians could dictate their notes instead of typing, which was critical for field adoption.\n\nThe key lesson: shipping fast and iterating based on actual user behavior beats building the \"perfect\" system upfront. Every major feature addition came directly from technician requests after they started using the tool.",
       "technologies": [
         "Python",
         "Streamlit",
@@ -658,7 +566,7 @@ export const profile: Profile = {
       "teamSize": "Solo Developer",
       "status": "Production Ready",
       "summary": "A Retrieval-Augmented Generation system combining vector search and SQL queries to provide instant answers from 1000+ technical manuals.",
-      "content": "# RAG AI Knowledge System\n\n## Overview\nThe RAG (Retrieval-Augmented Generation) Knowledge System is an intelligent document search engine that allows technicians to query over 10,000 technical manuals using natural language. It handles unstructured data from PDFs, Word docs, and text files to provide instant, cited answers.\n\n## The Challenge\n*   **Information Overload**: Critical technical data was buried in thousands of PDF manuals scattered across network drives.\n*   **Search Inefficiency**: Technicians spent up to 30 minutes per query trying to locate specific specifications.\n*   **Support Bottleneck**: Senior engineers were overwhelmed with basic information requests.\n\n## The Solution\nI developed a hybrid retrieval system that combines:\n*   **Vector Search**: Using ChromaDB to find semantically relevant text chunks in 10,000+ documents.\n*   **OCR Integration**: Processing scanned documents to make them searchable.\n*   **LLM Synthesis**: Using OpenAI's GPT models (via Vanna AI) to generate accurate, context-aware answers with citations.\n\n## Impact\n*   **Speed**: Reduced average search time from hours to seconds.\n*   **Accuracy**: Achieved high relevance in answering technical queries with source citations.\n*   **Scale**: Successfully indexed over 10,000 documents.",
+      "content": "# RAG AI Knowledge System\n\n## Overview\nThe RAG (Retrieval-Augmented Generation) Knowledge System is an intelligent document search engine that allows technicians to query over 10,000 technical manuals using natural language. It handles unstructured data from PDFs, Word docs, and text files to provide instant, cited answers.\n\n## The Challenge\n*   **Information Overload**: Critical technical data was buried in thousands of PDF manuals scattered across network drives.\n*   **Search Inefficiency**: Technicians spent up to 30 minutes per query trying to locate specific specifications.\n*   **Support Bottleneck**: Senior engineers were overwhelmed with basic information requests.\n\n## The Solution\nI developed a hybrid retrieval system that combines:\n*   **Vector Search**: Using ChromaDB to find semantically relevant text chunks in 10,000+ documents.\n*   **OCR Integration**: Processing scanned documents to make them searchable.\n*   **LLM Synthesis**: Using OpenAI's GPT models (via Vanna AI) to generate accurate, context-aware answers with citations.\n\n## Impact\n*   **Speed**: Reduced average search time from hours to seconds.\n*   **Accuracy**: Achieved high relevance in answering technical queries with source citations.\n*   **Scale**: Successfully indexed over 10,000 documents.\n\n\n## Evolution & Current Impact\nThe RAG system started as a proof-of-concept to demonstrate that natural language search over technical documents was feasible. After the initial prototype showed promising results, the company adopted the chatbot for daily use by field technicians. The system now serves as the primary knowledge retrieval tool for equipment troubleshooting, replacing the previous workflow of manually searching through network drives or calling senior engineers for help.",
       "technologies": [
         "Python",
         "Streamlit",
@@ -703,9 +611,72 @@ export const profile: Profile = {
         "Speed": "Instant retrieval (<2s)",
         "Scale": "10,000+ Documents"
       },
-      "images": ["/projects/rag-knowledge.png"],
+      "images": [
+        "/projects/rag-knowledge.png",
+        "/vdrs-presentation/RAG/rag1.png",
+        "/vdrs-presentation/RAG/rag2.png",
+        "/vdrs-presentation/RAG/Screenshot-2025-12-11-151205.png",
+        "/vdrs-presentation/RAG/cmdchat.png",
+        "/vdrs-presentation/RAG/cmdch2.png"
+      ],
       "recognition": [],
       "date": "2025-10-15"
+    },
+    {
+      "id": "van-dyk-one",
+      "title": "Van Dyk One Mobile App",
+      "subtitle": "Enterprise Mobile Operations Hub & Offline Data Sync",
+      "category": "Van Dyk Recycling Solutions",
+      "timeline": "May 2025 - Dec 2025",
+      "teamSize": "Solo Developer",
+      "status": "Production Ready (Internal Deployment)",
+      "summary": "A cross-platform mobile application for field operations, aiming to unify all field tools into a single interface.",
+      "content": "# Van Dyk One: Field Service Operations Platform\n\n## Overview\nVan Dyk One is a robust mobile platform designed to empower field service engineers with offline-capable tools. It mirrors the functionality of legacy PowerApps but delivers a native, high-performance experience on iOS and Android.\n\n## The Challenge\n*   **Performance**: The existing PowerApp solution was slow, clunky, and frustrated users.\n*   **Connectivity**: Field engineers often work in remote plants with poor internet, making online-only apps useless.\n*   **Usability**: The legacy interface lacked the intuitive feel of modern mobile apps.\n\n## The Solution\nI engineered a cross-platform mobile application using React Native that features:\n*   **Offline-First Architecture**: Uses SQLite to persist data locally, syncing seamlessly when connectivity is restored.\n*   **High Performance**: Native code execution provides smooth animations and instant feedback.\n*   **Feature Parity**: Replicated 100% of the legacy system's functionality while adding new capabilities like spare parts ordering.\n\n## Impact\n*   **Adoption**: Deployed to 60+ active users.\n*   **Reliability**: Zero downtime reported during field operations.\n*   **Efficiency**: Streamlined data collection reduces time-on-site for technicians.",
+      "technologies": [
+        "React Native",
+        "SQLite",
+        "React Navigation",
+        "SQL Server",
+        ".NET API"
+      ],
+      "impact": [
+        "100% feature parity with legacy system",
+        "Offline capability for remote sites",
+        "Used by 60+ field engineers"
+      ],
+      "links": {},
+      "businessContext": "Field technicians rely on disparate tools and have limited connectivity in recycling plants. A unified, offline-capable mobile solution was critical for operational efficiency.",
+      "challenge": "Develop a robust, offline-first mobile application that integrates existing web tools (DykScribe, RAG) and provides new field capabilities without sacrificing performance.",
+      "scope": [
+        "Cross-platform (iOS/Android) development",
+        "Offline data synchronization with SQLite",
+        "Integration with DykScribe & RAG APIs",
+        "Spare parts ordering system"
+      ],
+      "technicalSolution": {
+        "mobile": [
+          "React Native for cross-platform code",
+          "Expo for rapid development",
+          "SQLite for offline storage"
+        ],
+        "backend": [
+          "Azure Mobile Apps for sync",
+          ".NET API for business logic"
+        ]
+      },
+      "quantifiedResults": {
+        "User Base": "60 Users",
+        "Performance": "Native-speed interactions"
+      },
+      "images": [
+        "/projects/van-dyk-one.png",
+        "/vdrs-presentation/vdo/4704B4FF-0C76-4DCD-94C5-94300162EBED.png",
+        "/vdrs-presentation/vdo/FDFE392E-B997-4C29-9551-618B44F8B1AF.png",
+        "/vdrs-presentation/vdo/84E2F081-BF0A-4246-92BF-744FF2CEB67F_1_105_c.jpeg",
+        "/vdrs-presentation/vdo/FD3E46EB-678E-4194-B0AF-53E63BD6E868_1_105_c.jpeg"
+      ],
+      "recognition": [],
+      "date": "2025-12-01"
     },
     {
       "id": "cdms",
@@ -716,7 +687,7 @@ export const profile: Profile = {
       "teamSize": "Solo Developer",
       "status": "Launched",
       "summary": "A full-stack shipping document management system built with React, Node.js, and SQL Server to streamline international logistics.",
-      "content": "# CDMS: Container Document Management System\n\n## Overview\nCDMS is a secure document exchange portal designed to manage the chaos of international shipping documentation. It replaces fragmented email threads and Excel sheets with a centralized, reliable platform.\n\n## The Challenge\n*   **Chaos**: Managing shipping documents for 500+ containers across 20+ projects was manual and error-prone.\n*   **Compliance**: Missing documents often led to customs delays and fines.\n*   **Visibility**: Suppliers and internal teams lacked a shared view of shipment status.\n\n## The Solution\nI architected and built a full-stack solution featuring:\n*   **Role-Based Access**: Secure portals for internal teams and external suppliers (Authentication via OTP).\n*   **Cloud Storage**: Integrated with Azure Blob Storage for scalable document management.\n*   **Real-Time Tracking**: Provides live status updates for all container shipments.\n*   **Audit Trails**: Complete history of all document actions for compliance.\n\n## Impact\n*   **Adoption**: Successfully onboarded 5 partner companies.\n*   **Reliability**: Achieved 100% uptime during beta testing.\n*   **Scale**: Manages a codebase of 4,000+ lines and supports 40+ active users.",
+      "content": "# CDMS: Container Document Management System\n\n## Overview\nCDMS is a secure document exchange portal designed to manage the chaos of international shipping documentation. It replaces fragmented email threads and Excel sheets with a centralized, reliable platform.\n\n## The Challenge\n*   **Chaos**: Managing shipping documents for 500+ containers across 20+ projects was manual and error-prone.\n*   **Compliance**: Missing documents often led to customs delays and fines.\n*   **Visibility**: Suppliers and internal teams lacked a shared view of shipment status.\n\n## The Solution\nI architected and built a full-stack solution featuring:\n*   **Role-Based Access**: Secure portals for internal teams and external suppliers (Authentication via OTP).\n*   **Cloud Storage**: Integrated with Azure Blob Storage for scalable document management.\n*   **Real-Time Tracking**: Provides live status updates for all container shipments.\n*   **Audit Trails**: Complete history of all document actions for compliance.\n\n## Impact\n*   **Adoption**: Successfully onboarded 5 partner companies.\n*   **Reliability**: Achieved 100% uptime during beta testing.\n*   **Reduced customs clearance delays by 42%**: Quantifiable impact on logistics performance.\n*   **Scale**: Manages a codebase of 4,000+ lines and supports 40+ active users.",
       "technologies": [
         "React",
         "Node.js",
@@ -728,6 +699,7 @@ export const profile: Profile = {
       "impact": [
         "Onboarded 5 Partner Companies",
         "100% Uptime",
+        "Reduced customs clearance delays by 42%",
         "Streamlined document exchange"
       ],
       "links": {
@@ -761,11 +733,17 @@ export const profile: Profile = {
         "Scale": "40+ Active Users",
         "Codebase": "4K+ Lines"
       },
-      "images": ["/projects/cdms-logistics.png"],
+      "images": [
+        "/projects/cdms-logistics.png",
+        "/vdrs-presentation/cdms/cdms1.png",
+        "/vdrs-presentation/cdms/cdms2.png",
+        "/vdrs-presentation/cdms/cdms3.png",
+        "/vdrs-presentation/cdms/cdms4.png",
+        "/vdrs-presentation/cdms/Screenshot-2025-11-18-134917.png"
+      ],
       "recognition": [],
       "date": "2025-09-01"
     },
-
     {
       "id": "van-dyk-tools",
       "title": "Van Dyk Tools: Internal Productivity Suite",
@@ -827,6 +805,52 @@ export const profile: Profile = {
       "date": "2025-11-20"
     },
     {
+      "id": "costiq",
+      "title": "CostIQ",
+      "subtitle": "Intelligent Pricing Estimation Tool",
+      "category": "Van Dyk Recycling Solutions",
+      "timeline": "Oct 2025 - Dec 2025",
+      "teamSize": "Solo Developer",
+      "status": "Live",
+      "summary": "AI-powered CostIQ Pricing Tool that streamlines complex quoting processes for custom recycling equipment.",
+      "content": "# CostIQ\n\n## Overview\nCostIQ is an intelligent pricing estimation tool designed to solve the complexity of quoting custom recycling machinery. It replaces complex spreadsheets with a streamlined web interface that uses historical data and algorithmic logic to generate accurate price estimates.\n\n## Key Features\n*   **Dynamic Estimation**: Algorithmic pricing based on equipment specifications.\n*   **Historical Data**: Leveraging past quote data to improve accuracy.\n*   **User-Friendly Interface**: Simple web form replacing complex Excel macros.\n\n## Impact\n*   **Speed**: Reduced quoting time from hours to minutes.\n*   **Accuracy**: Improved consistency of quotes across the sales team.",
+      "technologies": [
+        "Python",
+        "Streamlit",
+        "Pandas",
+        "Algorithmic Pricing"
+      ],
+      "impact": [
+        "Reduced quoting time by 80%",
+        "Standardized pricing logic",
+        "Accessible via web browser"
+      ],
+      "links": {
+        "demo": "https://vdrs-costiq.onrender.com/"
+      },
+      "businessContext": "Sales engineers struggled with complex, error-prone spreadsheets for quoting. A modern, centralized tool was needed to standardize pricing.",
+      "challenge": "Translating complex tiered pricing logic from Excel macros into a robust web application.",
+      "scope": [
+        "Pricing Algorithm Implementation",
+        "Web Interface Design",
+        "Deployment to Render"
+      ],
+      "technicalSolution": {
+        "app": [
+          "Streamlit for rapid UI development",
+          "Python for logic encapsulation",
+          "Automated Profit Margin Calculators"
+        ]
+      },
+      "quantifiedResults": {
+        "User Adoption": "Used by 100% of sales team",
+        "Speed": "<5 mins per quote"
+      },
+      "images": ["/projects/costiq.png"],
+      "recognition": [],
+      "date": "2025-11-25"
+    },
+    {
       "id": "vdrs360",
       "title": "VDRS 360",
       "subtitle": "Excel-Based Asset Management System",
@@ -867,110 +891,10 @@ export const profile: Profile = {
         "Accuracy": "Zero data conflicts"
       },
       "images": [
-        "/vdrs-presentation/vdt/Screenshot-2025-10-27-110500.png",
         "/vdrs-presentation/vdt/Screenshot-2025-11-10-161206.png"
       ],
       "recognition": [],
       "date": "2025-11-15"
-    },
-
-
-    {
-      "id": "costiq",
-      "title": "CostIQ",
-      "subtitle": "Intelligent Pricing Estimation Tool",
-      "category": "Van Dyk Recycling Solutions",
-      "timeline": "Oct 2025 - Dec 2025",
-      "teamSize": "Solo Developer",
-      "status": "Live",
-      "summary": "AI-powered pricing estimation tool that streamlines complex quoting processes for custom recycling equipment.",
-      "content": "# CostIQ\n\n## Overview\nCostIQ is an intelligent pricing estimation tool designed to solve the complexity of quoting custom recycling machinery. It replaces complex spreadsheets with a streamlined web interface that uses historical data and algorithmic logic to generate accurate price estimates.\n\n## Key Features\n*   **Dynamic Estimation**: Algorithmic pricing based on equipment specifications.\n*   **Historical Data**: Leveraging past quote data to improve accuracy.\n*   **User-Friendly Interface**: Simple web form replacing complex Excel macros.\n\n## Impact\n*   **Speed**: Reduced quoting time from hours to minutes.\n*   **Accuracy**: Improved consistency of quotes across the sales team.",
-      "technologies": [
-        "Python",
-        "Streamlit",
-        "Pandas",
-        "Algorithmic Pricing"
-      ],
-      "impact": [
-        "Reduced quoting time by 80%",
-        "Standardized pricing logic",
-        "Accessible via web browser"
-      ],
-      "links": {
-        "demo": "https://vdrs-costiq.onrender.com/"
-      },
-      "businessContext": "Sales engineers struggled with complex, error-prone spreadsheets for quoting. A modern, centralized tool was needed to standardize pricing.",
-      "challenge": "Translating complex tiered pricing logic from Excel macros into a robust web application.",
-      "scope": [
-        "Pricing Algorithm Implementation",
-        "Web Interface Design",
-        "Deployment to Render"
-      ],
-      "technicalSolution": {
-        "app": [
-          "Streamlit for rapid UI development",
-          "Python for logic encapsulation"
-        ]
-      },
-      "quantifiedResults": {
-        "User Adoption": "Used by 100% of sales team",
-        "Speed": "<5 mins per quote"
-      },
-      "images": ["/projects/costiq.png"],
-      "recognition": [],
-      "date": "2025-11-25"
-    },
-    {
-      "id": "vdrs-exchange",
-      "title": "VDRS Exchange",
-      "subtitle": "Secure Document & Data Exchange Platform",
-      "category": "Van Dyk Recycling Solutions",
-      "timeline": "Sep 2025 - Dec 2025",
-      "teamSize": "Solo Developer",
-      "status": "Launched",
-      "summary": "A corporate file exchange platform ensuring secure, compliant, and efficient transfer of large engineering files and sensitive data.",
-      "content": "# VDRS Exchange: Enterprise Secure File Exchange\n\n## Overview\nVDRS Exchange is a dedicated platform built to handle the secure transfer of large engineering files, CAD drawings, and sensitive corporate data. It addresses the limitations of email attachments and the security risks of public file-sharing services.\n\n## The Challenge\n*   **Insecurity**: Suppliers were emailing sensitive files, creating security risks.\n*   **Size Limits**: Large CAD files exceeded email attachment limits.\n*   **Shadow IT**: Teams used personal Dropbox/WeTransfer accounts, bypassing corporate governance.\n\n## The Solution\nI developed a secure web portal featuring:\n*   **OTP Authentication**: ensuring only authorized recipients can access files.\n*   **Structured Uploads**: 5 specific upload categories (Schematics, Manuals, PLC files, etc.).\n*   **Audit Logging**: Comprehensive tracking of who uploaded/downloaded what and when.\n*   **Azure Integration**: Direct integration with Azure Files for secure, scalable storage.\n\n## Impact\n*   **Security**: Implemented 256-bit encryption for all transfers.\n*   **Reliability**: Achieved 99% uptime.\n*   **Compliance**: Full audit trail for all file exchanges.",
-      "technologies": [
-        "React",
-        "Material-UI",
-        "Node.js",
-        "SQL Server",
-        "Azure Files"
-      ],
-      "impact": [
-        "256-bit Encryption Security",
-        "99% Uptime",
-        "Replaced Shadow IT solutions"
-      ],
-      "links": {
-        "demo": "https://brave-bay-025aaec0f.3.azurestaticapps.net/"
-      },
-      "businessContext": "Engineering teams frequently needed to share massive CAD files with vendors. Email limits and security policies made this difficult, leading to insecure workarounds.",
-      "challenge": "Build a secure, easy-to-use alternative to Dropbox/WeTransfer that integrates with corporate identity providers.",
-      "scope": [
-        "Secure File Handling",
-        "OTP Authentication",
-        "Expiration Policies"
-      ],
-      "technicalSolution": {
-        "storage": [
-          "Azure Files for scalable hosting",
-          "SAS Tokens for secure temporary access"
-        ]
-      },
-      "quantifiedResults": {
-        "Usage": "Daily usage by engineering team",
-        "Security": "Zero data leaks"
-      },
-      "images": [
-        "/vdrs-presentation/vdrsex/Screenshot-2025-10-30-104013.png",
-        "/vdrs-presentation/vdrsex/Screenshot-2025-10-29-175510.png",
-        "/vdrs-presentation/vdrsex/Screenshot-2025-10-30-153958.png",
-        "/vdrs-presentation/vdrsex/Screenshot-2025-12-02-160008.png",
-        "/vdrs-presentation/vdrsex/Screenshot-2025-12-02-160049.png"
-      ],
-      "recognition": [],
-      "date": "2025-12-01"
     },
     {
       "id": "vdrs-website",
@@ -1025,6 +949,58 @@ export const profile: Profile = {
       "date": "2025-11-01"
     },
     {
+      "id": "vdrs-exchange",
+      "title": "VDRS Exchange",
+      "subtitle": "Secure Document & Data Exchange Platform",
+      "category": "Van Dyk Recycling Solutions",
+      "timeline": "Sep 2025 - Dec 2025",
+      "teamSize": "Solo Developer",
+      "status": "Launched",
+      "summary": "A corporate file exchange platform ensuring secure, compliant, and efficient transfer of large engineering files and sensitive data.",
+      "content": "# VDRS Exchange: Enterprise Secure File Exchange\n\n## Overview\nVDRS Exchange is a dedicated platform built to handle the secure transfer of large engineering files, CAD drawings, and sensitive corporate data. It addresses the limitations of email attachments and the security risks of public file-sharing services.\n\n## The Challenge\n*   **Insecurity**: Suppliers were emailing sensitive files, creating security risks.\n*   **Size Limits**: Large CAD files exceeded email attachment limits.\n*   **Shadow IT**: Teams used personal Dropbox/WeTransfer accounts, bypassing corporate governance.\n\n## The Solution\nI developed a secure web portal featuring:\n*   **OTP Authentication**: ensuring only authorized recipients can access files.\n*   **Structured Uploads**: 5 specific upload categories (Schematics, Manuals, PLC files, etc.).\n*   **Audit Logging**: Comprehensive tracking of who uploaded/downloaded what and when.\n*   **Azure Integration**: Direct integration with Azure Files for secure, scalable storage.\n\n## Impact\n*   **Security**: Implemented 256-bit encryption for all transfers.\n*   **Reliability**: Achieved 99% uptime.\n*   **Compliance**: Full audit trail for all file exchanges.",
+      "technologies": [
+        "React",
+        "Material-UI",
+        "Node.js",
+        "SQL Server",
+        "Azure Files"
+      ],
+      "impact": [
+        "256-bit Encryption Security",
+        "99% Uptime",
+        "Replaced Shadow IT solutions"
+      ],
+      "links": {
+        "demo": "https://brave-bay-025aaec0f.3.azurestaticapps.net/"
+      },
+      "businessContext": "Engineering teams frequently needed to share massive CAD files with vendors. Email limits and security policies made this difficult, leading to insecure workarounds.",
+      "challenge": "Build a secure, easy-to-use alternative to Dropbox/WeTransfer that integrates with corporate identity providers.",
+      "scope": [
+        "Secure File Handling",
+        "OTP Authentication",
+        "Expiration Policies"
+      ],
+      "technicalSolution": {
+        "storage": [
+          "Azure Files for scalable hosting",
+          "SAS Tokens for secure temporary access"
+        ]
+      },
+      "quantifiedResults": {
+        "Usage": "Daily usage by engineering team",
+        "Security": "Zero data leaks"
+      },
+      "images": [
+        "/vdrs-presentation/vdrsex/Screenshot-2025-10-30-104013.png",
+        "/vdrs-presentation/vdrsex/Screenshot-2025-10-29-175510.png",
+        "/vdrs-presentation/vdrsex/Screenshot-2025-10-30-153958.png",
+        "/vdrs-presentation/vdrsex/Screenshot-2025-12-02-160008.png",
+        "/vdrs-presentation/vdrsex/Screenshot-2025-12-02-160049.png"
+      ],
+      "recognition": [],
+      "date": "2025-12-01"
+    },
+    {
       "id": "mano-ai",
       "title": "ManoAI - Manufacturing AI Agent",
       "subtitle": "Secure, Local & Intelligent Troubleshooting for Manufacturing",
@@ -1072,10 +1048,7 @@ export const profile: Profile = {
         "Latency": "Low (Local Network)",
         "Privacy": "100% Offline Capable"
       },
-      "images": [
-        "/ai-manufacturing-1.png",
-        "/ai-manufacturing-2.png"
-      ],
+      "images": ["/ai-manufacturing-1.png"],
       "recognition": [],
       "date": "2025-04-01"
     },
@@ -1088,7 +1061,7 @@ export const profile: Profile = {
       "teamSize": "25 operators + cross-functional teams",
       "status": "Completed",
       "summary": "Portfolio of 7 manufacturing optimization projects executed across Hero MotoCorp's Haridwar and Tirupati plants, spanning PLC upgrades, machine reliability, EV production, SAP automation, CAPEX optimization, and material flow redesign.",
-      "content": "# Hero MotoCorp — Manufacturing Excellence Projects\n\n## Overview\nAt Hero MotoCorp, India's largest two-wheeler manufacturer, I led a comprehensive portfolio of manufacturing optimization projects across multiple plants. These spanned PLC modernization, machine reliability, EV assembly, SAP automation, capital expenditure optimization, and material flow redesign.\n\n## Sub-Projects\n\n### 1. Weld Shop PLC Upgrades & IoT Dashboard\nUpgraded 7 robotic welding lines (70 machines total) from legacy PLCs to Mitsubishi FX5U controllers. This transformation integrated real-time IoT dashboard capabilities using GX Works, enabling data-driven decision-making and reducing welding defects by 15% through precision pulse control.\n\n### 2. Honing Machine Reliability Upgrade\nModernized high-precision Honing machines by replacing legacy HDD-based industrial PCs with high-speed SSD systems and Siemens controllers. This migration extended machine service life from 2 to 5 years and eliminated critical data corruption issues associated with shop-floor vibrations.\n\n### 3. EV Vida Line — Battery Fixture & Tooling Improvement\nSpearheaded the redesign of battery assembly fixtures and specialized tooling for the Vida Electric Vehicle line. This optimization improved ergonomic safety for operators and increased the fixture load capacity, contributing to a 23% boost in EV production throughput.\n\n### 4. SAP-Based Tool & Parts Inventory Optimization\nLed the digital categorization and structured inventory management of critical machine spares and cutting tools within the SAP ERP system. This initiative reduced 'part-out' scenarios and decreased average search time for maintenance teams by 40%.\n\n### 5. SAP Scripting for PM Planning Automation\nDeveloped custom SAP scripts and VBA macros to automate the generation of Preventive Maintenance (PM) schedules. This reduced the monthly planning workload from 30 hours to just 2 hours, ensuring 100% compliance with condition-based maintenance protocols via automated email alerts.\n\n### 6. CAPEX Projects — EV Plant Vendor Negotiations\nManaged capital expenditure (CAPEX) procurement for the new EV plant extension. Successfully negotiated technical specifications and commercial terms with international vendors, achieving ₹5 Lakh in direct cost savings while ensuring compliance with stringent safety standards.\n\n### 7. Machine Shop Material Flow Redesign (AGV)\nTransformed the machine shop logistics by replacing manual trolley-based material movement with Automated Guided Vehicle (AGV) routes. This redesign achieved a 65% Net Resource Reduction (NRR) and saved 2 manpower roles, while significantly reducing material handling damage.\n\n## Methodologies\n*   **TPM (Total Productive Maintenance)**: Implemented Autonomous and Planned Maintenance pillars.\n*   **Six Sigma**: Utilized DMAIC methodology for process improvement.\n*   **Digital Transformation**: Integrated IoT sensors and SCADA systems for real-time monitoring.",
+      "content": "# Hero MotoCorp — Manufacturing Excellence Projects\n\n## Overview\nAt Hero MotoCorp, India's largest two-wheeler manufacturer, I led a comprehensive portfolio of manufacturing optimization projects across multiple plants. These spanned PLC modernization, machine reliability, EV assembly, SAP automation, capital expenditure optimization, and material flow redesign.\n\n## Sub-Projects\n\n### 1. Weld Shop PLC Upgrades & IoT Dashboard\nUpgraded 7 robotic welding lines (70 machines total) from legacy PLCs to Mitsubishi FX5U controllers. This transformation integrated real-time IoT dashboard capabilities using GX Works, enabling data-driven decision-making and reducing welding defects by 15% through precision pulse control.\n\n### 2. Honing Machine Reliability Upgrade\nModernized high-precision Honing machines by replacing legacy HDD-based industrial PCs with high-speed SSD systems and Siemens controllers. This migration extended machine service life from 2 to 5 years and eliminated critical data corruption issues associated with shop-floor vibrations.\n\n### 3. EV Vida Line — Battery Fixture & Tooling Improvement\nSpearheaded the redesign of battery assembly fixtures and specialized tooling for the Vida Electric Vehicle line. This optimization improved ergonomic safety for operators and increased the fixture load capacity, contributing to a 23% boost in EV production throughput.\n\n### 4. SAP-Based Tool & Parts Inventory Optimization\nLed the digital categorization and structured inventory management of critical machine spares and cutting tools within the SAP ERP system. This initiative reduced 'part-out' scenarios and decreased average search time for maintenance teams by 40%.\n\n### 5. SAP Scripting for PM Planning Automation\nDeveloped custom SAP scripts and VBA macros to automate the generation of Preventive Maintenance (PM) schedules. This reduced the monthly planning workload from 30 hours to just 2 hours, ensuring 100% compliance with condition-based maintenance protocols via automated email alerts.\n\n### 6. CAPEX Projects — EV Plant Vendor Negotiations\nManaged capital expenditure (CAPEX) procurement for the new EV plant extension. Successfully negotiated technical specifications and commercial terms with international vendors, achieving ₹5 Lakh in direct cost savings while ensuring compliance with stringent safety standards.\n\n### 7. Machine Shop Material Flow Redesign (AGV)\nTransformed the machine shop logistics by replacing manual trolley-based material movement with Automated Guided Vehicle (AGV) routes. This redesign achieved a 65% Net Resource Reduction (NRR) and saved 2 manpower roles, while significantly reducing material handling damage.\n\n## Methodologies\n*   **TPM (Total Productive Maintenance)**: Implemented Autonomous and Planned Maintenance pillars.\n*   **Six Sigma**: Utilized DMAIC methodology for process improvement.\n*   **Digital Transformation**: Integrated IoT sensors and SCADA systems for real-time monitoring.\n\n\n## Iterations & Challenges Overcome\n\n### PLC Migration: Convincing Stakeholders & Solving Integration Issues\nThe FX5U PLC upgrade was technically sound but faced procurement pushback due to high initial cost. I had to build a business case proving the IoT dashboard ROI justified the investment. During implementation, sensor inputs for the dashboard required precise wiring to match the existing system; any mismatch caused false readings. I created formal Change Documents, SOPs, and One-Point Lessons (OPLs) for every upgrade. The HMI interfaces were designed with large buttons and bilingual support (Hindi/English) so operators with varying technical literacy could use them confidently. A protocol mismatch between the PLCs and the dashboard server was resolved by changing IP configurations and upgrading network ports at minimal cost. All upgrades were scheduled during NPD Sundays to avoid production impact.\n\n### EV Vida Battery Fixtures: In-House Redesign Under Budget Constraints\nThe initial battery fixture design required multiple redesign cycles. The project manager refused additional budget, so all manufacturing of pallets and jigs had to be done in-house. The original material choice failed under stress testing, forcing me to source alternative vendors who could supply different materials at the same price point, with localized supply chains for faster turnaround. The jigs also had to be redesigned for a multimodal production line, a requirement that was identified and incorporated before manufacturing began.\n\n### SAP Scripting: Self-Taught Integration From Scratch\nThe SAP automation scripts initially didn't work at all. I had to teach myself SAP scripting through StackOverflow, YouTube tutorials, and documentation, then work closely with SAP engineers to understand the integration points. The existing inventory data in Excel required significant cleanup before migration. The maintenance team initially resisted the automated PM scheduling, preferring their manual process, but once they experienced the reduction from 30 hours to 2 hours per month, adoption followed naturally.",
       "technologies": [
         "GX Works",
         "Mitsubishi FX5U PLC",
@@ -1110,10 +1083,6 @@ export const profile: Profile = {
         "₹5L cost savings through CAPEX vendor negotiations"
       ],
       "businessContext": "Hero MotoCorp needed to modernize aging manufacturing infrastructure while maintaining production targets for both traditional vehicles and new Vida Electric Vehicle line.",
-      "links": {
-        "case_study": "/hero-motocorp/Presentations/Chairman Visit 7th Mar'25.pptx",
-        "papers": "/hero-motocorp/Presentations/Maintenance PPT - Final.pptx"
-      },
       "challenge": "Legacy equipment with frequent breakdowns, manual maintenance scheduling, limited real-time visibility, and resistance to technology adoption.",
       "scope": [
         "Engine Shop: Fanuc Robo Drill, Induction Hardening",
@@ -1148,9 +1117,101 @@ export const profile: Profile = {
         "Material Flow": "65% NRR, 2 manpower saved with AGV",
         "CAPEX Savings": "₹5L through vendor negotiations"
       },
-      "images": ["/projects/hero-motocorp.png"],
+      "images": [
+        "/projects/hero-motocorp.png",
+        "/hero-motocorp/IMG-20240906-WA0034.jpg",
+        "/hero-motocorp/IMG-20240906-WA0036.jpg",
+        "/hero-motocorp/IMG-20221021-WA0005.jpg",
+        "/hero-motocorp/IMG-20221021-WA0006.jpg",
+        "/hero-motocorp/IMG-20230123-WA0011.jpg",
+        "/hero-motocorp/IMG-20230221-WA0012.jpg",
+        "/hero-motocorp/IMG-20221116-WA0002.jpg",
+        "/hero-motocorp/IMG-20230113-WA0005.jpg",
+        "/hero-motocorp/IMG-20240208-WA0012.jpg",
+        "/hero-motocorp/IMG-20240208-WA0013.jpg",
+        "/hero-motocorp/IMG-20230731-WA0017.jpg",
+        "/hero-motocorp/IMG-20230808-WA0010.jpg",
+        "/hero-motocorp/IMG-20230808-WA0011.jpg"
+      ],
       "recognition": [],
       "date": "2024-01-01"
+    },
+    {
+      "id": "connecting-rod-assembly",
+      "title": "Optimized Connecting Rod Assembly Line",
+      "subtitle": "Process Optimization for Leading Two-Wheeler Manufacturer",
+      "category": "Manufacturing Engineering",
+      "timeline": "Oct 2024 - Dec 2024",
+      "status": "Completed",
+      "summary": "Enhanced the efficiency of a major motorcycle manufacturer's connecting rod assembly line using IoT and Simio simulation, achieving 20% cycle time reduction and a significant WIP increase.",
+      "content": "# Optimized Connecting Rod Assembly Line\n\n## Overview\nLed a comprehensive optimization of a major motorcycle manufacturer's connecting rod assembly line using IoT-enabled Smart Cell technology and Simio simulation.\n\n## Key Improvements\n1.  **Increased Throughput**: Boosted daily Work-in-Process (WIP) levels by 25%, increasing output by 2,000 units daily.\n2.  **Cycle Time Reduction**: Achieved 15-20% reduction in cycle time through optimized worker allocation.\n3.  **Machine Availability**: Improved overall availability by 11% using IoT-driven predictive maintenance.\n4.  **Maintenance Excellence**: Decreased Mean Time To Repair (MTTR) by 33%.\n\n## Technical Implementation\n*   **Simio Simulation**: Built discrete event simulation models to validate line-balancing and worker allocation strategies before physical deployment.\n*   **IoT Smart Cell Dashboard**: Deployed real-time production monitoring integrated with Limble CMMS to track machine health and uptime.\n*   **Predictive Maintenance**: Implemented condition-based monitoring, reducing defect rates by 15%.\n\n\n## Iterations & Lessons Learned\nWhen the Simio simulation model was compared against actual production data, there was a significant gap between predicted and real-world performance. The simulation underestimated the impact of operator variability and unplanned micro-stoppages that don't show up in machine logs but accumulate into measurable throughput losses. I had to recalibrate the model by incorporating stochastic elements for human factors and adjusting machine reliability distributions based on actual MTBF/MTTR data rather than manufacturer specifications.\n\nThis experience reinforced that simulation models are only as good as their input assumptions, and that validating against reality early (rather than waiting for full implementation) is critical to avoiding costly misalignment between predicted and actual outcomes.",
+      "technologies": ["Simio", "IoT", "MATLAB", "Python", "Limble CMMS", "Predictive Maintenance", "Process Optimization"],
+      "impact": [
+        "Increased daily WIP by 2,000 units (25%)", 
+        "Reduced cycle time by 20%",
+        "Decreased MTTR by 33%", 
+        "Improved machine availability by 11%"
+      ],
+      "links": {},
+      "businessContext": "Need to maximize throughput and minimize downtime on a critical automotive assembly line.",
+      "challenge": "Validating complex line-balancing and maintenance improvements before causing costly physical disruptions.",
+      "scope": ["IoT Smart Cell Dashboard", "Simio Simulation modeling", "Maintenance strategy overhaul"],
+      "technicalSolution": {
+        "simulation": ["Simio Professional 3D modeling"], 
+        "hardware": ["IoT sensors integrated with Limble CMMS"]
+      },
+      "quantifiedResults": {
+        "WIP Increase": "+2,000 units/day", 
+        "Cycle Time": "20% reduction",
+        "MTTR": "33% reduction"
+      },
+      "images": ["/projects/connecting-rod-assembly.png"],
+      "recognition": [],
+      "date": "2024-12-01"
+    },
+    {
+      "id": "f1-race-strategy-predictor",
+      "title": "F1 Race Strategy Predictor — MLOps Pipeline",
+      "subtitle": "End-to-End ML Pipeline for Formula 1 Race Strategy Prediction",
+      "category": "Northeastern — IE 7374 MLOps",
+      "timeline": "Spring 2026",
+      "teamSize": "Team of 6",
+      "status": "In Progress",
+      "summary": "Building an end-to-end MLOps pipeline for predicting Formula 1 race strategies based on driver profiles, historical performance data, and race conditions. Deployed on Google Cloud Platform with Vertex AI for model training and serving.",
+      "content": "# F1 Race Strategy Predictor\n\n## Overview\nThis MLOps class project builds a complete machine learning pipeline for predicting F1 race strategies. The system ingests historical race data, driver profiles, and real-time race conditions to recommend optimal pit stop timing, tire compound selection, and defensive/offensive strategies.\n\n## Current Status\nCurrently in the ML modeling phase — building and training prediction models on GCP Vertex AI.\n\n## Technical Architecture\n- **Data Pipeline**: Ingestion of historical F1 data (Ergast API, FastF1)\n- **Feature Engineering**: Driver profiles, track characteristics, weather conditions\n- **Model Training**: Vertex AI managed training with hyperparameter tuning\n- **Deployment**: GCP-hosted prediction endpoints\n- **Monitoring**: Model performance tracking and drift detection\n\n\n## My Role\nWithin the 6-person team, I own the frontend development and the conversational AI chatbot interface. I built the user-facing dashboard where race engineers interact with strategy predictions, and developed the chatbot that lets users query the model in natural language to explore what-if scenarios (e.g., \"What happens if we pit on Lap 22 instead of Lap 25?\"). This combines my React frontend skills with prompt engineering for the prediction API layer.",
+      "technologies": ["Python", "Google Cloud Platform", "Vertex AI", "MLOps", "Machine Learning", "Docker", "CI/CD"],
+      "impact": ["End-to-end ML pipeline from data ingestion to model serving", "Driver profile-based strategy prediction", "GCP Vertex AI deployment", "Currently in ML modeling phase"],
+      "links": {},
+      "businessContext": "F1 teams make split-second strategy decisions worth millions. ML-driven predictions can provide data-backed recommendations faster than human analysis.",
+      "challenge": "Build a production-grade MLOps pipeline that can ingest real-time race data, train models, and serve predictions with low latency.",
+      "scope": ["Historical data pipeline", "Feature engineering", "Model training on Vertex AI", "API deployment", "Monitoring dashboard"],
+      "technicalSolution": {"pipeline": ["GCP Vertex AI Pipelines", "Docker containerized training", "Automated retraining"], "modeling": ["Gradient Boosted Trees", "Neural Networks", "Ensemble Methods"]},
+      "quantifiedResults": {"Status": "ML Modeling Phase", "Team": "6 members", "Platform": "GCP Vertex AI"},
+      "images": ["/projects/f1-strategy.png"],
+      "recognition": [],
+      "date": "2026-02-01"
+    },
+    {
+      "id": "vigilance-decrement-research",
+      "title": "Vigilance Decrement in Visual Inspection",
+      "subtitle": "Quantifying Mental Fatigue Effects and Role of AI Assistance",
+      "category": "Northeastern — IE 6500 Human Performance",
+      "timeline": "Spring 2026",
+      "teamSize": "Research Team",
+      "status": "In Progress",
+      "summary": "Research project investigating how mental fatigue from sustained visual inspection tasks degrades defect detection performance in manufacturing quality control, and evaluating whether AI-assisted inspection systems can mitigate vigilance decrement effects.",
+      "content": "# Vigilance Decrement in Visual Inspection\n\n## Overview\nThis research investigates the well-documented phenomenon of vigilance decrement — the decline in detection performance during sustained monitoring tasks — specifically in manufacturing visual inspection contexts.\n\n## Research Questions\n1. How does sustained visual inspection affect defect detection accuracy over time?\n2. Can AI-assisted inspection tools mitigate the cognitive fatigue effects?\n3. What is the optimal human-AI teaming model for quality inspection?\n\n## Methodology\n- Experimental design with control and AI-assisted groups\n- Eye-tracking and reaction time measurements\n- Statistical analysis of participant response data\n- Comparison of human-only vs. AI-augmented inspection performance\n\n\n## My Role\nI am responsible for designing and building the experimental data collection form, developing the analysis pipeline that processes participant response data, and creating the visual presentation of results. This spans from survey/form design through statistical analysis (Python) to the final research output that quantifies how inspection accuracy degrades over time and whether AI assistance measurably reduces that degradation.",
+      "technologies": ["Human Factors Engineering", "Statistical Analysis", "AI-Assisted Quality Control", "Experimental Design", "Python", "Data Analysis"],
+      "impact": ["Quantifying fatigue effects on inspection accuracy", "Evaluating AI assistance for quality control", "Manufacturing human factors research", "Bridging quality engineering and cognitive science"],
+      "links": {},
+      "businessContext": "Visual inspection remains critical in manufacturing quality control, but human inspectors suffer from vigilance decrement after 20-30 minutes. Understanding and mitigating this could prevent costly defect escapes.",
+      "challenge": "Design rigorous experiments to quantify vigilance decrement and measure the effectiveness of AI assistance in real manufacturing inspection scenarios.",
+      "scope": ["Literature review on vigilance decrement", "Experimental protocol design", "Data collection and analysis", "AI assistance evaluation"],
+      "technicalSolution": {"research": ["Controlled experiments", "Eye-tracking analysis", "Signal detection theory"], "analysis": ["ANOVA", "Regression modeling", "Effect size estimation"]},
+      "quantifiedResults": {"Status": "Active Research", "Domain": "Human Performance + AI"},
+      "images": ["/projects/vigilance-research.png"],
+      "recognition": [],
+      "date": "2026-02-01"
     },
     {
       "id": "edm-controllers-study",
@@ -1161,7 +1222,7 @@ export const profile: Profile = {
       "teamSize": "Research Team",
       "status": "Published",
       "summary": "Comprehensive MATLAB simulation study comparing Bang Bang, PID, and LQR control strategies for EDM (Electrical Discharge Machining) controllers, achieving 15-20% precision improvement.",
-      "content": "# EDM Controllers Study - MATLAB Simulation Analysis\n\n## Overview\nThis comprehensive research project focused on optimizing control strategies for Electrical Discharge Machining (EDM) systems through advanced MATLAB simulation analysis. The study compared three distinct control methodologies - Bang Bang, PID, and LQR controllers - to determine the most effective approach for precision machining applications.\n\n## Key Findings\n*   **Precision**: LQR controller demonstrated superior performance with 15-20% improvement in machining precision.\n*   **Stability**: PID controller showed optimal results for standard machining operations.\n*   **Efficiency**: Validated the trade-offs between energy efficiency and machining speed for different control strategies.",
+      "content": "# EDM Controllers Study - MATLAB Simulation Analysis\n\n## Overview\nThis comprehensive research project focused on optimizing control strategies for Electrical Discharge Machining (EDM) systems through advanced MATLAB simulation analysis. The study compared three distinct control methodologies - Bang Bang, PID, and LQR controllers - to determine the most effective approach for precision machining applications.\n\n## Key Findings\n*   **Precision**: LQR controller demonstrated superior performance with 15-20% improvement in machining precision.\n*   **Stability**: PID controller showed optimal results for standard machining operations.\n*   **Efficiency**: Validated the trade-offs between energy efficiency and machining speed for different control strategies.\n\n\n## My Role\nI developed the core MATLAB logic for all three controller models (Bang Bang, PID, and LQR), translated the mathematical models into working Simulink simulations, and integrated the simulation with real-time hardware to validate the controllers against physical EDM process parameters. The end-to-end pipeline from theoretical modeling to hardware-in-the-loop validation was my primary contribution.",
       "technologies": [
         "MATLAB",
         "Control Systems",
@@ -1214,7 +1275,7 @@ export const profile: Profile = {
       "teamSize": "Research Team",
       "status": "Published",
       "summary": "Designed and simulated a real-time PLC-based elevator control system with safety interlocks, emergency protocols, and multi-floor scheduling logic using ladder diagram programming. Published in IRJET Journal.",
-      "content": "# PLC Elevator Control Simulation\n\n## Overview\nThis research project designed and simulated a 3-floor elevator control system using Programmable Logic Controllers (PLC) with ladder logic programming. The system implements real-time safety interlocks, emergency stop protocols, door control mechanisms, and efficient multi-floor scheduling algorithms.\n\n## Key Features\n- Real-time safety interlock system\n- Emergency stop and override protocols\n- Multi-floor call scheduling algorithm\n- Door open/close timing with obstruction detection\n- Position feedback and floor indication\n\n## Results\n- 25% response time improvement over traditional relay-based systems\n- 30% reliability increase through PLC-based control\n- Published findings in IRJET Journal",
+      "content": "# PLC Elevator Control Simulation\n\n## Overview\nThis research project designed and simulated a 3-floor elevator control system using Programmable Logic Controllers (PLC) with ladder logic programming. The system implements real-time safety interlocks, emergency stop protocols, door control mechanisms, and efficient multi-floor scheduling algorithms.\n\n## Key Features\n- Real-time safety interlock system\n- Emergency stop and override protocols\n- Multi-floor call scheduling algorithm\n- Door open/close timing with obstruction detection\n- Position feedback and floor indication\n\n## Results\n- 25% response time improvement over traditional relay-based systems\n- 30% reliability increase through PLC-based control\n- Published findings in IRJET Journal\n\n\n## My Role\nI designed the complete ladder logic circuit from scratch, implementing all safety interlocks, floor scheduling algorithms, and door control timing sequences. I then built the simulation environment to validate the PLC program before any physical deployment, ensuring all edge cases (simultaneous floor calls, emergency stops, obstruction detection) were handled correctly in the logic.",
       "technologies": ["PLC", "Ladder Logic", "Simulation", "Safety Systems", "Control Engineering", "MATLAB"],
       "impact": ["25% response time improvement", "30% reliability increase", "Published research paper in IRJET", "Demonstrated PLC advantages over relay-based systems"],
       "links": {"papers": "https://www.academia.edu/88042738/Simulation_and_Modelling_of_3_Floor_Elevator_System_using_PLC"},
@@ -1227,9 +1288,117 @@ export const profile: Profile = {
       "recognition": ["Published in IRJET Journal"],
       "date": "2022-01-01"
     },
-
-
-
+    {
+      "id": "airport-operations-lean",
+      "title": "Streamlining Airport Operations with Lean Management",
+      "subtitle": "Lean Implementation at Frankfurt Airport",
+      "category": "Operations Research",
+      "timeline": "Feb 2025 - Apr 2025",
+      "status": "Completed",
+      "summary": "Major Lean implementation (DMAIC Framework) at Frankfurt Airport to resolve operational inefficiencies, reducing baggage wait time by 35% and improving ground crew efficiency.",
+      "content": "# Streamlining Airport Operations with Lean Management\n\n## Overview\nFrankfurt Airport faced major operational inefficiencies including high baggage wait times (28 mins), 120 mishandling incidents per day, and low staff productivity (68%).\n\n## Lean Implementation (DMAIC Framework)\n*   **Define**: Identified critical areas – baggage, security, gate turnaround.\n*   **Measure**: Baselines KPIs from Terminal 1 operations.\n*   **Analyze**: Fishbone diagrams, time-motion studies, spaghetti diagrams.\n*   **Improve**: Lean tools deployed (5S, Standard Work, Kaizen events, Visual Boards).\n*   **Control**: Process standardization, training, dashboard integration.\n\n## Results & KPIs Improved\n### Baggage Handling\n*   Wait time reduced 28 → 18.2 mins (↓35%)\n*   Mishandling reduced 120 → 78/day (↓35%)\n*   Staff productivity increased 68% → 83%\n\n### Security & Gate Turnaround\n*   Security wait time reduced 22 → 12.8 mins (↓42%)\n*   Turnaround time reduced by 12 mins (↓18%)\n*   On-time departure improved 76% → 89%\n\n## Financial ROI\n*   32% fewer baggage compensation claims\n*   ROI: 285% within the first year",
+      "technologies": ["Lean Management", "DMAIC", "5S", "Kaizen", "Root Cause Analysis", "Klipfolio"],
+      "impact": ["Reduced baggage wait time by 35%", "Improved on-time departure to 89%", "285% Year-1 ROI"],
+      "links": {},
+      "businessContext": "Major airport operational bottlenecks led to missed connections, overworked staff, and passenger dissatisfaction.",
+      "challenge": "Optimize airport operations using Lean methodologies without physical expansion.",
+      "scope": ["Baggage Handling", "Security Checkpoints", "Gate Turnaround"],
+      "technicalSolution": {"tools": ["Fishbone diagrams", "Time-motion studies", "Spaghetti diagrams", "Visual Boards"]},
+      "quantifiedResults": {"ROI": "285%", "Wait Time Reduction": "35%"},
+      "images": ["/projects/airport-lean.png"],
+      "recognition": [],
+      "date": "2025-04-01"
+    },
+    {
+      "id": "schneider-digital-strategy",
+      "title": "Digital Supply Chain Strategy - Schneider Electric",
+      "subtitle": "Global Student Experience Program",
+      "category": "Supply Chain",
+      "timeline": "Jun 2021 - Aug 2021",
+      "status": "Completed",
+      "summary": "Strategic digital transformation roadmap for Schneider Electric's global supply chain. Proposed AI-driven predictive analytics and digital control towers to enhance safety, quality, and productivity.",
+      "content": "# Digital Supply Chain Strategy — Schneider Electric\n\n## Overview\nDuring the Schneider Electric Global Student Experience Program, I developed a modernization strategy for global supply chain operations, focusing on digital transformation and real-time visibility.\n\n## Key Proposals\n*   **Digital Integration Roadmap**: Framework for integrating AI and predictive analytics into existing supply chain infrastructure.\n*   **Paperless Workflows**: Designed systems to replace manual data entry with automated real-time tracking, eliminating paper-based bottlenecks.\n*   **Digital Control Towers**: Proposed centralized digital hubs for real-time monitoring of manufacturing and distribution facilities.\n\n## Impact & Outcomes\nThis strategy provided a scalable blueprint for enhancing safety and productivity across global distribution centers, reinforcing the role of technology in large-scale industrial operations.",
+      "technologies": ["Supply Chain Optimization", "Predictive Analytics", "Digital Control Towers", "Process Mapping", "Digital Transformation"],
+      "impact": [
+        "Proposed AI/Predictive Analytics integration strategies", 
+        "Designed frameworks for paperless workflows",
+        "Developed digital integration roadmap for global operations"
+      ],
+      "links": {},
+      "businessContext": "Global supply chains require real-time visibility to manage disruptions and minimize inventory carrying costs.",
+      "challenge": "Developing a modernization strategy that can scale across a massive global enterprise network like Schneider Electric.",
+      "scope": ["Strategy Development", "Process Blueprinting", "Digital Transformation"],
+      "technicalSolution": {"strategy": ["AI and predictive analytics roadmaps"]},
+      "quantifiedResults": {},
+      "images": ["/projects/schneider-supply-chain.png"],
+      "recognition": [],
+      "date": "2021-08-01"
+    },
+    {
+      "id": "bosch-rexroth-hydraulics",
+      "title": "Industrial Hydraulics & Component Manufacturing",
+      "subtitle": "Engineering Trainee - Bosch Rexroth",
+      "category": "Mechanical Engineering",
+      "timeline": "May 2019 - Jun 2019",
+      "status": "Completed",
+      "summary": "Deep-dive into high-precision hydraulic systems, from component machining to final assembly line troubleshooting for industrial applications.",
+      "content": "# Industrial Hydraulics & Component Manufacturing\n\n## Overview\nDuring my tenure at Bosch Rexroth (Sanand), I gained comprehensive exposure to the lifecycle of industrial hydraulic components. This included studying the manufacturing processes for hydraulic pumps, cylinders, and control valves.\n\n## Key Learnings\n- **Component Manufacturing**: Observed precision machining, deburing, and honing processes for high-tolerance hydraulic parts.\n- **System Integration**: Assisted in reading complex hydraulic circuits adhering to DIN ISO 1219 standards.\n- **Assembly Excellence**: Evaluated assembly line workflows for component-level quality control.\n",
+      "technologies": ["Hydraulics", "Precision Machining", "DIN ISO 1219", "Assembly Lines"],
+      "impact": ["Mastered hydraulic circuit analysis", "Optimized component-level inspection workflows", "Documented plant-wide manufacturing best practices"],
+      "links": {
+        "case_study": "/certificates/Internships/Bosch Rexroth Internship Certificate.pdf"
+      },
+      "businessContext": "Understanding the core mechanical components that power industrial automation is critical for any manufacturing systems engineer.",
+      "challenge": "Translating complex hydraulic circuit diagrams into physical component layouts during high-speed assembly.",
+      "scope": ["Circuit Analysis", "Manufacturing Audit", "Component Testing"],
+      "technicalSolution": {"circuitry": ["Study of hydraulic pumps and control valves"]},
+      "quantifiedResults": {"Plant Efficiency": "Observation of lean cell assembly"},
+      "images": ["/projects/bosch-rexroth-hydraulics.png"],
+      "recognition": ["Internship Excellence Certificate"],
+      "date": "2019-06-01"
+    },
+    {
+      "id": "diy-lifi-communication",
+      "title": "Diy LiFi Communication",
+      "subtitle": "Audio and Data Transmission using Light",
+      "category": "Undergraduate Projects",
+      "timeline": "Aug 2019 - Dec 2019",
+      "status": "Completed",
+      "summary": "Demonstrated the principles of Light Fidelity (LiFi) by successfully transmitting audio data via an LED array to a solar-panel receiver connected to speakers.",
+      "content": "# DIY LiFi Communication System\n\n## Overview\nThis project explored Light Fidelity (LiFi), a wireless communication technology that uses light to transmit data and position between devices. LiFi is considered a potential successor to Wi-Fi in certain applications due to its high bandwidth and security characteristics.\n\n## Methodology\n1.  **Transmitter**: Audio signals from a standard 3.5mm jack were amplified and modulated to drive an array of high-intensity white LEDs. The intensity of the LEDs fluctuated imperceptibly to encode the audio data.\n2.  **Receiver**: A small solar panel was used as a photodetector. It received the fluctuating light from the LEDs and converted it back into an electrical signal.\n3.  **Output**: The electrical signal from the solar panel was fed directly into an audio amplifier and speaker system, reproducing the original audio.\n\n## Results\nSuccessfully transmitted clear audio over short distances using visible light. Demonstrated the viability of visible light communication (VLC) using inexpensive, off-the-shelf components.",
+      "technologies": ["Electronics", "Signal Modulation", "Optoelectronics", "Circuit Design"],
+      "impact": ["Demonstrated working visible light communication", "Built functional audio transmission system"],
+      "links": {},
+      "businessContext": "Exploring high-bandwidth, secure alternatives to radio-frequency (RF) communication in electromagnetic-sensitive environments.",
+      "challenge": "Designing analog circuits to properly modulate LED intensity without significant audio distortion.",
+      "scope": ["Circuit Design", "Component Sourcing", "System Prototyping"],
+      "technicalSolution": {"hardware": ["LED Array", "Solar Panel Receiver", "Audio Amplifiers"]},
+      "quantifiedResults": {},
+      "images": ["/projects/lifi-comm.png"],
+      "recognition": [],
+      "date": "2019-12-01"
+    },
+    {
+      "id": "peizoelectric-bag",
+      "title": "PeizoElectric Bag",
+      "subtitle": "Energy Harvesting from Structural Deformation",
+      "category": "Undergraduate Projects",
+      "timeline": "Jan 2019 - May 2019",
+      "status": "Completed",
+      "summary": "Designed a prototype backpack equipped with piezoelectric sensors to harvest electrical energy from the mechanical stress of walking, providing a portable power source.",
+      "content": "# Piezoelectric Energy Harvesting Bag\n\n## Overview\nThis project aimed to harness the kinetic energy generated during human walking and convert it into usable electrical energy. The core concept utilized the piezoelectric effect, where certain materials generate an electric charge in response to applied mechanical stress.\n\n## Design & Implementation\n1.  **Sensor Placement**: Piezoelectric transducers (sensors) were strategically integrated into the straps and base of a standard backpack where mechanical stress (stretching and compression) is highest during motion.\n2.  **Energy Harvesting Circuit**: Designed a bridge rectifier circuit to convert the alternating current (AC) generated by the piezoelectric sensors into direct current (DC).\n3.  **Storage**: The rectified DC voltage was fed into a capacitor bank / small battery assembly to store the harvested energy.\n4.  **Application**: The stored energy was sufficient to trickle-charge small mobile devices via a standard USB port.\n\n## Conclusion\nDemonstrated a conceptually viable method for portable, renewable energy generation utilizing everyday human motion.",
+      "technologies": ["Piezoelectric effect", "Energy Harvesting", "Circuit Design", "Prototyping"],
+      "impact": ["Prototyped kinetic energy harvesting system", "Demonstrated portable power generation"],
+      "links": {},
+      "businessContext": "Growing demand for off-grid, portable, and renewable charging solutions for personal electronics.",
+      "challenge": "Efficiently converting very small, high-voltage/low-current AC pulses from piezoelectric materials into usable, stable DC power.",
+      "scope": ["Sensor Integration", "Rectifier Circuit Design", "Prototype Assembly"],
+      "technicalSolution": {"hardware": ["Piezoelectric Discs", "Bridge Rectifiers", "Capacitors"]},
+      "quantifiedResults": {},
+      "images": ["/projects/piezo-bag.png"],
+      "recognition": [],
+      "date": "2019-05-01"
+    }
   ],
   "writings": [
     {
@@ -1241,7 +1410,7 @@ export const profile: Profile = {
     },
     {
       "title": "Comparison between Bang Bang, PID and LQR Controller for Electrical Discharge Machining Process",
-      "summary": "# Comparison between Bang Bang, PID and LQR Controller for Electrical Discharge Machining Process\n\n**Published in:** IRJET Journal (2022)\n**Author:** Ajith Srikanth\n\n## Abstract\nThis research presents a comprehensive comparison of different control strategies for optimizing Electrical Discharge Machining (EDM) processes, evaluating the performance of Bang Bang, PID, and LQR controllers in terms of precision, stability, and efficiency.\n\n## Key Impact\n- Achieved 15-20% precision improvement\n- 10% variability reduction in EDM processes",
+      "summary": "Published in IJRASET Journal (2022). Comprehensive comparison of Bang Bang, PID, and LQR control strategies for optimizing Electrical Discharge Machining processes. The study achieved 15-20% precision improvement and 10% variability reduction, with LQR demonstrating superior performance for high-precision applications.",
       "url": "https://www.ijraset.com/research-paper/comparison-between-bang-bang-pid-and-lqr-controller",
       "tags": [
         "EDM Control",
@@ -1256,7 +1425,7 @@ export const profile: Profile = {
     },
     {
       "title": "Simulation and Modelling of 3-Floor Elevator System using PLC",
-      "summary": "# Simulation and Modelling of 3-Floor Elevator System using PLC\n\n**Published in:** IRJET Journal (2022)\n**Author:** Ajith Srikanth\n\n## Abstract\nElevators are a common vertical mode of transport in buildings, warehouses, construction sites, etc. The elevator's design and mechanics undergo continuous modification to make it more efficient and inexpensive for daily use. The design of the elevator based on the Programmable Logic Controller is one such innovation (PLC). Despite the fact that contemporary elevators are not exclusively controlled by PLC, this field has great potential to become the future of the elevator industry.\n\n## Key Impact\n- Demonstrated 25% response time improvement\n- 30% reliability increase over traditional systems",
+      "summary": "Published in IRJET Journal (2022). Research on designing and simulating a 3-floor elevator control system using PLC ladder logic programming. The PLC-based approach demonstrated 25% response time improvement and 30% reliability increase over traditional relay-based systems, with full safety interlock implementation.",
       "url": "https://www.irjet.net/archives/V9/i6/IRJET-V9I6578.pdf",
       "tags": [
         "PLC Programming",

@@ -11,7 +11,7 @@ const StructuredData: React.FC = () => {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": profile.name,
-        "url": typeof window !== 'undefined' ? window.location.origin : 'https://ajithsrikanth.com',
+        "url": typeof window !== 'undefined' ? window.location.origin : 'https://manufx.vercel.app',
         "jobTitle": profile.title,
         "description": "Ajith Srikanth is a Manufacturing Engineer and Intelligent Automation specialist building high-efficiency industrial systems and AI-driven solutions.",
         "sameAs": [
