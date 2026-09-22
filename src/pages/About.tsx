@@ -38,18 +38,18 @@ import ParallaxHeading from '../components/ParallaxHeading';
 const About: React.FC = () => {
   const professionalStatus = {
     workAuthorization: "F-1 Student Visa with OPT and STEM OPT eligibility until 2029",
-    availability: "Available Full Time from Aug 2026 - Pre OPT available on Request",
+    availability: "Currently working full-time at VAN DYK Recycling Solutions",
     location: "Boston, MA with relocation flexibility nationwide",
     clearanceEligible: "Eligible for security clearance processes if required"
   };
 
   const currentWork = {
     primary: {
-      title: "Manufacturing Engineering Intern",
+      title: "Inventory Forecast Analyst",
       company: "VAN DYK Recycling Solutions",
       location: "Norwalk, Connecticut",
-      period: "May 2025 - Dec 2025",
-      focus: "Sustainable manufacturing processes and recycling system optimization",
+      period: "July 2026 - Present",
+      focus: "Inventory and spare parts analytics for the service parts operation",
       icon: Building
     },
     academic: {
