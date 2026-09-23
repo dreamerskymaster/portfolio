@@ -187,7 +187,7 @@ const Contact: React.FC = () => {
                       <Calendar className="w-5 h-5 text-accent-2" />
                       <div>
                         <div className="font-medium text-foreground">Availability</div>
-                        <div className="text-muted-foreground">Available Full Time from Aug 2026 - Pre OPT available on Request</div>
+                        <div className="text-muted-foreground">Working full-time at VAN DYK Recycling Solutions. OPT through Jul 2027, STEM OPT eligible.</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">

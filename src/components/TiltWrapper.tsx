@@ -81,6 +81,8 @@ export const TiltImage: React.FC<TiltImageProps> = ({ className = "", ...props }
 
     return (
         <img
+            loading="lazy"
+            decoding="async"
             {...props}
             style={{
                 ...imageStyle,

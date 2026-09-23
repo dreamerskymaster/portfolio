@@ -90,7 +90,7 @@ const Home: React.FC = () => {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                     </span>
-                    Currently: TA for IE4350/4351 & Northeastern Off-Campus Ambassador | Available Full Time from Aug 2026 - Pre OPT available on Request
+                    Currently: Inventory Forecast Analyst at VAN DYK Recycling Solutions | OPT through Jul 2027, STEM OPT eligible
                   </span>
                 </motion.div>
 

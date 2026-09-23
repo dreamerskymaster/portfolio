@@ -364,6 +364,7 @@ export const profile: Profile = {
   "projects": [
     {
       "id": "spare-parts-data-quality",
+      "date": "2026-06-19",
       "title": "Spare Parts Inventory Data Quality",
       "subtitle": "An A3 study of why replenishment recommendations could not be trusted",
       "category": "Van Dyk Recycling Solutions",
@@ -397,6 +398,7 @@ export const profile: Profile = {
     },
     {
       "id": "lead-time-measurement",
+      "date": "2026-08-20",
       "title": "Measuring Real Supplier Lead Times",
       "subtitle": "Replacing assumed lead times with values derived from receipt history",
       "category": "Van Dyk Recycling Solutions",
@@ -430,6 +432,7 @@ export const profile: Profile = {
     },
     {
       "id": "parts-classification-engine",
+      "date": "2026-07-22",
       "title": "Spare Parts Criticality Classification",
       "subtitle": "Seven iterations to learn that demand data cannot identify a critical part",
       "category": "Van Dyk Recycling Solutions",
@@ -464,6 +467,7 @@ export const profile: Profile = {
     },
     {
       "id": "drawing-bom-extraction",
+      "date": "2026-08-06",
       "title": "Deterministic BOM Extraction from Engineering Drawings",
       "subtitle": "Reading parts tables out of CAD drawings geometrically — and deliberately not using AI",
       "category": "Van Dyk Recycling Solutions",
@@ -553,7 +557,7 @@ export const profile: Profile = {
         "Improved Service": "Instant access to proven solutions",
         "Data Security": "Hash-based duplicate prevention"
       },
-      "images": ["/projects/dykscribe.png"],
+      "images": ["/projects/dykscribe.webp"],
       "recognition": [],
       "date": "2025-11-01"
     },
@@ -612,7 +616,7 @@ export const profile: Profile = {
         "Scale": "10,000+ Documents"
       },
       "images": [
-        "/projects/rag-knowledge.png",
+        "/projects/rag-knowledge.webp",
         "/vdrs-presentation/RAG/rag1.png",
         "/vdrs-presentation/RAG/rag2.png",
         "/vdrs-presentation/RAG/Screenshot-2025-12-11-151205.png",
@@ -669,7 +673,7 @@ export const profile: Profile = {
         "Performance": "Native-speed interactions"
       },
       "images": [
-        "/projects/van-dyk-one.png",
+        "/projects/van-dyk-one.webp",
         "/vdrs-presentation/vdo/4704B4FF-0C76-4DCD-94C5-94300162EBED.png",
         "/vdrs-presentation/vdo/FDFE392E-B997-4C29-9551-618B44F8B1AF.png",
         "/vdrs-presentation/vdo/84E2F081-BF0A-4246-92BF-744FF2CEB67F_1_105_c.jpeg",
@@ -734,7 +738,7 @@ export const profile: Profile = {
         "Codebase": "4K+ Lines"
       },
       "images": [
-        "/projects/cdms-logistics.png",
+        "/projects/cdms-logistics.webp",
         "/vdrs-presentation/cdms/cdms1.png",
         "/vdrs-presentation/cdms/cdms2.png",
         "/vdrs-presentation/cdms/cdms3.png",
@@ -794,7 +798,7 @@ export const profile: Profile = {
         "Tools": "30+ Consolidated"
       },
       "images": [
-        "/projects/vdt-hub.png",
+        "/projects/vdt-hub.webp",
         "/vdrs-presentation/vdt/VanDykTools.png",
         "/vdrs-presentation/vdt/vdt1.png",
         "/vdrs-presentation/vdt/vdt2.png",
@@ -846,7 +850,7 @@ export const profile: Profile = {
         "User Adoption": "Used by 100% of sales team",
         "Speed": "<5 mins per quote"
       },
-      "images": ["/projects/costiq.png"],
+      "images": ["/projects/costiq.webp"],
       "recognition": [],
       "date": "2025-11-25"
     },
@@ -1118,7 +1122,7 @@ export const profile: Profile = {
         "CAPEX Savings": "₹5L through vendor negotiations"
       },
       "images": [
-        "/projects/hero-motocorp.png",
+        "/projects/hero-motocorp.webp",
         "/hero-motocorp/IMG-20240906-WA0034.jpg",
         "/hero-motocorp/IMG-20240906-WA0036.jpg",
         "/hero-motocorp/IMG-20221021-WA0005.jpg",
@@ -1165,7 +1169,7 @@ export const profile: Profile = {
         "Cycle Time": "20% reduction",
         "MTTR": "33% reduction"
       },
-      "images": ["/projects/connecting-rod-assembly.png"],
+      "images": ["/projects/connecting-rod-assembly.webp"],
       "recognition": [],
       "date": "2024-12-01"
     },
@@ -1187,7 +1191,7 @@ export const profile: Profile = {
       "scope": ["Historical data pipeline", "Feature engineering", "Model training on Vertex AI", "API deployment", "Monitoring dashboard"],
       "technicalSolution": {"pipeline": ["GCP Vertex AI Pipelines", "Docker containerized training", "Automated retraining"], "modeling": ["Gradient Boosted Trees", "Neural Networks", "Ensemble Methods"]},
       "quantifiedResults": {"Status": "ML Modeling Phase", "Team": "6 members", "Platform": "GCP Vertex AI"},
-      "images": ["/projects/f1-strategy.png"],
+      "images": ["/projects/f1-strategy.webp"],
       "recognition": [],
       "date": "2026-02-01"
     },
@@ -1209,7 +1213,7 @@ export const profile: Profile = {
       "scope": ["Literature review on vigilance decrement", "Experimental protocol design", "Data collection and analysis", "AI assistance evaluation"],
       "technicalSolution": {"research": ["Controlled experiments", "Eye-tracking analysis", "Signal detection theory"], "analysis": ["ANOVA", "Regression modeling", "Effect size estimation"]},
       "quantifiedResults": {"Status": "Active Research", "Domain": "Human Performance + AI"},
-      "images": ["/projects/vigilance-research.png"],
+      "images": ["/projects/vigilance-research.webp"],
       "recognition": [],
       "date": "2026-02-01"
     },
@@ -1262,7 +1266,7 @@ export const profile: Profile = {
         "Variability": "10% reduction",
         "Efficiency": "25% response time improvement"
       },
-      "images": ["/projects/edm-study.png"],
+      "images": ["/projects/edm-study.webp"],
       "recognition": [],
       "date": "2022-01-01"
     },
@@ -1284,7 +1288,7 @@ export const profile: Profile = {
       "scope": ["PLC ladder logic design", "Safety interlock implementation", "Multi-floor scheduling algorithm", "Simulation and validation"],
       "technicalSolution": {"control": ["Ladder logic programming", "Timer and counter implementation", "Safety interlock design"], "simulation": ["MATLAB validation", "Performance benchmarking"]},
       "quantifiedResults": {"Response Time": "25% improvement", "Reliability": "30% increase", "Publication": "IRJET Journal"},
-      "images": ["/projects/plc-elevator.png"],
+      "images": ["/projects/plc-elevator.webp"],
       "recognition": ["Published in IRJET Journal"],
       "date": "2022-01-01"
     },
@@ -1305,7 +1309,7 @@ export const profile: Profile = {
       "scope": ["Baggage Handling", "Security Checkpoints", "Gate Turnaround"],
       "technicalSolution": {"tools": ["Fishbone diagrams", "Time-motion studies", "Spaghetti diagrams", "Visual Boards"]},
       "quantifiedResults": {"ROI": "285%", "Wait Time Reduction": "35%"},
-      "images": ["/projects/airport-lean.png"],
+      "images": ["/projects/airport-lean.webp"],
       "recognition": [],
       "date": "2025-04-01"
     },
@@ -1330,7 +1334,7 @@ export const profile: Profile = {
       "scope": ["Strategy Development", "Process Blueprinting", "Digital Transformation"],
       "technicalSolution": {"strategy": ["AI and predictive analytics roadmaps"]},
       "quantifiedResults": {},
-      "images": ["/projects/schneider-supply-chain.png"],
+      "images": ["/projects/schneider-supply-chain.webp"],
       "recognition": [],
       "date": "2021-08-01"
     },
@@ -1353,7 +1357,7 @@ export const profile: Profile = {
       "scope": ["Circuit Analysis", "Manufacturing Audit", "Component Testing"],
       "technicalSolution": {"circuitry": ["Study of hydraulic pumps and control valves"]},
       "quantifiedResults": {"Plant Efficiency": "Observation of lean cell assembly"},
-      "images": ["/projects/bosch-rexroth-hydraulics.png"],
+      "images": ["/projects/bosch-rexroth-hydraulics.webp"],
       "recognition": ["Internship Excellence Certificate"],
       "date": "2019-06-01"
     },
@@ -1374,7 +1378,7 @@ export const profile: Profile = {
       "scope": ["Circuit Design", "Component Sourcing", "System Prototyping"],
       "technicalSolution": {"hardware": ["LED Array", "Solar Panel Receiver", "Audio Amplifiers"]},
       "quantifiedResults": {},
-      "images": ["/projects/lifi-comm.png"],
+      "images": ["/projects/lifi-comm.webp"],
       "recognition": [],
       "date": "2019-12-01"
     },
@@ -1395,7 +1399,7 @@ export const profile: Profile = {
       "scope": ["Sensor Integration", "Rectifier Circuit Design", "Prototype Assembly"],
       "technicalSolution": {"hardware": ["Piezoelectric Discs", "Bridge Rectifiers", "Capacitors"]},
       "quantifiedResults": {},
-      "images": ["/projects/piezo-bag.png"],
+      "images": ["/projects/piezo-bag.webp"],
       "recognition": [],
       "date": "2019-05-01"
     }
