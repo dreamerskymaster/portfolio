@@ -37,7 +37,7 @@ import ParallaxHeading from '../components/ParallaxHeading';
 
 const About: React.FC = () => {
   const professionalStatus = {
-    workAuthorization: "F-1 Student Visa with OPT and STEM OPT eligibility until 2029",
+    workAuthorization: "F-1 OPT, work authorized through July 2027, with 24-month STEM OPT extension eligibility",
     availability: "Currently working full-time at VAN DYK Recycling Solutions",
     location: "Boston, MA with relocation flexibility nationwide",
     clearanceEligible: "Eligible for security clearance processes if required"
@@ -234,7 +234,7 @@ const About: React.FC = () => {
                 className="w-3 h-3 bg-emerald-500 rounded-full"
               />
               <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
-                Available Full Time from Aug 2026 - Pre OPT available on Request
+                Working full-time at VAN DYK Recycling Solutions | OPT through Jul 2027, STEM OPT eligible
               </span>
               <motion.span
                 animate={{ rotate: [0, 10, -10, 0] }}
@@ -378,11 +378,11 @@ const About: React.FC = () => {
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-accent-1" />
-                    <span>Eligible for OPT (Optional Practical Training)</span>
+                    <span>Currently on OPT (Optional Practical Training), valid through July 2027</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-accent-1" />
-                    <span>STEM OPT extension available until 2029</span>
+                    <span>Eligible for the 24-month STEM OPT extension after July 2027</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-accent-1" />
@@ -403,7 +403,7 @@ const About: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4 text-accent-2" />
-                    <span>Pre-OPT opportunities available on discussion</span>
+                    <span>No sponsorship required through the OPT and STEM OPT period</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-accent-1" />
