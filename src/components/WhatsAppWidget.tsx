@@ -15,7 +15,9 @@ import { profile } from '../data/profile';
  * unconfigured deploy never shows a dead chat button.
  */
 
-const RAW_NUMBER = (import.meta.env.VITE_WHATSAPP_NUMBER ?? '').toString();
+// Env var wins so the number can be changed without a code edit; the profile
+// value is the shipped default.
+const RAW_NUMBER = (import.meta.env.VITE_WHATSAPP_NUMBER || profile.whatsapp || '').toString();
 const NUMBER = RAW_NUMBER.replace(/\D/g, '');
 
 const PREFILL = `Hi ${profile.name.split(' ')[0]}, I found your portfolio and wanted to get in touch.`;
