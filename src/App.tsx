@@ -32,6 +32,8 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 import { ThemeProvider } from './context/ThemeContext';
 import { useEasterEggs } from './hooks/useEasterEggs';
 import EasterEggOverlays from './components/EasterEggOverlays';
+import WhatsAppWidget from './components/WhatsAppWidget';
+import StructuredData from './components/StructuredData';
 
 function App() {
   const easterEggs = useEasterEggs();
@@ -49,6 +51,7 @@ function App() {
             </a>
             <PreLoader />
             <ScrollToTop />
+            <StructuredData />
             <Background />
             <ScrollProgress />
             <CustomCursor />
@@ -62,6 +65,7 @@ function App() {
               <Analytics />
             </div>
             <EasterEggOverlays {...easterEggs} />
+            <WhatsAppWidget />
           </Router>
         </HelmetProvider >
       </ErrorBoundary >

@@ -22,11 +22,11 @@ export const hobbies: Hobby[] = [
     icon: 'plane',
     color: 'from-blue-500 to-purple-600',
     media: [
-      { type: 'image', src: '/hobbies/IMG20240927181857.jpg', alt: 'Travel destination', caption: 'Beautiful sunset view' },
-      { type: 'image', src: '/hobbies/IMG20241010181331.jpg', alt: 'Travel destination', caption: 'Mountain adventure' },
-      { type: 'image', src: '/hobbies/IMG_9627.JPG', alt: 'Travel destination', caption: 'City exploration' },
-      { type: 'image', src: '/hobbies/IMG_1651.JPG', alt: 'Travel destination', caption: 'Cultural experience' },
-      { type: 'video', src: '/hobbies/IMG_1721.MOV', alt: 'Travel video', caption: 'Adventure moments' }
+      { type: 'image', src: '/hobbies/IMG20240927181857.webp', alt: 'Travel destination', caption: 'Beautiful sunset view' },
+      { type: 'image', src: '/hobbies/IMG20241010181331.webp', alt: 'Travel destination', caption: 'Mountain adventure' },
+      { type: 'image', src: '/hobbies/IMG_9627.webp', alt: 'Travel destination', caption: 'City exploration' },
+      { type: 'image', src: '/hobbies/IMG_1651.webp', alt: 'Travel destination', caption: 'Cultural experience' },
+      { type: 'video', src: '/hobbies/IMG_1721.mp4', alt: 'Travel video', caption: 'Adventure moments' }
     ],
     highlights: [
       'Visited 15+ countries',
@@ -43,11 +43,11 @@ export const hobbies: Hobby[] = [
     icon: 'utensils',
     color: 'from-orange-500 to-red-600',
     media: [
-      { type: 'image', src: '/hobbies/IMG_2536.JPG', alt: 'Cooking creation', caption: 'Homemade pasta' },
-      { type: 'image', src: '/hobbies/IMG_2537.JPG', alt: 'Cooking creation', caption: 'Dessert masterpiece' },
-      { type: 'image', src: '/hobbies/IMG_2538.JPG', alt: 'Cooking creation', caption: 'Fusion experiment' },
-      { type: 'image', src: '/hobbies/IMG_2914.JPG', alt: 'Cooking creation', caption: 'Traditional recipe' },
-      { type: 'video', src: '/hobbies/IMG_0130.MOV', alt: 'Cooking process', caption: 'Cooking in action' }
+      { type: 'image', src: '/hobbies/IMG_2536.webp', alt: 'Cooking creation', caption: 'Homemade pasta' },
+      { type: 'image', src: '/hobbies/IMG_2537.webp', alt: 'Cooking creation', caption: 'Dessert masterpiece' },
+      { type: 'image', src: '/hobbies/IMG_2538.webp', alt: 'Cooking creation', caption: 'Fusion experiment' },
+      { type: 'image', src: '/hobbies/IMG_2914.webp', alt: 'Cooking creation', caption: 'Traditional recipe' },
+      { type: 'video', src: '/hobbies/IMG_0130.mp4', alt: 'Cooking process', caption: 'Cooking in action' }
     ],
     highlights: [
       'Mastered 50+ recipes',
@@ -64,11 +64,11 @@ export const hobbies: Hobby[] = [
     icon: 'utensils',
     color: 'from-green-500 to-teal-600',
     media: [
-      { type: 'image', src: '/hobbies/Snapchat-1818034525.jpg', alt: 'Cuisine exploration', caption: 'Authentic street food' },
-      { type: 'image', src: '/hobbies/Snapchat-186579657.jpg', alt: 'Cuisine exploration', caption: 'Exotic ingredients' },
-      { type: 'image', src: '/hobbies/Snapchat-1952597326.jpg', alt: 'Cuisine exploration', caption: 'Local delicacy' },
-      { type: 'image', src: '/hobbies/Snapchat-1972145851.jpg', alt: 'Cuisine exploration', caption: 'Traditional meal' },
-      { type: 'video', src: '/hobbies/IMG_1304.MP4', alt: 'Food tasting video', caption: 'Tasting new flavors' }
+      { type: 'image', src: '/hobbies/Snapchat-1818034525.webp', alt: 'Cuisine exploration', caption: 'Authentic street food' },
+      { type: 'image', src: '/hobbies/Snapchat-186579657.webp', alt: 'Cuisine exploration', caption: 'Exotic ingredients' },
+      { type: 'image', src: '/hobbies/Snapchat-1952597326.webp', alt: 'Cuisine exploration', caption: 'Local delicacy' },
+      { type: 'image', src: '/hobbies/Snapchat-1972145851.webp', alt: 'Cuisine exploration', caption: 'Traditional meal' },
+      { type: 'video', src: '/hobbies/IMG_1304.mp4', alt: 'Food tasting video', caption: 'Tasting new flavors' }
     ],
     highlights: [
       'Tried 30+ different cuisines',
@@ -85,9 +85,9 @@ export const hobbies: Hobby[] = [
     icon: 'bike',
     color: 'from-yellow-500 to-orange-600',
     media: [
-      { type: 'image', src: '/hobbies/CAB3B256-F15D-4059-AF1F-C3EEFF4E5A16.jpg', alt: 'Biking adventure', caption: 'Mountain trail ride' },
-      { type: 'video', src: '/hobbies/IMG_2425.MP4', alt: 'Biking video', caption: 'Downhill adventure' },
-      { type: 'video', src: '/hobbies/IMG_2431.MP4', alt: 'Biking video', caption: 'Scenic route' }
+      { type: 'image', src: '/hobbies/CAB3B256-F15D-4059-AF1F-C3EEFF4E5A16.webp', alt: 'Biking adventure', caption: 'Mountain trail ride' },
+      { type: 'video', src: '/hobbies/IMG_2425.mp4', alt: 'Biking video', caption: 'Downhill adventure' },
+      { type: 'video', src: '/hobbies/IMG_2431.mp4', alt: 'Biking video', caption: 'Scenic route' }
     ],
     highlights: [
       'Completed 1000+ km rides',
@@ -104,8 +104,8 @@ export const hobbies: Hobby[] = [
     icon: 'mountain',
     color: 'from-emerald-500 to-green-600',
     media: [
-      { type: 'video', src: '/hobbies/IMG_2572.MP4', alt: 'Hiking video', caption: 'Trail adventure' },
-      { type: 'video', src: '/hobbies/IMG_2639.MOV', alt: 'Hiking video', caption: 'Nature exploration' }
+      { type: 'video', src: '/hobbies/IMG_2572.mp4', alt: 'Hiking video', caption: 'Trail adventure' },
+      { type: 'video', src: '/hobbies/IMG_2639.mp4', alt: 'Hiking video', caption: 'Nature exploration' }
     ],
     highlights: [
       'Completed 20+ hiking trails',
@@ -122,9 +122,9 @@ export const hobbies: Hobby[] = [
     icon: 'music',
     color: 'from-purple-500 to-pink-600',
     media: [
-      { type: 'image', src: '/hobbies/Snapchat-662689688.jpg', alt: 'Music moment', caption: 'Concert experience' },
-      { type: 'video', src: '/hobbies/IMG_2797.MP4', alt: 'Music video', caption: 'Live performance' },
-      { type: 'video', src: '/hobbies/IMG_0195.MOV', alt: 'Music video', caption: 'Musical exploration' }
+      { type: 'image', src: '/hobbies/Snapchat-662689688.webp', alt: 'Music moment', caption: 'Concert experience' },
+      { type: 'video', src: '/hobbies/IMG_2797.mp4', alt: 'Music video', caption: 'Live performance' },
+      { type: 'video', src: '/hobbies/IMG_0195.mp4', alt: 'Music video', caption: 'Musical exploration' }
     ],
     highlights: [
       'Discovered 500+ new artists',
@@ -141,8 +141,8 @@ export const hobbies: Hobby[] = [
     icon: 'tv',
     color: 'from-indigo-500 to-purple-600',
     media: [
-      { type: 'image', src: '/hobbies/IMG_2481.jpg', alt: 'Entertainment setup', caption: 'Series marathon' },
-      { type: 'video', src: '/hobbies/IMG_2481.mov', alt: 'Entertainment video', caption: 'Cinema experience' },
+      { type: 'image', src: '/hobbies/IMG_2481.webp', alt: 'Entertainment setup', caption: 'Series marathon' },
+      { type: 'video', src: '/hobbies/IMG_2481.mp4', alt: 'Entertainment video', caption: 'Cinema experience' },
       { type: 'video', src: '/hobbies/VID20250628163928.mp4', alt: 'Entertainment video', caption: 'Documentary watching' }
     ],
     highlights: [
@@ -160,8 +160,8 @@ export const hobbies: Hobby[] = [
     icon: 'wrench',
     color: 'from-slate-700 to-slate-900',
     media: [
-      { type: 'image', src: '/hobbies/IMG_1963.JPG', alt: 'Car maintenance', caption: 'Weekend garage session' },
-      { type: 'video', src: '/hobbies/IMG_0755.MP4', alt: 'Engine detail', caption: 'Diagnostic and tuning' }
+      { type: 'image', src: '/hobbies/IMG_1963.webp', alt: 'Car maintenance', caption: 'Weekend garage session' },
+      { type: 'video', src: '/hobbies/IMG_0755.mp4', alt: 'Engine detail', caption: 'Diagnostic and tuning' }
     ],
     highlights: [
       'Engine diagnostic mastery',

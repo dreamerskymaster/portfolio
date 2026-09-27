@@ -80,6 +80,8 @@ export interface Profile {
   socials?: { [key: string]: string };
   linkedin: string;
   github: string;
+  /** E.164-ish WhatsApp number; non-digits are stripped when building the wa.me link. */
+  whatsapp?: string;
   skills: { [group: string]: string[] };
   experience: Experience[];
   projects: Project[];
@@ -95,6 +97,7 @@ export const profile: Profile = {
   "socials": {},
   "location": "Boston, MA | Chennai, India",
   "linkedin": "https://linkedin.com/in/as31",
+  "whatsapp": "+1 (857) 339-9017",
   "github": "https://github.com/dreamerskymaster",
   "skills": {
     "Manufacturing Excellence": [
@@ -173,7 +176,7 @@ export const profile: Profile = {
       "role": "Off-Campus Northeastern Ambassador",
       "location": "Boston, MA",
       "start": "Jan 2026",
-      "end": "Present",
+      "end": "Apr 2026",
       "bullets": [
         "# Off-Campus Northeastern Ambassador",
         "Serving as a primary contact for off-campus students, facilitating community engagement and providing resources for successful navigation of university life.",
@@ -188,7 +191,7 @@ export const profile: Profile = {
       "role": "Teaching Assistant - IE4350/4351",
       "location": "Boston, MA",
       "start": "Jan 2026",
-      "end": "Present",
+      "end": "Apr 2026",
       "bullets": [
         "# Teaching Assistant - IE4350/4351",
         "Supporting undergraduate students in Industrial Engineering courses, focusing on core engineering principles and practical applications.",
@@ -224,8 +227,8 @@ export const profile: Profile = {
         "# Manufacturing Engineering Intern",
         "At Van Dyk Recycling Solutions, I operated at the intersection of manufacturing engineering and artificial intelligence. My primary focus was to identify operational inefficiencies and solve them using cutting-edge AI and automation technologies.",
         "## Key Achievements",
-        "*   **$153K+ Annual Savings**: Delivered quantifiable value through productivity improvements and error reduction.",
-        "*   **7 Systems Deployed**: Architected and launched a suite of tools including DykScribe, RAG Knowledge System, and CDMS.",
+        "*   **$200K+ Annual Business Value**: Delivered quantifiable value through productivity improvements and error reduction.",
+        "*   **13 Systems Deployed**: Architected and launched a suite of tools including DykScribe, RAG Knowledge System, and CDMS.",
         "*   **819% Average ROI**: Demonstrated exceptional return on investment for developed solutions.",
         "## Core Responsibilities",
         "*   **Digital Transformation**: Led the transition from manual, paper-based workflows to intelligent, digital systems.",

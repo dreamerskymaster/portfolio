@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 Guidance for Claude Code when working in this repository.
-Last verified against the code: **2026-09-16**.
+Last verified against the code: **2026-09-26**.
 
 ## What this is
 
@@ -29,7 +29,8 @@ deployed to Vercel at https://manufx.vercel.app.
 
 ```bash
 npm run dev            # Vite dev server (port 5173, auto-opens)
-npm run build          # Production build → dist/
+npm run build          # vite build, then scripts/prerender.mjs
+npm run prerender      # Re-run the prerender step alone against an existing dist/
 npm run preview        # Preview the production build (port 4173)
 npm run lint           # ESLint flat config, --max-warnings 50
 npm test               # Vitest (run mode)
@@ -124,37 +125,67 @@ resume PDF and markdown there are still archival source material.
   app**, all `.jsx`. Do not refactor it or count it as app code.
 
 ## Media / assets
-Everything is served from `public/` at the site root. Current layout:
-`public/projects/` (17 project hero PNGs, named `<project-id>.png`),
-`public/hobbies/` (84 photos/videos), `public/hero-motocorp/` (32),
-`public/certificates/` (13), `public/documents/` (20),
-`public/vdrs-presentation/` (9), `public/internship/` (2 leftovers).
+Everything is served from `public/` at the site root. Formats matter here:
+project heroes and hobby photos are **WebP**, hobby videos are **H.264 MP4**
+with faststart. Do not add PNG/JPEG heroes or `.MOV`/HEIC files back:
 
-Image paths live in the `images` arrays inside `src/data/profile.ts` (projects)
-and `src/data/hobbies.ts` (hobbies).
+- The originals were 800KB-1MB PNGs (13MB total) and VP9-in-MOV videos that
+  Safari could not play. They were converted in Sept 2026.
+- HEIC does not render in Chrome or Firefox at all.
+- `public/` is the deploy payload. It was 462MB and is now ~214MB; the deploy
+  step stalled for hours at the larger size.
 
-⚠️ **`MEDIA_GUIDE.md` is out of date** — it still documents the old
-`/internship/DSC01xxx.JPG` mapping that the "AI-generated project hero images"
-commit replaced with `/projects/*.png`. Trust the data files, not that table.
+Current layout: `public/projects/` (17 WebP heroes named `<project-id>.webp`),
+`public/hobbies/` (16 WebP + 12 MP4), `public/documents/`, `public/certificates/`,
+`public/vdrs-presentation/`, `public/hero-motocorp/`.
+
+Image paths live in the `images` arrays in `src/data/profile.ts` (projects) and
+`src/data/hobbies.ts` (hobbies). **Anything in `public/` that nothing
+references is dead weight shipped on every deploy** - 112 such files were
+removed in Sept 2026. Check references before adding assets.
+
+⚠️ **`MEDIA_GUIDE.md` is out of date** - it documents the old
+`/internship/DSC01xxx.JPG` mapping and PNG paths. Trust the data files.
 
 ## Deployment / CI
 `.github/workflows/pipeline.yml`, on push to `main`/`develop` and PRs to `main`:
-1. **verify** — `npm run lint`, `npx tsc --noEmit`,
+1. **verify** - `npm run lint`, `npx tsc --noEmit`,
    `npm audit --audit-level=high --omit=dev`, `npm test`
-2. **build** — `npm run build`, uploads the `dist/` artifact
-3. **deploy** — push to `main` only; `amondnet/vercel-action@v25` with
-   `--prod`, using the `VERCEL_TOKEN` / `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID`
-   secrets.
+2. **build** - `npm run build`, uploads the `dist/` artifact
+3. **deploy** - push to `main` only:
+   `npm i -g vercel@latest`, then `vercel pull` / `vercel build --prod` /
+   `vercel deploy --prebuilt --prod --archive=tgz`, using the
+   `VERCEL_TOKEN` / `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` secrets.
 
-`vercel.json` adds the SPA rewrite and security headers
-(`X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`,
-`X-XSS-Protection`).
+**Do not reintroduce `amondnet/vercel-action`.** It pinned Vercel CLI 25.1.0
+and the deploy endpoint now requires >= 47.2.2, so it fails outright. The
+Vercel project is `ajiths-projects-12e1832d/portfoliovone`.
 
-`dist/` is **gitignored and untracked** — it exists locally as a build
-artifact only. Never edit or commit it.
+`--archive=tgz` is there because the deploy step once stalled 3.4 hours
+uploading a 462MB payload. If it stalls again, the durable fix is Vercel's
+Git integration (Vercel clones the repo itself, no runner upload).
 
-⚠️ `VERCEL_SETUP.md` is stale in places (it names an old GitHub account,
-`skuller-007`). The real remote is `dreamerskymaster/portfolio`.
+`vercel.json` adds the SPA rewrite and security headers. Vercel matches the
+filesystem **before** the rewrite, which is what makes prerendered routes work.
+
+`dist/` is gitignored and untracked.
+
+## Prerendering (`scripts/prerender.mjs`)
+Runs automatically after `vite build`. The app is a client-rendered SPA, so
+without this every route serves the same `index.html` with an empty `#root`
+and non-JS crawlers (GPTBot, ClaudeBot, PerplexityBot) see nothing.
+
+It writes one HTML file per route (34: 9 static pages + 25 project pages) with
+that route's title, description, canonical, Open Graph tags, JSON-LD and the
+page's content in `<noscript>`. It also **regenerates `public/`-equivalent
+`dist/sitemap.xml`** from the same route list, so the sitemap cannot drift.
+
+It reads content out of `src/data/profile.ts` by brace-matching the JSON
+arrays. If you restructure `profile.ts` heavily, check this still parses.
+
+**It is not full DOM prerendering.** Every page is `React.lazy`, so a real SSR
+pass would emit the Suspense fallback instead of the page. Doing it properly
+means reworking the lazy boundaries.
 
 ## Environment variables
 All client vars are **`VITE_`-prefixed** (see `env.example`): `VITE_SITE_URL`,

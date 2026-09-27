@@ -21,7 +21,6 @@ import PageTransition from '../components/PageTransition';
 import Chip from '../components/ui/Chip';
 import ImpactDashboard from '../components/ImpactDashboard';
 import { TiltWrapper, TiltImage } from '../components/TiltWrapper';
-import StructuredData from '../components/StructuredData';
 import ParallaxHeading from '../components/ParallaxHeading';
 
 const Home: React.FC = () => {
@@ -62,7 +61,6 @@ const Home: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <StructuredData />
       <div className="min-h-screen">
 
         {/* Hero Section */}

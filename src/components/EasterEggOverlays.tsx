@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Activity } from 'lucide-react';
 
-import MatrixRain from './MatrixRain';
+// Lazy so the MatrixRain chunk is not pulled into the main bundle; it is
+// only needed when the easter egg fires.
+const MatrixRain = lazy(() => import('./MatrixRain'));
 
 interface EasterEggOverlaysProps {
   isBlueprintMode: boolean;
@@ -77,7 +79,9 @@ const EasterEggOverlays: React.FC<EasterEggOverlaysProps> = ({
             exit={{ opacity: 0 }} 
             className="fixed inset-0 z-[105] pointer-events-none mix-blend-screen"
           >
-            <MatrixRain />
+            <Suspense fallback={null}>
+              <MatrixRain />
+            </Suspense>
           </motion.div>
         )}
       </AnimatePresence>

@@ -115,7 +115,7 @@ This portfolio represents **Ajith Srikanth**, an Advanced Manufacturing Engineer
 ## 🚀 Installation
 
 ### Prerequisites
-- **Node.js 18+**
+- **Node.js 20+** (CI pins Node 20)
 - **npm**
 
 ### Quick Start
@@ -142,14 +142,35 @@ This portfolio represents **Ajith Srikanth**, an Advanced Manufacturing Engineer
 
 ```bash
 # Development
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
+npm run dev          # Start development server (port 5173)
+npm run build        # Production build, then prerender 34 routes + sitemap
+npm run preview      # Preview production build (port 4173)
+npm run prerender    # Re-run prerendering alone against an existing dist/
 
 # Code Quality
-npm run lint         # Run ESLint
-npm run typecheck    # TypeScript type checking
+npm run lint         # ESLint (flat config)
+npx tsc --noEmit     # TypeScript type checking
+npm test             # Vitest
 ```
+
+> **Note:** there is no `npm run typecheck` script — use `npx tsc --noEmit`.
+> CI runs lint, typecheck, `npm audit --audit-level=high --omit=dev` and tests.
+
+## 🔍 SEO & Performance
+
+- **Prerendering** — `scripts/prerender.mjs` runs after every build and emits a
+  real HTML file per route (34 of them) with that route's title, description,
+  canonical, Open Graph tags and JSON-LD, plus content in `<noscript>`. Without
+  this, a client-rendered SPA serves an empty `#root` to crawlers that don't run
+  JavaScript, including GPTBot, ClaudeBot and PerplexityBot.
+- **Sitemap** — generated from the same route list at build time, so it can't
+  drift from what actually ships.
+- **Media** — project and hobby images are WebP; hobby videos are H.264 MP4 with
+  faststart. Avoid adding PNG/JPEG heroes, `.MOV` or HEIC: HEIC doesn't render in
+  Chrome or Firefox, and VP9-in-MOV doesn't play in Safari.
+- **Backgrounds** — heavy effects (Three.js globe, particle fields) are lazy
+  loaded and skipped entirely on small screens, coarse pointers and
+  `prefers-reduced-motion`.
 
 ## 🖼️ Media & Assets
 
