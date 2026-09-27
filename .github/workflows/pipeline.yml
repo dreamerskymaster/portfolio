@@ -60,36 +60,22 @@ jobs:
           name: dist
           path: dist
 
-  deploy:
-    needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    runs-on: ubuntu-latest
-    env:
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      # amondnet/vercel-action@v25 pinned Vercel CLI 25.1.0, which the deploy
-      # endpoint now rejects (requires >= 47.2.2). Use the CLI directly so the
-      # version is never pinned to an unmaintained wrapper again.
-      - name: Install Vercel CLI
-        run: npm install --global vercel@latest
-
-      - name: Pull Vercel project settings
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Build with Vercel
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-
-      # --archive=tgz compresses the output before upload. Without it the
-      # deploy step stalled for hours: this project ships thousands of static
-      # files, which Vercel's docs call out as the case this flag exists for.
-      - name: Deploy prebuilt output to production
-        run: vercel deploy --prebuilt --prod --archive=tgz --token=${{ secrets.VERCEL_TOKEN }}
+# Deployment is handled by Vercel's Git integration, not by this workflow.
+#
+# History: this job originally used amondnet/vercel-action@v25, which pinned
+# Vercel CLI 25.1.0 and began failing outright once the deploy endpoint
+# required >= 47.2.2. Replacing it with the official CLI flow fixed everything
+# up to the upload: `vercel pull` and `vercel build --prod` both succeed. The
+# `vercel deploy --prebuilt` step then hung indefinitely pushing the build
+# output from the runner to Vercel - 202 minutes on one attempt and 73+ on
+# another, at well under 50 KB/s, with and without --archive=tgz. That is a
+# stall rather than a bandwidth limit, and it did not resolve by shrinking the
+# payload from 462MB to 214MB.
+#
+# Vercel's Git integration sidesteps it: Vercel clones the repository and
+# builds it itself, so there is no runner upload to hang. It also provides
+# per-PR preview deployments, which this workflow never did.
+#
+# This workflow now does what CI should do - lint, typecheck, audit, test and
+# prove the build compiles. If you ever need to deploy from here again, use
+# the official CLI steps rather than a third-party wrapper action.
