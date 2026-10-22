@@ -1,139 +1,94 @@
-# 🚀 Vercel Deployment Setup Guide
+# Deployment Setup
 
-## 📋 Quick Setup Steps
+Hard-won notes. Read the Gotchas section before debugging a failed deploy —
+every one of them cost hours.
 
-### 1. **Connect GitHub to Vercel** (Recommended - Easiest Method)
+## Current state
 
-1. Go to [vercel.com](https://vercel.com) and sign in
-2. Click **"New Project"**
-3. Import your GitHub repository: `skuller-007/portfolio`
-4. Vercel will auto-detect it's a Vite project
-5. Click **"Deploy"** - That's it! 🎉
+- Repo: `dreamerskymaster/portfolio`, production branch `main`
+- Live URL: `https://manufx.vercel.app`
+- CI: `.github/workflows/pipeline.yml` — `verify` (lint, tsc, audit, test)
+  and `build` (which also runs `scripts/prerender.mjs`)
 
-**Your site will be live at**: `https://portfolio-skuller-007.vercel.app`
+## Gotchas
 
-### 2. **Set Custom Domain** (Optional)
+### 1. The live domain is on a different Vercel account
+`manufx.vercel.app` is served by a project under a **different Vercel account
+(different email)** than `ajiths-projects-12e1832d`, which is where the
+`VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` GitHub secrets point (`portfoliovone`).
 
-1. In Vercel dashboard, go to your project
-2. Go to **Settings > Domains**
-3. Add custom domain: `manufx.vercel.app`
-4. Follow DNS configuration instructions
+A deploy using those secrets publishes to `portfoliovone`, **not** to the live
+domain. Confirm which account and project own the domain before trusting any
+"successful" deploy.
 
-### 3. **Configure Environment Variables**
+### 2. Five Vercel projects exist for this one repo
+`portfolio`, `portfolio-31rs`, `portfolio-i8rz`, `portfoliovone`, and another.
+They accumulated from repeated "New Project" imports. This is how the IDs got
+crossed. Consolidate to one.
 
-In Vercel dashboard, go to **Settings > Environment Variables**:
+### 3. Vercel blocks commits whose author email it cannot match
+> The deployment was blocked because the commit email … could not be matched
+> to a GitHub account.
 
-| Variable | Value | Environment |
-|----------|-------|-------------|
-| `VITE_SITE_URL` | `https://manufx.vercel.app` | Production |
-| `VITE_FORMSPREE_ENDPOINT` | `xzzanvdl` | Production |
-| `VITE_CONTACT_EMAIL` | `ajithsrikanth.f@northeastern.edu` | Production |
-| `NODE_ENV` | `production` | Production |
+Every commit here is authored `ajithsri3103@gmail.com`. If that address is not
+registered **and verified** on the GitHub account, Vercel refuses to build.
+Fix at github.com/settings/emails — add and verify the address. Do not rewrite
+history for this.
 
----
+History also contains `skymaster@SkyMaster.local`, a machine hostname rather
+than a real address, from commits made before git was configured. Set:
 
-## 🔧 **Advanced Setup with GitHub Actions** (Optional)
+```bash
+git config --global user.email "ajithsri3103@gmail.com"
+git config --global user.name  "Ajith Srikanth"
+```
 
-If you want automatic deployment via GitHub Actions, follow these steps:
+### 4. Do not use `amondnet/vercel-action`
+It pins Vercel CLI 25.1.0. The deploy endpoint now requires >= 47.2.2, so it
+fails outright:
 
-### Step 1: Get Vercel Tokens
+> Error! Your Vercel CLI version is outdated. This endpoint requires version
+> 47.2.2 or later.
 
-1. Go to [Vercel Dashboard](https://vercel.com/account/tokens)
-2. Create a new token with these scopes:
-   - `read:user`
-   - `read:project`
-   - `write:project`
-   - `deploy:project`
+If deploying from CI, install the CLI directly instead.
 
-### Step 2: Get Project IDs
+### 5. `vercel deploy --prebuilt` from a GitHub runner hung
+Two attempts stalled at the upload step — 202 minutes and 73+ minutes, at well
+under 50 KB/s — with and without `--archive=tgz`, and it did not improve when
+the payload went from 462MB to 214MB. That profile is a stall, not a bandwidth
+limit.
 
-1. In Vercel dashboard, go to your project
-2. Go to **Settings > General**
-3. Copy:
-   - **Project ID** (from Project ID section)
-   - **Team ID** (from Team ID section, this is your Org ID)
+**Prefer Vercel's Git integration**: Vercel clones the repo and builds it
+itself, so there is no runner upload to hang, and you get per-PR previews.
 
-### Step 3: Add GitHub Secrets
+## Git integration (recommended)
 
-In your GitHub repository, go to **Settings > Secrets and variables > Actions** and add:
+In the Vercel project that owns the live domain:
 
-| Secret Name | Value |
-|-------------|-------|
-| `VERCEL_TOKEN` | Your Vercel token from Step 1 |
-| `VERCEL_ORG_ID` | Your Team ID from Step 2 |
-| `VERCEL_PROJECT_ID` | Your Project ID from Step 2 |
+1. **Settings → Git** → connect `dreamerskymaster/portfolio`, production
+   branch `main`
+2. **Build Command** `npm run build` (already includes the prerender step),
+   **Output Directory** `dist`
+3. Optional: **Settings → Deployment Protection → Checks** → require the
+   `verify` and `build` workflows
 
----
+## Environment variables
 
-## 🎯 **Current Status**
+Set in **Settings → Environment Variables**. All client vars are `VITE_`
+prefixed and **inlined at build time**, so changing one requires a rebuild.
 
-✅ **GitHub Repository**: Ready  
-✅ **Code**: Clean and linted  
-✅ **Build**: Working  
-✅ **ManuFX Branding**: Integrated  
-✅ **Formspree**: Configured  
-✅ **GitHub Actions**: Ready (will work once secrets are added)
+| Variable | Notes |
+|---|---|
+| `VITE_SITE_URL` | `https://manufx.vercel.app` — drives canonicals and the sitemap |
+| `VITE_FORMSPREE_ENDPOINT` | contact form |
+| `VITE_CONTACT_EMAIL` | contact form |
+| `VITE_WHATSAPP_NUMBER` | optional; overrides `profile.whatsapp`. Unset means the widget renders nothing |
 
----
+## Deploying by hand
 
-## 🚀 **Deployment Options**
+```bash
+npx vercel@latest --prod
+```
 
-### **Option 1: Vercel Dashboard (Recommended)**
-- **Pros**: Easiest, automatic deployments, built-in analytics
-- **Cons**: Manual trigger for updates
-- **Best for**: Quick setup, immediate deployment
-
-### **Option 2: GitHub Actions + Vercel**
-- **Pros**: Automatic deployments on push, full CI/CD
-- **Cons**: Requires secret setup
-- **Best for**: Advanced users, team workflows
-
----
-
-## 📊 **After Deployment**
-
-### **Test Your Site**
-1. Visit your live URL
-2. Test all pages and features
-3. Verify contact form works
-4. Check mobile responsiveness
-5. Test dark/light mode toggle
-
-### **Monitor Performance**
-- Check Vercel dashboard for analytics
-- Monitor build logs for any issues
-- Set up custom domain if needed
-
----
-
-## 🔧 **Troubleshooting**
-
-### **Build Fails**
-- Check Vercel build logs
-- Verify all dependencies are in `package.json`
-- Ensure TypeScript compilation passes
-
-### **Environment Variables Not Working**
-- Verify variables are set in Vercel dashboard
-- Check variable names match exactly
-- Ensure variables are prefixed with `VITE_`
-
-### **Formspree Not Working**
-- Verify `VITE_FORMSPREE_ENDPOINT` is set correctly
-- Check Formspree dashboard for submissions
-- Test form locally first
-
----
-
-## 📞 **Need Help?**
-
-If you encounter any issues:
-
-1. **Check Vercel Logs**: Go to your project dashboard > Functions tab
-2. **Check GitHub Actions**: Go to your repo > Actions tab
-3. **Review this guide**: Make sure all steps are completed
-4. **Contact**: ajithsrikanth.f@northeastern.edu
-
----
-
-**Ready to deploy? Choose Option 1 for the quickest setup! 🚀**
+Requires a CLI >= 47.2.2 and the correct account linked. Check the URL it
+prints — it may not be the live domain (see Gotcha 1).
