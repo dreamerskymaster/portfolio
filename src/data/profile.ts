@@ -1405,6 +1405,321 @@ export const profile: Profile = {
       "images": ["/projects/piezo-bag.webp"],
       "recognition": [],
       "date": "2019-05-01"
+    },
+    {
+      "id": "fuel-rewards-notifier",
+      "title": "Fuel Price & Rewards Notifier",
+      "subtitle": "Serverless forecasting pipelines that run without a server or an API key",
+      "category": "Independent Project",
+      "timeline": "2026",
+      "teamSize": "Solo Developer",
+      "status": "Running in Production",
+      "date": "2026-10-22",
+      "summary": "A multi-pipeline automation suite that monitors fuel prices across US and India commute corridors, tracks USD-INR transfer costs, picks the right card for each fill, and emails a digest. Every forecast is printed beside its own out-of-sample track record.",
+      "content": "# Fuel Price & Rewards Notifier\n\n## What it does\nMonitors fuel prices on two commute corridors — Norwalk CT to Jersey City NJ, and Mumbai — tracks USD to INR transfer costs, selects the best-value credit card for each fill, and sends a mobile-friendly HTML email digest.\n\n## Why it is interesting\n**Every email prints its ML or rule-based outlook beside that model's own out-of-sample track record.** A forecast with no accountability is just an opinion; showing the backtest next to the prediction is what makes it usable. That discipline is the same one that matters in demand forecasting at work.\n\nThe whole thing runs on GitHub Actions against free, key-less data sources. There is no server, no database to babysit, and no local checkout required — it keeps running whether or not anyone is paying attention to it.\n\n## Design constraints\n* **No paid services.** Every data source is free and key-less.\n* **No infrastructure.** Scheduled GitHub Actions only.\n* **Readable on a phone**, because that is where a fuel decision actually gets made.",
+      "technologies": [
+        "Python",
+        "GitHub Actions",
+        "Time Series Forecasting",
+        "HTML Email",
+        "Cron Scheduling"
+      ],
+      "impact": [
+        "Runs unattended on scheduled GitHub Actions with no server to maintain",
+        "Publishes each forecast alongside its out-of-sample accuracy rather than in isolation",
+        "Covers two countries' fuel corridors plus USD-INR transfer costs in one digest"
+      ],
+      "links": {
+        "repo": "https://github.com/dreamerskymaster/costco_fuel_notifier"
+      },
+      "businessContext": "Fuel and remittance decisions are small, frequent and easy to get mildly wrong. Automating the comparison turns a recurring guess into a scheduled answer.",
+      "challenge": "Produce forecasts people can actually trust, with zero running cost and no infrastructure.",
+      "scope": [
+        "Multi-corridor fuel price monitoring (US and India)",
+        "USD-INR transfer cost tracking",
+        "Per-fill credit card rewards optimisation",
+        "ML and rule-based outlooks with published out-of-sample scoring",
+        "Scheduled HTML email digests via GitHub Actions"
+      ]
+    },
+    {
+      "id": "mail-data-cleaner",
+      "title": "Mail Data Cleaner",
+      "subtitle": "A Claude Code skill for cleaning every inbox, with a reversible path at each step",
+      "category": "Independent Project",
+      "timeline": "2026",
+      "teamSize": "Solo Developer",
+      "status": "Published",
+      "date": "2026-10-02",
+      "summary": "A published Claude Code skill that inventories, classifies, unsubscribes and cleans every account connected to Apple Mail on macOS — Gmail, Outlook and iCloud — without API keys or OAuth apps, and with approval required at every destructive step.",
+      "content": "# Mail Data Cleaner\n\nA [Claude Code](https://claude.com/claude-code) skill that cleans and organises every email account connected to Apple Mail on macOS — Gmail, Outlook/Exchange, iCloud — **with no API keys and no OAuth app to register**.\n\n## How it works\n* **Inventories** every sender in seconds, reading a read-only copy of Mail's local SQLite index rather than hammering a mail server.\n* **Classifies** senders into social, promotional and mixed, deliberately keeping receipts.\n* **Unsubscribes** using RFC 8058 one-click where offered, falling back to mailto and then to link-only pages.\n* **Moves junk to Trash** — recoverable for around 30 days, never permanently deleted — with a restore command.\n\n## The design principle\nEvery destructive action is approval-gated and reversible. A tool that deletes mail is only useful if being wrong is survivable, so nothing is ever hard-deleted and every sweep can be undone.\n\nWorking from a read-only copy of the local index is what makes the inventory fast and safe: no rate limits, no credentials, no risk of mutating the live mailbox while reading it.",
+      "technologies": [
+        "Python",
+        "SQLite",
+        "AppleScript",
+        "Claude Code Skills",
+        "RFC 8058"
+      ],
+      "impact": [
+        "Works across Gmail, Outlook/Exchange and iCloud with no API keys or OAuth registration",
+        "Every destructive step is approval-gated and recoverable, never a hard delete",
+        "Reads a read-only copy of the local mail index, avoiding rate limits entirely"
+      ],
+      "links": {
+        "repo": "https://github.com/dreamerskymaster/mail-data-cleaner"
+      },
+      "businessContext": "Inbox cleanup tools normally demand broad OAuth scopes over your entire mail account. This one needs none, because the data is already on the machine.",
+      "challenge": "Make bulk email deletion safe enough that a wrong classification costs nothing.",
+      "scope": [
+        "Sender inventory from a read-only copy of Mail's SQLite index",
+        "Classification into social, promotional and mixed, preserving receipts",
+        "RFC 8058 one-click unsubscribe with mailto and link fallbacks",
+        "Recoverable Trash moves with a restore path",
+        "Approval gate on every destructive operation"
+      ]
+    },
+    {
+      "id": "hustlesync",
+      "title": "HustleSync",
+      "subtitle": "Job and invoice tracking for a four-trade field service operation",
+      "category": "Independent Project",
+      "timeline": "2026",
+      "teamSize": "Solo Developer",
+      "status": "Live",
+      "date": "2026-10-05",
+      "summary": "Mobile-first job and invoice tracking for a field service business running four trades out of one truck — firewood, junk hauling, plumbing and HVAC — designed for one-handed use outdoors rather than for a desk.",
+      "content": "# HustleSync\n\nJob and invoice tracking for a field service operation running four trades out of a single truck: firewood, junk hauling, plumbing and HVAC.\n\n## The constraint that shaped it\nIt is **built mobile first, because it is used standing in a driveway, one handed, in sunlight.** Not a desktop admin panel that happens to shrink.\n\nThat single sentence drove most of the decisions: large touch targets, high-contrast type that survives glare, short flows that can be completed between carrying things, and no interaction that assumes two free hands or a steady surface.\n\n## Why it matters\nMost small-business tooling is designed for the office and then apologised for on mobile. Designing for the actual place of use — outdoors, mid-job, one-handed — produces a different and better product.",
+      "technologies": [
+        "JavaScript",
+        "Firebase",
+        "Responsive Design",
+        "Progressive Web App"
+      ],
+      "impact": [
+        "Covers four distinct trades in a single operational tool",
+        "Designed for one-handed outdoor use rather than adapted from a desktop layout",
+        "Deployed and in real use"
+      ],
+      "links": {
+        "demo": "https://hustlesync-3665b.web.app"
+      },
+      "businessContext": "A single-truck operation running four trades had no shared view of jobs or invoices across them.",
+      "challenge": "Build something genuinely usable mid-job, outdoors, one-handed — not a desktop tool made smaller.",
+      "scope": [
+        "Job tracking across four trades",
+        "Invoice capture and status",
+        "Mobile-first interface built for outdoor glare and one-handed use",
+        "Firebase hosting and data"
+      ]
+    },
+    {
+      "id": "wagegate-h1b-wage-checker",
+      "title": "WageGate: H1B Prevailing Wage Checker",
+      "subtitle": "Chrome extension putting official BLS wage levels on any job posting",
+      "category": "Independent Project",
+      "timeline": "2026",
+      "teamSize": "Solo Developer",
+      "status": "Released",
+      "date": "2026-03-16",
+      "summary": "A Chrome extension that checks H1B prevailing wage levels for any job title on any website. Highlight a title, right-click, and see where the salary falls on the H1B wage scale using official BLS OES data.",
+      "content": "# WageGate\n\nA Chrome extension that lets you check H1B prevailing wage levels for any job title on **any** website — LinkedIn, Indeed, Glassdoor, ZipRecruiter, a company careers page, anywhere.\n\nHighlight a job title, right-click, and see immediately where a salary falls on the H1B wage scale, using official **BLS OES** data.\n\n## Why build it\nFor anyone who needs sponsorship, the prevailing wage level is one of the most consequential numbers in a job posting, and it is almost never shown. The data is public but awkward to query mid-search. This puts it one right-click away, in context, on whatever site the posting happens to live on.\n\n## Approach\nRather than scraping or integrating with specific job boards — which breaks constantly — it works from the selected text on any page, so it does not care how a site is structured or when that structure changes.",
+      "technologies": [
+        "JavaScript",
+        "Chrome Extension APIs",
+        "BLS OES Data",
+        "Context Menus API"
+      ],
+      "impact": [
+        "Works on any website rather than a fixed list of supported job boards",
+        "Surfaces official BLS OES wage levels at the moment of reading a posting",
+        "Site-structure independent, so it does not break when job boards change their markup"
+      ],
+      "links": {
+        "repo": "https://github.com/dreamerskymaster/wagegate-extension"
+      },
+      "businessContext": "H1B prevailing wage level materially affects sponsorship viability, but is never displayed alongside the job posting it applies to.",
+      "challenge": "Make public wage data usable in context without depending on any individual job board's markup.",
+      "scope": [
+        "Right-click lookup from selected text on any page",
+        "BLS OES prevailing wage level mapping",
+        "Works across LinkedIn, Indeed, Glassdoor and arbitrary career pages"
+      ]
+    },
+    {
+      "id": "half-marathon-pace-simulator",
+      "title": "Half Marathon Pace Simulator",
+      "subtitle": "Modelling whether a goal pace is physiologically plausible",
+      "category": "Independent Project",
+      "timeline": "2026",
+      "teamSize": "Solo Developer",
+      "status": "Live",
+      "date": "2026-09-30",
+      "summary": "An interactive single-file visualiser that models the mathematical and physiological feasibility of half marathon pacing goals, built with zero build tooling — no Node runtime, no bundler, one HTML file.",
+      "content": "# Half Marathon Pace Simulator\n\nAn interactive, responsive single-file training visualiser that models the mathematical and **physiological** feasibility of half marathon pacing goals.\n\n## The question it answers\nNot \"what splits hit my target time\" — any calculator does that — but whether a target is plausible given the physiology behind it, and where a plan quietly assumes something the body will not deliver.\n\n## Architecture\nVanilla JavaScript, Tailwind via CDN and Chart.js via CDN, with **zero build tooling and no Node runtime**. The entire thing is one self-contained HTML file.\n\nThat is a deliberate choice: a tool like this should still open and work in five years without a dependency install, a lockfile resolution, or a toolchain that has since moved on.",
+      "technologies": [
+        "Vanilla JavaScript",
+        "Chart.js",
+        "Tailwind CSS",
+        "Physiological Modelling",
+        "Zero-Build Architecture"
+      ],
+      "impact": [
+        "Models physiological feasibility, not just arithmetic splits",
+        "Single self-contained HTML file with no build step or runtime dependency",
+        "Still runs years later without a toolchain to reinstall"
+      ],
+      "links": {
+        "demo": "https://dreamerskymaster.github.io/half-marathon-pace-simulator/",
+        "repo": "https://github.com/dreamerskymaster/half-marathon-pace-simulator"
+      },
+      "businessContext": "Pace calculators tell you the splits for a goal without saying whether the goal is realistic.",
+      "challenge": "Express physiological feasibility visually, in something that loads instantly and never needs maintenance.",
+      "scope": [
+        "Pace and split modelling",
+        "Physiological feasibility visualisation",
+        "Interactive Chart.js output",
+        "Single-file zero-build delivery"
+      ]
+    },
+    {
+      "id": "srikanth-consulting-site",
+      "title": "Consulting Practice Website",
+      "subtitle": "Marketing site for a campus-to-corporate and HR advisory practice",
+      "category": "Client Work",
+      "timeline": "2026",
+      "teamSize": "Solo Developer",
+      "status": "Live",
+      "date": "2026-10-16",
+      "summary": "A marketing site for a campus-to-corporate, POSH, coaching and HR advisory practice, built in plain HTML, CSS and JavaScript with no framework, no build step and no dependencies.",
+      "content": "# Consulting Practice Website\n\nMarketing site for a campus-to-corporate, POSH, coaching and HR advisory practice, covering the twelve-week Mindful Professional 360 curriculum, placement readiness for colleges, and graduate trainee bootcamps for corporates.\n\n## Deliberately boring technology\nPlain HTML, CSS and JavaScript. **No framework, no build step, no dependencies.**\n\nFor a brochure site maintained by a non-developer, that is the right call: nothing to upgrade, nothing to break on a dependency bump, and a page that can be edited by hand years from now. Hosted on Cloudflare Pages, where a push publishes.\n\n## Scope\nSeparate journeys for the two audiences that buy differently — colleges buying placement readiness, and corporates buying graduate trainee programmes — alongside the programme curriculum and third-party recommendations.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Cloudflare Pages"
+      ],
+      "impact": [
+        "Zero dependencies, so nothing can break from an upgrade",
+        "Push-to-publish on Cloudflare Pages with no build step",
+        "Separate conversion paths for college and corporate audiences"
+      ],
+      "links": {
+        "demo": "https://srikanthk.pages.dev"
+      },
+      "businessContext": "An advisory practice selling to two very different buyers — colleges and corporates — needed a credible web presence that would not require a developer to maintain.",
+      "challenge": "Build something maintainable by a non-developer, indefinitely, with no toolchain.",
+      "scope": [
+        "Home and programme pages",
+        "Dedicated college and corporate journeys",
+        "Recommendations and credibility content",
+        "Cloudflare Pages deployment"
+      ]
+    },
+    {
+      "id": "vanna-reverie-art-portfolio",
+      "title": "Vanna Reverie — Art Portfolio",
+      "subtitle": "A gallery site whose owner publishes by dropping files in Google Drive",
+      "category": "Client Work",
+      "timeline": "2026",
+      "teamSize": "Solo Developer",
+      "status": "Live",
+      "date": "2026-10-22",
+      "summary": "A static art portfolio whose gallery is generated by GitHub Actions directly from the artist's Google Drive folder, so she publishes new work by adding files to Drive rather than touching the site.",
+      "content": "# Vanna Reverie\n\nAn art portfolio site. Static HTML, CSS and JavaScript, with no build step on the server.\n\n## The part that matters\nThe gallery is **generated from the artist's own Google Drive folder**, which the build only ever reads. She adds a painting to Drive; the site picks it up.\n\nThat removes the usual failure mode of a portfolio built for someone else: it going stale the moment the developer stops maintaining it. There is no CMS to learn, no admin login, no deploy step — she works in the tool she already uses, and publishing is a side effect.\n\nCloudflare Pages is connected to the repository, so every push to main publishes.\n\n## Why read-only matters\nThe build has read access to Drive and nothing more. The source of truth stays with the artist, and the pipeline cannot damage it.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "GitHub Actions",
+        "Google Drive API",
+        "Cloudflare Pages"
+      ],
+      "impact": [
+        "Artist publishes by adding files to Google Drive, with no CMS and no deploy step",
+        "Build has read-only access, so the source of truth cannot be damaged by the pipeline",
+        "Push-to-publish via Cloudflare Pages"
+      ],
+      "links": {
+        "demo": "https://mah-artworks.pages.dev"
+      },
+      "businessContext": "A portfolio built for someone else goes stale the moment its developer stops maintaining it. The owner needed to publish without involving one.",
+      "challenge": "Make publishing a side effect of the artist's existing workflow rather than a new system to learn.",
+      "scope": [
+        "Static gallery site",
+        "Automated image pipeline from Google Drive",
+        "GitHub Actions build",
+        "Cloudflare Pages push-to-publish"
+      ]
+    },
+    {
+      "id": "ie4351-cyber-physical-labs",
+      "title": "IE 4351 Cyber-Physical Manufacturing Labs",
+      "subtitle": "Interactive laboratory materials built as teaching assistant",
+      "category": "Northeastern University",
+      "timeline": "2026",
+      "teamSize": "Teaching Assistant",
+      "status": "In Use",
+      "date": "2026-05-04",
+      "summary": "Interactive, slide-based laboratory materials for IE 4351 Cyber-Physical Manufacturing in Northeastern's MIE department, covering Industry 4.0, CNC milling and automated assembly, built while serving as the lab's teaching assistant.",
+      "content": "# IE 4351 — Cyber-Physical & Advanced Manufacturing Labs\n\nInteractive, slide-based laboratory materials for **IE 4351: Cyber-Physical Manufacturing** at Northeastern University's Mechanical & Industrial Engineering department, built while serving as the teaching assistant for the lab.\n\n## Contents\nA navigation hub plus per-lab modules covering cyber-physical manufacturing and Industry 4.0, subtractive manufacturing and CNC milling, and the automated assembly and robotics equipment used in the lab.\n\n## Why build it this way\nLab instruction normally lives in slide decks that students cannot revisit at the machine. Delivering it as browsable, self-contained web pages means a student can pull up the exact procedure while standing at the equipment, which is when it is actually needed.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "GitHub Pages",
+        "Instructional Design"
+      ],
+      "impact": [
+        "Used for hands-on lab instruction in Northeastern's MIE department",
+        "Browsable at the machine rather than locked in a slide deck",
+        "Self-contained and publicly hosted for student reference"
+      ],
+      "links": {
+        "demo": "https://dreamerskymaster.github.io/IE4351-CP-Lab/",
+        "repo": "https://github.com/dreamerskymaster/IE4351-CP-Lab"
+      },
+      "businessContext": "Graduate and undergraduate students needed lab procedures they could consult at the equipment, not only during the session.",
+      "challenge": "Turn lab instruction into something students can actually use while operating the machines.",
+      "scope": [
+        "Central navigation hub",
+        "Cyber-physical manufacturing and Industry 4.0 module",
+        "CNC milling module",
+        "Automated assembly and robotics content"
+      ]
+    },
+    {
+      "id": "ie7374-mlops-labs",
+      "title": "IE 7374 MLOps Laboratory Work",
+      "subtitle": "Machine learning operations coursework at Northeastern",
+      "category": "Northeastern University",
+      "timeline": "2026",
+      "teamSize": "Solo",
+      "status": "Completed",
+      "date": "2026-04-10",
+      "summary": "Laboratory assignments for IE 7374 Machine Learning Operations at Northeastern, covering Python development, infrastructure automation, interface design and machine learning integration across the production ML lifecycle.",
+      "content": "# IE 7374 — MLOps Laboratory Work\n\nLaboratory assignments for **IE 7374: Machine Learning Operations** at Northeastern University.\n\nEach module covers a different part of putting machine learning into production: Python development practice, infrastructure automation, interface design, and integrating models into working systems rather than leaving them in notebooks.\n\n## Why it is relevant\nMLOps is the gap between a model that works in a notebook and one that survives contact with production — versioning, pipelines, monitoring and deployment. That gap is exactly where most applied-AI projects fail, and it is the same discipline behind the production systems built during the Van Dyk co-op.",
+      "technologies": [
+        "Python",
+        "MLOps",
+        "Pipeline Automation",
+        "Machine Learning",
+        "Model Deployment"
+      ],
+      "impact": [
+        "Covers the full path from notebook model to deployed system",
+        "Python development, infrastructure automation and ML integration across modules"
+      ],
+      "links": {
+        "repo": "https://github.com/dreamerskymaster/IE7374LabsAjithSrikanth"
+      },
+      "businessContext": "Models that work in a notebook routinely fail to reach production. MLOps is the discipline that closes that gap.",
+      "challenge": "Build practical competence in versioning, pipelines, deployment and monitoring rather than model training alone.",
+      "scope": [
+        "Python development modules",
+        "Infrastructure automation",
+        "Interface design",
+        "Machine learning integration and deployment"
+      ]
     }
   ],
   "writings": [
