@@ -132,5 +132,10 @@ const urls = routes
   .join('\n');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 writeFileSync(join(dist, 'sitemap.xml'), sitemap);
+try {
+  writeFileSync(join(root, 'public/sitemap.xml'), sitemap);
+} catch {
+  // Ignored if public/ is read-only in build environment
+}
 
 console.log(`prerendered ${written} routes, sitemap has ${routes.length} urls`);

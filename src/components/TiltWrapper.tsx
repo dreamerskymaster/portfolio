@@ -51,7 +51,7 @@ export const TiltWrapper: React.FC<TiltWrapperProps> = ({ children, className = 
                     ...propStyle,
                     transition: isHovering ? 'none' : 'transform 0.5s ease-out',
                 }}
-                className={`relative group touch-none rounded-[inherit] ${className}`}
+                className={`relative group touch-pan-y rounded-[inherit] will-change-transform ${className}`}
             >
                 {/* Dynamic Glow Layer */}
                 <div

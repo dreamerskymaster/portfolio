@@ -28,17 +28,17 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, suffix = '', pref
     const animatedValue = useCountUp(value, 2000, delay);
 
     return (
-        <div className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center space-y-3 hover-lift group">
-            <div className="p-3 bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+        <div className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center space-y-3 hover-lift group border border-border/60 hover:border-primary/40 transition-all duration-300">
+            <div className="p-3 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors">
                 <div className="text-primary">
                     {icon}
                 </div>
             </div>
             <div>
-                <p className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                <p className="text-3xl md:text-4xl font-bold tracking-tight text-fg font-serif">
                     {prefix}{animatedValue.toLocaleString()}{suffix}
                 </p>
-                <p className="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1">
+                <p className="text-xs md:text-sm font-medium text-muted-foreground uppercase tracking-wider mt-1 font-mono">
                     {label}
                 </p>
             </div>
@@ -52,11 +52,11 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, suffix = '', pref
  */
 const ImpactDashboard: React.FC = () => {
     return (
-        <div className="w-full max-w-6xl mx-auto px-4 py-12">
+        <div className="w-full max-w-6xl mx-auto px-4 py-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <MetricCard
-                    label="Annual Savings"
-                    value={138000}
+                    label="Annual Business Value"
+                    value={200000}
                     prefix="$"
                     suffix="+"
                     icon={<TrendingUp size={28} />}
@@ -71,13 +71,13 @@ const ImpactDashboard: React.FC = () => {
                 />
                 <MetricCard
                     label="Systems Deployed"
-                    value={7}
+                    value={13}
                     icon={<Rocket size={28} />}
                     delay={400}
                 />
                 <MetricCard
                     label="Avg. ROI"
-                    value={813}
+                    value={819}
                     suffix="%"
                     icon={<ShieldCheck size={28} />}
                     delay={600}

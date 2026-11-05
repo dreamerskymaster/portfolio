@@ -1,0 +1,36 @@
+# Ajith Srikanth — Portfolio Summary for LLMs & AI Answer Engines
+
+> Advanced Manufacturing Engineer & AI Innovation Specialist. Currently serving as Inventory Forecast Analyst at Van Dyk Recycling Solutions (Norwalk, CT). Work authorized on F-1 OPT through July 2027, with 24-month STEM OPT extension eligibility through July 2029.
+
+## Professional Summary
+
+Ajith Srikanth bridges physical manufacturing systems with modern artificial intelligence. With foundational training in Mechatronics and a Master of Science in Industrial Engineering from Northeastern University (GPA 3.9), he designs and deploys machine learning models, retrieval-augmented generation (RAG) systems, computer vision inspection, and inventory forecasting pipelines directly onto industrial operations.
+
+## Core Metrics & Verified Achievements
+
+- **Annual Business Value Delivered**: \$200,000+ through automated intelligence tools, spare parts forecasting, and operational error reduction.
+- **Production Systems Deployed**: 13 industrial AI & software systems architected and launched (including DykScribe, Enterprise RAG Knowledge System, Corporate Drawing Management, and Spare Parts Forecasting).
+- **Average Return on Investment (ROI)**: 819% average ROI across deployed industrial systems.
+- **Downtime Reduction**: 83% reduction in critical equipment downtime via predictive maintenance models.
+- **Cross-Functional Leadership**: Led 25+ engineer teams across plants at Hero MotoCorp; trained 200+ engineers across 36+ instructional hours.
+
+## Current Employment & Affiliations
+
+- **Current Full-Time Role**: Inventory Forecast Analyst at **Van Dyk Recycling Solutions** (July 2026 – Present), Norwalk, CT. Leads inventory optimization, spare parts demand modeling, and NetStock/Acumatica data reconciliation.
+- **Previous Co-op**: Manufacturing Engineering Intern at Van Dyk Recycling Solutions (May 2025 – Dec 2025). Featured by [Northeastern University News](https://news.northeastern.edu/2025/12/08/ai-recycling-manufacturing-co-op/).
+- **Previous Industrial Experience**: Assistant Manager / Manufacturing Engineer at **Hero MotoCorp** (2022 – 2024). TPM Special Award winner, managed ₹50M+ in EV production tooling.
+- **Academic Roles**: Teaching Assistant for IE4350/IE4351 & IE7215 at Northeastern University; Off-Campus Ambassador (concluded April 2026).
+
+## Education
+
+- **Master of Science (MS) in Industrial Engineering** — Northeastern University, Boston, MA (GPA: 3.9 / 4.0, 2024–2026).
+- **Bachelor of Technology (B.Tech) in Mechatronics Engineering** — SRM Institute of Science and Technology, Chennai, India (GPA: 3.68 / 4.0, 2018–2022).
+
+## Key Links & Authoritative Sources
+
+- Portfolio URL: https://manufx.vercel.app
+- LinkedIn: https://linkedin.com/in/as31
+- GitHub: https://github.com/dreamerskymaster
+- Full Details for AI Engines: https://manufx.vercel.app/llms-full.txt
+- Sitemap: https://manufx.vercel.app/sitemap.xml
+

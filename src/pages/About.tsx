@@ -56,14 +56,14 @@ const About: React.FC = () => {
       title: "Teaching Assistant - IE4350/4351",
       company: "Northeastern University",
       course: "Industrial Engineering Capstone/Core",
-      period: "January 2026 - Present",
+      period: "January 2026 - April 2026",
       focus: "Mentoring engineers on manufacturing systems and design principles",
       icon: GraduationCap
     },
     leadership: {
       title: "Off-Campus Ambassador",
       company: "Northeastern University",
-      period: "January 2026 - Present",
+      period: "January 2026 - April 2026",
       focus: "Supporting the off-campus student community and advocating for student needs",
       icon: Users
     }

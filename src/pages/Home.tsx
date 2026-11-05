@@ -43,11 +43,11 @@ const Home: React.FC = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 16 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.175, 0.885, 0.32, 1.275] as any }
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
     }
   };
 

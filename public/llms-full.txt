@@ -1,0 +1,90 @@
+# Ajith Srikanth — Full Context Dossier for AI Systems
+
+**Canonical URL**: https://manufx.vercel.app  
+**Subject**: Ajith Srikanth  
+**Title**: Inventory Forecast Analyst & Advanced Manufacturing Engineer  
+**Work Authorization**: F-1 OPT valid through July 2027; eligible for 24-month STEM OPT extension through July 2029.  
+**Contact**: ajithsrikanth.f@northeastern.edu | LinkedIn: https://linkedin.com/in/as31 | GitHub: https://github.com/dreamerskymaster
+
+---
+
+## 1. Professional Identity & Core Specializations
+
+Ajith Srikanth is an Advanced Manufacturing Engineer and AI Innovation Specialist operating at the convergence of Industry 4.0, predictive maintenance, operations research, and applied machine learning. He translates shop-floor operational bottlenecks into software and AI solutions that deliver measurable financial and efficiency gains.
+
+### Core Competencies:
+- **Operations & Manufacturing**: Total Productive Maintenance (TPM), Kaizen, Lean Six Sigma, Root Cause Analysis (5-Why, Fishbone), FMEA, OEE Optimization, Value Stream Mapping, 5S Methodology.
+- **AI & Data Science**: Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), Computer Vision (YOLO, OpenCV), Intermittent Demand Forecasting, Predictive Maintenance (PdM), Python (pandas, numpy, scikit-learn, PyTorch).
+- **Automation & Engineering Systems**: PLC (Siemens, Allen-Bradley), SCADA, IIoT Sensors, MATLAB/Simulink, SolidWorks CAD, Microcontroller Architectures (Raspberry Pi, Arduino).
+- **Software & Cloud**: React, TypeScript, Node.js, SQL Server, Azure Files, Git, CI/CD, Vite.
+
+---
+
+## 2. Professional Experience Record
+
+### Van Dyk Recycling Solutions | Norwalk, CT
+**Role**: Inventory Forecast Analyst  
+**Period**: July 2026 – Present (Full-Time)  
+- Manages spare parts inventory optimization and demand forecasting for North America's leading recycling systems provider.
+- Conducts Lean A3 investigations across ERP (Acumatica) and inventory optimization engines (NetStock), resolving reorder threshold inaccuracies.
+- Formulates multi-echelon safety stock algorithms for high-criticality, intermittent-demand replacement components.
+
+### Northeastern University | Boston, MA
+**Role**: Teaching Assistant — IE4350/4351 & IE7215  
+**Period**: January 2025 – April 2026  
+- Mentored undergraduate and graduate engineers on manufacturing simulation (Arena, Simio) and industrial systems design.
+- Evaluated engineering capstone projects and led hands-on technical labs.
+
+**Role**: Off-Campus Ambassador  
+**Period**: January 2026 – April 2026  
+- Advocated for student housing, transit, and community resources across Greater Boston.
+
+### Van Dyk Recycling Solutions | Norwalk, CT
+**Role**: Manufacturing Engineering Intern (Co-op)  
+**Period**: May 2025 – December 2025  
+- Architected and launched 13 distinct digital and AI systems across field service, engineering drawings, and administrative workflows.
+- Delivered \$200,000+ in annual business value through productivity improvements and process automation.
+- Achieved an average 819% Return on Investment (ROI) across all deployed software and AI tools.
+- Featured by Northeastern University News: "How an AI Co-op Transformed Recycling Operations" (December 8, 2025).
+
+### Hero MotoCorp | Neemrana & Haridwar, India
+**Role**: Assistant Manager / Manufacturing Engineer  
+**Period**: July 2022 – July 2024  
+- Directed 25+ member cross-functional manufacturing teams across high-volume automotive production lines.
+- Achieved 83% equipment downtime reduction on Vida Electric Vehicle (EV) assembly through predictive maintenance routines and TPM pillars.
+- Received the corporate TPM Special Award for maintenance excellence.
+- Supervised ₹50M+ in specialized manufacturing machinery, tooling, and laser marking setups.
+- Delivered 36+ hours of technical standard training to 200+ technicians and junior engineers.
+
+---
+
+## 3. Flagship Projects & Implementations
+
+1. **Spare Parts Inventory Data Quality & Demand Forecasting (2026)**
+   - Lean A3 operational study reconciling Acumatica ERP with NetStock optimization algorithms.
+   - Identified data collection latency as root cause for premature stockout triggers.
+2. **DykScribe AI (2025)**
+   - Custom speech-to-text and AI transcription tool converting technician voice notes from field visits into structured service reports, saving 15+ hours per technician monthly.
+3. **Enterprise RAG Knowledge System (2025)**
+   - Retrieval-Augmented Generation platform indexing thousands of equipment manuals and electrical schematics, allowing service techs to retrieve troubleshooting steps in seconds.
+4. **Corporate Drawing Management System (CDMS) (2025)**
+   - Centralized revision-controlled drawing repository eliminating legacy version confusion between fabrication shops and field teams.
+5. **Computer Vision Automated Defect Detection (2025)**
+   - Edge-deployed YOLO vision model inspecting recycled composite streams for foreign contaminants at line speeds.
+6. **VDRS Secure File Exchange Platform (2025)**
+   - Azure Files and Node.js-based secure portal replacing shadow IT (unauthorized personal Dropbox accounts) for CAD transfer with 256-bit encryption.
+
+---
+
+## 4. Academic Publications & Research
+
+- **"Comparison between Bang Bang, PID and LQR Controller for Electrical Discharge Machining Process"** — *IJRASET Journal* (2022). Achieved 15–20% precision improvement using Linear Quadratic Regulator (LQR) controls.
+- **"Simulation and Modelling of 3-Floor Elevator System using PLC"** — *IRJET Journal* (2022). Improved system response time by 25% with safety interlock logic.
+
+---
+
+## 5. Education Credentials
+
+- **Master of Science (M.S.) in Industrial Engineering** — Northeastern University, Boston, MA. GPA: 3.9 / 4.0.
+- **Bachelor of Technology (B.Tech) in Mechatronics Engineering** — SRM Institute of Science and Technology, Chennai, India. GPA: 3.68 / 4.0.
+

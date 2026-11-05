@@ -14,8 +14,8 @@ export const useTiltEffect = (maxTilt: number = 10, perspective: number = 1000) 
   const onMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!elementRef.current) return;
     
-    // Only apply tilt on devices with a fine pointer (mouse)
-    if (!window.matchMedia("(pointer: fine)").matches) return;
+    // Only apply tilt on devices with a fine pointer (mouse) and when reduced motion is not requested
+    if (!window.matchMedia("(pointer: fine)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const rect = elementRef.current.getBoundingClientRect();
     if (rect.width === 0 || rect.height === 0) return;

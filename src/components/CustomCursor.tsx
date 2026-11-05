@@ -33,14 +33,11 @@ const CustomCursor: React.FC = () => {
     const handleMouseLeave = useCallback(() => setIsVisible(false), []);
 
     useEffect(() => {
-        // Check if device is touch-enabled
-        const checkMobile = () => {
-            setIsMobile(window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window);
-        };
+        // Check if device is touch-enabled or coarse pointer
+        const isTouch = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+        setIsMobile(isTouch);
 
-        checkMobile();
-
-        if (isMobile) return;
+        if (isTouch) return;
 
         window.addEventListener('mousemove', onMouseMove);
         window.addEventListener('mousedown', onMouseDown);

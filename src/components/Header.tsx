@@ -68,8 +68,8 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-      if (window.innerWidth >= 1024) {
+      setIsMobile(window.innerWidth < 1280);
+      if (window.innerWidth >= 1280) {
         setIsMenuOpen(false); // Auto-close menu on desktop
       }
     };
@@ -289,12 +289,22 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="xl:hidden flex items-center gap-2">
+          {/* Mobile menu button & quick actions */}
+          <div className="xl:hidden flex items-center gap-1.5">
+            <button
+              onClick={toggleSearch}
+              className="p-2 text-foreground hover:text-primary transition-colors focus:outline-none rounded-lg"
+              aria-label="Search portfolio"
+              title="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-foreground hover:text-primary transition-colors focus:outline-none"
+              className="p-2 text-foreground hover:text-primary transition-colors focus:outline-none rounded-lg"
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -368,7 +378,7 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className={`lg:hidden border-t border-border mobile-nav-menu ${isMenuOpen ? 'open block' : ''}`}
+              className={`xl:hidden border-t border-border mobile-nav-menu ${isMenuOpen ? 'open block' : ''}`}
             >
               <nav className="py-4 space-y-2">
                 {navigation.map((item) => (

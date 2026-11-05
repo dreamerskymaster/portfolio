@@ -110,5 +110,47 @@ export const technicalTerms: Record<string, {
     example: 'Like a smoke detector that stops you from cooking when it detects a problem - better to stop and fix the issue than continue and make it worse.',
     industry: 'Manufacturing',
     icon: 'octagon'
+  },
+  'rag-system': {
+    term: 'RAG (Retrieval-Augmented Generation)',
+    definition: 'An AI architecture that grounds large language model responses in verified internal technical manuals, schematics, and databases.',
+    example: 'Like an open-book exam for an AI - instead of guessing from memory, it searches company technical archives and quotes the exact page.',
+    industry: 'Applied AI & Industrial Tech',
+    icon: 'search'
+  },
+  'computer-vision': {
+    term: 'Computer Vision Inspection',
+    definition: 'Using cameras and deep learning vision models to automate visual quality control, surface defect detection, and part orientation.',
+    example: 'Like a superhuman inspector with zero fatigue checking thousands of manufactured parts per minute for microscopic flaws.',
+    industry: 'Industrial Automation',
+    icon: 'eye'
+  },
+  'demand-forecasting': {
+    term: 'Spare Parts Demand Forecasting',
+    definition: 'Statistical and machine-learning models predicting intermittent failure rates, safety stocks, and lead-time reorder triggers.',
+    example: 'Like weather forecasting for machinery breakdowns - predicting exactly when replacement bearings are needed before machines stop.',
+    industry: 'Supply Chain & Operations Research',
+    icon: 'trending-up'
+  },
+  'industry-4-0': {
+    term: 'Industry 4.0 / Smart Manufacturing',
+    definition: 'The fourth industrial revolution integrating IoT sensors, edge computing, AI algorithms, and cloud analytics into shop-floor machinery.',
+    example: 'Like turning a traditional factory into a smart home where every machine communicates its status and alerts operators in real time.',
+    industry: 'Manufacturing & Industrial IoT',
+    icon: 'cpu'
+  },
+  'plc-scada': {
+    term: 'PLC & SCADA Automation',
+    definition: 'Programmable Logic Controllers (hardware controllers) and SCADA systems monitoring and automating industrial electro-mechanical processes.',
+    example: 'Like the brain and nervous system of a factory - PLCs control motors and valves while SCADA shows operators the real-time status.',
+    industry: 'Industrial Automation',
+    icon: 'layers'
+  },
+  'lean-a3': {
+    term: 'A3 Problem Solving',
+    definition: 'A structured Lean methodology condensing complex operational root causes, countermeasures, and verification onto a single A3 sheet.',
+    example: 'Like an executive summary that aligns cross-functional engineering teams on the exact root cause and measurable action plan.',
+    industry: 'Continuous Improvement',
+    icon: 'file-text'
   }
 };

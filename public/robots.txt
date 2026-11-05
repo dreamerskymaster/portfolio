@@ -1,6 +1,27 @@
 User-agent: *
 Allow: /
 
+# Explicit AI crawler permissions for indexing & citation
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://manufx.vercel.app/sitemap.xml
+# LLM knowledge standard
+# https://llmstxt.org
+# llms.txt: https://manufx.vercel.app/llms.txt
+# llms-full.txt: https://manufx.vercel.app/llms-full.txt
+
 
 
