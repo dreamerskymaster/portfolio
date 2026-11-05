@@ -255,11 +255,10 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-3">
-            {/* Render simplified nav for tablet/smaller laptops if needed, or just keep actions */}
+          <div className="hidden xl:flex items-center gap-3">
             <button
               onClick={toggleSearch}
-              className="p-2.5 text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all"
+              className="p-2.5 text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-all"
               title="Search (Ctrl+K)"
             >
               <Search className="w-5 h-5" />
@@ -267,12 +266,12 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
 
             <ThemeToggle />
 
-            <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-700">
+            <div className="flex items-center gap-2 pl-2 border-l border-border">
               <a
                 href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all"
+                className="p-2.5 text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-all"
                 title="GitHub"
               >
                 <Github className="w-5 h-5" />
@@ -281,7 +280,7 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
                 href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all"
+                className="p-2.5 text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-all"
                 title="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
@@ -390,6 +389,7 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
                           <Link
                             key={link.name}
                             to={link.href}
+                            onClick={() => setIsMenuOpen(false)}
                             className={`flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-lg transition-colors duration-200 ${location.pathname === link.href
                               ? 'bg-primary/10 text-primary'
                               : 'text-foreground hover:bg-muted'
@@ -403,6 +403,7 @@ const Header: React.FC<HeaderProps> = ({ onLogoTap }) => {
                     ) : (
                       <Link
                         to={item.href || '#'}
+                        onClick={() => setIsMenuOpen(false)}
                         className={`block px-4 py-2.5 text-sm font-bold rounded-lg transition-colors duration-200 ${location.pathname === item.href
                           ? 'bg-primary/10 text-primary'
                           : 'text-foreground hover:bg-muted'

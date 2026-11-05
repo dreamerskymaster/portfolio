@@ -24,15 +24,15 @@ Ajith Srikanth is an Advanced Manufacturing Engineer and AI Innovation Specialis
 
 ### Van Dyk Recycling Solutions | Norwalk, CT
 **Role**: Inventory Forecast Analyst  
-**Period**: July 2026 – Present (Full-Time)  
-- Manages spare parts inventory optimization and demand forecasting for North America's leading recycling systems provider.
-- Conducts Lean A3 investigations across ERP (Acumatica) and inventory optimization engines (NetStock), resolving reorder threshold inaccuracies.
+**Period**: June 2026 – Present (Full-Time)  
+- Manages spare parts inventory optimization and intermittent demand forecasting for North America's leading recycling systems provider.
+- Conducts Lean A3 investigations across ERP (Acumatica) and inventory optimization engines (NetStock), mapping data lineage and eliminating stockouts.
 - Formulates multi-echelon safety stock algorithms for high-criticality, intermittent-demand replacement components.
 
 ### Northeastern University | Boston, MA
 **Role**: Teaching Assistant — IE4350/4351 & IE7215  
 **Period**: January 2025 – April 2026  
-- Mentored undergraduate and graduate engineers on manufacturing simulation (Arena, Simio) and industrial systems design.
+- Mentored undergraduate and graduate engineers on manufacturing simulation (Simio) and industrial systems design.
 - Evaluated engineering capstone projects and led hands-on technical labs.
 
 **Role**: Off-Campus Ambassador  
@@ -40,20 +40,21 @@ Ajith Srikanth is an Advanced Manufacturing Engineer and AI Innovation Specialis
 - Advocated for student housing, transit, and community resources across Greater Boston.
 
 ### Van Dyk Recycling Solutions | Norwalk, CT
-**Role**: Manufacturing Engineering Intern (Co-op)  
+**Role**: Manufacturing Engineering Co-op  
 **Period**: May 2025 – December 2025  
 - Architected and launched 13 distinct digital and AI systems across field service, engineering drawings, and administrative workflows.
-- Delivered \$200,000+ in annual business value through productivity improvements and process automation.
+- Delivered $200,000+ in annual business value through productivity improvements and process automation.
 - Achieved an average 819% Return on Investment (ROI) across all deployed software and AI tools.
 - Featured by Northeastern University News: "How an AI Co-op Transformed Recycling Operations" (December 8, 2025).
 
-### Hero MotoCorp | Neemrana & Haridwar, India
-**Role**: Assistant Manager / Manufacturing Engineer  
-**Period**: July 2022 – July 2024  
-- Directed 25+ member cross-functional manufacturing teams across high-volume automotive production lines.
-- Achieved 83% equipment downtime reduction on Vida Electric Vehicle (EV) assembly through predictive maintenance routines and TPM pillars.
-- Received the corporate TPM Special Award for maintenance excellence.
-- Supervised ₹50M+ in specialized manufacturing machinery, tooling, and laser marking setups.
+### Hero MotoCorp Ltd. | Haridwar & Tirupati, India
+**Role**: Team Manager — Manufacturing Excellence  
+**Period**: July 2022 – August 2024  
+- Directed 25+ member cross-functional manufacturing teams across high-volume automotive production lines producing 4M+ vehicles/year.
+- Led NPI for Vida Electric Vehicle (EV) assembly across two plants, reaching 85% OEE within 6 weeks.
+- Raised OEE by 38.9% and cut unplanned equipment downtime by 82.4% across CNC and robotic welding lines.
+- Deployed Cognex and Keyence automated optical inspection systems, saving ~$1.1M annually with 60% defect reduction.
+- Received the corporate TPM Special Award; instituted Daily Management Systems with 97% PM adherence.
 - Delivered 36+ hours of technical standard training to 200+ technicians and junior engineers.
 
 ---
@@ -63,15 +64,17 @@ Ajith Srikanth is an Advanced Manufacturing Engineer and AI Innovation Specialis
 1. **Spare Parts Inventory Data Quality & Demand Forecasting (2026)**
    - Lean A3 operational study reconciling Acumatica ERP with NetStock optimization algorithms.
    - Identified data collection latency as root cause for premature stockout triggers.
-2. **DykScribe AI (2025)**
+2. **Manufacturing Line Optimization (Simio) (2024)**
+   - Discrete-event simulation and line balancing cutting cycle time by 18.4% and raising throughput from 7,800 to 9,800 units (+25.6%).
+3. **DykScribe AI (2025)**
    - Custom speech-to-text and AI transcription tool converting technician voice notes from field visits into structured service reports, saving 15+ hours per technician monthly.
-3. **Enterprise RAG Knowledge System (2025)**
+4. **Enterprise RAG Knowledge System (2025)**
    - Retrieval-Augmented Generation platform indexing thousands of equipment manuals and electrical schematics, allowing service techs to retrieve troubleshooting steps in seconds.
-4. **Corporate Drawing Management System (CDMS) (2025)**
+5. **Corporate Drawing Management System (CDMS) (2025)**
    - Centralized revision-controlled drawing repository eliminating legacy version confusion between fabrication shops and field teams.
-5. **Computer Vision Automated Defect Detection (2025)**
-   - Edge-deployed YOLO vision model inspecting recycled composite streams for foreign contaminants at line speeds.
-6. **VDRS Secure File Exchange Platform (2025)**
+6. **Deterministic BOM Extraction from Engineering Drawings (2026)**
+   - Coordinate-geometry CAD table extraction pipeline achieving 91.5% accuracy without hallucination risk.
+7. **VDRS Secure File Exchange Platform (2025)**
    - Azure Files and Node.js-based secure portal replacing shadow IT (unauthorized personal Dropbox accounts) for CAD transfer with 256-bit encryption.
 
 ---
@@ -85,6 +88,6 @@ Ajith Srikanth is an Advanced Manufacturing Engineer and AI Innovation Specialis
 
 ## 5. Education Credentials
 
-- **Master of Science (M.S.) in Industrial Engineering** — Northeastern University, Boston, MA. GPA: 3.9 / 4.0.
+- **Master of Science (M.S.) in Advanced and Intelligent Manufacturing** — Northeastern University, Boston, MA. GPA: 3.90 / 4.0.
 - **Bachelor of Technology (B.Tech) in Mechatronics Engineering** — SRM Institute of Science and Technology, Chennai, India. GPA: 3.68 / 4.0.
 

@@ -4,7 +4,7 @@
 
 ## Professional Summary
 
-Ajith Srikanth bridges physical manufacturing systems with modern artificial intelligence. With foundational training in Mechatronics and a Master of Science in Industrial Engineering from Northeastern University (GPA 3.9), he designs and deploys machine learning models, retrieval-augmented generation (RAG) systems, computer vision inspection, and inventory forecasting pipelines directly onto industrial operations.
+Ajith Srikanth bridges physical manufacturing systems with modern artificial intelligence. With foundational training in Mechatronics and a Master of Science in Advanced and Intelligent Manufacturing from Northeastern University (GPA 3.90), he designs and deploys machine learning models, retrieval-augmented generation (RAG) systems, computer vision inspection, and inventory forecasting pipelines directly onto industrial operations.
 
 ## Core Metrics & Verified Achievements
 
@@ -16,14 +16,14 @@ Ajith Srikanth bridges physical manufacturing systems with modern artificial int
 
 ## Current Employment & Affiliations
 
-- **Current Full-Time Role**: Inventory Forecast Analyst at **Van Dyk Recycling Solutions** (July 2026 – Present), Norwalk, CT. Leads inventory optimization, spare parts demand modeling, and NetStock/Acumatica data reconciliation.
-- **Previous Co-op**: Manufacturing Engineering Intern at Van Dyk Recycling Solutions (May 2025 – Dec 2025). Featured by [Northeastern University News](https://news.northeastern.edu/2025/12/08/ai-recycling-manufacturing-co-op/).
-- **Previous Industrial Experience**: Assistant Manager / Manufacturing Engineer at **Hero MotoCorp** (2022 – 2024). TPM Special Award winner, managed ₹50M+ in EV production tooling.
+- **Current Full-Time Role**: Inventory Forecast Analyst at **Van Dyk Recycling Solutions** (June 2026 – Present), Norwalk, CT. Leads inventory optimization, intermittent demand forecasting, and NetStock/Acumatica Python and SQL analytics.
+- **Previous Co-op**: Manufacturing Engineering Co-op at Van Dyk Recycling Solutions (May 2025 – Dec 2025). Shipped 13 production systems with 819% average ROI; featured by [Northeastern University News](https://news.northeastern.edu/2025/12/08/ai-recycling-manufacturing-co-op/).
+- **Previous Industrial Experience**: Team Manager — Manufacturing Excellence at **Hero MotoCorp Ltd.** (Haridwar & Tirupati, Jul 2022 – Aug 2024). Led Vida EV NPI launch to 85% OEE in 6 weeks, achieved 38.9% OEE increase, 82.4% downtime reduction, Cognex/Keyence optical vision saving ~$1.1M/yr, and TPM Special Award.
 - **Academic Roles**: Teaching Assistant for IE4350/IE4351 & IE7215 at Northeastern University; Off-Campus Ambassador (concluded April 2026).
 
 ## Education
 
-- **Master of Science (MS) in Industrial Engineering** — Northeastern University, Boston, MA (GPA: 3.9 / 4.0, 2024–2026).
+- **Master of Science (MS) in Advanced and Intelligent Manufacturing** — Northeastern University, Boston, MA (GPA: 3.90 / 4.0, 2024–2026).
 - **Bachelor of Technology (B.Tech) in Mechatronics Engineering** — SRM Institute of Science and Technology, Chennai, India (GPA: 3.68 / 4.0, 2018–2022).
 
 ## Key Links & Authoritative Sources
