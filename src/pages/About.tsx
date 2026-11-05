@@ -48,16 +48,16 @@ const About: React.FC = () => {
       title: "Inventory Forecast Analyst",
       company: "VAN DYK Recycling Solutions",
       location: "Norwalk, Connecticut",
-      period: "July 2026 - Present",
-      focus: "Inventory and spare parts analytics for the service parts operation",
+      period: "June 2026 - Present",
+      focus: "Spare parts inventory optimization, intermittent demand forecasting, and ERP-integrated analytics",
       icon: Building
     },
     academic: {
-      title: "Teaching Assistant - IE4350/4351",
+      title: "Teaching Assistant - IE4350/4351 & IE7215",
       company: "Northeastern University",
-      course: "Industrial Engineering Capstone/Core",
-      period: "January 2026 - April 2026",
-      focus: "Mentoring engineers on manufacturing systems and design principles",
+      course: "Capstone & Simulation Analysis (Simio)",
+      period: "January 2025 - Present",
+      focus: "Mentoring engineers on discrete-event simulation, manufacturing systems, and scale-up design",
       icon: GraduationCap
     },
     leadership: {
@@ -73,93 +73,79 @@ const About: React.FC = () => {
     {
       phase: "Foundation Building",
       period: "2018-2022",
-      focus: "Mechatronics Engineering & Core Concepts",
+      focus: "Mechatronics Engineering & Core Systems",
       achievements: [
-        "B.Tech Mechatronics (GPA 3.68) - SRM Institute of Science and Technology",
+        "B.Tech in Mechatronics Engineering (GPA 3.68) - SRM Institute of Science and Technology",
         "Merit-based scholarship recipient for academic excellence",
-        "Research publications in EDM controllers and control systems",
-        "Final year project on IIoT-based manufacturing systems",
-        "Active participation in technical symposiums and competitions"
+        "Published research in EDM controllers (IJRASET) and PLC elevator systems (IRJET)",
+        "Fluid power and hydraulic systems engineering training at Bosch Rexroth (Sanand, Gujarat)",
+        "Active leadership in techno-management fest Aaruush and national engineering symposiums"
       ],
-      technologies: ["MATLAB", "SolidWorks", "PLC Programming", "Control Systems", "Arduino", "Raspberry Pi"],
+      technologies: ["MATLAB", "SolidWorks", "PLC Ladder Logic", "Control Systems", "Hydraulics", "C++", "Python"],
       icon: BookOpen,
       color: "bg-blue-500"
     },
     {
-      phase: "Industrial Application",
+      phase: "Industrial Application & Scale-Up",
       period: "2022-2024",
-      focus: "Manufacturing Excellence & Team Leadership at Hero MotoCorp",
+      focus: "Manufacturing Excellence & Operations Leadership at Hero MotoCorp",
       achievements: [
-        "Led 25+ member cross-functional teams across multiple manufacturing plants",
-        <TechnicalTooltip key="tpm" term="TPM (Total Productive Maintenance)" definition="A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Like regularly maintaining your car to prevent breakdowns - oil changes, tire rotations, and check-ups keep it running smoothly." industry="Manufacturing" icon="wrench">
-          TPM Special Award for maintenance excellence and process optimization
+        "Led 25+ member cross-functional engineering and operator teams at Hero's 4M+ vehicle/yr plants (Haridwar & Tirupati)",
+        "Led NPI for Vida EV launch across two plants, reaching 85% OEE in 6 weeks with custom fixtures & tooling",
+        <TechnicalTooltip key="oee" term="OEE (Overall Equipment Effectiveness)" definition="Standard metric measuring manufacturing productivity by multiplying Availability, Performance, and Quality." example="A plant running at 85% OEE is considered world-class benchmark." industry="Manufacturing" icon="wrench">
+          Raised OEE by 38.9% and cut unplanned equipment downtime by 82.4% across CNC and robotic welding lines
         </TechnicalTooltip>,
-        "Managed Vida EV production line tools and equipment worth ₹50M+",
-        "Delivered 36+ hours of technical training to 200+ engineers",
-        <TechnicalTooltip key="downtime" term="Downtime Reduction" definition="The process of minimizing the time when equipment or systems are not operational due to maintenance, breakdowns, or other issues." example="Like reducing the time your car spends in the repair shop - the less time it's broken, the more you can use it productively." industry="Manufacturing" icon="clock">
-          Achieved 83% downtime reduction through predictive maintenance implementation
-        </TechnicalTooltip>,
-        "Generated ₹9M+ annual savings through supply chain efficiency initiatives"
-      ],
-      technologies: ["SAP", "SCADA", "IoT Sensors", "Automation Systems",
-        <TechnicalTooltip key="tpm-tech" term="TPM" definition="Total Productive Maintenance - A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Like regularly maintaining your car to prevent breakdowns - oil changes, tire rotations, and check-ups keep it running smoothly." industry="Manufacturing" icon="wrench">
-          TPM
-        </TechnicalTooltip>,
-        <TechnicalTooltip key="six-sigma" term="Six Sigma" definition="A data-driven methodology for eliminating defects and improving quality in processes." example="Like ensuring 99.99966% of your products are perfect - if you made 1 million products, only 3.4 would be defective." industry="Quality Management" icon={<BarChart className="w-4 h-4" />}>
-          Six Sigma
-        </TechnicalTooltip>,
-        <TechnicalTooltip key="lean" term="Lean Manufacturing" definition="A methodology focused on minimizing waste while maximizing productivity and value for customers." example="Like organizing your kitchen - removing unused items, arranging tools efficiently, and having everything you need within reach." industry="Manufacturing" icon={<RefreshCw className="w-4 h-4" />}>
-          Lean Manufacturing
+        "Deployed Cognex and Keyence automated optical inspection systems, saving ~$1.1M annually with 60% defect reduction",
+        <TechnicalTooltip key="tpm" term="TPM (Total Productive Maintenance)" definition="A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Structured PM adherence recovered ~430 downtime hours." industry="Manufacturing" icon="wrench">
+          Awarded corporate TPM Special Award; instituted Daily Management Systems with 97% PM adherence
         </TechnicalTooltip>
       ],
+      technologies: ["SolidWorks", "AutoCAD", "SAP ERP", "Cognex Vision", "Keyence", "Mitsubishi PLC", "TPM", "Six Sigma", "Kaizen"],
       icon: Wrench,
       color: "bg-green-500"
     },
     {
-      phase: "AI Innovation & Education",
-      period: "2024-2025",
-      focus: "Intelligent Manufacturing, Teaching & Academic Excellence",
+      phase: "Graduate Engineering & Simulation",
+      period: "2024-2026",
+      focus: "Master of Science in Advanced and Intelligent Manufacturing (GPA 3.90)",
       achievements: [
-        "Developed ManuFX troubleshooting assistant using LLaMA and edge computing",
-        "IoT Smart Cell dashboard implementation with 11% availability improvement",
-        "Advanced simulation modeling expertise with Simio and MATLAB",
-        "Teaching and mentoring emerging engineers at Northeastern University",
-        "Course Assistant for Advanced Manufacturing and Simulation Analysis",
-        "LEAD360 Teaching Assistant for leadership development programs"
+        "Master of Science in Advanced and Intelligent Manufacturing at Northeastern University (GPA: 3.90/4.0)",
+        "Manufacturing Line Optimization (Simio): Cut cycle time by 18.4% and raised throughput from 7,800 to 9,800 units",
+        "Course Assistant & TA for IE7215 Simulation Analysis (Simio) and IE4350/4351 Industrial Engineering Capstone",
+        "LEAD360 Teaching Assistant for leadership development across engineering cohorts",
+        "Specialization in scale-up to controlled production, SPC, and digital manufacturing systems"
       ],
-      technologies: ["LLaMA", "Docker", "AWS IoT", "Simio", "Python", "Edge Computing", "LLM Fine-tuning"],
+      technologies: ["Simio", "Digital Manufacturing", "SPC", "DOE", "Minitab", "Python", "MLOps"],
       icon: Brain,
       color: "bg-purple-500"
     },
     {
-      phase: "VDRS Co-op Experience",
+      phase: "VDRS Co-op & Production AI",
       period: "2025",
-      focus: "AI-Powered Solutions & Cross-Industry Innovation",
+      focus: "13 Production Systems & Enterprise AI at Van Dyk Recycling Solutions",
       achievements: [
-        "Developed DykScribe AI Q&A system with 95%+ accuracy in audio processing",
-        "Implemented RAG system for intelligent document search and knowledge management",
-        "Created comprehensive Data Extractor Suite with multi-method PDF processing",
-        "Built BlobCheck automated data verification system for cloud-database consistency",
-        "Designed Van Dyk One cross-platform mobile app for field service management",
-        "Applied automotive manufacturing expertise to recycling and sustainability challenges",
-        "Demonstrated cost-effective AI implementation with ethical usage principles"
+        "Shipped 13 production tools & AI systems delivering $200K+ annual value and 819% average ROI",
+        "Built AI data-extraction pipeline (Python, GPT-4 Vision, OpenCV) at 91.5% accuracy, cutting manual entry by 76%",
+        "Developed web equipment management suite (Flask, SQL Server) with real-time tracking, raising decision efficiency by 32.6%",
+        "Deployed enterprise RAG knowledge system on Azure indexing 10,000+ manuals (featured in Northeastern Global News)",
+        "Engineered Container Document Management System (CDMS) reducing customs clearance delays by 42%"
       ],
-      technologies: ["OpenAI Whisper", "GPT-4", "ChromaDB", "Vector Search", "React Native", "Azure Blob Storage", "SQL Server", "Streamlit", "PaddleOCR"],
+      technologies: ["Python", "Flask", "OpenAI GPT-4", "Whisper", "ChromaDB", "Azure Blob Storage", "SQL Server", "React"],
       icon: Zap,
       color: "bg-orange-500"
     },
     {
-      phase: "Current Focus: AI & Smart Mfg",
+      phase: "Inventory Forecast Analyst",
       period: "2026-Present",
-      focus: "Sustainable Manufacturing & Advanced AI Applications",
+      focus: "Full-Time Operations Research & Supply Chain Optimization at Van Dyk",
       achievements: [
-        "Advanced coursework: ML Ops, Human Performance Engineering, and Digital Manufacturing",
-        "Teaching Assistant for IE4350/4351, bridging academic theory with industrial practice",
-        "Off-Campus Ambassador, fostering student community and professional networking",
-        "Developing AI models for cost-effective IoT implementation in smart manufacturing",
-        "Promoting sustainability through circular economy principles in engineering design"
+        "Lead demand forecasting and inventory optimization for recycling equipment service and spare parts",
+        "Testing quantitative models for intermittent, lumpy demand where standard moving averages fail",
+        "Engineered production Python/SQL analytics pipelines integrated with Acumatica ERP and NetStock optimizer",
+        "Conducted Lean A3 root-cause investigation across ERP and optimizer data lineage, eliminating stockout risks",
+        "Replaced default supplier lead times with measured receipt-history analytics to prevent late replenishment"
       ],
-      technologies: ["ML Ops", "Smart Manufacturing", "IoT Strategy", "Process Optimization", "Human Factors"],
+      technologies: ["Acumatica ERP", "NetStock", "Python", "SQL", "A3 Problem Solving", "Lean", "Intermittent Demand Modeling"],
       icon: Globe,
       color: "bg-emerald-500"
     }
@@ -265,7 +251,7 @@ const About: React.FC = () => {
           >
             <ParallaxHeading direction="vertical" distance={20} className="mb-0">
               <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
-                Current Focus (2025)
+                Current Focus & Leadership
               </h2>
             </ParallaxHeading>
             <div className="grid md:grid-cols-3 gap-6">

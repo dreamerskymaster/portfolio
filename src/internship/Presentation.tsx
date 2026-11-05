@@ -3010,7 +3010,6 @@ const Presentation = () => {
               <p className="text-center text-gray-300">Northeastern University</p>
               <div className="border-t border-white/20 my-4"></div>
               <p className="text-center text-gray-300">ajithsrikanth.f@northeastern.edu</p>
-              <p className="text-center text-gray-300">(857) 339-9017</p>
               <p className="text-center text-gray-300">linkedin.com/in/as31</p>
             </div>
           </div>

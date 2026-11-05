@@ -13,19 +13,35 @@ export interface TimelineItem {
 export const timeline: TimelineItem[] = [
   // Current Work (Most Recent)
   {
+    id: 'van-dyk-analyst-2026',
+    title: 'Inventory Forecast Analyst',
+    organization: 'Van Dyk Recycling Solutions',
+    location: 'Norwalk, CT',
+    period: 'June 2026 - Present',
+    type: 'work',
+    description: 'Leading spare parts inventory optimization and demand forecasting for North America\'s premier recycling equipment systems. Building Python/SQL analytics integrated with Acumatica ERP and NetStock.',
+    skills: ['Inventory Optimization', 'Demand Forecasting', 'Acumatica ERP', 'NetStock', 'Python', 'SQL', 'A3 Problem Solving', 'Lean'],
+    achievements: [
+      'Forecasting demand and inventory for service and spare parts on recycling systems',
+      'Modeling intermittent, lumpy demand where moving averages and normal safety stocks fail',
+      'Built Python and SQL analytics pipelines integrated with Acumatica ERP and NetStock',
+      'Conducted Lean A3 root-cause audit across ERP and optimizer data lineage, eliminating stockout risks'
+    ]
+  },
+  {
     id: 'van-dyk-intern-2025',
-    title: 'Manufacturing Engineering Intern',
+    title: 'Manufacturing Engineering Co-op',
     organization: 'VAN DYK Recycling Solutions',
     location: 'Norwalk, Connecticut',
     period: 'May 2025 - Dec 2025',
     type: 'work',
-    description: 'Leading sustainable manufacturing process optimization and recycling system improvements. Focus on circular economy principles and waste optimization strategies.',
-    skills: ['Sustainable Manufacturing', 'Circular Economy', 'Process Optimization', 'Waste Management', 'Recycling Systems'],
+    description: 'Shipped 13 production tools and AI systems still in use after the co-op ended, delivering an estimated 819% average ROI across deployed systems.',
+    skills: ['Python', 'Computer Vision', 'GPT-4 Vision', 'OpenCV', 'Flask', 'SQL Server', 'Azure Blob Storage', 'ChromaDB', 'RAG'],
     achievements: [
-      'Implementing sustainable manufacturing processes',
-      'Optimizing recycling system efficiency',
-      'Developing circular economy strategies',
-      'Contributing to environmental sustainability goals'
+      'Built AI data-extraction pipeline (Python, GPT-4 Vision, OpenCV) at 91.5% accuracy that cut manual data entry by 76%',
+      'Developed web-based equipment management suite (Flask, SQL Server) improving stakeholder decision efficiency by 32.6%',
+      'Deployed enterprise RAG AI knowledge system on Azure indexing 10,000+ technical manuals (featured in Northeastern Global News)',
+      'Built Container Document Management System (CDMS) reducing customs clearance delays by 42%'
     ]
   },
   {
@@ -66,35 +82,34 @@ export const timeline: TimelineItem[] = [
     title: 'Master of Science in Advanced and Intelligent Manufacturing',
     organization: 'Northeastern University',
     location: 'Boston, MA',
-    period: 'September 2024 - August 2026 (Expected)',
+    period: 'August 2024 - June 2026',
     type: 'education',
-    description: 'Specialized coursework in Process Design, Lean Manufacturing, Intelligent Manufacturing, Digital Manufacturing, and Simulation Analysis. Focus on bridging smart manufacturing, supply chain optimization, and AI-driven automation.',
-    skills: ['Advanced Manufacturing', 'Process Design', 'Lean Manufacturing', 'Intelligent Manufacturing', 'Digital Manufacturing', 'Simulation Analysis'],
+    description: 'Specialized coursework in Process Design, Lean Manufacturing, Intelligent Manufacturing, Digital Manufacturing, and Simulation Analysis. Focus on scale-up to controlled production, SPC, and digital manufacturing.',
+    skills: ['Advanced Manufacturing', 'Process Design', 'Lean Manufacturing', 'Intelligent Manufacturing', 'Digital Manufacturing', 'Simulation Analysis (Simio)', 'SPC', 'DOE'],
     achievements: [
-      'Current GPA: 3.90/4.0',
-      'Expected Graduation: August 2026',
-      'Focus: Industry 4.0 and Smart Manufacturing Integration',
-      'Specialized in AI-driven manufacturing solutions'
+      'GPA: 3.90/4.0',
+      'Specialized in scale-up to controlled production, SPC, and digital manufacturing',
+      'Manufacturing Line Optimization: Cut cycle time by 18.4% and raised throughput from 7,800 to 9,800 units',
+      'Teaching Assistant and Course Assistant for core engineering courses'
     ]
   },
   // Previous Work Experience
   {
     id: 'hero-motocorp-team-manager-2024',
-    title: 'Team Manager - Manufacturing Excellence',
-    organization: 'Hero MotoCorp',
-    location: 'India',
-    period: 'January 2022 - August 2024',
+    title: 'Team Manager — Manufacturing Excellence',
+    organization: 'Hero MotoCorp Ltd.',
+    location: 'Haridwar & Tirupati, India',
+    period: 'July 2022 - August 2024',
     type: 'work',
-    description: 'Led manufacturing optimization initiatives for robotic welding systems and IoT-enabled smart manufacturing cells. Implemented predictive maintenance strategies and SAP MRP digitization for Vida Electric Vehicle production.',
-    skills: ['PLC/HMI Automation', 'IoT Integration', 'Predictive Maintenance', 'SAP MRP', 'Robotic Welding', 'Supply Chain Optimization', 'TPM', 'Lean Manufacturing'],
+    description: 'Led cross-functional teams of 25+ operators and engineers driving operational excellence across Engine, Weld, and EV shops at facilities producing 4M+ vehicles annually.',
+    skills: ['SolidWorks', 'AutoCAD', 'Cognex Vision', 'Keyence', 'Mitsubishi PLC', 'SAP ERP', 'TPM', 'Six Sigma', 'Kaizen'],
     achievements: [
-      'Achieved 15% efficiency boost through PLC/HMI automation for robotic welding systems',
-      'Implemented IoT-enabled Smart Cell Dashboard with Limble CMMS, gaining 11% availability improvement',
-      'Reduced downtime by 83% through predictive maintenance implementation',
-      'Achieved ₹28 per EV cost reduction (~$0.5/vehicle) through tool cost optimization',
-      'Contributed to significant annual savings through supply chain efficiency and lean initiatives',
-      'Optimized fixtures and jigs for Vida Electric Vehicle manufacturing',
-      'Digitized SAP MRP for demand forecasting and inventory optimization'
+      'Led NPI for Vida EV production launch across two plants, reaching 85% OEE within 6 weeks',
+      'Raised OEE by 38.9% and cut unplanned downtime by 82.4% across CNC and robotic welding lines',
+      'Deployed Cognex and Keyence automated optical inspection systems, saving ~$1.1M annually with 60% defect reduction',
+      'Eliminated 12 recurring failure modes through structured 5-Why and Pareto analyses, reducing breakdowns by 75.7%',
+      'Built Daily Management Systems (DMS) achieving 97% PM adherence and recovering ~430 downtime hours',
+      'Honored with corporate TPM Special Award for data-driven predictive maintenance excellence'
     ]
   },
   {

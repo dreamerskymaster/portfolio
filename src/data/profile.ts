@@ -69,6 +69,16 @@ export interface Volunteering {
   bullets?: string[];
 }
 
+export interface Education {
+  degree: string;
+  institution: string;
+  location: string;
+  period: string;
+  gpa?: string;
+  courses?: string[];
+  highlights?: string[];
+}
+
 /**
  * Root profile interface containing all professional metadata.
  */
@@ -83,6 +93,7 @@ export interface Profile {
   /** E.164-ish WhatsApp number; non-digits are stripped when building the wa.me link. */
   whatsapp?: string;
   skills: { [group: string]: string[] };
+  education?: Education[];
   experience: Experience[];
   projects: Project[];
   writings: Writing[];
@@ -97,7 +108,6 @@ export const profile: Profile = {
   "socials": {},
   "location": "Boston, MA | Chennai, India",
   "linkedin": "https://linkedin.com/in/as31",
-  "whatsapp": "+1 (857) 339-9017",
   "github": "https://github.com/dreamerskymaster",
   "skills": {
     "Manufacturing Excellence": [
@@ -156,19 +166,60 @@ export const profile: Profile = {
     "Microcontroller Programming & PCB Design",
     "Root Cause Analysis in Six Sigma"
   ],
+  "education": [
+    {
+      "degree": "Master of Science in Advanced and Intelligent Manufacturing",
+      "institution": "Northeastern University",
+      "location": "Boston, MA",
+      "period": "Aug 2024 – June 2026",
+      "gpa": "3.90 / 4.0",
+      "courses": [
+        "Manufacturing Process Design Engineering",
+        "Digital Manufacturing",
+        "Intelligent Manufacturing",
+        "Lean Concepts and Applications",
+        "Simulation Analysis (Simio)",
+        "MLOps & Scalable Engineering"
+      ],
+      "highlights": [
+        "Specialization in scale-up to controlled production, SPC, and digital manufacturing",
+        "Course Assistant and Teaching Assistant for core engineering and simulation courses"
+      ]
+    },
+    {
+      "degree": "Bachelor of Technology in Mechatronics Engineering",
+      "institution": "SRM Institute of Science and Technology",
+      "location": "Chennai, India",
+      "period": "2018 – 2022",
+      "gpa": "3.68 / 4.0",
+      "courses": [
+        "Control Systems",
+        "Manufacturing Methods",
+        "Industrial IoT",
+        "Embedded Systems",
+        "Robotics & Automation"
+      ],
+      "highlights": [
+        "Merit-based scholarship recipient for academic excellence",
+        "Research publications in EDM controllers and PLC elevator simulation"
+      ]
+    }
+  ],
   "experience": [
     {
       "company": "Van Dyk Recycling Solutions",
       "role": "Inventory Forecast Analyst",
       "location": "Norwalk, CT",
-      "start": "Jul 2026",
+      "start": "Jun 2026",
       "end": "Present",
       "bullets": [
         "# Inventory Forecast Analyst",
-        "Full-time role at Van Dyk Recycling Solutions, working on inventory and spare parts analytics for the service parts operation.",
-        "## Focus",
-        "*   **Forecasting & Operations Research**: Applying forecasting and modeling methods to spare parts demand and maintenance planning.",
-        "*   **Returning to VDRS**: Continuing from the 2025 AI and engineering co-op, now focused on the inventory and forecasting side of the business."
+        "Full-time role at Van Dyk Recycling Solutions leading spare parts inventory optimization and demand forecasting for North America's premier recycling equipment systems.",
+        "## Key Responsibilities & Achievements",
+        "*   **Demand Forecasting**: Forecast demand and plan inventory for service and spare parts on recycling and sorting equipment, linking stocking decisions to field failure modes and wear rather than only sales history.",
+        "*   **Intermittent Demand Modeling**: Testing quantitative forecasting models for intermittent, lumpy demand where traditional moving averages and normal-distribution safety stocks break down.",
+        "*   **Python & SQL Analytics**: Developed production Python and SQL analytics pipelines directly integrated with Acumatica ERP and NetStock to automate operational replenishment recommendations.",
+        "*   **Lean A3 Data Quality Audit**: Conducted an A3 root-cause investigation across the ERP system of record and inventory optimizer, mapping data lineage field-by-field and eliminating stockout risks."
       ]
     },
     {
@@ -219,22 +270,20 @@ export const profile: Profile = {
     },
     {
       "company": "Van Dyk Recycling Solutions",
-      "role": "Manufacturing Engineering Intern",
+      "role": "Manufacturing Engineering Co-op",
       "location": "Norwalk, CT",
       "start": "May 2025",
       "end": "Dec 2025",
       "bullets": [
-        "# Manufacturing Engineering Intern",
-        "At Van Dyk Recycling Solutions, I operated at the intersection of manufacturing engineering and artificial intelligence. My primary focus was to identify operational inefficiencies and solve them using cutting-edge AI and automation technologies.",
+        "# Manufacturing Engineering Co-op",
+        "At Van Dyk Recycling Solutions, operated at the intersection of manufacturing engineering, digital operations, and artificial intelligence to eliminate operational bottlenecks and automate mission-critical workflows.",
         "## Key Achievements",
-        "*   **$200K+ Annual Business Value**: Delivered quantifiable value through productivity improvements and error reduction.",
-        "*   **13 Systems Deployed**: Architected and launched a suite of tools including DykScribe, RAG Knowledge System, and CDMS.",
-        "*   **819% Average ROI**: Demonstrated exceptional return on investment for developed solutions.",
-        "## Core Responsibilities",
-        "*   **Digital Transformation**: Led the transition from manual, paper-based workflows to intelligent, digital systems.",
-        "*   **AI Application**: Applied Large Language Models (LLMs) and computer vision to solve real-world manufacturing challenges.",
-        "*   **Full-Stack Development**: Built end-to-end solutions using React, Python, SQL Server, and Azure.",
-        "*   **Process Optimization**: utilized Lean Manufacturing principles (Kaizen, Value Stream Mapping) to optimize software development and deployment."
+        "*   **$200K+ Annual Business Value**: Delivered quantifiable recurring value through productivity improvements and automated error reduction.",
+        "*   **13 Production Systems Deployed**: Architected and launched 13 distinct software and AI tools still active in daily production (including DykScribe, Azure RAG Knowledge System, and CDMS).",
+        "*   **819% Average ROI**: Demonstrated exceptional quantifiable return on investment across deployed automation solutions.",
+        "*   **AI Data-Extraction Pipeline**: Built an AI data-extraction pipeline using Python, Computer Vision, GPT-4 Vision, LayoutParser, and OpenCV achieving 92% accuracy, cutting manual data entry by 80% across 1,000+ technical PDF documents.",
+        "*   **Equipment Management Suite**: Engineered web-based equipment management suite (Flask, SQL Server, Streamlit) with real-time tracking dashboards for 500+ equipment records across 8+ dynamic filters, boosting stakeholder decision efficiency by 35%.",
+        "*   **Automated Data QA (BlobCheck)**: Developed automated validation tools verifying cloud-database consistency between Azure Blob Storage and SQL Server records."
       ]
     },
     {
@@ -247,8 +296,8 @@ export const profile: Profile = {
         "# Teaching Assistant - IE7215",
         "In this role, I supported the instruction of the graduate-level course IE7215: Simulation and Modeling.",
         "## Key Responsibilities",
-        "*   **Academic Support**: Guided students through the theoretical and practical aspects of system simulation.",
-        "*   **Technical Guidance**: Provided hands-on assistance with industry-standard simulation software.",
+        "*   **Academic Support**: Guided students through the theoretical and practical aspects of system simulation using Simio.",
+        "*   **Technical Guidance**: Provided hands-on assistance with industry-standard simulation software and bottleneck analysis.",
         "*   **Evaluation**: Assessed student performance and provided constructive feedback to enhance learning outcomes."
       ]
     },
@@ -265,23 +314,21 @@ export const profile: Profile = {
       ]
     },
     {
-      "company": "Hero MotoCorp",
-      "role": "Team Manager - Manufacturing Excellence",
-      "location": "India",
-      "start": "2022",
-      "end": "2024",
+      "company": "Hero MotoCorp Ltd.",
+      "role": "Team Manager — Manufacturing Excellence",
+      "location": "Haridwar & Tirupati, India",
+      "start": "Jul 2022",
+      "end": "Aug 2024",
       "bullets": [
         "# Team Manager — Manufacturing Excellence",
-        "As a Team Manager at Hero MotoCorp's largest manufacturing plants (Haridwar & Tirupati), I led cross-functional teams of 25+ operators and engineers to drive operational excellence across Engine, Weld, and EV shops. My work focused on stabilizing production, optimizing capital expenditure, and leading digital transformation initiatives.",
+        "As Team Manager at Hero MotoCorp's largest manufacturing plants (Haridwar & Tirupati), led cross-functional teams of 25+ operators and engineers driving operational excellence across Engine, Weld, and EV shops at a facility producing 4M+ vehicles annually.",
         "## High-Impact Systems & Automations",
-        "* **PLC & IoT Modernization**: Led the migration of 7 robotic welding lines to Mitsubishi FX5U PLCs, integrating real-time IoT dashboards for predictive maintenance and pulse-control welding, resulting in a 15% defect reduction.",
-        "* **Machine Reliability**: Optimized high-precision Honing machines by migrating from HDD to SSD Siemens controllers, extending machine service life from 2 to 5 years.",
-        "* **SAP Process Automation**: Developed custom SAP scripts and VBA macros that slashed monthly Preventive Maintenance (PM) planning time from 30 hours to just 2 hours.",
-        "* **EV Manufacturing (Vida Line)**: Spearheaded the redesign of battery assembly fixtures and specialized tooling, boosting production throughput by 23% for Hero's flagship EV.",
-        "## Operational Strategy",
-        "* **Material Flow optimization**: Replaced manual trolley systems with Automated Guided Vehicle (AGV) routes, achieving a 65% Net Resource Reduction (NRR).",
-        "* **CAPEX Procurement**: Successfully negotiated commercial and technical terms for EV plant equipment, delivering ₹5 Lakh in direct savings.",
-        "* **TPM & Lean Leadership**: Successfully implemented Autonomous and Planned Maintenance pillars, contributing to a plant-wide 83% downtime reduction."
+        "* **Vida EV NPI Launch**: Led New Product Introduction (NPI) for the Vida EV production launch across two plants, designing fixtures, jigs, and automation programs in SolidWorks and AutoCAD; reached 85% OEE within 6 weeks.",
+        "* **Downtime & OEE Optimization**: Raised OEE by 38.9% (to 40%) and cut unplanned equipment downtime by 82.4% (to 83%) across CNC, PLC-controlled, and robotic welding lines via predictive maintenance routines and Kaizen.",
+        "* **Defect Reduction & Computer Vision**: Deployed Cognex and Keyence automated optical inspection systems on assembly lines, cutting defects from 5% to 2% and delivering ~$1.1M in annual savings.",
+        "* **Structured Root Cause Analysis**: Ran structured 5-Why, Fishbone, and Pareto root-cause analyses that permanently eliminated 12 recurring failure modes, reducing breakdowns by 75.7%.",
+        "* **Daily Management Systems (DMS)**: Built Excel and SAP-based analytical DMS dashboards consolidating breakdown logs, MTTR/MTBF metrics, and PM schedules, achieving 97% PM adherence and recovering ~430 downtime hours.",
+        "* **TPM Special Award**: Honored with corporate TPM Special Award for data-driven excellence in Predictive Maintenance and Zero-Breakdown initiatives."
       ]
     },
     {
@@ -1145,32 +1192,33 @@ export const profile: Profile = {
     },
     {
       "id": "connecting-rod-assembly",
-      "title": "Optimized Connecting Rod Assembly Line",
-      "subtitle": "Process Optimization for Leading Two-Wheeler Manufacturer",
-      "category": "Manufacturing Engineering",
+      "title": "Manufacturing Line Optimization (Simio)",
+      "subtitle": "Discrete-Event Simulation & Dynamic Buffer Management",
+      "category": "Northeastern University",
       "timeline": "Oct 2024 - Dec 2024",
       "status": "Completed",
-      "summary": "Enhanced the efficiency of a major motorcycle manufacturer's connecting rod assembly line using IoT and Simio simulation, achieving 20% cycle time reduction and a significant WIP increase.",
-      "content": "# Optimized Connecting Rod Assembly Line\n\n## Overview\nLed a comprehensive optimization of a major motorcycle manufacturer's connecting rod assembly line using IoT-enabled Smart Cell technology and Simio simulation.\n\n## Key Improvements\n1.  **Increased Throughput**: Boosted daily Work-in-Process (WIP) levels by 25%, increasing output by 2,000 units daily.\n2.  **Cycle Time Reduction**: Achieved 15-20% reduction in cycle time through optimized worker allocation.\n3.  **Machine Availability**: Improved overall availability by 11% using IoT-driven predictive maintenance.\n4.  **Maintenance Excellence**: Decreased Mean Time To Repair (MTTR) by 33%.\n\n## Technical Implementation\n*   **Simio Simulation**: Built discrete event simulation models to validate line-balancing and worker allocation strategies before physical deployment.\n*   **IoT Smart Cell Dashboard**: Deployed real-time production monitoring integrated with Limble CMMS to track machine health and uptime.\n*   **Predictive Maintenance**: Implemented condition-based monitoring, reducing defect rates by 15%.\n\n\n## Iterations & Lessons Learned\nWhen the Simio simulation model was compared against actual production data, there was a significant gap between predicted and real-world performance. The simulation underestimated the impact of operator variability and unplanned micro-stoppages that don't show up in machine logs but accumulate into measurable throughput losses. I had to recalibrate the model by incorporating stochastic elements for human factors and adjusting machine reliability distributions based on actual MTBF/MTTR data rather than manufacturer specifications.\n\nThis experience reinforced that simulation models are only as good as their input assumptions, and that validating against reality early (rather than waiting for full implementation) is critical to avoiding costly misalignment between predicted and actual outcomes.",
-      "technologies": ["Simio", "IoT", "MATLAB", "Python", "Limble CMMS", "Predictive Maintenance", "Process Optimization"],
+      "summary": "Discrete-event simulation and Smart Cell line balancing at Northeastern University; cut cycle time by 18.4% and raised throughput from 7,800 to 9,800 units through dynamic buffer management.",
+      "content": "# Manufacturing Line Optimization (Simio)\n\n## Overview\nLed discrete-event simulation and line balancing for high-volume automotive manufacturing, optimizing buffer allocations and worker assignments using Simio Professional and Smart Cell IoT concepts.\n\n## Key Improvements\n1.  **Increased Throughput**: Raised daily throughput from 7,800 to 9,800 units (+25.6%) through dynamic buffer management.\n2.  **Cycle Time Reduction**: Cut cycle time by 18.4% through bottleneck optimization and balanced line sequencing.\n3.  **Machine Availability**: Improved overall availability by 11% using condition-based monitoring.\n4.  **Maintenance Excellence**: Decreased Mean Time To Repair (MTTR) by 33%.\n\n## Technical Implementation\n*   **Simio Simulation**: Built discrete-event simulation models to test line-balancing and dynamic buffer strategies prior to physical re-tooling.\n*   **IoT Smart Cell Dashboard**: Designed production monitoring concepts integrated with Limble CMMS to track equipment uptime and cycle variances.\n*   **Predictive Maintenance**: Modeled reliability curves to guide condition-based maintenance, reducing defect rates.\n\n## Iterations & Lessons Learned\nWhen the Simio simulation model was compared against production data, there was an initial gap between predicted and actual performance. The simulation initially underestimated operator variability and stochastic micro-stoppages that do not appear in equipment error logs. Recalibrating the model with empirical reliability distributions (actual MTBF/MTTR) proved that simulation models are only as robust as their input assumptions, making early shop-floor ground-truth validation essential.",
+      "technologies": ["Simio", "IoT", "MATLAB", "Python", "Limble CMMS", "Predictive Maintenance", "Process Optimization", "DOE"],
       "impact": [
-        "Increased daily WIP by 2,000 units (25%)", 
-        "Reduced cycle time by 20%",
-        "Decreased MTTR by 33%", 
-        "Improved machine availability by 11%"
+        "Cut cycle time by 18.4% through bottleneck optimization",
+        "Raised throughput from 7,800 to 9,800 units (+25.6%) via dynamic buffer management",
+        "Decreased MTTR by 33% using predictive maintenance protocols",
+        "Improved machine availability by 11% with IoT condition monitoring"
       ],
       "links": {},
-      "businessContext": "Need to maximize throughput and minimize downtime on a critical automotive assembly line.",
-      "challenge": "Validating complex line-balancing and maintenance improvements before causing costly physical disruptions.",
-      "scope": ["IoT Smart Cell Dashboard", "Simio Simulation modeling", "Maintenance strategy overhaul"],
+      "businessContext": "Need to maximize throughput and minimize downtime on a high-volume manufacturing line without capital-intensive line re-designs.",
+      "challenge": "Validating complex line-balancing and buffer management improvements before causing costly physical disruptions.",
+      "scope": ["Simio discrete-event simulation modeling", "Dynamic buffer allocation", "Bottleneck and cycle time analysis", "Maintenance strategy overhaul"],
       "technicalSolution": {
-        "simulation": ["Simio Professional 3D modeling"], 
-        "hardware": ["IoT sensors integrated with Limble CMMS"]
+        "simulation": ["Simio Professional 3D discrete-event modeling"],
+        "hardware": ["IoT Smart Cell monitoring integrated with Limble CMMS"]
       },
       "quantifiedResults": {
-        "WIP Increase": "+2,000 units/day", 
-        "Cycle Time": "20% reduction",
-        "MTTR": "33% reduction"
+        "Throughput Increase": "7,800 → 9,800 units/day (+25.6%)",
+        "Cycle Time Reduction": "18.4%",
+        "MTTR Reduction": "33%",
+        "Machine Availability": "+11%"
       },
       "images": ["/projects/connecting-rod-assembly.webp"],
       "recognition": [],

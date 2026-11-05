@@ -8,8 +8,7 @@ import { profile } from '../data/profile';
  * Floating WhatsApp click-to-chat widget.
  *
  * The number is read from VITE_WHATSAPP_NUMBER and must include the country
- * code (for example "18573399017"). Everything that is not a digit is
- * stripped before building the wa.me link, so "+1 (857) 339-9017" also works.
+ * code. Everything that is not a digit is stripped before building the wa.me link.
  *
  * If the variable is unset the widget renders nothing at all, so an
  * unconfigured deploy never shows a dead chat button.
