@@ -1,191 +1,118 @@
-# 🏭 ManuFX - Ajith Srikanth Portfolio
+# 🏭 ManuFX — Engineering & AI Portfolio
 
-> **Advanced Manufacturing Engineer & AI Innovation Specialist**  
-> Bridging Smart Manufacturing, Supply Chain Optimization, and AI-Driven Automation for Industry 4.0 Transformation
+**Bridging physical manufacturing systems with modern artificial intelligence.**
+
+> **Live Portfolio**: Explore interactive project breakdowns, 3D tilt cards, and LLM-ready knowledge bases at [manufx.vercel.app](https://manufx.vercel.app).
 
 <div align="center">
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-manufx.vercel.app-00D4AA?style=for-the-badge&logo=vercel)](https://manufx.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-dreamerskymaster-181717?style=for-the-badge&logo=github)](https://github.com/dreamerskymaster)
+[![CI Pipeline](https://img.shields.io/github/actions/workflow/status/dreamerskymaster/portfolio/pipeline.yml?branch=main&style=for-the-badge&label=CI%20Pipeline)](https://github.com/dreamerskymaster/portfolio/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ajith%20Srikanth-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/as31)
-[![Email](https://img.shields.io/badge/Email-ajithsrikanth.f@northeastern.edu-D14836?style=for-the-badge&logo=gmail)](mailto:ajithsrikanth.f@northeastern.edu)
-
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdreamerskymaster%2Fportfolio)
 
 </div>
 
-## 🚀 Live Demo
+<!-- DEMO GIF (5-10 s): scroll the home page from the hero to the impact dashboard, open one project card and its demo. Save as docs/demo.gif, then replace this line with ![ManuFX Demo](docs/demo.gif) -->
+[![ManuFX Portfolio Preview](public/logo/ManuFX.jpg)](https://manufx.vercel.app)
 
-**🌐 Portfolio Website**: [https://manufx.vercel.app](https://manufx.vercel.app)  
-**📁 GitHub Repository**: [https://github.com/dreamerskymaster/portfolio](https://github.com/dreamerskymaster/portfolio)
-
-## 🔄 Automatic Deployment
-
-This portfolio features **GitHub Actions** for seamless CI/CD:
-
-- ✅ **Push to main** → Automatic production deployment
-- ✅ **Pull requests** → Preview deployments  
-- ✅ **CI/CD Pipeline** → Automated testing and building
-- ✅ **Environment Variables** → Secure configuration management
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Development](#development)
-- [Deployment](#deployment)
-- [Key Sections](#key-sections)
-- [Media & Assets](#media--assets)
-- [Performance](#performance)
-- [Contributing](#contributing)
-- [License](#license)
-
-## 🎯 Overview
-
-This portfolio represents **Ajith Srikanth**, an Advanced Manufacturing Engineer with expertise in:
-
-- **🏭 Manufacturing Excellence**: TPM, Kaizen, Lean Methodology, OEE optimization
-- **🤖 Automation & Systems**: PLC/HMI Programming, SCADA, IoT, Industry 4.0
-- **🧠 AI & Innovation**: Machine Learning, Computer Vision, Predictive Analytics
-- **👥 Leadership**: Cross-functional team management, Training & Development
-
-## ✨ Features (Overhaul v2.0)
-
-### 🎨 **Premium UI/UX**
-- **OLED Dark Mode**: True black background for incredible contrast.
-- **Warm Light Mode**: Editorial-style warm paper theme for readability.
-- **Typography System**: Integrated Satoshi, Instrument Serif, and JetBrains Mono for a premium feel.
-- **Glassmorphic Design**: Modern glassmorphic effects with dynamic gradient backgrounds.
-- **Micro-Interactions**: Custom trailing cursor, section parallax, and animated link underlines.
-
-### 📱 **Interactive Sections**
-- **Impact Dashboard**: Dynamic metrics grid with animated counters (`useCountUp`).
-- **3D Tilt Cards**: Project cards with interactive 3D tilt and glow effects.
-- **Professional Timeline**: Interactive career progression with detailed achievements.
-- **Personal Interests**: Gamified hobbies section with media galleries.
-- **Technical Tooltips**: Interactive explanations for industry-specific terms.
-
-### 🔧 **Technical Excellence**
-- **SPA Routing**: Seamless Single Page Application transitions via `react-router-dom`.
-- **SEO Optimized**: Helmet-powered metadata and JSON-LD Structured Data for high search rankings.
-- **Accessibility**: ARIA labels, skip-links, and full keyboard navigation support.
-- **Performance**: Code splitting, lazy loading, and zero build-time syntax errors.
-
-## 🛠️ Tech Stack
-
-### **Frontend**
-- **React 18** - Component-based UI library
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **React Router DOM** - Client-side routing
-
-### **Build & Deployment**
-- **Vite** - Fast build tool and dev server
-- **Vercel** - Cloud platform for deployment
-- **GitHub Actions** - CI/CD automation
-
-## 📁 Project Structure
-
-```
-├── src/
-│   ├── components/          # UI Components
-│   │   ├── ui/              # Atom-level components (Button, Card, Chip)
-│   │   ├── CustomCursor.tsx # Trailing cursor logic
-│   │   ├── ImpactDashboard.tsx # Animated metrics
-│   │   ├── PageTransition.tsx  # Global blur-fade wrapper
-│   │   ├── ScrollProgress.tsx  # Vertical reading indicator
-│   │   └── ParallaxHeading.tsx # Parallax header effects
-│   ├── pages/              # Routed Page Components
-│   ├── data/               # Static Data Modules
-│   │   ├── profile.ts      # Main career & project data
-│   │   └── technicalTerms.ts # Tooltip definitions
-│   ├── utils/              # Hooks & Logic
-│   │   ├── useTiltEffect.ts # 3D interaction hook
-│   │   └── useCountUp.ts    # Counter animation hook
-│   └── styles/             # Global CSS & Tokens
-├── public/                 # Static Assets (ManuFX logo, etc.)
-├── content/               # Markdown content (Projects, Articles)
-└── .github/workflows/     # CI/CD configuration
-```
-
-## 🚀 Installation
-
-### Prerequisites
-- **Node.js 20+** (CI pins Node 20)
-- **npm**
-
-### Quick Start
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/dreamerskymaster/portfolio.git
-   cd portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-## 🔧 Development
-
-### Available Scripts
-
-```bash
-# Development
-npm run dev          # Start development server (port 5173)
-npm run build        # Production build, then prerender 34 routes + sitemap
-npm run preview      # Preview production build (port 4173)
-npm run prerender    # Re-run prerendering alone against an existing dist/
-
-# Code Quality
-npm run lint         # ESLint (flat config)
-npx tsc --noEmit     # TypeScript type checking
-npm test             # Vitest
-```
-
-> **Note:** there is no `npm run typecheck` script — use `npx tsc --noEmit`.
-> CI runs lint, typecheck, `npm audit --audit-level=high --omit=dev` and tests.
-
-## 🔍 SEO & Performance
-
-- **Prerendering** — `scripts/prerender.mjs` runs after every build and emits a
-  real HTML file per route (34 of them) with that route's title, description,
-  canonical, Open Graph tags and JSON-LD, plus content in `<noscript>`. Without
-  this, a client-rendered SPA serves an empty `#root` to crawlers that don't run
-  JavaScript, including GPTBot, ClaudeBot and PerplexityBot.
-- **Sitemap** — generated from the same route list at build time, so it can't
-  drift from what actually ships.
-- **Media** — project and hobby images are WebP; hobby videos are H.264 MP4 with
-  faststart. Avoid adding PNG/JPEG heroes, `.MOV` or HEIC: HEIC doesn't render in
-  Chrome or Firefox, and VP9-in-MOV doesn't play in Safari.
-- **Backgrounds** — heavy effects (Three.js globe, particle fields) are lazy
-  loaded and skipped entirely on small screens, coarse pointers and
-  `prefers-reduced-motion`.
-
-## 🖼️ Media & Assets
-
-This project uses a centralized mapping system for all visual content. See the [Media & Assets Mapping Guide](MEDIA_GUIDE.md) for details.
-
-## 🤝 Contributing
-
-This is a personal professional portfolio. While it is public, it is maintained for individual professional representation.
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
+An open-source, high-performance portfolio and industrial AI showcase built for engineers, technical recruiters, and manufacturing leaders. Powered by React 18, Vite, Tailwind CSS, and zero-dependency static SSR prerendering for AI search engines.
 
 ---
 
-**Built with ❤️ by Ajith Srikanth | ManuFX Branding**
+## ⚡ Quick Start (One Command)
 
-*Last updated: February 2026*
+Clone, install dependencies, and launch the development server in a single command:
+
+```bash
+git clone https://github.com/dreamerskymaster/portfolio.git && cd portfolio && npm install && npm run dev
+```
+
+The app will be live at `http://localhost:5173`.
+
+---
+
+## 💡 Key Highlights
+
+- **Static SSR Prerendering for LLMs**: A zero-dependency script (`scripts/prerender.mjs`) generates static semantic HTML for all 43 routes after every build, complete with canonical tags, JSON-LD, OpenGraph cards, and machine-readable context (`/llms.txt` and `/llms-full.txt`). Solves the SPA blank-page problem for ClaudeBot, GPTBot, and PerplexityBot.
+- **60fps Fluid Motion**: Custom Framer Motion cubic-bezier curves, hardware-accelerated 3D tilt cards (`useTiltEffect`), animated counter reveals (`useCountUp`), and an optional desktop trailing cursor.
+- **Mobile & Battery First**: Automatic coarse-pointer detection (`(pointer: coarse)`) turns off heavy canvas elements, Three.js shaders, and trailing rings on mobile/tablet devices.
+- **Dual OLED & Warm Paper Themes**: Instant theme toggle between high-contrast OLED dark mode and an editorial warm paper light theme with zero Flash of Unstyled Content (FOUC).
+- **Embedded Technical Glossary**: Interactive tooltips explaining core industrial engineering & AI concepts (TPM, OEE, Lean A3, RAG systems, Computer Vision, Demand Forecasting).
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| **Core Frontend** | [React 18](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/) |
+| **Motion & Physics** | [Framer Motion](https://www.framer.com/motion/), Custom 3D Tilt Hook |
+| **Icons & Design** | [Lucide React](https://lucide.dev/), Custom Glassmorphic Tokens |
+| **Build & Tooling** | [Vite 8](https://vitejs.dev/) (ESM native), [Vitest](https://vitest.dev/), ESLint Flat Config |
+| **SEO & Machine Readability** | Custom HTML Prerenderer, `/llms.txt`, Schema.org JSON-LD |
+| **Deployment** | [Vercel](https://vercel.com/) with automated GitHub Actions CI/CD pipeline |
+
+---
+
+## 📁 Repository Structure
+
+```
+├── src/
+│   ├── components/       # UI Atoms, Navigation, Tilt Cards, Glossary Tooltips
+│   ├── pages/            # Home, About, Projects, Detail, Writings, Resume
+│   ├── data/             # profile.ts (single source of truth), technicalTerms.ts
+│   ├── utils/            # useTiltEffect, useCountUp, client-side search
+│   └── styles/           # Tailwind variables, OLED & warm themes
+├── public/               # Static assets, /llms.txt, /llms-full.txt, resume PDF
+├── scripts/              # prerender.mjs (static route generator)
+├── .github/
+│   ├── workflows/        # pipeline.yml (lint, typecheck, audit, test)
+│   └── ISSUE_TEMPLATE/   # Bug report and feature request templates
+├── CONTRIBUTING.md       # Contribution guidelines & 24h SLA
+└── LICENSE               # MIT License
+```
+
+---
+
+## 🔧 Available Commands
+
+```bash
+# Development & Build
+npm run dev          # Start local dev server (port 5173)
+npm run build        # Build bundle & prerender 43 static HTML routes + sitemap.xml
+npm run preview      # Preview production build locally
+npm run prerender    # Regenerate static route HTML without rebuilding JS bundle
+
+# Code Quality & Tests
+npm run lint         # Run ESLint across source files
+npx tsc --noEmit     # Full TypeScript type check
+npm test             # Run Vitest unit tests
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions, feedback, and suggestions are welcome! Please check out [CONTRIBUTING.md](CONTRIBUTING.md) for local development setup and pull request guidelines.
+
+I actively monitor this repository and review issues and pull requests **within 24 hours**.
+
+---
+
+## ⭐ Star History
+
+<a href="https://www.star-history.com/?type=date&repos=dreamerskymaster%2Fportfolio">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=dreamerskymaster%2Fportfolio&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=dreamerskymaster%2Fportfolio&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=dreamerskymaster%2Fportfolio&type=date&legend=top-left" />
+ </picture>
+</a>
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
