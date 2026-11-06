@@ -7,6 +7,7 @@
 <div align="center">
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-manufx.vercel.app-00D4AA?style=for-the-badge&logo=vercel)](https://manufx.vercel.app)
+[![Launch Video](https://img.shields.io/badge/Launch%20Video-brag.mp4-E11D48?style=for-the-badge&logo=video)](brag-output/brag.mp4)
 [![CI Pipeline](https://img.shields.io/github/actions/workflow/status/dreamerskymaster/portfolio/pipeline.yml?branch=main&style=for-the-badge&label=CI%20Pipeline)](https://github.com/dreamerskymaster/portfolio/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ajith%20Srikanth-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/as31)
@@ -14,8 +15,13 @@
 
 </div>
 
-<!-- DEMO GIF (5-10 s): scroll the home page from the hero to the impact dashboard, open one project card and its demo. Save as docs/demo.gif, then replace this line with ![ManuFX Demo](docs/demo.gif) -->
-[![ManuFX Portfolio Preview](public/logo/ManuFX.jpg)](https://manufx.vercel.app)
+<div align="center">
+
+[![ManuFX Launch Demo](docs/demo.gif)](https://manufx.vercel.app)
+
+*Full 1080p 60fps release video with sound available at [`brag-output/brag.mp4`](brag-output/brag.mp4)*
+
+</div>
 
 An open-source, high-performance portfolio and industrial AI showcase built for engineers, technical recruiters, and manufacturing leaders. Powered by React 18, Vite, Tailwind CSS, and zero-dependency static SSR prerendering for AI search engines.
 

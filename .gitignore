@@ -53,3 +53,4 @@ temp/
 .vercel
 content/*.pptx
 public/internship_backup/
+.hyperframes/

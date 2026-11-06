@@ -22,3 +22,4 @@ I built ManuFX (https://manufx.vercel.app) to solve two core challenges that man
    - Device-aware performance guards: heavy Three.js canvas components, trailing cursors, and particle fields are automatically disabled on mobile or coarse-pointer screens (`(pointer: coarse)`).
 
 The entire codebase is open-source under the MIT license. Would love to hear feedback from the community on the design, performance architecture, or SEO approach!
+
