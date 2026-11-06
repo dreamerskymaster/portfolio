@@ -1,3 +1,4 @@
 Introducing ManuFX: From $1.1M/yr optical defect inspection and 85% EV launch OEE to enterprise RAG agents and 43 LLM-prerendered routes.
 Bridging physical shop-floor manufacturing with modern AI systems.
 Explore the live interactive portfolio at https://manufx.vercel.app
+

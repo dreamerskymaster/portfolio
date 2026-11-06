@@ -34,3 +34,4 @@ Create a high-energy, polished brag launch video for ManuFX (Ajith Srikanth's Ma
 - Music: `assets/music/bgm.mp3` (`happy-beats-business-moves-vol-1-by-ende-dot-app.mp3`)
 - SFX: `assets/sfx/chime.ogg`, `assets/sfx/click.ogg`
 - Balance: Music data-volume="0.85", SFX data-volume="0.6"
+

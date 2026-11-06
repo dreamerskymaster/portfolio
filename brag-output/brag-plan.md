@@ -76,3 +76,4 @@
 - SFX: `click.ogg`, `chime.ogg`
 - Volume: Music at 0.85, SFX at 0.60
 - Fades: 0.5s fade-in at start, 1.2s fade-out at end.
+
