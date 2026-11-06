@@ -1,7 +1,15 @@
 # CLAUDE.md
 
 Guidance for Claude Code when working in this repository.
-Last verified against the code: **2026-09-26**.
+Last verified against the code: **2026-10-23**.
+
+## Current status (2026-10-23)
+- One branch: `main`. **34 projects.**
+- PRs #4–#6 merged 2026-10-22 but **not yet deployed**: live site still
+  404s on `/favicon-32.png` and serves a 34-URL sitemap instead of 43.
+- Work from a fresh clone (e.g. `~/Projects/portfolio-work`). The three
+  OneDrive copies have **no `.git`** after the Oct 2026 relocation.
+- `MLOpsAjith` is a fork of `raminmohammadi/MLOps` — never list it.
 
 ## What this is
 
@@ -148,22 +156,31 @@ removed in Sept 2026. Check references before adding assets.
 `/internship/DSC01xxx.JPG` mapping and PNG paths. Trust the data files.
 
 ## Deployment / CI
-`.github/workflows/pipeline.yml`, on push to `main`/`develop` and PRs to `main`:
+`.github/workflows/pipeline.yml` is **CI only** — two jobs, on push to
+`main` and on PRs:
 1. **verify** - `npm run lint`, `npx tsc --noEmit`,
    `npm audit --audit-level=high --omit=dev`, `npm test`
-2. **build** - `npm run build`, uploads the `dist/` artifact
-3. **deploy** - push to `main` only:
-   `npm i -g vercel@latest`, then `vercel pull` / `vercel build --prod` /
-   `vercel deploy --prebuilt --prod --archive=tgz`, using the
-   `VERCEL_TOKEN` / `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` secrets.
+2. **build** - `npm run build` (includes prerender), uploads `dist/`
 
-**Do not reintroduce `amondnet/vercel-action`.** It pinned Vercel CLI 25.1.0
-and the deploy endpoint now requires >= 47.2.2, so it fails outright. The
-Vercel project is `ajiths-projects-12e1832d/portfoliovone`.
+**There is no deploy job** (removed in PR #4). Deploys are **manual**:
 
-`--archive=tgz` is there because the deploy step once stalled 3.4 hours
-uploading a 462MB payload. If it stalls again, the durable fix is Vercel's
-Git integration (Vercel clones the repo itself, no runner upload).
+```bash
+git pull && npm run build && npx vercel@latest --prod
+```
+
+run while logged into the Vercel account that **owns `manufx.vercel.app`** —
+a *different* account (different email) from `ajiths-projects-12e1832d`. The
+`VERCEL_*` GitHub secrets point at `portfoliovone` in the wrong account, so a
+deploy using them publishes somewhere nobody looks. Check the URL the CLI
+prints.
+
+Why no CI deploy: `amondnet/vercel-action` pinned CLI 25.1.0 and now fails
+outright (endpoint needs >= 47.2.2); the official `vercel deploy --prebuilt`
+from a runner then hung 202 min and 73+ min at <50 KB/s regardless of
+payload size or `--archive`. Full history in `VERCEL_SETUP.md`.
+
+Vercel also **blocks commits whose author email is not verified on GitHub**
+(`ajithsri3103@gmail.com`).
 
 `vercel.json` adds the SPA rewrite and security headers. Vercel matches the
 filesystem **before** the rewrite, which is what makes prerendered routes work.
@@ -175,7 +192,7 @@ Runs automatically after `vite build`. The app is a client-rendered SPA, so
 without this every route serves the same `index.html` with an empty `#root`
 and non-JS crawlers (GPTBot, ClaudeBot, PerplexityBot) see nothing.
 
-It writes one HTML file per route (34: 9 static pages + 25 project pages) with
+It writes one HTML file per route (43: 9 static pages + 34 project pages) with
 that route's title, description, canonical, Open Graph tags, JSON-LD and the
 page's content in `<noscript>`. It also **regenerates `public/`-equivalent
 `dist/sitemap.xml`** from the same route list, so the sitemap cannot drift.
