@@ -278,9 +278,7 @@ export const profile: Profile = {
         "# Manufacturing Engineering Co-op",
         "At Van Dyk Recycling Solutions, operated at the intersection of manufacturing engineering, digital operations, and artificial intelligence to eliminate operational bottlenecks and automate mission-critical workflows.",
         "## Key Achievements",
-        "*   **$200K+ Annual Business Value**: Delivered quantifiable recurring value through productivity improvements and automated error reduction.",
         "*   **13 Production Systems Deployed**: Architected and launched 13 distinct software and AI tools still active in daily production (including DykScribe, Azure RAG Knowledge System, and CDMS).",
-        "*   **819% Average ROI**: Demonstrated exceptional quantifiable return on investment across deployed automation solutions.",
         "*   **AI Data-Extraction Pipeline**: Built an AI data-extraction pipeline using Python, Computer Vision, GPT-4 Vision, LayoutParser, and OpenCV achieving 92% accuracy, cutting manual data entry by 80% across 1,000+ technical PDF documents.",
         "*   **Equipment Management Suite**: Engineered web-based equipment management suite (Flask, SQL Server, Streamlit) with real-time tracking dashboards for 500+ equipment records across 8+ dynamic filters, boosting stakeholder decision efficiency by 35%.",
         "*   **Automated Data QA (BlobCheck)**: Developed automated validation tools verifying cloud-database consistency between Azure Blob Storage and SQL Server records."
@@ -321,13 +319,13 @@ export const profile: Profile = {
       "end": "Aug 2024",
       "bullets": [
         "# Team Manager — Manufacturing Excellence",
-        "As Team Manager at Hero MotoCorp's largest manufacturing plants (Haridwar & Tirupati), led cross-functional teams of 25+ operators and engineers driving operational excellence across Engine, Weld, and EV shops at a facility producing 4M+ vehicles annually.",
+        "As Team Manager at Hero MotoCorp's largest manufacturing plants (Haridwar & Tirupati), led cross-functional teams of 25+ operators and engineers driving operational excellence across Engine, Weld, and EV shops on high-volume CNC, PLC and robotic welding lines.",
         "## High-Impact Systems & Automations",
         "* **Vida EV NPI Launch**: Led New Product Introduction (NPI) for the Vida EV production launch across two plants, designing fixtures, jigs, and automation programs in SolidWorks and AutoCAD; reached 85% OEE within 6 weeks.",
-        "* **Downtime & OEE Optimization**: Raised OEE by 38.9% (to 40%) and cut unplanned equipment downtime by 82.4% (to 83%) across CNC, PLC-controlled, and robotic welding lines via predictive maintenance routines and Kaizen.",
-        "* **Defect Reduction & Computer Vision**: Deployed Cognex and Keyence automated optical inspection systems on assembly lines, cutting defects from 5% to 2% and delivering ~$1.1M in annual savings.",
+        "* **Downtime & OEE Optimization**: Raised OEE by 38.9% on a connecting-rod line and cut weld-shop breakdowns by 82.4%, working across CNC, PLC-controlled, and robotic welding lines with predictive maintenance routines and Kaizen.",
+        "* **Defect Reduction & Computer Vision**: Worked on the team that put Cognex and Keyence vision inspection on assembly lines, taking defects from 5% to 2%.",
         "* **Structured Root Cause Analysis**: Ran structured 5-Why, Fishbone, and Pareto root-cause analyses that permanently eliminated 12 recurring failure modes, reducing breakdowns by 75.7%.",
-        "* **Daily Management Systems (DMS)**: Built Excel and SAP-based analytical DMS dashboards consolidating breakdown logs, MTTR/MTBF metrics, and PM schedules, achieving 97% PM adherence and recovering ~430 downtime hours.",
+        "* **Daily Management Systems (DMS)**: Built Excel and SAP-based analytical DMS dashboards consolidating breakdown logs, MTTR/MTBF metrics, and PM schedules, achieving 97% PM adherence.",
         "* **TPM Special Award**: Honored with corporate TPM Special Award for data-driven excellence in Predictive Maintenance and Zero-Breakdown initiatives."
       ]
     },
@@ -557,7 +555,7 @@ export const profile: Profile = {
       "teamSize": "Solo Developer",
       "status": "Production Ready",
       "summary": "An AI-powered Q&A system using OpenAI Whisper and GPT-4 that reduced documentation time by 87% and captured tribal knowledge from retiring technicians.",
-      "content": "# DykScribe: AI-Powered Knowledge Capture\n\n## Overview\nDykScribe is an intelligent Q&A system designed to capture and digitize the \"tribal knowledge\" of field service technicians. By leveraging OpenAI's Whisper for transcription and GPT-4 for information extraction, it transforms spoken troubleshooting sessions into structured, searchable data.\n\n## The Challenge\n*   **Knowledge Loss**: 30+ years of expertise was leaving with retiring technicians.\n*   **Manual Burden**: Technicians spent 2-3 hours weekly typing reports.\n*   **Data Silos**: Valuable troubleshooting insights were trapped in emails and unsearchable documents.\n\n## The Solution\nI built a browser-based application that allows technicians to record audio summaries of their site visits. The system automatically:\n1.  **Transcribes** the audio using OpenAI Whisper.\n2.  **Extracts** key Q&A pairs using GPT-4.\n3.  **Structures** the data into a standardized format.\n4.  **Stores** it in a SQL Server database for future retrieval.\n\n## Impact\n*   **Efficiency**: Reduced reporting time from 2 hours to 15 minutes per week.\n*   **Knowledge Retention**: Successfully captured hundreds of troubleshooting scenarios that would have otherwise been lost.\n*   **ROI**: Delivered a 900% return on investment in the first year through productivity gains and error reduction.\n\n\n## How It Was Built & Evolved\nDykScribe went from concept to working webapp in one week, built using GenAI-assisted development (Cursor) and deployed on Streamlit. The idea for knowledge transfer had been floating around the company for a long time, but nobody was implementing it. I took the initiative to build it and get it into technicians' hands immediately.\n\nOnce deployed, the system evolved based on real usage feedback:\n- **PDF Transcription**: Technicians wanted to upload equipment manuals alongside their Q&A entries, so I added PDF upload support (up to 25MB).\n- **Points/Rewards System**: To incentivize knowledge sharing (1 point per valid Q&A pair), I added a gamification layer that drove adoption.\n- **Voice Input**: Integrated OpenAI Whisper for speech-to-text, so technicians could dictate their notes instead of typing, which was critical for field adoption.\n\nThe key lesson: shipping fast and iterating based on actual user behavior beats building the \"perfect\" system upfront. Every major feature addition came directly from technician requests after they started using the tool.",
+      "content": "# DykScribe: AI-Powered Knowledge Capture\n\n## Overview\nDykScribe is an intelligent Q&A system designed to capture and digitize the \"tribal knowledge\" of field service technicians. By leveraging OpenAI's Whisper for transcription and GPT-4 for information extraction, it transforms spoken troubleshooting sessions into structured, searchable data.\n\n## The Challenge\n*   **Knowledge Loss**: 30+ years of expertise was leaving with retiring technicians.\n*   **Manual Burden**: Technicians spent 2-3 hours weekly typing reports.\n*   **Data Silos**: Valuable troubleshooting insights were trapped in emails and unsearchable documents.\n\n## The Solution\nI built a browser-based application that allows technicians to record audio summaries of their site visits. The system automatically:\n1.  **Transcribes** the audio using OpenAI Whisper.\n2.  **Extracts** key Q&A pairs using GPT-4.\n3.  **Structures** the data into a standardized format.\n4.  **Stores** it in a SQL Server database for future retrieval.\n\n## Impact\n*   **Efficiency**: Reduced reporting time from 2 hours to 15 minutes per week.\n*   **Knowledge Retention**: Successfully captured hundreds of troubleshooting scenarios that would have otherwise been lost.\n\n\n## How It Was Built & Evolved\nDykScribe went from concept to working webapp in one week, built using GenAI-assisted development (Cursor) and deployed on Streamlit. The idea for knowledge transfer had been floating around the company for a long time, but nobody was implementing it. I took the initiative to build it and get it into technicians' hands immediately.\n\nOnce deployed, the system evolved based on real usage feedback:\n- **PDF Transcription**: Technicians wanted to upload equipment manuals alongside their Q&A entries, so I added PDF upload support (up to 25MB).\n- **Points/Rewards System**: To incentivize knowledge sharing (1 point per valid Q&A pair), I added a gamification layer that drove adoption.\n- **Voice Input**: Integrated OpenAI Whisper for speech-to-text, so technicians could dictate their notes instead of typing, which was critical for field adoption.\n\nThe key lesson: shipping fast and iterating based on actual user behavior beats building the \"perfect\" system upfront. Every major feature addition came directly from technician requests after they started using the tool.",
       "technologies": [
         "Python",
         "Streamlit",
@@ -568,7 +566,6 @@ export const profile: Profile = {
       ],
       "impact": [
         "87% reduction in documentation time",
-        "900% ROI in Year 1 ($35K value)",
         "Captured 400+ Q&A sessions"
       ],
       "links": {
@@ -1129,7 +1126,7 @@ export const profile: Profile = {
         "Six Sigma"
       ],
       "impact": [
-        "83% downtime reduction across CNC and PLC systems",
+        "Weld-shop breakdowns cut 82.4%",
         "PM planning reduced from 30hrs to 2hrs/month via SAP automation",
         "70 machines upgraded to FX5U PLCs with IoT dashboards",
         "Machine life extended from 2 to 5 years (Honing upgrade)",
@@ -1164,7 +1161,7 @@ export const profile: Profile = {
         ]
       },
       "quantifiedResults": {
-        "Downtime": "83% reduction across CNC/PLC systems",
+        "Downtime": "Weld-shop breakdowns cut 82.4%",
         "PLC Upgrade": "70 machines across 7 lines to FX5U",
         "Machine Life": "2 years → 5 years (Honing SSD upgrade)",
         "PM Automation": "30 hrs/month → 2 hrs/month via SAP scripting",
@@ -1773,7 +1770,7 @@ export const profile: Profile = {
   "writings": [
     {
       "title": "How This Northeastern Co-op Built 13 AI Projects for a Recycling Company",
-      "summary": "Featured article on Northeastern University News about Ajith Srikanth's co-op experience at Van Dyk Recycling Solutions. During a 7-month internship, Ajith developed 13 AI-powered systems that transformed manufacturing operations at a recycling equipment company, delivering an estimated 819% average ROI across all deployed solutions. The article covers his journey from manufacturing engineering to AI systems development.",
+      "summary": "Featured article on Northeastern University News about Ajith Srikanth's co-op experience at Van Dyk Recycling Solutions. During a 7-month internship, Ajith developed 13 AI-powered systems that transformed manufacturing operations at a recycling equipment company. The article covers his journey from manufacturing engineering to AI systems development.",
       "url": "https://news.northeastern.edu/2025/12/08/ai-recycling-manufacturing-co-op/",
       "tags": ["AI", "Manufacturing", "Co-op", "Northeastern", "Van Dyk", "Featured Article"],
       "date": "2025-12-08"

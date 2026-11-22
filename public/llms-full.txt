@@ -43,17 +43,15 @@ Ajith Srikanth is an Advanced Manufacturing Engineer and AI Innovation Specialis
 **Role**: Manufacturing Engineering Co-op  
 **Period**: May 2025 – December 2025  
 - Architected and launched 13 distinct digital and AI systems across field service, engineering drawings, and administrative workflows.
-- Delivered $200,000+ in annual business value through productivity improvements and process automation.
-- Achieved an average 819% Return on Investment (ROI) across all deployed software and AI tools.
 - Featured by Northeastern University News: "How an AI Co-op Transformed Recycling Operations" (December 8, 2025).
 
 ### Hero MotoCorp Ltd. | Haridwar & Tirupati, India
 **Role**: Team Manager — Manufacturing Excellence  
 **Period**: July 2022 – August 2024  
-- Directed 25+ member cross-functional manufacturing teams across high-volume automotive production lines producing 4M+ vehicles/year.
+- Directed 25+ member cross-functional manufacturing teams across high-volume CNC, PLC and robotic welding lines.
 - Led NPI for Vida Electric Vehicle (EV) assembly across two plants, reaching 85% OEE within 6 weeks.
 - Raised OEE by 38.9% and cut unplanned equipment downtime by 82.4% across CNC and robotic welding lines.
-- Deployed Cognex and Keyence automated optical inspection systems, saving ~$1.1M annually with 60% defect reduction.
+- Worked on the team that put Cognex and Keyence vision inspection on assembly lines, taking defects from 5% to 2%.
 - Received the corporate TPM Special Award; instituted Daily Management Systems with 97% PM adherence.
 - Delivered 36+ hours of technical standard training to 200+ technicians and junior engineers.
 

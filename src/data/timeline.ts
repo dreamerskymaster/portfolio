@@ -35,12 +35,12 @@ export const timeline: TimelineItem[] = [
     location: 'Norwalk, Connecticut',
     period: 'May 2025 - Dec 2025',
     type: 'work',
-    description: 'Shipped 13 production tools and AI systems still in use after the co-op ended, delivering an estimated 819% average ROI across deployed systems.',
+    description: 'Shipped 13 production tools and AI systems still in use after the co-op ended.',
     skills: ['Python', 'Computer Vision', 'GPT-4 Vision', 'OpenCV', 'Flask', 'SQL Server', 'Azure Blob Storage', 'ChromaDB', 'RAG'],
     achievements: [
       'Built AI data-extraction pipeline (Python, GPT-4 Vision, OpenCV) at 91.5% accuracy that cut manual data entry by 76%',
       'Developed web-based equipment management suite (Flask, SQL Server) improving stakeholder decision efficiency by 32.6%',
-      'Deployed enterprise RAG AI knowledge system on Azure indexing 10,000+ technical manuals (featured in Northeastern Global News)',
+      'Deployed enterprise RAG AI knowledge system on Azure indexing 10,000+ technical manuals; Northeastern featured the co-op work',
       'Built Container Document Management System (CDMS) reducing customs clearance delays by 42%'
     ]
   },
@@ -101,14 +101,14 @@ export const timeline: TimelineItem[] = [
     location: 'Haridwar & Tirupati, India',
     period: 'July 2022 - August 2024',
     type: 'work',
-    description: 'Led cross-functional teams of 25+ operators and engineers driving operational excellence across Engine, Weld, and EV shops at facilities producing 4M+ vehicles annually.',
+    description: 'Led cross-functional teams of 25+ operators and engineers driving operational excellence across Engine, Weld, and EV shops on high-volume CNC, PLC and robotic welding lines.',
     skills: ['SolidWorks', 'AutoCAD', 'Cognex Vision', 'Keyence', 'Mitsubishi PLC', 'SAP ERP', 'TPM', 'Six Sigma', 'Kaizen'],
     achievements: [
       'Led NPI for Vida EV production launch across two plants, reaching 85% OEE within 6 weeks',
       'Raised OEE by 38.9% and cut unplanned downtime by 82.4% across CNC and robotic welding lines',
-      'Deployed Cognex and Keyence automated optical inspection systems, saving ~$1.1M annually with 60% defect reduction',
+      'Worked on the team that put Cognex and Keyence vision inspection on assembly lines, taking defects from 5% to 2%',
       'Eliminated 12 recurring failure modes through structured 5-Why and Pareto analyses, reducing breakdowns by 75.7%',
-      'Built Daily Management Systems (DMS) achieving 97% PM adherence and recovering ~430 downtime hours',
+      'Built Daily Management Systems (DMS) achieving 97% PM adherence',
       'Honored with corporate TPM Special Award for data-driven predictive maintenance excellence'
     ]
   },

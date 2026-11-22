@@ -55,10 +55,9 @@ const ImpactDashboard: React.FC = () => {
         <div className="w-full max-w-6xl mx-auto px-4 py-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <MetricCard
-                    label="Annual Business Value"
-                    value={200000}
-                    prefix="$"
-                    suffix="+"
+                    label="NPI OEE in 6 Weeks"
+                    value={85}
+                    suffix="%"
                     icon={<TrendingUp size={28} />}
                     delay={0}
                 />
@@ -76,8 +75,8 @@ const ImpactDashboard: React.FC = () => {
                     delay={400}
                 />
                 <MetricCard
-                    label="Avg. ROI"
-                    value={819}
+                    label="PM Adherence"
+                    value={97}
                     suffix="%"
                     icon={<ShieldCheck size={28} />}
                     delay={600}
