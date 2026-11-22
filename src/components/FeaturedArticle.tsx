@@ -28,7 +28,7 @@ const FeaturedArticle: React.FC = () => {
                     </h2>
                     
                     <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
-                        "Working with a leading recycling manufacturer, Ajith Srikanth used AI to do what he’s always done: fix things." – Northeastern Global News
+                        "Working with a leading recycling manufacturer, Ajith Srikanth used AI to do what he’s always done: fix things." – Northeastern University
                     </p>
                     
                     <motion.a 

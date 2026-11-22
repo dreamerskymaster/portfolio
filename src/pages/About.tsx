@@ -90,13 +90,13 @@ const About: React.FC = () => {
       period: "2022-2024",
       focus: "Manufacturing Excellence & Operations Leadership at Hero MotoCorp",
       achievements: [
-        "Led 25+ member cross-functional engineering and operator teams at Hero's 4M+ vehicle/yr plants (Haridwar & Tirupati)",
+        "Led 25+ member cross-functional engineering and operator teams at Hero's high-volume plants (Haridwar & Tirupati)",
         "Led NPI for Vida EV launch across two plants, reaching 85% OEE in 6 weeks with custom fixtures & tooling",
         <TechnicalTooltip key="oee" term="OEE (Overall Equipment Effectiveness)" definition="Standard metric measuring manufacturing productivity by multiplying Availability, Performance, and Quality." example="A plant running at 85% OEE is considered world-class benchmark." industry="Manufacturing" icon="wrench">
           Raised OEE by 38.9% and cut unplanned equipment downtime by 82.4% across CNC and robotic welding lines
         </TechnicalTooltip>,
-        "Deployed Cognex and Keyence automated optical inspection systems, saving ~$1.1M annually with 60% defect reduction",
-        <TechnicalTooltip key="tpm" term="TPM (Total Productive Maintenance)" definition="A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Structured PM adherence recovered ~430 downtime hours." industry="Manufacturing" icon="wrench">
+        "Worked on the team that put Cognex and Keyence vision inspection on assembly lines, taking defects from 5% to 2%",
+        <TechnicalTooltip key="tpm" term="TPM (Total Productive Maintenance)" definition="A systematic approach to equipment maintenance that aims to maximize equipment effectiveness and eliminate breakdowns." example="Root cause analysis and redesigned preventive maintenance cut weld-shop breakdowns 82.4% and laser-marking breakdowns 75.7%." industry="Manufacturing" icon="wrench">
           Awarded corporate TPM Special Award; instituted Daily Management Systems with 97% PM adherence
         </TechnicalTooltip>
       ],
@@ -124,10 +124,10 @@ const About: React.FC = () => {
       period: "2025",
       focus: "13 Production Systems & Enterprise AI at Van Dyk Recycling Solutions",
       achievements: [
-        "Shipped 13 production tools & AI systems delivering $200K+ annual value and 819% average ROI",
+        "Shipped 13 production tools & AI systems still in use after the co-op ended",
         "Built AI data-extraction pipeline (Python, GPT-4 Vision, OpenCV) at 91.5% accuracy, cutting manual entry by 76%",
         "Developed web equipment management suite (Flask, SQL Server) with real-time tracking, raising decision efficiency by 32.6%",
-        "Deployed enterprise RAG knowledge system on Azure indexing 10,000+ manuals (featured in Northeastern Global News)",
+        "Deployed enterprise RAG knowledge system on Azure indexing 10,000+ manuals; Northeastern featured the co-op work",
         "Engineered Container Document Management System (CDMS) reducing customs clearance delays by 42%"
       ],
       technologies: ["Python", "Flask", "OpenAI GPT-4", "Whisper", "ChromaDB", "Azure Blob Storage", "SQL Server", "React"],

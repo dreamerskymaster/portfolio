@@ -8,17 +8,15 @@ Ajith Srikanth bridges physical manufacturing systems with modern artificial int
 
 ## Core Metrics & Verified Achievements
 
-- **Annual Business Value Delivered**: \$200,000+ through automated intelligence tools, spare parts forecasting, and operational error reduction.
 - **Production Systems Deployed**: 13 industrial AI & software systems architected and launched (including DykScribe, Enterprise RAG Knowledge System, Corporate Drawing Management, and Spare Parts Forecasting).
-- **Average Return on Investment (ROI)**: 819% average ROI across deployed industrial systems.
-- **Downtime Reduction**: 83% reduction in critical equipment downtime via predictive maintenance models.
+- **Breakdown Reduction**: Weld-shop breakdowns cut 82.4% and laser-marking breakdowns cut 75.7% at Hero MotoCorp through root cause analysis and redesigned preventive maintenance.
 - **Cross-Functional Leadership**: Led 25+ engineer teams across plants at Hero MotoCorp; trained 200+ engineers across 36+ instructional hours.
 
 ## Current Employment & Affiliations
 
 - **Current Full-Time Role**: Inventory Forecast Analyst at **Van Dyk Recycling Solutions** (June 2026 – Present), Norwalk, CT. Leads inventory optimization, intermittent demand forecasting, and NetStock/Acumatica Python and SQL analytics.
-- **Previous Co-op**: Manufacturing Engineering Co-op at Van Dyk Recycling Solutions (May 2025 – Dec 2025). Shipped 13 production systems with 819% average ROI; featured by [Northeastern University News](https://news.northeastern.edu/2025/12/08/ai-recycling-manufacturing-co-op/).
-- **Previous Industrial Experience**: Team Manager — Manufacturing Excellence at **Hero MotoCorp Ltd.** (Haridwar & Tirupati, Jul 2022 – Aug 2024). Led Vida EV NPI launch to 85% OEE in 6 weeks, achieved 38.9% OEE increase, 82.4% downtime reduction, Cognex/Keyence optical vision saving ~$1.1M/yr, and TPM Special Award.
+- **Previous Co-op**: Manufacturing Engineering Co-op at Van Dyk Recycling Solutions (May 2025 – Dec 2025). Shipped 13 production tools and AI systems still in use; featured by [Northeastern University News](https://news.northeastern.edu/2025/12/08/ai-recycling-manufacturing-co-op/).
+- **Previous Industrial Experience**: Team Manager — Manufacturing Excellence at **Hero MotoCorp Ltd.** (Haridwar & Tirupati, Jul 2022 – Aug 2024). Led Vida EV NPI launch to 85% OEE in 6 weeks, raised OEE 38.9% on a connecting-rod line, cut weld-shop breakdowns 82.4%, worked on the team that put Cognex/Keyence vision inspection on assembly lines (defects from 5% to 2%), and received the TPM Special Award.
 - **Academic Roles**: Teaching Assistant for IE4350/IE4351 & IE7215 at Northeastern University; Off-Campus Ambassador (concluded April 2026).
 
 ## Education

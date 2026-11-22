@@ -14,8 +14,8 @@ export const skills: SkillCategory[] = [
   {
     name: "Manufacturing Excellence",
     skills: [
-      { name: "TPM Methodology", level: 8, description: "JIPM-trained, TPM Special Award recipient, 83% downtime reduction achieved", icon: "factory" },
-      { name: "Six Sigma DMAIC", level: 7, description: "Yellow Belt certified, multiple projects, ₹9M+ cost savings", icon: "settings" },
+      { name: "TPM Methodology", level: 8, description: "JIPM-trained, TPM Special Award recipient, weld-shop breakdowns cut 82.4%", icon: "factory" },
+      { name: "Six Sigma DMAIC", level: 7, description: "Yellow Belt certified, multiple projects", icon: "settings" },
       { name: "Lean Manufacturing", level: 7, description: "Extensive Skillsoft training, Kaizen implementation, 20% cycle time improvement", icon: "bar-chart" },
       { name: "Process Improvement", level: 6, description: "Advanced Manufacturing, Process Design, Digital Manufacturing", icon: "link" }
     ]

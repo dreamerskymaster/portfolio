@@ -126,7 +126,7 @@ function Home() {
               <ul>
                 <li>Started on Shop Floor (Mechatronics)</li>
                 <li>Learned Backend of Operations</li>
-                <li>Reduced downtime by 83%</li>
+                <li>Cut weld-shop breakdowns by 82.4%</li>
               </ul>
             </div>
             <div className="journey-column">
