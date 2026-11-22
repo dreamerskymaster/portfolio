@@ -279,8 +279,8 @@ export const profile: Profile = {
         "At Van Dyk Recycling Solutions, operated at the intersection of manufacturing engineering, digital operations, and artificial intelligence to eliminate operational bottlenecks and automate mission-critical workflows.",
         "## Key Achievements",
         "*   **13 Production Systems Deployed**: Architected and launched 13 distinct software and AI tools still active in daily production (including DykScribe, Azure RAG Knowledge System, and CDMS).",
-        "*   **AI Data-Extraction Pipeline**: Built an AI data-extraction pipeline using Python, Computer Vision, GPT-4 Vision, LayoutParser, and OpenCV achieving 92% accuracy, cutting manual data entry by 80% across 1,000+ technical PDF documents.",
-        "*   **Equipment Management Suite**: Engineered web-based equipment management suite (Flask, SQL Server, Streamlit) with real-time tracking dashboards for 500+ equipment records across 8+ dynamic filters, boosting stakeholder decision efficiency by 35%.",
+        "*   **AI Data-Extraction Pipeline**: Built an AI data-extraction pipeline using Python, Computer Vision, GPT-4 Vision, LayoutParser, and OpenCV achieving 91.5% accuracy, cutting manual data entry by 76% across 1,000+ technical PDF documents.",
+        "*   **Equipment Management Suite**: Engineered web-based equipment management suite (Flask, SQL Server, Streamlit) with real-time tracking dashboards for 500+ equipment records across 8+ dynamic filters, boosting stakeholder decision efficiency by 32.6%.",
         "*   **Automated Data QA (BlobCheck)**: Developed automated validation tools verifying cloud-database consistency between Azure Blob Storage and SQL Server records."
       ]
     },
