@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, TrendingUp, DollarSign, Clock, Target, Lightbulb, Rocket, Users, Settings, Database, Cloud, Zap, CheckCircle, AlertTriangle, Award, BarChart3, GitBranch, Layout, Camera } from 'lucide-react';
+import { ChevronLeft, ChevronRight, TrendingUp, Clock, Target, Lightbulb, Rocket, Users, Settings, Database, Cloud, Zap, CheckCircle, AlertTriangle, Award, BarChart3, GitBranch, Layout, Camera } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 
 const Presentation = () => {
@@ -33,10 +33,6 @@ const Presentation = () => {
             </div>
             <div className="mt-12 flex space-x-8">
               <div className="text-center">
-                <p className="text-4xl font-bold text-green-400">$153K+</p>
-                <p className="text-sm text-gray-400">Annual Savings</p>
-              </div>
-              <div className="text-center">
                 <p className="text-4xl font-bold text-blue-400">10</p>
                 <p className="text-sm text-gray-400">Systems Deployed</p>
               </div>
@@ -53,33 +49,6 @@ const Presentation = () => {
       icon: BarChart3,
       content: (
         <div className="space-y-6">
-          <div className="grid grid-cols-4 gap-4">
-            <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-xl shadow-lg">
-              <DollarSign size={32} className="mb-2" />
-              <p className="text-4xl font-bold">$125K+</p>
-              <p className="text-sm opacity-90">Annual Cost Savings</p>
-              <p className="text-xs mt-2 opacity-75">Documented ROI</p>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-xl shadow-lg">
-              <Clock size={32} className="mb-2" />
-              <p className="text-4xl font-bold">320+</p>
-              <p className="text-sm opacity-90">Hours Saved Monthly</p>
-              <p className="text-xs mt-2 opacity-75">Across 30+ staff</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-xl shadow-lg">
-              <Target size={32} className="mb-2" />
-              <p className="text-4xl font-bold">85%</p>
-              <p className="text-sm opacity-90">Error Reduction</p>
-              <p className="text-xs mt-2 opacity-75">Quality improvement</p>
-            </div>
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 rounded-xl shadow-lg">
-              <Award size={32} className="mb-2" />
-              <p className="text-4xl font-bold">800%</p>
-              <p className="text-sm opacity-90">Average ROI</p>
-              <p className="text-xs mt-2 opacity-75">Year 1 performance</p>
-            </div>
-          </div>
-
           <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold mb-4 text-gray-800">Portfolio Overview: 7 Intelligent Systems</h3>
             <div className="grid grid-cols-2 gap-4">
@@ -96,7 +65,6 @@ const Presentation = () => {
                   <div>
                     <p className="font-semibold text-gray-800">RAG AI Knowledge System</p>
                     <p className="text-sm text-gray-600">Vector search & intelligent document retrieval</p>
-                    <p className="text-xs text-green-600 font-semibold mt-1">$45K annual value | 770% ROI</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -104,7 +72,6 @@ const Presentation = () => {
                   <div>
                     <p className="font-semibold text-gray-800">Data Extractor Suite</p>
                     <p className="text-sm text-gray-600">Multi-method OCR & AI data extraction</p>
-                    <p className="text-xs text-green-600 font-semibold mt-1">$28K annual value | 884% ROI</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -112,7 +79,6 @@ const Presentation = () => {
                   <div>
                     <p className="font-semibold text-gray-800">BlobCheck Verification</p>
                     <p className="text-sm text-gray-600">Azure-SQL data integrity monitoring</p>
-                    <p className="text-xs text-green-600 font-semibold mt-1">$12K annual value | 733% ROI</p>
                   </div>
                 </div>
               </div>
@@ -140,7 +106,7 @@ const Presentation = () => {
                   <div>
                     <p className="font-semibold text-gray-800">Van Dyk One Mobile App</p>
                     <p className="text-sm text-gray-600">Cross-platform field operations app</p>
-                    <p className="text-xs text-yellow-600 font-semibold mt-1">In Development | $40K projected value</p>
+                    <p className="text-xs text-yellow-600 font-semibold mt-1">In Development</p>
                   </div>
                 </div>
               </div>
@@ -377,7 +343,7 @@ const Presentation = () => {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg">
-            <h4 className="text-xl font-bold mb-4 text-gray-800">Development Timeline: 4 Months to $125K Annual Value</h4>
+            <h4 className="text-xl font-bold mb-4 text-gray-800">Development Timeline: 4 Months</h4>
             <div className="relative">
               <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-500"></div>
               <div className="space-y-6">
@@ -529,7 +495,6 @@ const Presentation = () => {
                   <p className="font-semibold text-gray-800 mb-2">Business Impact:</p>
                   <ul className="text-xs text-gray-600 space-y-1">
                     <li>• 1,750 hours saved annually (25 techs × 1.75 hrs/week × 52 weeks)</li>
-                    <li>• $91K productivity value created ($40/hr × 1,750 hours + $21K in error reduction)</li>
                     <li>• 400+ Q&A sessions documented in first 3 months (vs 50 previously)</li>
                     <li>• Knowledge base now searchable via RAG system integration</li>
                     <li>• New hire training time reduced by 40% using documented Q&As</li>
@@ -613,7 +578,7 @@ const Presentation = () => {
                 <div className="bg-purple-50 p-3 rounded-lg border-l-4 border-purple-500">
                   <p className="font-bold text-purple-800 mb-1 text-sm">RESULT</p>
                   <div className="text-xs text-gray-700">
-                    <div className="grid grid-cols-3 gap-2 mb-2">
+                    <div className="grid grid-cols-2 gap-2 mb-2">
                       <div className="bg-white p-2 rounded text-center">
                         <p className="text-2xl font-bold text-green-600">93%</p>
                         <p className="text-gray-600">Time saved</p>
@@ -622,14 +587,9 @@ const Presentation = () => {
                         <p className="text-2xl font-bold text-blue-600">1200+</p>
                         <p className="text-gray-600">Queries/month</p>
                       </div>
-                      <div className="bg-white p-2 rounded text-center">
-                        <p className="text-2xl font-bold text-purple-600">$45K</p>
-                        <p className="text-gray-600">Annual value</p>
-                      </div>
                     </div>
                     <p>• Support call volume reduced by 40% (from 15 to 9 calls/day)</p>
                     <p>• Average search time: 30 min → 2 min (93% reduction)</p>
-                    <p>• 770% ROI in Year 1 ($154K value - $20K cost)</p>
                   </div>
                 </div>
               </div>
@@ -934,7 +894,6 @@ const Presentation = () => {
                   <p>• File operations: 8 hrs → 25 min (95% faster)</p>
                   <p>• Processing capacity: 50 files → 1000+ files/week</p>
                   <p>• Zero data loss incidents (vs 2-3/year previously)</p>
-                  <p>• $18K annual savings in labor costs</p>
                 </div>
               </div>
             </div>
@@ -1019,14 +978,10 @@ const Presentation = () => {
             <div className="space-y-4">
               <div className="bg-white p-5 rounded-xl shadow-lg border-l-4 border-purple-500">
                 <p className="font-bold text-purple-800 mb-3 text-sm">RESULT</p>
-                <div className="grid grid-cols-3 gap-2 mb-3">
+                <div className="grid grid-cols-2 gap-2 mb-3">
                   <div className="bg-green-50 p-2 rounded text-center">
                     <p className="text-2xl font-bold text-green-600">93%</p>
                     <p className="text-xs text-gray-600">Time reduction</p>
-                  </div>
-                  <div className="bg-blue-50 p-2 rounded text-center">
-                    <p className="text-2xl font-bold text-blue-600">85%</p>
-                    <p className="text-xs text-gray-600">Error reduction</p>
                   </div>
                   <div className="bg-purple-50 p-2 rounded text-center">
                     <p className="text-2xl font-bold text-purple-600">20x</p>
@@ -1038,8 +993,6 @@ const Presentation = () => {
                   <p>• Error rate: 15% → under 2%</p>
                   <p>• Weekly capacity: 50 → 1000+ documents</p>
                   <p>• Backlog eliminated in first month of deployment</p>
-                  <p>• $78,700 annual value ($63.7K time + $15K error avoidance)</p>
-                  <p>• 884% ROI ($78.7K value / $8K cost)</p>
                 </div>
               </div>
 
@@ -1201,10 +1154,6 @@ const Presentation = () => {
                   <p className="font-bold text-purple-800 mb-3 text-sm">RESULT</p>
                   <div className="grid grid-cols-2 gap-2 mb-2">
                     <div className="bg-white p-2 rounded text-center shadow-sm">
-                      <p className="text-xl font-bold text-green-600">97%</p>
-                      <p className="text-xs text-gray-600">Time saved</p>
-                    </div>
-                    <div className="bg-white p-2 rounded text-center shadow-sm">
                       <p className="text-xl font-bold text-blue-600">100%</p>
                       <p className="text-xs text-gray-600">Data accuracy</p>
                     </div>
@@ -1212,17 +1161,11 @@ const Presentation = () => {
                       <p className="text-xl font-bold text-purple-600">0</p>
                       <p className="text-xs text-gray-600">Downtime events</p>
                     </div>
-                    <div className="bg-white p-2 rounded text-center shadow-sm">
-                      <p className="text-xl font-bold text-orange-600">$25K</p>
-                      <p className="text-xs text-gray-600">Annual value</p>
-                    </div>
                   </div>
                   <div className="text-xs text-gray-700 space-y-1 bg-gray-50 p-2 rounded">
                     <p>• Verification time: 8 hrs/month → 15 min/day</p>
                     <p>• Proactive issue detection preventing downtime</p>
                     <p>• Zero production delays since deployment (4 months)</p>
-                    <p>• $25K annual value ($5K labor + $20K downtime avoidance)</p>
-                    <p>• 733% ROI in Year 1</p>
                   </div>
                 </div>
 
@@ -1249,7 +1192,7 @@ const Presentation = () => {
 
           <div className="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-xl border-2 border-green-300">
             <p className="font-bold text-gray-800 mb-2">PM Learning: Preventive Maintenance {'>'} Reactive Fixes</p>
-            <p className="text-sm text-gray-700">Applied TPM principle from Hero MotoCorp: prevent problems before they occur. Daily automated checks detect issues before they impact production, saving $20K annually in downtime costs. Classic example of small investment (3-week project) preventing large losses.</p>
+            <p className="text-sm text-gray-700">Applied TPM principle from Hero MotoCorp: prevent problems before they occur. Daily automated checks detect issues before they impact production. Classic example of small investment (3-week project) preventing large losses.</p>
             <p className="text-sm text-gray-700 mt-2">Preventive Maintenance {'>'} Reactive Fixes</p>
           </div>
         </div>
@@ -1312,7 +1255,7 @@ const Presentation = () => {
             <div className="space-y-4">
               <div className="bg-white p-5 rounded-xl shadow-lg border-l-4 border-purple-500">
                 <p className="font-bold text-purple-800 mb-3 text-sm">RESULT</p>
-                <div className="grid grid-cols-2 gap-2 mb-3">
+                <div className="grid grid-cols-3 gap-2 mb-3">
                   <div className="bg-purple-50 p-2 rounded text-center">
                     <p className="text-2xl font-bold text-purple-600">70%</p>
                     <p className="text-xs text-gray-600">Time reduction</p>
@@ -1325,17 +1268,12 @@ const Presentation = () => {
                     <p className="text-2xl font-bold text-green-600">100+</p>
                     <p className="text-xs text-gray-600">Records/month</p>
                   </div>
-                  <div className="bg-orange-50 p-2 rounded text-center">
-                    <p className="text-2xl font-bold text-orange-600">$15K</p>
-                    <p className="text-xs text-gray-600">Annual value</p>
-                  </div>
                 </div>
                 <div className="text-xs text-gray-700 space-y-1">
                   <p>• Processing time: 18 min → 5 min (including review)</p>
                   <p>• Error rate: 12% → 1.5% (88% improvement)</p>
                   <p>• Monthly capacity: 50 → 100+ records</p>
                   <p>• Database completeness: 70% → 95%</p>
-                  <p>• $15K annual savings in labor + error avoidance</p>
                 </div>
               </div>
 
@@ -1949,7 +1887,6 @@ const Presentation = () => {
                   </div>
                 </div>
                 <div className="text-xs text-gray-700 space-y-1">
-                  <p>• Projected $40K annual savings based on Hero MotoCorp mobile implementation</p>
                   <p>• Real-time equipment status vs next-day updates</p>
                   <p>• Expense reporting: same-day vs 3-5 day delay</p>
                   <p>• Service tickets created on-site vs back at office</p>
@@ -2090,7 +2027,7 @@ const Presentation = () => {
               <div className="bg-gradient-to-r from-orange-100 to-red-100 p-4 rounded-xl border-2 border-orange-300">
                 <h4 className="font-bold mb-2 text-sm text-gray-800">The Multiplier Effect</h4>
                 <p className="text-xs text-gray-700">Manufacturing expertise (TPM, Kaizen, data-driven) provides the <strong>operational framework</strong>. Modern AI/cloud provides the <strong>technological accelerator</strong>. Together: 10x productivity gains vs using either alone.</p>
-                <p className="text-xs text-gray-700 mt-2 italic">Example: At Hero, redesigned preventive maintenance cut weld-shop breakdowns 82.4%. VDRS's BlobCheck + RAG applies same preventive principle but with AI to achieve 97% time reduction - even better because AI handles complexity humans can't.</p>
+                <p className="text-xs text-gray-700 mt-2 italic">Example: At Hero, redesigned preventive maintenance cut weld-shop breakdowns 82.4%. VDRS's BlobCheck + RAG applies same preventive principle but with AI - even better because AI handles complexity humans can't.</p>
               </div>
             </div>
           </div>
@@ -2139,107 +2076,12 @@ const Presentation = () => {
       content: (
         <div className="space-y-6">
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-6 rounded-xl shadow-lg">
-            <h3 className="text-3xl font-bold mb-2">Portfolio Performance: $125K+ Annual Value Created</h3>
+            <h3 className="text-3xl font-bold mb-2">Portfolio Performance</h3>
             <p className="text-xl opacity-90">7 Systems | 4 Months | Measurable Business Transformation</p>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
-            <div className="col-span-2 bg-white p-6 rounded-xl shadow-lg">
-              <h4 className="text-xl font-bold mb-4 text-gray-800">Financial Impact by Project</h4>
-              <div className="space-y-2">
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-3 rounded-lg border-l-4 border-blue-500">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="font-semibold text-gray-800 text-sm">DykScribe Q&A System</span>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-600">
-                    <span>25 techs × 1.75 hrs/wk × $40/hr × 52 wks</span>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-3 rounded-lg border-l-4 border-purple-500">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="font-semibold text-gray-800 text-sm">RAG AI Knowledge System</span>
-                    <span className="text-xl font-bold text-purple-600">$45K</span>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-600">
-                    <span>30 staff × 28 min/day × $45/hr × 220 days</span>
-                    <span className="font-semibold text-green-600">770% ROI</span>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-green-50 to-green-100 p-3 rounded-lg border-l-4 border-green-500">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="font-semibold text-gray-800 text-sm">Data Extractor Suite</span>
-                    <span className="text-xl font-bold text-green-600">$28K</span>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-600">
-                    <span>50 docs/wk × 42 min × $35/hr × 52 wks + $15K error avoidance</span>
-                    <span className="font-semibold text-green-600">884% ROI</span>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-3 rounded-lg border-l-4 border-orange-500">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="font-semibold text-gray-800 text-sm">GDrive File Operations</span>
-                    <span className="text-xl font-bold text-orange-600">$18K</span>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-600">
-                    <span>7.5 hrs/wk × $45/hr × 52 wks (file management labor)</span>
-                    <span className="font-semibold text-green-600">550% ROI</span>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-teal-50 to-teal-100 p-3 rounded-lg border-l-4 border-teal-500">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="font-semibold text-gray-800 text-sm">BlobCheck Verification</span>
-                    <span className="text-xl font-bold text-teal-600">$12K</span>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-600">
-                    <span>$5K labor savings + $20K downtime prevention</span>
-                    <span className="font-semibold text-green-600">733% ROI</span>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-gray-100 to-gray-200 p-4 rounded-lg border-2 border-gray-400">
-                  <div className="flex justify-between items-center">
-                    <span className="font-bold text-gray-800 text-lg">TOTAL ANNUAL VALUE</span>
-                    <span className="text-3xl font-bold text-green-600">$138K</span>
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-600 mt-2">
-                    <span>Total development cost (4 months)</span>
-                    <span className="font-semibold">~$44K</span>
-                  </div>
-                  <div className="flex justify-between text-sm text-gray-800 mt-2 pt-2 border-t border-gray-300">
-                    <span className="font-bold">Average ROI Across Portfolio</span>
-                    <span className="font-bold text-green-600">813%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 gap-4">
             <div className="space-y-4">
-              <div className="bg-gradient-to-br from-green-500 to-emerald-600 text-white p-6 rounded-xl shadow-lg">
-                <h4 className="text-2xl font-bold mb-4">3-Year Projection</h4>
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-sm opacity-90 mb-1">Year 1 Value</p>
-                    <p className="text-4xl font-bold">$138K</p>
-                  </div>
-                  <div>
-                    <p className="text-sm opacity-90 mb-1">Year 2 Value (+ Mobile)</p>
-                    <p className="text-4xl font-bold">$178K</p>
-                  </div>
-                  <div>
-                    <p className="text-sm opacity-90 mb-1">Year 3 Value (Optimized)</p>
-                    <p className="text-4xl font-bold">$210K</p>
-                  </div>
-                  <div className="border-t-2 border-white/30 pt-3 mt-3">
-                    <p className="text-sm opacity-90 mb-1">3-Year Cumulative</p>
-                    <p className="text-5xl font-bold">$526K</p>
-                  </div>
-                </div>
-              </div>
-
               <div className="bg-white p-5 rounded-xl shadow-lg">
                 <h4 className="font-bold mb-3 text-gray-800">Non-Financial Benefits</h4>
                 <div className="space-y-2 text-xs">
@@ -2261,10 +2103,6 @@ const Presentation = () => {
                   </div>
                   <div className="flex items-start space-x-2">
                     <CheckCircle className="text-green-500 mt-0.5 flex-shrink-0" size={14} />
-                    <span className="text-gray-700"><strong>Quality:</strong> 85% reduction in errors improves customer satisfaction</span>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <CheckCircle className="text-green-500 mt-0.5 flex-shrink-0" size={14} />
                     <span className="text-gray-700"><strong>Compliance:</strong> Audit preparation 40 hrs → 2 hrs</span>
                   </div>
                 </div>
@@ -2273,19 +2111,7 @@ const Presentation = () => {
           </div>
 
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-xl shadow-xl">
-            <div className="grid grid-cols-4 gap-4 text-center">
-              <div>
-                <p className="text-4xl font-bold mb-1">813%</p>
-                <p className="text-sm opacity-90">Average ROI</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold mb-1">320+</p>
-                <p className="text-sm opacity-90">Hours Saved/Month</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold mb-1">85%</p>
-                <p className="text-sm opacity-90">Error Reduction</p>
-              </div>
+            <div className="grid grid-cols-1 gap-4 text-center">
               <div>
                 <p className="text-4xl font-bold mb-1">7</p>
                 <p className="text-sm opacity-90">Production Systems</p>
@@ -2381,7 +2207,7 @@ const Presentation = () => {
       content: (
         <div className="space-y-6">
           <div className="bg-gradient-to-r from-violet-600 to-purple-600 text-white p-6 rounded-xl shadow-lg">
-            <h3 className="text-3xl font-bold mb-2">Next 6-12 Months: Scaling from $138K to $210K+ Annual Value</h3>
+            <h3 className="text-3xl font-bold mb-2">Next 6-12 Months: Phase 2 Roadmap</h3>
             <p className="text-lg opacity-90">Strategic enhancements to multiply existing system value</p>
           </div>
 
@@ -2403,7 +2229,7 @@ const Presentation = () => {
                     <li>• Integration with CDMS for document access</li>
                   </ul>
                   <div className="bg-blue-50 p-2 rounded mt-2">
-                    <p className="text-xs"><strong>Projected Impact:</strong> $40K additional annual value, 60% reduction in admin overhead</p>
+                    <p className="text-xs"><strong>Projected Impact:</strong> 60% reduction in admin overhead</p>
                   </div>
                 </div>
               </div>
@@ -2495,36 +2321,6 @@ const Presentation = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="bg-gradient-to-br from-green-500 to-emerald-600 text-white p-5 rounded-xl shadow-lg">
-                <h4 className="font-bold mb-3 text-xl">Cumulative Phase 2 Value</h4>
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">Current systems (Year 1)</span>
-                    <span className="text-xl font-bold">$138K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">Mobile App launch</span>
-                    <span className="text-xl font-bold">+$40K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">AI enhancements</span>
-                    <span className="text-xl font-bold">+$15K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">Analytics & integration</span>
-                    <span className="text-xl font-bold">+$12K</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">Customer portal</span>
-                    <span className="text-xl font-bold">+$18K</span>
-                  </div>
-                  <div className="border-t-2 border-white/30 pt-2 mt-2 flex justify-between items-center">
-                    <span className="text-lg font-bold">Year 2-3 Total</span>
-                    <span className="text-3xl font-bold">$223K</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -2610,9 +2406,6 @@ const Presentation = () => {
                   <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
                     <p className="font-bold text-sm mb-2 text-green-800">Immediate Gains (Proven)</p>
                     <ul className="text-xs text-gray-700 space-y-1">
-                      <li>• $138K annual value created in first 4 months (documented)</li>
-                      <li>• 320+ hours saved monthly = capacity for 30% more work</li>
-                      <li>• 85% error reduction improves customer satisfaction</li>
                       <li>• Knowledge preserved forever in searchable systems</li>
                     </ul>
                   </div>
@@ -2638,12 +2431,6 @@ const Presentation = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="bg-gradient-to-br from-green-500 to-emerald-600 text-white p-5 rounded-xl shadow-lg">
-                <p className="text-2xl font-bold mb-2">3-Year Value Creation</p>
-                <p className="text-5xl font-bold mb-2">$526K+</p>
-                <p className="text-sm opacity-90">Documented savings + growth enablement + competitive positioning</p>
-              </div>
             </div>
           </div>
 
@@ -2663,7 +2450,6 @@ const Presentation = () => {
               <div className="bg-green-900/50 p-5 rounded-lg border-2 border-green-500">
                 <p className="text-xl font-bold mb-3 text-green-400">Innovation Path</p>
                 <ul className="space-y-2 text-sm">
-                  <li>• $138K annual value (proven + growing)</li>
                   <li>• Market leadership in AI-powered services</li>
                   <li>• Operations ready for 3x growth</li>
                   <li>• Institutional knowledge preserved & accessible</li>
@@ -2736,7 +2522,7 @@ const Presentation = () => {
               <div className="space-y-2 text-xs">
                 <div className="bg-green-50 p-2 rounded">
                   <p className="font-semibold text-green-800">Business Value Creation</p>
-                  <p className="text-gray-600">$138K annual value, 813% average ROI, 7 systems deployed</p>
+                  <p className="text-gray-600">7 systems deployed</p>
                 </div>
                 <div className="bg-blue-50 p-2 rounded">
                   <p className="font-semibold text-blue-800">Technical Leadership</p>
@@ -2838,7 +2624,7 @@ const Presentation = () => {
       content: (
         <div className="space-y-6">
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-6 rounded-xl shadow-lg">
-            <h3 className="text-4xl font-bold mb-3">From $150K Problem to $138K Solution</h3>
+            <h3 className="text-4xl font-bold mb-3">From $150K Problem to Production Solutions</h3>
             <p className="text-2xl opacity-90">4 months • 7 systems • Transformative results</p>
           </div>
 
@@ -2846,38 +2632,6 @@ const Presentation = () => {
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <h4 className="text-2xl font-bold mb-4 text-gray-800">By The Numbers</h4>
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <DollarSign className="text-green-600" size={24} />
-                    <span className="font-semibold text-gray-800">Annual Value Created</span>
-                  </div>
-                  <span className="text-2xl font-bold text-green-600">$138K</span>
-                </div>
-
-                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Clock className="text-blue-600" size={24} />
-                    <span className="font-semibold text-gray-800">Hours Saved Monthly</span>
-                  </div>
-                  <span className="text-2xl font-bold text-blue-600">320+</span>
-                </div>
-
-                <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Target className="text-purple-600" size={24} />
-                    <span className="font-semibold text-gray-800">Error Reduction</span>
-                  </div>
-                  <span className="text-2xl font-bold text-purple-600">85%</span>
-                </div>
-
-                <div className="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <TrendingUp className="text-orange-600" size={24} />
-                    <span className="font-semibold text-gray-800">Average ROI</span>
-                  </div>
-                  <span className="text-2xl font-bold text-orange-600">813%</span>
-                </div>
-
                 <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg">
                   <div className="flex items-center space-x-3">
                     <Users className="text-red-600" size={24} />
@@ -2932,16 +2686,6 @@ const Presentation = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 rounded-xl border-2 border-green-300">
-                <p className="font-bold text-sm mb-2 text-gray-800">ROI by System</p>
-                <div className="space-y-1 text-xs">
-                  <div className="flex justify-between"><span>Data Extractor</span><span className="font-bold text-green-600">884%</span></div>
-                  <div className="flex justify-between"><span>RAG System</span><span className="font-bold text-green-600">770%</span></div>
-                  <div className="flex justify-between"><span>BlobCheck</span><span className="font-bold text-green-600">733%</span></div>
-                  <div className="flex justify-between"><span>GDrive</span><span className="font-bold text-green-600">550%</span></div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -2969,7 +2713,7 @@ const Presentation = () => {
                 "Building solutions is not about technology - it is about understanding operational problems deeply and applying the right tools to solve them."
               </p>
               <p className="text-sm opacity-75">
-                This portfolio proves that combining manufacturing operational excellence with modern AI creates measurable business transformation. The results speak for themselves: $138K annual value in 4 months.
+                This portfolio proves that combining manufacturing operational excellence with modern AI creates measurable business transformation.
               </p>
             </blockquote>
           </div>
@@ -3001,11 +2745,7 @@ const Presentation = () => {
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-8 text-center max-w-4xl">
-            <div>
-              <p className="text-4xl font-bold text-green-400 mb-2">$153K</p>
-              <p className="text-sm text-gray-300">Annual Value Created</p>
-            </div>
+          <div className="mt-12 grid grid-cols-1 gap-8 text-center max-w-4xl">
             <div>
               <p className="text-4xl font-bold text-purple-400 mb-2">10</p>
               <p className="text-sm text-gray-300">Systems Deployed</p>

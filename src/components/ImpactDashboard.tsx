@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCountUp } from '../utils/useCountUp';
-import { TrendingUp, Clock, ShieldCheck, Rocket } from 'lucide-react';
+import { TrendingUp, ShieldCheck, Rocket } from 'lucide-react';
 
 /**
  * Props for the MetricCard component.
@@ -53,20 +53,13 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, suffix = '', pref
 const ImpactDashboard: React.FC = () => {
     return (
         <div className="w-full max-w-6xl mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <MetricCard
                     label="NPI OEE in 6 Weeks"
                     value={85}
                     suffix="%"
                     icon={<TrendingUp size={28} />}
                     delay={0}
-                />
-                <MetricCard
-                    label="Hours Saved / Mo"
-                    value={320}
-                    suffix="+"
-                    icon={<Clock size={28} />}
-                    delay={200}
                 />
                 <MetricCard
                     label="Systems Deployed"
